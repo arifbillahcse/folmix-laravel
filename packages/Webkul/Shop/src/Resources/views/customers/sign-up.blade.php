@@ -102,28 +102,143 @@
 
                     {!! view_render_event('bagisto.shop.customers.signup_form.last_name.after') !!}
 
-                    <!-- Email -->
+                    <!-- Username -->
                     <x-shop::form.control-group>
                         <x-shop::form.control-group.label class="required">
-                            @lang('shop::app.customers.signup-form.email')
+                            @lang('shop::app.customers.signup-form.username')
                         </x-shop::form.control-group.label>
 
                         <x-shop::form.control-group.control
-                            type="email"
+                            type="text"
                             class="px-6 py-4 max-md:py-3 max-sm:py-2"
-                            name="email"
-                            rules="required|email"
-                            :value="old('email')"
-                            :label="trans('shop::app.customers.signup-form.email')"
-                            placeholder="email@example.com"
-                            :aria-label="trans('shop::app.customers.signup-form.email')"
+                            name="username"
+                            rules="required"
+                            :value="old('username')"
+                            :label="trans('shop::app.customers.signup-form.username')"
+                            :placeholder="trans('shop::app.customers.signup-form.username')"
+                            :aria-label="trans('shop::app.customers.signup-form.username')"
                             aria-required="true"
                         />
 
-                        <x-shop::form.control-group.error control-name="email" />
+                        <x-shop::form.control-group.error control-name="username" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.signup_form.email.after') !!}
+                    <!-- VAT -->
+                    <x-shop::form.control-group>
+                        <x-shop::form.control-group.label class="required">
+                            @lang('shop::app.customers.signup-form.vat-number')
+                        </x-shop::form.control-group.label>
+
+                        <x-shop::form.control-group.control
+                            type="text"
+                            class="px-6 py-4 max-md:py-3 max-sm:py-2"
+                            name="vat_number"
+                            rules="required"
+                            :value="old('vat_number')"
+                            :label="trans('shop::app.customers.signup-form.vat-number')"
+                            :placeholder="trans('shop::app.customers.signup-form.vat-number')"
+                            :aria-label="trans('shop::app.customers.signup-form.vat-number')"
+                            aria-required="true"
+                        />
+
+                        <p class="mt-1.5 text-xs text-zinc-500">
+                            @lang('shop::app.customers.signup-form.vat-number-hint')
+                        </p>
+
+                        <x-shop::form.control-group.error control-name="vat_number" />
+                    </x-shop::form.control-group>
+
+                    <!-- Address -->
+                    <x-shop::form.control-group>
+                        <x-shop::form.control-group.label class="required">
+                            @lang('shop::app.customers.signup-form.address')
+                        </x-shop::form.control-group.label>
+
+                        <x-shop::form.control-group.control
+                            type="text"
+                            class="px-6 py-4 max-md:py-3 max-sm:py-2"
+                            name="address"
+                            rules="required"
+                            :value="old('address')"
+                            :label="trans('shop::app.customers.signup-form.address')"
+                            :placeholder="trans('shop::app.customers.signup-form.address')"
+                            :aria-label="trans('shop::app.customers.signup-form.address')"
+                            aria-required="true"
+                        />
+
+                        <x-shop::form.control-group.error control-name="address" />
+                    </x-shop::form.control-group>
+
+                    <!-- Postal Code -->
+                    <x-shop::form.control-group>
+                        <x-shop::form.control-group.label class="required">
+                            @lang('shop::app.customers.signup-form.postcode')
+                        </x-shop::form.control-group.label>
+
+                        <x-shop::form.control-group.control
+                            type="text"
+                            class="px-6 py-4 max-md:py-3 max-sm:py-2"
+                            name="postcode"
+                            rules="required"
+                            :value="old('postcode')"
+                            :label="trans('shop::app.customers.signup-form.postcode')"
+                            :placeholder="trans('shop::app.customers.signup-form.postcode')"
+                            :aria-label="trans('shop::app.customers.signup-form.postcode')"
+                            aria-required="true"
+                        />
+
+                        <x-shop::form.control-group.error control-name="postcode" />
+                    </x-shop::form.control-group>
+
+                    <!-- City / Province / Region -->
+                    <x-shop::form.control-group>
+                        <x-shop::form.control-group.label class="required">
+                            @lang('shop::app.customers.signup-form.city')
+                        </x-shop::form.control-group.label>
+
+                        <x-shop::form.control-group.control
+                            type="text"
+                            class="px-6 py-4 max-md:py-3 max-sm:py-2"
+                            name="city"
+                            rules="required"
+                            :value="old('city')"
+                            :label="trans('shop::app.customers.signup-form.city')"
+                            :placeholder="trans('shop::app.customers.signup-form.city')"
+                            :aria-label="trans('shop::app.customers.signup-form.city')"
+                            aria-required="true"
+                        />
+
+                        <x-shop::form.control-group.error control-name="city" />
+                    </x-shop::form.control-group>
+
+                    <!-- Country -->
+                    <x-shop::form.control-group>
+                        <x-shop::form.control-group.label class="required">
+                            @lang('shop::app.customers.signup-form.country')
+                        </x-shop::form.control-group.label>
+
+                        <x-shop::form.control-group.control
+                            type="select"
+                            name="country"
+                            rules="required"
+                            :value="old('country')"
+                            :label="trans('shop::app.customers.signup-form.country')"
+                            :aria-label="trans('shop::app.customers.signup-form.country')"
+                            aria-required="true"
+                        >
+                            <option value="">
+                                @lang('shop::app.customers.signup-form.country')
+                            </option>
+
+                            @foreach (core()->countries() as $country)
+                                <option value="{{ $country->code }}">{{ $country->name }}</option>
+                            @endforeach
+                        </x-shop::form.control-group.control>
+
+                        <x-shop::form.control-group.error control-name="country" />
+                    </x-shop::form.control-group>
+
+                    {!! view_render_event('bagisto.shop.customers.signup_form.country.after') !!}
 
                     <!-- Password -->
                     <x-shop::form.control-group class="mb-6">
@@ -172,6 +287,100 @@
 
                     {!! view_render_event('bagisto.shop.customers.signup_form.password_confirmation.after') !!}
 
+                    <!-- Email -->
+                    <x-shop::form.control-group>
+                        <x-shop::form.control-group.label class="required">
+                            @lang('shop::app.customers.signup-form.email')
+                        </x-shop::form.control-group.label>
+
+                        <x-shop::form.control-group.control
+                            type="email"
+                            class="px-6 py-4 max-md:py-3 max-sm:py-2"
+                            name="email"
+                            rules="required|email"
+                            :value="old('email')"
+                            :label="trans('shop::app.customers.signup-form.email')"
+                            placeholder="email@example.com"
+                            :aria-label="trans('shop::app.customers.signup-form.email')"
+                            aria-required="true"
+                        />
+
+                        <x-shop::form.control-group.error control-name="email" />
+                    </x-shop::form.control-group>
+
+                    {!! view_render_event('bagisto.shop.customers.signup_form.email.after') !!}
+
+                    <!-- Website -->
+                    <x-shop::form.control-group>
+                        <x-shop::form.control-group.label>
+                            @lang('shop::app.customers.signup-form.website')
+                        </x-shop::form.control-group.label>
+
+                        <x-shop::form.control-group.control
+                            type="text"
+                            class="px-6 py-4 max-md:py-3 max-sm:py-2"
+                            name="website"
+                            rules="url"
+                            :value="old('website')"
+                            :label="trans('shop::app.customers.signup-form.website')"
+                            :placeholder="trans('shop::app.customers.signup-form.website')"
+                            :aria-label="trans('shop::app.customers.signup-form.website')"
+                        />
+
+                        <x-shop::form.control-group.error control-name="website" />
+                    </x-shop::form.control-group>
+
+                    <!-- Newsletter -->
+                    <x-shop::form.control-group>
+                        <x-shop::form.control-group.label class="required">
+                            @lang('shop::app.customers.signup-form.newsletter')
+                        </x-shop::form.control-group.label>
+
+                        <div class="flex flex-col gap-1.5">
+                            <div class="flex select-none items-center gap-1.5">
+                                <x-shop::form.control-group.control
+                                    type="radio"
+                                    name="newsletter"
+                                    value="yes"
+                                    for="newsletter-yes"
+                                    id="newsletter-yes"
+                                    rules="required"
+                                    :label="trans('shop::app.customers.signup-form.newsletter')"
+                                />
+
+                                <label
+                                    class="cursor-pointer select-none text-base text-zinc-500 max-sm:text-sm ltr:pl-0 rtl:pr-0"
+                                    for="newsletter-yes"
+                                >
+                                    @lang('shop::app.customers.signup-form.newsletter-yes')
+                                </label>
+                            </div>
+
+                            <div class="flex select-none items-center gap-1.5">
+                                <x-shop::form.control-group.control
+                                    type="radio"
+                                    name="newsletter"
+                                    value="no"
+                                    for="newsletter-no"
+                                    id="newsletter-no"
+                                    rules="required"
+                                    :label="trans('shop::app.customers.signup-form.newsletter')"
+                                />
+
+                                <label
+                                    class="cursor-pointer select-none text-base text-zinc-500 max-sm:text-sm ltr:pl-0 rtl:pr-0"
+                                    for="newsletter-no"
+                                >
+                                    @lang('shop::app.customers.signup-form.newsletter-no')
+                                </label>
+                            </div>
+                        </div>
+
+                        <x-shop::form.control-group.error control-name="newsletter" />
+                    </x-shop::form.control-group>
+
+                    {!! view_render_event('bagisto.shop.customers.signup_form.newsletter_subscription.after') !!}
+
                     <!-- Captcha -->
                     @if (core()->getConfigData('customer.captcha.credentials.status'))
                         <x-shop::form.control-group>
@@ -180,32 +389,6 @@
                             <x-shop::form.control-group.error control-name="recaptcha_token" />
                         </x-shop::form.control-group>
                     @endif
-
-                    <!-- Subscribed Button -->
-                    @if (core()->getConfigData('customer.settings.create_new_account_options.news_letter'))
-                        <div class="mb-5 flex select-none items-center gap-1.5">
-                            <input
-                                type="checkbox"
-                                name="is_subscribed"
-                                id="is-subscribed"
-                                class="peer hidden"
-                            />
-
-                            <label
-                                class="icon-uncheck peer-checked:icon-check-box cursor-pointer text-2xl text-navyBlue peer-checked:text-navyBlue"
-                                for="is-subscribed"
-                            ></label>
-
-                            <label
-                                class="cursor-pointer select-none text-base text-zinc-500 max-sm:text-sm ltr:pl-0 rtl:pr-0"
-                                for="is-subscribed"
-                            >
-                                @lang('shop::app.customers.signup-form.subscribe-to-newsletter')
-                            </label>
-                        </div>
-                    @endif
-
-                    {!! view_render_event('bagisto.shop.customers.signup_form.newsletter_subscription.after') !!}
 
                     @if(
                         core()->getConfigData('general.gdpr.settings.enabled')

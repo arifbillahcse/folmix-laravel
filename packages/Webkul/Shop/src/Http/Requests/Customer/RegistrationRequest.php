@@ -27,8 +27,16 @@ class RegistrationRequest extends FormRequest
         $rules = [
             'first_name' => 'string|required',
             'last_name' => 'string|required',
+            'username' => 'string|required|unique:customers,username,NULL,id,channel_id,'.core()->getCurrentChannel()->id,
+            'vat_number' => 'string|required',
+            'address' => 'string|required',
+            'postcode' => 'string|required',
+            'city' => 'string|required',
+            'country' => 'string|required',
+            'website' => 'nullable|url',
             'email' => 'email|required|unique:customers,email,NULL,id,channel_id,'.core()->getCurrentChannel()->id,
             'password' => 'confirmed|min:6|required',
+            'newsletter' => 'required|in:yes,no',
         ];
 
         return Captcha::getValidations($rules);

@@ -22,8 +22,15 @@ it('should fails validation error when certain inputs are invalid when register'
     postJson(route('shop.customers.register.store'))
         ->assertJsonValidationErrorFor('first_name')
         ->assertJsonValidationErrorFor('last_name')
+        ->assertJsonValidationErrorFor('username')
+        ->assertJsonValidationErrorFor('vat_number')
+        ->assertJsonValidationErrorFor('address')
+        ->assertJsonValidationErrorFor('postcode')
+        ->assertJsonValidationErrorFor('city')
+        ->assertJsonValidationErrorFor('country')
         ->assertJsonValidationErrorFor('email')
         ->assertJsonValidationErrorFor('password')
+        ->assertJsonValidationErrorFor('newsletter')
         ->assertUnprocessable();
 });
 
@@ -60,9 +67,16 @@ it('successfully registers a customer', function () {
     $requestedCustomer = [
         'first_name' => fake()->firstName(),
         'last_name' => fake()->lastName(),
+        'username' => fake()->unique()->userName(),
+        'vat_number' => fake()->bothify('VAT#######'),
+        'address' => fake()->streetAddress(),
+        'postcode' => fake()->postcode(),
+        'city' => fake()->city(),
+        'country' => 'US',
         'email' => fake()->email(),
         'password' => 'admin123',
         'password_confirmation' => 'admin123',
+        'newsletter' => 'yes',
     ];
 
     // Act and Assert.
@@ -83,9 +97,16 @@ it('successfully registers a customer and send mail to the customer verify the a
     $requestedCustomer = [
         'first_name' => fake()->firstName(),
         'last_name' => fake()->lastName(),
+        'username' => fake()->unique()->userName(),
+        'vat_number' => fake()->bothify('VAT#######'),
+        'address' => fake()->streetAddress(),
+        'postcode' => fake()->postcode(),
+        'city' => fake()->city(),
+        'country' => 'US',
         'email' => fake()->email(),
         'password' => 'admin123',
         'password_confirmation' => 'admin123',
+        'newsletter' => 'no',
     ];
 
     // Act and Assert.
@@ -117,9 +138,16 @@ it('registers a customer successfully and sends a registration email to customer
     $requestedCustomer = [
         'first_name' => fake()->firstName(),
         'last_name' => fake()->lastName(),
+        'username' => fake()->unique()->userName(),
+        'vat_number' => fake()->bothify('VAT#######'),
+        'address' => fake()->streetAddress(),
+        'postcode' => fake()->postcode(),
+        'city' => fake()->city(),
+        'country' => 'US',
         'email' => fake()->email(),
         'password' => 'admin123',
         'password_confirmation' => 'admin123',
+        'newsletter' => 'yes',
     ];
 
     // Act and Assert.
