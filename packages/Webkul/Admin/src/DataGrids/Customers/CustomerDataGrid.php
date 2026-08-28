@@ -253,6 +253,19 @@ class CustomerDataGrid extends DataGrid
                     ],
                 ],
             ]);
+
+            $this->addMassAction([
+                'title' => trans('admin::app.customers.customers.index.datagrid.assign-group'),
+                'method' => 'POST',
+                'url' => route('admin.customers.customers.mass_assign_group'),
+                'options' => $this->customerGroupRepository->all(['id', 'name'])
+                    ->map(fn ($group) => [
+                        'label' => $group->name,
+                        'value' => $group->id,
+                    ])
+                    ->values()
+                    ->toArray(),
+            ]);
         }
     }
 }

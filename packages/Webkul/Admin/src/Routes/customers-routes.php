@@ -37,6 +37,8 @@ Route::prefix('customers')->group(function () {
 
         Route::post('mass-update', 'massUpdate')->name('admin.customers.customers.mass_update');
 
+        Route::post('mass-assign-group', 'massAssignGroup')->name('admin.customers.customers.mass_assign_group');
+
         Route::post('{id}', 'destroy')->name('admin.customers.customers.delete');
 
         Route::controller(WishlistController::class)->group(function () {

@@ -312,6 +312,36 @@ class CustomerController extends Controller
     }
 
     /**
+     * To mass assign a customer group to the selected customers.
+     */
+    public function massAssignGroup(MassUpdateRequest $massUpdateRequest): JsonResponse
+    {
+        $selectedCustomerIds = $massUpdateRequest->input('indices');
+
+        $customerGroup = $this->customerGroupRepository->find($massUpdateRequest->input('value'));
+
+        if (! $customerGroup) {
+            return new JsonResponse([
+                'message' => trans('admin::app.customers.customers.index.datagrid.group-not-found'),
+            ], 400);
+        }
+
+        foreach ($selectedCustomerIds as $customerId) {
+            Event::dispatch('customer.update.before', $customerId);
+
+            $customer = $this->customerRepository->update([
+                'customer_group_id' => $customerGroup->id,
+            ], $customerId);
+
+            Event::dispatch('customer.update.after', $customer);
+        }
+
+        return new JsonResponse([
+            'message' => trans('admin::app.customers.customers.index.datagrid.update-success'),
+        ]);
+    }
+
+    /**
      * To mass delete the customer.
      */
     public function massDestroy(MassDestroyRequest $massDestroyRequest): JsonResponse
