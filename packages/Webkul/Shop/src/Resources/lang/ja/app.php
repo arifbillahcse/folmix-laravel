@@ -5,10 +5,10 @@ return [
         'forgot-password' => [
             'already-sent' => 'すでにパスワードリセットメールが送信されました。',
             'back' => 'サインインに戻る？',
-            'bagisto' => 'バギスト',
+            'bagisto' => 'Folmix',
             'email' => 'メール',
             'email-not-exist' => 'そのメールアドレスを持つユーザーが見つかりません。',
-            'footer' => '© 2010 - :current_year、Webkul Software（インドで登録）。全著作権所有。',
+            'footer' => '© :current_year、Folmix。全著作権所有。',
             'forgot-password-text' => 'パスワードを忘れた場合は、メールアドレスを入力して回復してください。',
             'page-title' => 'パスワードを忘れましたか？',
             'reset-link-sent' => 'パスワードリセットリンクをメールで送信しました。',
@@ -19,21 +19,21 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'サインインに戻る',
-            'bagisto' => 'バギスト',
+            'bagisto' => 'Folmix',
             'confirm-password' => 'パスワードの確認',
             'email' => '登録済みのメール',
-            'footer' => '© 2010 - :current_year、Webkul Software（インドで登録）。全著作権所有。',
+            'footer' => '© :current_year、Folmix。全著作権所有。',
             'password' => 'パスワード',
             'submit-btn-title' => 'パスワードをリセット',
             'title' => 'パスワードをリセット',
         ],
 
         'login-form' => [
-            'bagisto' => 'バギスト',
+            'bagisto' => 'Folmix',
             'button-title' => 'サインイン',
             'create-your-account' => 'アカウントを作成',
             'email' => 'メール',
-            'footer' => '© 2010 - :current_year、Webkul Software（インドで登録）。全著作権所有。',
+            'footer' => '© :current_year、Folmix。全著作権所有。',
             'forgot-pass' => 'パスワードをお忘れですか？',
             'form-login-text' => 'アカウントをお持ちの場合、メールアドレスでサインインしてください。',
             'invalid-credentials' => '資格情報を確認してもう一度お試しください。',
@@ -51,7 +51,7 @@ return [
         'signup-form' => [
             'account-exists' => 'すでにアカウントをお持ちですか？',
             'address' => '住所',
-            'bagisto' => 'バギスト',
+            'bagisto' => 'Folmix',
             'button-title' => '登録',
             'city' => '市区町村/都道府県/地域',
             'click-here' => 'ここをクリック',
@@ -59,7 +59,7 @@ return [
             'country' => '国',
             'email' => 'ユーザーメール',
             'first-name' => '名',
-            'footer' => '© 2010 - :current_year、Webkul Software（インドで登録）。全著作権所有。',
+            'footer' => '© :current_year、Folmix。全著作権所有。',
             'form-signup-text' => '当ストアが初めての場合、メンバーとしてお迎えできることを嬉しく思います。',
             'last-name' => '姓',
             'newsletter' => 'ニュースレター',
@@ -575,7 +575,7 @@ return [
                     'bottom' => [
                         'all' => 'すべて',
                         'back-button' => 'メインメニューに戻る',
-                        'bagisto' => 'バギスト',
+                        'bagisto' => 'Folmix',
                         'categories' => 'カテゴリ',
                         'compare' => '比較',
                         'dropdown-text' => 'カート、注文、ウィッシュリストを管理',
@@ -598,7 +598,7 @@ return [
                 'mobile' => [
                     'account' => 'アカウント',
                     'back-button' => 'メインメニューに戻る',
-                    'bagisto' => 'バギスト',
+                    'bagisto' => 'Folmix',
                     'compare' => '比較',
                     'currencies' => '通貨',
                     'dropdown-text' => 'カート、注文、ウィッシュリストを管理',
@@ -638,7 +638,7 @@ return [
                 'customer-service' => 'カスタマーサービス',
                 'email' => 'Email',
                 'footer-content' => 'フッターコンテンツ',
-                'footer-text' => '© 著作権 2010 - :current_year, Webkul Software (インドで登録済み)。全ての権利を保有しています。',
+                'footer-text' => '© 著作権 :current_year, Folmix。全ての権利を保有しています。',
                 'locale' => 'ロケール',
                 'newsletter-text' => '楽しいニュースレターの準備をしてください！',
                 'order-return' => '注文と返品',
@@ -1091,7 +1091,7 @@ return [
             'suspended-account-message' => 'アカウントは一時停止されました。',
 
             'index' => [
-                'bagisto' => 'バギスト',
+                'bagisto' => 'Folmix',
                 'cart' => 'カート',
                 'continue-shopping' => 'ショッピングを続ける',
                 'empty-product' => 'カートに製品がありません。',

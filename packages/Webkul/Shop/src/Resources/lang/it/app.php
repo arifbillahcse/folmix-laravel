@@ -5,10 +5,10 @@ return [
         'forgot-password' => [
             'already-sent' => 'E-mail di reimpostazione password già inviata.',
             'back' => 'Torna al Login ?',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Folmix',
             'email' => 'Email',
             'email-not-exist' => 'Non possiamo trovare un utente con quell\'indirizzo email.',
-            'footer' => '© Copyright 2010 - :current_year, Webkul Software (Registrato in India). Tutti i diritti riservati.',
+            'footer' => '© Copyright :current_year, Folmix. Tutti i diritti riservati.',
             'forgot-password-text' => 'Se hai dimenticato la tua password, recuperala inserendo il tuo indirizzo email.',
             'page-title' => 'Hai dimenticato la tua password ?',
             'reset-link-sent' => 'Abbiamo inviato il link per il ripristino della password al tuo indirizzo email.',
@@ -19,21 +19,21 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'Torna al Login',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Folmix',
             'confirm-password' => 'Conferma Password',
             'email' => 'Email Registrata',
-            'footer' => '© Copyright 2010 - :current_year, Webkul Software (Registrato in India). Tutti i diritti riservati.',
+            'footer' => '© Copyright :current_year, Folmix. Tutti i diritti riservati.',
             'password' => 'Password',
             'submit-btn-title' => 'Reimposta la Password',
             'title' => 'Reimposta la Password',
         ],
 
         'login-form' => [
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Folmix',
             'button-title' => 'Accedi',
             'create-your-account' => 'Crea il tuo account',
             'email' => 'Email',
-            'footer' => '© Copyright 2010 - :current_year, Webkul Software (Registrato in India). Tutti i diritti riservati.',
+            'footer' => '© Copyright :current_year, Folmix. Tutti i diritti riservati.',
             'forgot-pass' => 'Hai dimenticato la password?',
             'form-login-text' => 'Se hai un account, accedi con il tuo indirizzo email.',
             'invalid-credentials' => 'Controlla le tue credenziali e riprova.',
@@ -51,7 +51,7 @@ return [
         'signup-form' => [
             'account-exists' => 'Hai già un account ?',
             'address' => 'Indirizzo',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Folmix',
             'button-title' => 'Registrazione',
             'city' => 'Città/Provincia/Regione',
             'click-here' => 'Clicca qui',
@@ -59,7 +59,7 @@ return [
             'country' => 'Paese',
             'email' => 'E-mail dell\'utente',
             'first-name' => 'Nome',
-            'footer' => '© Copyright 2010 - :current_year, Webkul Software (Registrato in India). Tutti i diritti riservati.',
+            'footer' => '© Copyright :current_year, Folmix. Tutti i diritti riservati.',
             'form-signup-text' => 'Se sei nuovo nel nostro negozio, siamo felici di averti come membro.',
             'last-name' => 'Cognome',
             'newsletter' => 'Newsletter',
@@ -575,7 +575,7 @@ return [
                     'bottom' => [
                         'all' => 'Tutti',
                         'back-button' => 'Torna al menu principale',
-                        'bagisto' => 'Bagisto',
+                        'bagisto' => 'Folmix',
                         'categories' => 'Categorie',
                         'compare' => 'Confronta',
                         'dropdown-text' => 'Gestisci carrello, ordini e lista dei desideri',
@@ -598,7 +598,7 @@ return [
                 'mobile' => [
                     'account' => 'Account',
                     'back-button' => 'Torna al menu principale',
-                    'bagisto' => 'Bagisto',
+                    'bagisto' => 'Folmix',
                     'compare' => 'Confronta',
                     'currencies' => 'Valute',
                     'dropdown-text' => 'Gestisci carrello, ordini e lista dei desideri',
@@ -638,7 +638,7 @@ return [
                 'customer-service' => 'Servizio clienti',
                 'email' => 'Email',
                 'footer-content' => 'Contenuto del piè di pagina',
-                'footer-text' => '© Copyright 2010 - :current_year, Webkul Software (registrato in India). Tutti i diritti riservati.',
+                'footer-text' => '© Copyright :current_year, Folmix. Tutti i diritti riservati.',
                 'locale' => 'Lingua',
                 'newsletter-text' => 'Iscriviti alla nostra divertente newsletter!',
                 'order-return' => 'Ordini e resi',
@@ -1091,7 +1091,7 @@ return [
             'suspended-account-message' => 'Il tuo account è stato sospeso.',
 
             'index' => [
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Folmix',
                 'cart' => 'Carrello',
                 'continue-shopping' => 'Continua a fare acquisti',
                 'empty-product' => 'Il carrello è vuoto.',

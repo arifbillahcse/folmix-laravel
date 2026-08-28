@@ -5,10 +5,10 @@ return [
         'forgot-password' => [
             'already-sent' => 'Email untuk mengatur ulang kata sandi sudah dikirim.',
             'back' => 'Kembali ke halaman masuk?',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Folmix',
             'email' => 'Email',
             'email-not-exist' => 'Kami tidak dapat menemukan pengguna dengan alamat email tersebut.',
-            'footer' => '© Hak Cipta 2010 - :current_year, Webkul Software (Terdaftar di India). Seluruh hak cipta dilindungi undang-undang.',
+            'footer' => '© Hak Cipta :current_year, Folmix. Seluruh hak cipta dilindungi undang-undang.',
             'forgot-password-text' => 'Jika Anda lupa kata sandi, silakan pulihkan dengan memasukkan alamat email Anda.',
             'page-title' => 'Lupa kata sandi?',
             'reset-link-sent' => 'Kami telah mengirimkan tautan untuk mengatur ulang kata sandi ke email Anda.',
@@ -19,21 +19,21 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'Kembali ke Halaman Masuk',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Folmix',
             'confirm-password' => 'Konfirmasi Kata Sandi',
             'email' => 'Email Terdaftar',
-            'footer' => '© Hak Cipta 2010 - :current_year, Webkul Software (Terdaftar di India). Seluruh hak cipta dilindungi undang-undang.',
+            'footer' => '© Hak Cipta :current_year, Folmix. Seluruh hak cipta dilindungi undang-undang.',
             'password' => 'Kata Sandi',
             'submit-btn-title' => 'Atur Ulang Kata Sandi',
             'title' => 'Atur Ulang Kata Sandi',
         ],
 
         'login-form' => [
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Folmix',
             'button-title' => 'Masuk',
             'create-your-account' => 'Buat akun Anda',
             'email' => 'Email',
-            'footer' => '© Hak Cipta 2010 - :current_year, Webkul Software (Terdaftar di India). Seluruh hak cipta dilindungi undang-undang.',
+            'footer' => '© Hak Cipta :current_year, Folmix. Seluruh hak cipta dilindungi undang-undang.',
             'forgot-pass' => 'Lupa Kata Sandi?',
             'form-login-text' => 'Jika Anda sudah memiliki akun, masuk dengan alamat email Anda.',
             'invalid-credentials' => 'Periksa kembali kredensial Anda dan coba lagi.',
@@ -51,7 +51,7 @@ return [
         'signup-form' => [
             'account-exists' => 'Sudah memiliki akun?',
             'address' => 'Alamat',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Folmix',
             'button-title' => 'Pendaftaran',
             'city' => 'Kota/Provinsi/Wilayah',
             'click-here' => 'Klik di sini',
@@ -59,7 +59,7 @@ return [
             'country' => 'Negara',
             'email' => 'Email Pengguna',
             'first-name' => 'Nama Depan',
-            'footer' => '© Hak Cipta 2010 - :current_year, Webkul Software (Terdaftar di India). Seluruh hak cipta dilindungi undang-undang.',
+            'footer' => '© Hak Cipta :current_year, Folmix. Seluruh hak cipta dilindungi undang-undang.',
             'form-signup-text' => 'Jika Anda baru di toko kami, kami senang menyambut Anda sebagai anggota.',
             'last-name' => 'Nama Belakang',
             'newsletter' => 'Buletin',
@@ -575,7 +575,7 @@ return [
                     'bottom' => [
                         'all' => 'Semua',
                         'back-button' => 'Kembali ke Menu Utama',
-                        'bagisto' => 'Bagisto',
+                        'bagisto' => 'Folmix',
                         'categories' => 'Kategori',
                         'compare' => 'Bandingkan',
                         'dropdown-text' => 'Kelola Keranjang, Pesanan & Daftar Keinginan',
@@ -598,7 +598,7 @@ return [
                 'mobile' => [
                     'account' => 'Akun',
                     'back-button' => 'Kembali ke Menu Utama',
-                    'bagisto' => 'Bagisto',
+                    'bagisto' => 'Folmix',
                     'compare' => 'Bandingkan',
                     'currencies' => 'Mata Uang',
                     'dropdown-text' => 'Kelola Keranjang, Pesanan & Daftar Keinginan',
@@ -638,7 +638,7 @@ return [
                 'customer-service' => 'Layanan Pelanggan',
                 'email' => 'Email',
                 'footer-content' => 'Konten Footer',
-                'footer-text' => '© Hak Cipta 2010 - :current_year, Webkul Software (Terdaftar di India). Seluruh hak cipta dilindungi undang-undang.',
+                'footer-text' => '© Hak Cipta :current_year, Folmix. Seluruh hak cipta dilindungi undang-undang.',
                 'locale' => 'Bahasa',
                 'newsletter-text' => 'Bersiaplah untuk Newsletter Seru Kami!',
                 'order-return' => 'Pesanan dan Pengembalian',
@@ -1091,7 +1091,7 @@ return [
             'suspended-account-message' => 'Akun Anda telah ditangguhkan.',
 
             'index' => [
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Folmix',
                 'cart' => 'Keranjang',
                 'continue-shopping' => 'Lanjut Belanja',
                 'empty-product' => 'Keranjang Anda masih kosong.',

@@ -5,10 +5,10 @@ return [
         'forgot-password' => [
             'already-sent' => 'Лист для скидання пароля вже надіслано.',
             'back' => 'Повернутися до входу?',
-            'bagisto' => 'Багісто',
+            'bagisto' => 'Folmix',
             'email' => 'Електронна пошта',
             'email-not-exist' => 'Ми не можемо знайти користувача за цією адресою електронної пошти.',
-            'footer' => '© Копірайт 2010 - :current_year, Webkul Software (зареєстрована в Індії). Всі права захищені.',
+            'footer' => '© Копірайт :current_year, Folmix. Всі права захищені.',
             'forgot-password-text' => 'Якщо ви забули свій пароль, відновіть його, введіть свою електронну адресу.',
             'page-title' => 'Забули пароль?',
             'reset-link-sent' => 'Ми відправили вам посилання на скидання пароля на вашу електронну пошту.',
@@ -19,21 +19,21 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'Повернутися до входу',
-            'bagisto' => 'Багісто',
+            'bagisto' => 'Folmix',
             'confirm-password' => 'Підтвердити пароль',
             'email' => 'Зареєстрована електронна пошта',
-            'footer' => '© Копірайт 2010 - :current_year, Webkul Software (зареєстрована в Індії). Всі права захищені.',
+            'footer' => '© Копірайт :current_year, Folmix. Всі права захищені.',
             'password' => 'Пароль',
             'submit-btn-title' => 'Скинути пароль',
             'title' => 'Скидання паролю',
         ],
 
         'login-form' => [
-            'bagisto' => 'Багісто',
+            'bagisto' => 'Folmix',
             'button-title' => 'Увійти',
             'create-your-account' => 'Створити свій обліковий запис',
             'email' => 'Електронна пошта',
-            'footer' => '© Копірайт 2010 - :current_year, Webkul Software (зареєстрована в Індії). Всі права захищені.',
+            'footer' => '© Копірайт :current_year, Folmix. Всі права захищені.',
             'forgot-pass' => 'Забули пароль?',
             'form-login-text' => 'Якщо у вас є обліковий запис, увійдіть за допомогою своєї електронної адреси.',
             'invalid-credentials' => 'Перевірте свої облікові дані та спробуйте ще раз.',
@@ -51,7 +51,7 @@ return [
         'signup-form' => [
             'account-exists' => 'Вже є обліковий запис?',
             'address' => 'Адреса',
-            'bagisto' => 'Багісто',
+            'bagisto' => 'Folmix',
             'button-title' => 'Реєстрація',
             'city' => 'Місто/Область/Регіон',
             'click-here' => 'Натисніть тут',
@@ -59,7 +59,7 @@ return [
             'country' => 'Країна',
             'email' => 'Email користувача',
             'first-name' => 'Ім’я',
-            'footer' => '© Копірайт 2010 - :current_year, Webkul Software (зареєстрована в Індії). Всі права захищені.',
+            'footer' => '© Копірайт :current_year, Folmix. Всі права захищені.',
             'form-signup-text' => 'Якщо ви новачок у нашому магазині, ми раді вас бачити як учасника.',
             'last-name' => 'Прізвище',
             'newsletter' => 'Розсилка',
@@ -575,7 +575,7 @@ return [
                     'bottom' => [
                         'all' => 'Все',
                         'back-button' => 'Повернутися до головного меню',
-                        'bagisto' => 'Bagisto',
+                        'bagisto' => 'Folmix',
                         'categories' => 'Категорії',
                         'compare' => 'Порівняти',
                         'dropdown-text' => 'Керуйте кошиком, замовленнями та списком бажань',
@@ -598,7 +598,7 @@ return [
                 'mobile' => [
                     'account' => 'Обліковий запис',
                     'back-button' => 'Повернутися до головного меню',
-                    'bagisto' => 'Bagisto',
+                    'bagisto' => 'Folmix',
                     'compare' => 'Порівняти',
                     'currencies' => 'Валюти',
                     'dropdown-text' => 'Керуйте кошиком, замовленнями та списком бажань',
@@ -638,7 +638,7 @@ return [
                 'customer-service' => 'Служба підтримки',
                 'email' => 'Електронна пошта',
                 'footer-content' => 'Вміст нижнього колонтитула',
-                'footer-text' => '© Авторське право 2010 - :current_year, Webkul Software (зареєстровано в Індії). Усі права захищені.',
+                'footer-text' => '© Авторське право :current_year, Folmix. Усі права захищені.',
                 'locale' => 'Мова',
                 'newsletter-text' => 'Готуйтеся до наших цікавих новин!',
                 'order-return' => 'Замовлення та повернення',
@@ -1091,7 +1091,7 @@ return [
             'suspended-account-message' => 'Ваш обліковий запис призупинено.',
 
             'index' => [
-                'bagisto' => 'Багісто',
+                'bagisto' => 'Folmix',
                 'cart' => 'Кошик',
                 'continue-shopping' => 'Продовжити покупки',
                 'empty-product' => 'У вас немає товарів у кошику.',

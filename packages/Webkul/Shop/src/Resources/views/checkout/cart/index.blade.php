@@ -141,7 +141,7 @@
 
                                 <div v-if="selectedItemsCount">
                                     <span
-                                        class="cursor-pointer text-base text-blue-700 max-sm:text-xs"
+                                        class="cursor-pointer text-base text-navyBlue max-sm:text-xs"
                                         role="button"
                                         tabindex="0"
                                         @click="removeSelectedItems"
@@ -153,7 +153,7 @@
                                         <span class="mx-2.5 border-r-2 border-zinc-200"></span>
 
                                         <span
-                                            class="cursor-pointer text-base text-blue-700 max-sm:text-xs"
+                                            class="cursor-pointer text-base text-navyBlue max-sm:text-xs"
                                             role="button"
                                             tabindex="0"
                                             @click="moveToWishlistSelectedItems"
@@ -259,7 +259,7 @@
                                                                 <template v-if="attribute?.attribute_type === 'file'">
                                                                     <a
                                                                         :href="attribute.file_url"
-                                                                        class="text-blue-700"
+                                                                        class="text-navyBlue"
                                                                         target="_blank"
                                                                         :download="attribute.file_name"
                                                                     >
@@ -302,7 +302,7 @@
                                                 </p>
 
                                                 <span
-                                                    class="cursor-pointer text-base text-blue-700 max-md:hidden"
+                                                    class="cursor-pointer text-base text-navyBlue max-md:hidden"
                                                     role="button"
                                                     tabindex="0"
                                                     @click="removeItem(item.id)"
@@ -329,7 +329,7 @@
 
                                                 <!-- For Mobile view Remove Button -->
                                                 <span
-                                                    class="hidden cursor-pointer text-sm text-blue-700 max-md:block"
+                                                    class="hidden cursor-pointer text-sm text-navyBlue max-md:block"
                                                     role="button"
                                                     tabindex="0"
                                                     @click="removeItem(item.id)"
@@ -375,7 +375,7 @@
 
                                         <!-- Cart Item Remove Button -->
                                         <span
-                                            class="cursor-pointer text-base text-blue-700"
+                                            class="cursor-pointer text-base text-navyBlue"
                                             role="button"
                                             tabindex="0"
                                             @click="removeItem(item.id)"

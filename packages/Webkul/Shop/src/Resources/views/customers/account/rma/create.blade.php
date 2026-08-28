@@ -407,7 +407,7 @@
                                         <a
                                             :href="'{{ route('shop.product_or_category.index', ':slug') }}'.replace(':slug', product.url_key)"
                                             target='_blank'
-                                            class="text-blue-600 text-base font-semibold hover:underline"
+                                            class="text-navyBlue text-base font-semibold hover:underline"
                                         >
                                             @{{ product.name }}
 

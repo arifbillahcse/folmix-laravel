@@ -5,10 +5,10 @@ return [
         'forgot-password' => [
             'already-sent' => 'از قبل بازنشانی رمز عبور ایمیل ارسال شده است.',
             'back' => 'بازگشت به صفحه ورود؟',
-            'bagisto' => 'بگیستو',
+            'bagisto' => 'Folmix',
             'email' => 'ایمیل',
             'email-not-exist' => 'ما نمی‌توانیم کاربری با این آدرس ایمیل پیدا کنیم.',
-            'footer' => '© حق تألیف 2010 - :current_year، نرم‌افزار وب‌کول (ثبت شده در هند). تمامی حقوق محفوظ است.',
+            'footer' => '© حق تألیف :current_year، Folmix. تمامی حقوق محفوظ است.',
             'forgot-password-text' => 'اگر رمز عبور خود را فراموش کرده‌اید، با وارد کردن آدرس ایمیل خود آن را بازیابی کنید.',
             'page-title' => 'رمز عبور خود را فراموش کرده‌اید؟',
             'reset-link-sent' => 'ما لینک بازنشانی رمز عبور شما را به ایمیل شما ارسال کردیم',
@@ -19,21 +19,21 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'بازگشت به صفحه ورود',
-            'bagisto' => 'بگیستو',
+            'bagisto' => 'Folmix',
             'confirm-password' => 'تأیید رمز عبور',
             'email' => 'ایمیل ثبت‌شده',
-            'footer' => '© حق تألیف 2010 - :current_year، نرم‌افزار وب‌کول (ثبت شده در هند). تمامی حقوق محفوظ است.',
+            'footer' => '© حق تألیف :current_year، Folmix. تمامی حقوق محفوظ است.',
             'password' => 'رمز عبور',
             'submit-btn-title' => 'بازنشانی رمز عبور',
             'title' => 'بازنشانی رمز عبور',
         ],
 
         'login-form' => [
-            'bagisto' => 'بگیستو',
+            'bagisto' => 'Folmix',
             'button-title' => 'ورود',
             'create-your-account' => 'حساب کاربری خود را ایجاد کنید',
             'email' => 'ایمیل',
-            'footer' => '© حق تألیف 2010 - :current_year، نرم‌افزار وب‌کول (ثبت شده در هند). تمامی حقوق محفوظ است.',
+            'footer' => '© حق تألیف :current_year، Folmix. تمامی حقوق محفوظ است.',
             'forgot-pass' => 'رمز عبور را فراموش کرده‌اید؟',
             'form-login-text' => 'اگر حساب کاربری دارید، با آدرس ایمیل خود وارد شوید.',
             'invalid-credentials' => 'لطفاً اطلاعات ورود خود را بررسی کرده و دوباره تلاش کنید.',
@@ -51,7 +51,7 @@ return [
         'signup-form' => [
             'account-exists' => 'قبلاً حساب دارید؟',
             'address' => 'آدرس',
-            'bagisto' => 'بگیستو',
+            'bagisto' => 'Folmix',
             'button-title' => 'ثبت‌نام',
             'city' => 'شهر/استان/منطقه',
             'click-here' => 'اینجا کلیک کنید',
@@ -59,7 +59,7 @@ return [
             'country' => 'کشور',
             'email' => 'ایمیل کاربر',
             'first-name' => 'نام',
-            'footer' => '© حق تألیف 2010 - :current_year، نرم‌افزار وب‌کول (ثبت شده در هند). تمامی حقوق محفوظ است.',
+            'footer' => '© حق تألیف :current_year، Folmix. تمامی حقوق محفوظ است.',
             'form-signup-text' => 'اگر تازه وارد فروشگاه ما شده‌اید، ما خوشحالیم که شما را به عنوان عضو می‌پذیریم.',
             'last-name' => 'نام خانوادگی',
             'newsletter' => 'خبرنامه',
@@ -575,7 +575,7 @@ return [
                     'bottom' => [
                         'all' => 'همه',
                         'back-button' => 'بازگشت به منوی اصلی',
-                        'bagisto' => 'باگیستو',
+                        'bagisto' => 'Folmix',
                         'categories' => 'دسته‌بندی‌ها',
                         'compare' => 'مقایسه',
                         'dropdown-text' => 'مدیریت سبد خرید، سفارش‌ها و لیست علاقه‌مندی‌ها',
@@ -598,7 +598,7 @@ return [
                 'mobile' => [
                     'account' => 'حساب کاربری',
                     'back-button' => 'بازگشت به منوی اصلی',
-                    'bagisto' => 'باگیستو',
+                    'bagisto' => 'Folmix',
                     'compare' => 'مقایسه',
                     'currencies' => 'واحدهای پول',
                     'dropdown-text' => 'مدیریت سبد خرید، سفارش‌ها و لیست علاقه‌مندی‌ها',
@@ -638,7 +638,7 @@ return [
                 'customer-service' => 'خدمات مشتری',
                 'email' => 'ایمیل',
                 'footer-content' => 'محتوای فوتر',
-                'footer-text' => '© حق تکثیر 2010 - :current_year ، نرم‌افزار Webkul (ثبت‌شده در هند). تمام حقوق محفوظ است.',
+                'footer-text' => '© حق تکثیر :current_year ، Folmix. تمام حقوق محفوظ است.',
                 'locale' => 'زبان و محل',
                 'newsletter-text' => 'برای دریافت خبرنامه‌ی جذاب ما آماده شوید!',
                 'order-return' => 'سفارش و بازگشت',
@@ -1091,7 +1091,7 @@ return [
             'suspended-account-message' => 'حساب کاربری شما مسدود شده است.',
 
             'index' => [
-                'bagisto' => 'بگیستو',
+                'bagisto' => 'Folmix',
                 'cart' => 'سبد خرید',
                 'continue-shopping' => 'ادامه خرید',
                 'empty-product' => 'شما هیچ محصولی در سبد خرید خود ندارید.',

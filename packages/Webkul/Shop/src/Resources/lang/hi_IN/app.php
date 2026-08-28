@@ -5,10 +5,10 @@ return [
         'forgot-password' => [
             'already-sent' => 'पासवर्ड रीसेट मेल पहले ही भेजा जा चुका है।',
             'back' => 'साइन इन पर वापस जाएं?',
-            'bagisto' => 'बागिस्तो',
+            'bagisto' => 'Folmix',
             'email' => 'ईमेल',
             'email-not-exist' => 'हम उस ईमेल पते के साथ कोई उपयोगकर्ता नहीं ढूंढ सकते।',
-            'footer' => '© कॉपीराइट 2010 - :current_year, वेबकुल सॉफ़्टवेयर (भारत में पंजीकृत)। सभी अधिकार सुरक्षित हैं।',
+            'footer' => '© कॉपीराइट :current_year, Folmix। सभी अधिकार सुरक्षित हैं।',
             'forgot-password-text' => 'अगर आप अपना पासवर्ड भूल गए हैं, तो अपना ईमेल पता दर्ज करके इसे पुनः प्राप्त करें।',
             'page-title' => 'क्या आप अपना पासवर्ड भूल गए हैं?',
             'reset-link-sent' => 'हमने आपके पासवर्ड रीसेट लिंक को आपके ईमेल पर भेजा है।',
@@ -19,21 +19,21 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'साइन इन पर वापस जाएं',
-            'bagisto' => 'बागिस्तो',
+            'bagisto' => 'Folmix',
             'confirm-password' => 'पासवर्ड की पुष्टि करें',
             'email' => 'पंजीकृत ईमेल',
-            'footer' => '© कॉपीराइट 2010 - :current_year, वेबकुल सॉफ़्टवेयर (भारत में पंजीकृत)। सभी अधिकार सुरक्षित हैं।',
+            'footer' => '© कॉपीराइट :current_year, Folmix। सभी अधिकार सुरक्षित हैं।',
             'password' => 'पासवर्ड',
             'submit-btn-title' => 'पासवर्ड रीसेट करें',
             'title' => 'पासवर्ड रीसेट करें',
         ],
 
         'login-form' => [
-            'bagisto' => 'बागिस्तो',
+            'bagisto' => 'Folmix',
             'button-title' => 'साइन इन करें',
             'create-your-account' => 'अपना खाता बनाएं',
             'email' => 'ईमेल',
-            'footer' => '© कॉपीराइट 2010 - :current_year, वेबकुल सॉफ़्टवेयर (भारत में पंजीकृत)। सभी अधिकार सुरक्षित हैं।',
+            'footer' => '© कॉपीराइट :current_year, Folmix। सभी अधिकार सुरक्षित हैं।',
             'forgot-pass' => 'पासवर्ड भूल गए?',
             'form-login-text' => 'यदि आपका खाता है, तो अपने ईमेल पते के साथ साइन इन करें।',
             'invalid-credentials' => 'कृपया अपने क्रेडेंशियल्स की जाँच करें और पुनः प्रयास करें।',
@@ -51,7 +51,7 @@ return [
         'signup-form' => [
             'account-exists' => 'पहले से ही खाता है?',
             'address' => 'पता',
-            'bagisto' => 'बागिस्तो',
+            'bagisto' => 'Folmix',
             'button-title' => 'पंजीकरण',
             'city' => 'शहर/प्रांत/क्षेत्र',
             'click-here' => 'यहां क्लिक करें',
@@ -59,7 +59,7 @@ return [
             'country' => 'देश',
             'email' => 'उपयोगकर्ता ईमेल',
             'first-name' => 'पहला नाम',
-            'footer' => '© कॉपीराइट 2010 - :current_year, वेबकुल सॉफ़्टवेयर (भारत में पंजीकृत)। सभी अधिकार सुरक्षित हैं।',
+            'footer' => '© कॉपीराइट :current_year, Folmix। सभी अधिकार सुरक्षित हैं।',
             'form-signup-text' => 'यदि आप हमारे स्टोर पर नए हैं, तो हम आपको सदस्य के रूप में देखकर खुश होते हैं।',
             'last-name' => 'अंतिम नाम',
             'newsletter' => 'न्यूज़लेटर',
@@ -575,7 +575,7 @@ return [
                     'bottom' => [
                         'all' => 'सभी',
                         'back-button' => 'मुख्य मेनू पर वापस जाएं',
-                        'bagisto' => 'बैगिस्टो',
+                        'bagisto' => 'Folmix',
                         'categories' => 'श्रेणियाँ',
                         'compare' => 'तुलना करें',
                         'dropdown-text' => 'कार्ट, ऑर्डर और विशलिस्ट प्रबंधित करें',
@@ -598,7 +598,7 @@ return [
                 'mobile' => [
                     'account' => 'खाता',
                     'back-button' => 'मुख्य मेनू पर वापस जाएं',
-                    'bagisto' => 'बैगिस्टो',
+                    'bagisto' => 'Folmix',
                     'compare' => 'तुलना करें',
                     'currencies' => 'मुद्राएँ',
                     'dropdown-text' => 'कार्ट, ऑर्डर और विशलिस्ट प्रबंधित करें',
@@ -638,7 +638,7 @@ return [
                 'customer-service' => 'ग्राहक सेवा',
                 'email' => 'ईमेल',
                 'footer-content' => 'फ़ुटर सामग्री',
-                'footer-text' => '© कॉपीराइट 2010 - :current_year, वेबकल सॉफ़्टवेयर (भारत में पंजीकृत)। सभी अधिकार सुरक्षित हैं।',
+                'footer-text' => '© कॉपीराइट :current_year, Folmix। सभी अधिकार सुरक्षित हैं।',
                 'locale' => 'स्थान',
                 'newsletter-text' => 'हमारे मनोरंजन समाचार पत्रिका के लिए तैयार हो जाओ!',
                 'order-return' => 'आर्डर और रिटर्न',
@@ -1091,7 +1091,7 @@ return [
             'suspended-account-message' => 'आपका खाता निलंबित कर दिया गया है।',
 
             'index' => [
-                'bagisto' => 'बागिस्तो',
+                'bagisto' => 'Folmix',
                 'cart' => 'कार्ट',
                 'continue-shopping' => 'खरीदारी जारी रखें',
                 'empty-product' => 'आपके पास आपके कार्ट में कोई उत्पाद नहीं है।',
