@@ -70,6 +70,7 @@ class RegistrationController extends Controller
             'channel_id' => core()->getCurrentChannel()->id,
             'token' => md5(uniqid(rand(), true)),
             'subscribed_to_news_letter' => request()->input('newsletter') === 'yes' || (bool) $subscription?->is_subscribed,
+            'status' => 0,
         ]);
 
         Event::dispatch('customer.registration.before');

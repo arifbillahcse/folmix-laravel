@@ -41,6 +41,7 @@ return [
             'not-activated' => 'Uw activering wacht op goedkeuring van de beheerder',
             'page-title' => 'Aanmelden',
             'password' => 'Wachtwoord',
+            'please-login-first' => 'Log in om door te gaan.',
             'resend-verification' => 'Verificatie-e-mail opnieuw verzenden',
             'show-password' => 'Wachtwoord Weergeven',
             'title' => 'Aanmelden',

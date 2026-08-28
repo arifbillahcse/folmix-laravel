@@ -41,6 +41,7 @@ return [
             'not-activated' => 'আপনার সক্রিয়ণ অ্যাডমিনের অনুমোদন প্রয়োজন',
             'page-title' => 'গ্রাহক লগইন',
             'password' => 'পাসওয়ার্ড',
+            'please-login-first' => 'চালিয়ে যেতে লগইন করুন।',
             'resend-verification' => 'ভেরিফিকেশন ইমেইল পুনরায় পাঠান',
             'show-password' => 'পাসওয়ার্ড দেখুন',
             'title' => 'সাইন ইন করুন',

@@ -41,6 +41,7 @@ return [
             'not-activated' => 'הפעלת החשבון שלך מחכה לאישור מנהל',
             'page-title' => 'התחברות ללקוחות',
             'password' => 'סיסמה',
+            'please-login-first' => 'אנא התחבר כדי להמשיך.',
             'resend-verification' => 'שלח שוב אימייל אימות',
             'show-password' => 'הצג סיסמה',
             'title' => 'התחברות',

@@ -41,6 +41,7 @@ return [
             'not-activated' => 'Hesabınızın aktif edilmesi için yönetici onayı gerekiyor.',
             'page-title' => 'Müşteri Girişi',
             'password' => 'Şifre',
+            'please-login-first' => 'Devam etmek için lütfen giriş yapın.',
             'resend-verification' => 'Doğrulama E-postasını Yeniden Gönder',
             'show-password' => 'Şifreyi Göster',
             'title' => 'Oturum Aç',

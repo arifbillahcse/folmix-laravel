@@ -41,6 +41,7 @@ return [
             'not-activated' => '您的帐户请求已提交，等待管理员批准。',
             'page-title' => '用户登录',
             'password' => '密码',
+            'please-login-first' => '请登录以继续。',
             'resend-verification' => '重新发送验证邮件',
             'show-password' => '显示密码',
             'title' => '登录',

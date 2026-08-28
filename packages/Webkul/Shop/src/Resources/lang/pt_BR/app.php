@@ -41,6 +41,7 @@ return [
             'not-activated' => 'Sua ativação aguarda aprovação do administrador',
             'page-title' => 'Login do Cliente',
             'password' => 'Senha',
+            'please-login-first' => 'Faça login para continuar.',
             'resend-verification' => 'Reenviar e-mail de verificação',
             'show-password' => 'Mostrar Senha',
             'title' => 'Entrar',

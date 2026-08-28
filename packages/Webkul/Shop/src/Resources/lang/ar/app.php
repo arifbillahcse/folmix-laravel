@@ -41,6 +41,7 @@ return [
             'not-activated' => 'يتطلب تنشيط حسابك موافقة المسؤول',
             'page-title' => 'تسجيل الدخول للعملاء',
             'password' => 'كلمة المرور',
+            'please-login-first' => 'يرجى تسجيل الدخول للمتابعة.',
             'resend-verification' => 'إعادة إرسال بريد التحقق',
             'show-password' => 'عرض كلمة المرور',
             'title' => 'تسجيل الدخول',

@@ -41,6 +41,7 @@ return [
             'not-activated' => 'La teva activació requereix l’aprovació de l’administrador.',
             'page-title' => 'Inici de sessió del client',
             'password' => 'Contrasenya',
+            'please-login-first' => 'Inicieu la sessió per continuar.',
             'resend-verification' => 'Reenvia el correu de verificació',
             'show-password' => 'Mostrar contrasenya',
             'title' => 'Iniciar sessió',

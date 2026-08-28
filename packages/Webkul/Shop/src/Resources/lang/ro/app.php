@@ -41,6 +41,7 @@ return [
             'not-activated' => 'Activarea contului dvs. necesită aprobarea administratorului',
             'page-title' => 'Autentificare client',
             'password' => 'Parolă',
+            'please-login-first' => 'Vă rugăm să vă autentificați pentru a continua.',
             'resend-verification' => 'Retrimite emailul de verificare',
             'show-password' => 'Afișează parola',
             'title' => 'Autentificare',

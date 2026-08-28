@@ -41,6 +41,7 @@ return [
             'not-activated' => 'درخواست فعال‌سازی حساب شما منتظر تأیید مدیر است',
             'page-title' => 'ورود مشتری',
             'password' => 'رمز عبور',
+            'please-login-first' => 'لطفاً برای ادامه وارد شوید.',
             'resend-verification' => 'ارسال مجدد ایمیل تأیید',
             'show-password' => 'نمایش رمز عبور',
             'title' => 'ورود',
