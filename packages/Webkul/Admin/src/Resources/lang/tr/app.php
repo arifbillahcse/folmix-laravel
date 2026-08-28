@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Özel Web Sitesi',
+                        'title-info' => 'Etkinleştirildiğinde, mağazanın her sayfası ziyaretçinin onaylı bir müşteri olarak giriş yapmış olmasını gerektirir. Yalnızca giriş, kayıt ve şifre kurtarma misafirler için erişilebilir kalır.',
+                        'enabled' => 'Mağazaya Göz Atmak İçin Giriş Gerektir',
+                        'enabled-info' => 'Mağaza yayına hazır olduğunda ve ziyaretçilerin artık kayıt olmadan ve onaylanmadan göz atamaması gerektiğinde bunu etkinleştirin.',
+                    ],
                 ],
             ],
 

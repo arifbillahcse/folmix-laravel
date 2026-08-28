@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Privéwebsite',
+                        'title-info' => 'Indien ingeschakeld, vereist elke winkelpagina dat de bezoeker is ingelogd als goedgekeurde klant. Alleen inloggen, registreren en wachtwoordherstel blijven toegankelijk voor gasten.',
+                        'enabled' => 'Inloggen vereisen om de winkel te bekijken',
+                        'enabled-info' => 'Schakel dit in wanneer de winkel klaar is om live te gaan en bezoekers niet meer zonder registratie en goedkeuring mogen bladeren.',
+                    ],
                 ],
             ],
 

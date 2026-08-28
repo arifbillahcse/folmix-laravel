@@ -1561,6 +1561,20 @@ return [
                 'default' => config('app.url').'/customer/social-login/github/callback',
             ],
         ],
+    ], [
+        'key' => 'customer.settings.private_website',
+        'name' => 'admin::app.configuration.index.customer.settings.private-website.title',
+        'info' => 'admin::app.configuration.index.customer.settings.private-website.title-info',
+        'sort' => 8,
+        'fields' => [
+            [
+                'name' => 'enabled',
+                'title' => 'admin::app.configuration.index.customer.settings.private-website.enabled',
+                'info' => 'admin::app.configuration.index.customer.settings.private-website.enabled-info',
+                'type' => 'boolean',
+                'default' => 0,
+            ],
+        ],
     ],
 
     /**

@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Sito web privato',
+                        'title-info' => 'Se abilitata, ogni pagina del negozio richiede che il visitatore abbia effettuato l\'accesso come cliente approvato. Solo l\'accesso, la registrazione e il recupero della password restano accessibili agli ospiti.',
+                        'enabled' => 'Richiedi accesso per navigare nel negozio',
+                        'enabled-info' => 'Attiva questa opzione quando il negozio è pronto per andare online e i visitatori non devono più poter navigare senza registrarsi ed essere approvati.',
+                    ],
                 ],
             ],
 

@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Site web privé',
+                        'title-info' => 'Lorsque cette option est activée, chaque page de la boutique nécessite que le visiteur soit connecté en tant que client approuvé. Seules la connexion, l\'inscription et la récupération du mot de passe restent accessibles aux invités.',
+                        'enabled' => 'Exiger une connexion pour parcourir la boutique',
+                        'enabled-info' => 'Activez cette option lorsque la boutique est prête à être mise en ligne et que les visiteurs ne doivent plus pouvoir naviguer sans s\'inscrire et être approuvés.',
+                    ],
                 ],
             ],
 

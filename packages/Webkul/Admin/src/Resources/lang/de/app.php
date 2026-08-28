@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Private Website',
+                        'title-info' => 'Wenn aktiviert, erfordert jede Storefront-Seite, dass der Besucher als genehmigter Kunde angemeldet ist. Nur Anmeldung, Registrierung und Passwort-Wiederherstellung bleiben für Gäste zugänglich.',
+                        'enabled' => 'Anmeldung zum Durchsuchen des Shops erforderlich',
+                        'enabled-info' => 'Aktivieren Sie dies, wenn der Shop bereit für den Livegang ist und Besucher nicht mehr ohne Registrierung und Genehmigung stöbern können sollen.',
+                    ],
                 ],
             ],
 

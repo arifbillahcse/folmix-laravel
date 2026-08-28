@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Prywatna witryna',
+                        'title-info' => 'Po włączeniu każda strona sklepu wymaga, aby odwiedzający był zalogowany jako zatwierdzony klient. Tylko logowanie, rejestracja i odzyskiwanie hasła pozostają dostępne dla gości.',
+                        'enabled' => 'Wymagaj logowania do przeglądania sklepu',
+                        'enabled-info' => 'Włącz to, gdy sklep jest gotowy do uruchomienia, a odwiedzający nie powinni już móc przeglądać go bez rejestracji i zatwierdzenia.',
+                    ],
                 ],
             ],
 

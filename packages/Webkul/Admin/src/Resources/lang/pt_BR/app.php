@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Site Privado',
+                        'title-info' => 'Quando ativado, cada página da loja exige que o visitante esteja conectado como cliente aprovado. Apenas login, cadastro e recuperação de senha permanecem acessíveis aos visitantes.',
+                        'enabled' => 'Exigir login para navegar na loja',
+                        'enabled-info' => 'Ative isso quando a loja estiver pronta para entrar no ar e os visitantes não puderem mais navegar sem se cadastrar e serem aprovados.',
+                    ],
                 ],
             ],
 

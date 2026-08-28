@@ -42,6 +42,10 @@ class RequireCustomerLogin
      */
     public function handle($request, Closure $next)
     {
+        if (! core()->getConfigData('customer.settings.private_website.enabled')) {
+            return $next($request);
+        }
+
         if (auth()->guard('customer')->check()) {
             return $next($request);
         }

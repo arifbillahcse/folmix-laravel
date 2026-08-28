@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Lloc web privat',
+                        'title-info' => 'Quan està activat, cada pàgina de la botiga requereix que el visitant hagi iniciat sessió com a client aprovat. Només l\'inici de sessió, el registre i la recuperació de contrasenya continuen accessibles als convidats.',
+                        'enabled' => 'Requereix iniciar sessió per navegar per la botiga',
+                        'enabled-info' => 'Activeu-ho quan la botiga estigui a punt per sortir en producció i els visitants ja no hagin de poder navegar sense registrar-se i ser aprovats.',
+                    ],
                 ],
             ],
 

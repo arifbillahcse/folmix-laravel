@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Situs Web Privat',
+                        'title-info' => 'Jika diaktifkan, setiap halaman toko mengharuskan pengunjung masuk sebagai pelanggan yang disetujui. Hanya login, pendaftaran, dan pemulihan kata sandi yang tetap dapat diakses oleh tamu.',
+                        'enabled' => 'Wajibkan Login untuk Menjelajahi Toko',
+                        'enabled-info' => 'Aktifkan ini saat toko siap diluncurkan dan pengunjung tidak lagi dapat menjelajah tanpa mendaftar dan disetujui.',
+                    ],
                 ],
             ],
 

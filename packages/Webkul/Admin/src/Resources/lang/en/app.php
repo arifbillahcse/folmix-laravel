@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Private Website',
+                        'title-info' => 'When enabled, every storefront page requires the visitor to be logged in as an approved customer. Only login, registration, and password recovery stay reachable to guests.',
+                        'enabled' => 'Require Login to Browse the Store',
+                        'enabled-info' => 'Turn this on when the store is ready to go live and visitors should no longer be able to browse without registering and being approved.',
+                    ],
                 ],
             ],
 

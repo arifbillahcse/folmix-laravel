@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Sitio web privado',
+                        'title-info' => 'Cuando está activado, cada página de la tienda requiere que el visitante haya iniciado sesión como cliente aprobado. Solo el inicio de sesión, el registro y la recuperación de contraseña siguen siendo accesibles para los invitados.',
+                        'enabled' => 'Requerir inicio de sesión para navegar por la tienda',
+                        'enabled-info' => 'Actívelo cuando la tienda esté lista para salir en vivo y los visitantes ya no deban poder navegar sin registrarse y ser aprobados.',
+                    ],
                 ],
             ],
 

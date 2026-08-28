@@ -4801,6 +4801,13 @@ return [
                             ],
                         ],
                     ],
+
+                    'private-website' => [
+                        'title' => 'Site web privat',
+                        'title-info' => 'Când este activat, fiecare pagină a magazinului necesită ca vizitatorul să fie autentificat ca client aprobat. Doar autentificarea, înregistrarea și recuperarea parolei rămân accesibile vizitatorilor.',
+                        'enabled' => 'Solicită autentificare pentru a naviga în magazin',
+                        'enabled-info' => 'Activați acest lucru atunci când magazinul este gata să fie lansat, iar vizitatorii nu ar trebui să mai poată naviga fără să se înregistreze și să fie aprobați.',
+                    ],
                 ],
             ],
 
