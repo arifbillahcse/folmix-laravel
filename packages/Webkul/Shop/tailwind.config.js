@@ -29,7 +29,10 @@ module.exports = {
 
         extend: {
             colors: {
-                navyBlue: "#060C3B",
+                // Primary brand color (matches the Folmix logo green). Kept under the
+                // legacy "navyBlue" name since it's referenced across ~55 storefront
+                // views - renaming the token would mean touching every one of them.
+                navyBlue: "#40994A",
                 lightOrange: "#F6F2EB",
                 darkGreen: '#40994A',
                 darkBlue: '#0044F2',
