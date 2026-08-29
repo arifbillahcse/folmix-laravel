@@ -632,7 +632,9 @@ return [
             ],
 
             'footer' => [
+                'about-tagline' => 'Welcome to Folmix. Explore our wide range of spare parts and accessories with the quality and service you can trust.',
                 'about-us' => 'About Us',
+                'categories' => 'Categories',
                 'contact-us' => 'Contact Us',
                 'currency' => 'Currency',
                 'customer-service' => 'Customer Service',
@@ -640,14 +642,17 @@ return [
                 'footer-content' => 'Footer Content',
                 'footer-text' => '© Copyright :current_year, Folmix. All rights reserved.',
                 'locale' => 'Locale',
+                'need-help' => 'Need help? Call us!',
                 'newsletter-text' => 'Get Ready for our Fun Newsletter!',
                 'order-return' => 'Order and Returns',
                 'payment-policy' => 'Payment Policy',
+                'phone-number' => '+880 1700-000000',
                 'privacy-cookies-policy' => 'Privacy and Cookies Policy',
                 'shipping-policy' => 'Shipping Policy',
                 'subscribe' => 'Subscribe',
                 'subscribe-newsletter' => 'Subscribe Newsletter',
                 'subscribe-stay-touch' => 'Subscribe to stay in touch.',
+                'useful-links' => 'Useful Links',
                 'whats-new' => 'What’s New',
             ],
 
