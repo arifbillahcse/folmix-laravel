@@ -6,21 +6,6 @@
 
     <div class="flex h-[100vh] items-center justify-center">
         <div class="flex flex-col items-center gap-5">
-            <!-- Logo -->
-            @if ($logo = core()->getConfigData('general.design.admin_logo.logo_image'))
-                <img
-                    class="h-10 w-[110px]"
-                    src="{{ Storage::url($logo) }}"
-                    alt="{{ config('app.name') }}"
-                />
-            @else
-                <img
-                    class="w-max" 
-                    src="{{ bagisto_asset('images/logo.svg') }}"
-                    alt="{{ config('app.name') }}"
-                />
-            @endif
-
             <div class="box-shadow flex min-w-[300px] flex-col rounded-md bg-white dark:bg-gray-900">
                 <!-- Forget Password Form -->
                 <x-admin::form :action="route('admin.forget_password.store')">
@@ -68,14 +53,6 @@
                         </button>
                     </div>
                 </x-admin::form>
-            </div>
-
-            <!-- Powered By -->
-            <div class="text-sm font-normal">
-                @lang('admin::app.users.forget-password.create.powered-by-description', [
-                    'bagisto' => '<a class="text-blue-600 hover:underline" href="https://bagisto.com/en/">Bagisto</a>',
-                    'webkul' => '<a class="text-blue-600 hover:underline" href="https://webkul.com/">Webkul</a>',
-                ])
             </div>
         </div>
     </div>
