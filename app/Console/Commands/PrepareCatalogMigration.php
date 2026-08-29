@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 use Webkul\Attribute\Repositories\AttributeFamilyRepository;
 use Webkul\Attribute\Repositories\AttributeRepository;
 use Webkul\Category\Repositories\CategoryRepository;
@@ -192,8 +193,16 @@ class PrepareCatalogMigration extends Command
                 $this->line("  attribute already exists, skipping: {$def['name']} ({$code})");
             }
 
-            $alreadyInGroup = $attributeGroup->custom_attributes()
-                ->where('attributes.id', $attribute->id)
+            /**
+             * Query the pivot table directly rather than through the
+             * custom_attributes() relation: that relation has an
+             * orderBy('pivot_position') baked in, which breaks exists()
+             * queries (the pivot alias isn't available in that stripped-down
+             * SQL, causing "Unknown column 'pivot_position'").
+             */
+            $alreadyInGroup = DB::table('attribute_group_mappings')
+                ->where('attribute_group_id', $attributeGroup->id)
+                ->where('attribute_id', $attribute->id)
                 ->exists();
 
             if (! $alreadyInGroup) {
