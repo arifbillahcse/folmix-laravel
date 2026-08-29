@@ -158,7 +158,7 @@ class PrepareCatalogMigration extends Command
             $this->info('  created attribute group "Configurable Options" on the default family');
         }
 
-        $position = ($attributeGroup->custom_attributes()->max('position') ?? 0) + 1;
+        $position = ($attributeGroup->custom_attributes()->max('attribute_group_mappings.position') ?? 0) + 1;
 
         foreach ($attributeDefs as $def) {
             $code = $def['code'];
