@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'අපේ සෙවුම් පනසලේ සම්බන්ධවන්ද බලන්න!',
                 'order-return' => 'ඇණවුම් හා ආපසු සපිරව්ව',
                 'payment-policy' => 'ගෙවීම් ප්‍රතිඵල',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'පෞද්ගලිකතා සහ කුකී පොලීසි',
                 'shipping-policy' => 'නවුකාරයේ ප්‍රතිලදීම',
                 'subscribe' => 'බලන්න',

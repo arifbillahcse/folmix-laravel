@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'Iscriviti alla nostra divertente newsletter!',
                 'order-return' => 'Ordini e resi',
                 'payment-policy' => 'Politica di pagamento',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'Politica sulla privacy e sui cookie',
                 'shipping-policy' => 'Politica di spedizione',
                 'subscribe' => 'Iscriviti',

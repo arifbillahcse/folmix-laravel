@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'Подготовьтесь к нашей интересной рассылке!',
                 'order-return' => 'Заказ и возврат',
                 'payment-policy' => 'Политика оплаты',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'Политика конфиденциальности и файлов cookie',
                 'shipping-policy' => 'Политика доставки',
                 'subscribe' => 'Подписаться',

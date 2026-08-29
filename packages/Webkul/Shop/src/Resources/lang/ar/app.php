@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'احصل على نشرتنا الممتعة!',
                 'order-return' => 'الطلب والمرتجعات',
                 'payment-policy' => 'سياسة الدفع',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'سياسة الخصوصية وملفات تعريف الارتباط',
                 'shipping-policy' => 'سياسة الشحن',
                 'subscribe' => 'اشترك',

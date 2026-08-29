@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'برای دریافت خبرنامه‌ی جذاب ما آماده شوید!',
                 'order-return' => 'سفارش و بازگشت',
                 'payment-policy' => 'سیاست پرداخت',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'سیاست حریم خصوصی و کوکی‌ها',
                 'shipping-policy' => 'سیاست حمل و نقل',
                 'subscribe' => 'عضویت',

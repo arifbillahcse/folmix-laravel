@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'Bersiaplah untuk Newsletter Seru Kami!',
                 'order-return' => 'Pesanan dan Pengembalian',
                 'payment-policy' => 'Kebijakan Pembayaran',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'Kebijakan Privasi & Cookie',
                 'shipping-policy' => 'Kebijakan Pengiriman',
                 'subscribe' => 'Berlangganan',

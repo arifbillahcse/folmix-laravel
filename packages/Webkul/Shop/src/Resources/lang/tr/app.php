@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'Bültenimize abone olun, fırsatları kaçırmayın!',
                 'order-return' => 'Sipariş ve İade',
                 'payment-policy' => 'Ödeme Politikası',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'Gizlilik ve Çerez Politikası',
                 'shipping-policy' => 'Teslimat Politikası',
                 'subscribe' => 'Abone Ol',

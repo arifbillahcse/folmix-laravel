@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'Maak je klaar voor onze leuke nieuwsbrief!',
                 'order-return' => 'Bestelling en Retourneren',
                 'payment-policy' => 'Betalingsbeleid',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'Privacy- en cookiebeleid',
                 'shipping-policy' => 'Verzendbeleid',
                 'subscribe' => 'Abonneren',

@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'Prepara’t per al nostre divertit butlletí!',
                 'order-return' => 'Comandes i devolucions',
                 'payment-policy' => 'Política de pagaments',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'Política de privadesa i cookies',
                 'shipping-policy' => 'Política d’enviaments',
                 'subscribe' => 'Subscriu-te',

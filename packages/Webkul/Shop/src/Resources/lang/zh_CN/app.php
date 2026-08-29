@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => '准备好我们有趣的新闻通讯！',
                 'order-return' => '订单和退货',
                 'payment-policy' => '付款政策',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => '隐私和 Cookie 政策',
                 'shipping-policy' => '运输政策',
                 'subscribe' => '订阅',

@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'हमारे मनोरंजन समाचार पत्रिका के लिए तैयार हो जाओ!',
                 'order-return' => 'आर्डर और रिटर्न',
                 'payment-policy' => 'भुगतान नीति',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'गोपनीयता और कुकीज़ नीति',
                 'shipping-policy' => 'शिपिंग नीति',
                 'subscribe' => 'सदस्यता लें',

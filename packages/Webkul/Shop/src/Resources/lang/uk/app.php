@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'Готуйтеся до наших цікавих новин!',
                 'order-return' => 'Замовлення та повернення',
                 'payment-policy' => 'Політика оплати',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'Політика конфіденційності та файлів cookie',
                 'shipping-policy' => 'Політика доставки',
                 'subscribe' => 'Підписатися',

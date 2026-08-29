@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'আমাদের মজাদার নিউজলেটারের জন্য প্রস্তুত থাকুন!',
                 'order-return' => 'অর্ডার এবং রিটার্ন',
                 'payment-policy' => 'পেমেন্ট নীতি',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'গোপনীয়তা এবং কুকিজ নীতি',
                 'shipping-policy' => 'শিপিং নীতি',
                 'subscribe' => 'সাবস্ক্রাইব',

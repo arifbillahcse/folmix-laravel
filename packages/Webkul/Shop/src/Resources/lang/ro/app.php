@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'Pregătiți-vă pentru newsletter-ul nostru distractiv!',
                 'order-return' => 'Comenzi și retururi',
                 'payment-policy' => 'Politica de plată',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'Politica de confidențialitate și cookie-uri',
                 'shipping-policy' => 'Politica de expediere',
                 'subscribe' => 'Abonare',

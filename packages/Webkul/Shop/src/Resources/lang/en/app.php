@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'Get Ready for our Fun Newsletter!',
                 'order-return' => 'Order and Returns',
                 'payment-policy' => 'Payment Policy',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'Privacy and Cookies Policy',
                 'shipping-policy' => 'Shipping Policy',
                 'subscribe' => 'Subscribe',

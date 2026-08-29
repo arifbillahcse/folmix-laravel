@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => '楽しいニュースレターの準備をしてください！',
                 'order-return' => '注文と返品',
                 'payment-policy' => '支払いポリシー',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'プライバシーとクッキーポリシー',
                 'shipping-policy' => '配送ポリシー',
                 'subscribe' => '登録する',

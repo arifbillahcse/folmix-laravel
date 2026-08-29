@@ -646,7 +646,7 @@ return [
                 'newsletter-text' => 'הכנסו לרשימת התפוצה שלנו וקבלו עדכונים והצעות מרשימות!',
                 'order-return' => 'הזמנה והחזרה',
                 'payment-policy' => 'מדיניות תשלום',
-                'phone-number' => '+880 1700-000000',
+                'phone-number' => '+39 328 886 1855',
                 'privacy-cookies-policy' => 'מדיניות פרטיות ועוגיות',
                 'shipping-policy' => 'מדיניות משלוחים',
                 'subscribe' => 'הרשם',
