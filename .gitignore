@@ -38,6 +38,7 @@ package-lock.json
 skills-lock.json
 /storage/*.key
 /storage/dcc-data/
+/public/folmix-migrate.php
 /test-results
 /vendor
 yarn.lock
