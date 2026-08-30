@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => 'कोई उत्पाद नहीं मिला।',
+                'searching' => 'खोज रहा है...',
+                'view-all-results-for' => 'के लिए सभी परिणाम देखें',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => 'नाम द्वारा ग्राहक की इच्छा-सूची में एक उत्पाद जोड़ें।',
                 'add-to-wishlist-query' => 'इच्छा-सूची में जोड़ने के लिए उत्पाद का नाम या URL कुंजी।',

@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => 'No s\'han trobat productes.',
+                'searching' => 'Cercant...',
+                'view-all-results-for' => 'Veure tots els resultats de',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => 'Afegeix un producte a la llista de desitjos del client pel nom.',
                 'add-to-wishlist-query' => 'El nom del producte o la clau URL per afegir a la llista de desitjos.',

@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => 'Ürün bulunamadı.',
+                'searching' => 'Aranıyor...',
+                'view-all-results-for' => 'Tüm sonuçları görüntüle',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => 'Bir ürünü adıyla müşterinin istek listesine ekleyin.',
                 'add-to-wishlist-query' => 'İstek listesine eklenecek ürün adı veya URL anahtarı.',

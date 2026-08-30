@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => '商品が見つかりません。',
+                'searching' => '検索中...',
+                'view-all-results-for' => 'のすべての結果を表示',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => '名前で商品を顧客のお気に入りリストに追加します。',
                 'add-to-wishlist-query' => 'お気に入りリストに追加する商品名またはURLキー。',

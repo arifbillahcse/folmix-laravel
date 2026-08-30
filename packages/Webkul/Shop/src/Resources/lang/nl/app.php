@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => 'Geen producten gevonden.',
+                'searching' => 'Zoeken...',
+                'view-all-results-for' => 'Bekijk alle resultaten voor',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => 'Voeg een product op naam toe aan de verlanglijst van de klant.',
                 'add-to-wishlist-query' => 'De productnaam of URL-sleutel om aan de verlanglijst toe te voegen.',

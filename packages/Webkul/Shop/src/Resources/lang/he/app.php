@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => 'לא נמצאו מוצרים.',
+                'searching' => 'מחפש...',
+                'view-all-results-for' => 'הצג את כל התוצאות עבור',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => 'הוסף מוצר לרשימת המשאלות של הלקוח לפי שם.',
                 'add-to-wishlist-query' => 'שם המוצר או מפתח ה-URL להוספה לרשימת המשאלות.',

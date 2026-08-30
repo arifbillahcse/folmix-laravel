@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => 'কোনো পণ্য পাওয়া যায়নি।',
+                'searching' => 'অনুসন্ধান করা হচ্ছে...',
+                'view-all-results-for' => 'সমস্ত ফলাফল দেখুন',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => 'নাম দিয়ে গ্রাহকের ইচ্ছেতালিকায় একটি পণ্য যোগ করুন।',
                 'add-to-wishlist-query' => 'ইচ্ছেতালিকায় যোগ করার জন্য পণ্যের নাম বা URL কী।',

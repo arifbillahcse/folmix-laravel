@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => '未找到产品。',
+                'searching' => '搜索中...',
+                'view-all-results-for' => '查看所有结果',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => '按名称将产品添加到客户的心愿单。',
                 'add-to-wishlist-query' => '要添加到心愿单的产品名称或 URL 键。',

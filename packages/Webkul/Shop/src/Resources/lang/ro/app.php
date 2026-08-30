@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => 'Niciun produs găsit.',
+                'searching' => 'Se caută...',
+                'view-all-results-for' => 'Vezi toate rezultatele pentru',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => 'Adaugă un produs în lista de dorințe a clientului după nume.',
                 'add-to-wishlist-query' => 'Numele produsului sau cheia URL de adăugat în lista de dorințe.',

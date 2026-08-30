@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => 'لا توجد منتجات.',
+                'searching' => 'جارٍ البحث...',
+                'view-all-results-for' => 'عرض جميع النتائج لـ',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => 'أضف منتجًا إلى قائمة أمنيات العميل بالاسم.',
                 'add-to-wishlist-query' => 'اسم المنتج أو مفتاح الرابط لإضافته إلى قائمة الأمنيات.',

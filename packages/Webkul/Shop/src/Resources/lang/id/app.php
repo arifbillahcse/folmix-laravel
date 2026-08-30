@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => 'Tidak ada produk yang ditemukan.',
+                'searching' => 'Mencari...',
+                'view-all-results-for' => 'Lihat semua hasil untuk',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => 'Tambahkan produk ke daftar keinginan pelanggan berdasarkan nama.',
                 'add-to-wishlist-query' => 'Nama produk atau kunci URL untuk ditambahkan ke daftar keinginan.',

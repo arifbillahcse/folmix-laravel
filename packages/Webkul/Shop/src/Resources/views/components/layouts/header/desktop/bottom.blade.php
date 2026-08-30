@@ -71,20 +71,12 @@
 
                 <div class="icon-search pointer-events-none absolute top-2.5 flex items-center text-xl ltr:left-3 rtl:right-3"></div>
 
-                <input
-                    type="text"
+                <x-shop::layouts.header.search-suggestions
                     name="query"
-                    value="{{ request('query') }}"
-                    toolparamdescription="{{ trans('shop::app.components.layouts.webmcp.search-products-query') }}"
                     class="block w-full py-3 text-xs font-medium text-gray-900 transition-all border border-transparent rounded-lg bg-zinc-100 px-11 hover:border-gray-400 focus:border-gray-400"
-                    minlength="{{ core()->getConfigData('catalog.products.search.min_query_length') }}"
-                    maxlength="{{ core()->getConfigData('catalog.products.search.max_query_length') }}"
-                    placeholder="@lang('shop::app.components.layouts.header.desktop.bottom.search-text')"
-                    aria-label="@lang('shop::app.components.layouts.header.desktop.bottom.search-text')"
-                    aria-required="true"
-                    pattern="[^\\]+"
-                    required
-                >
+                    placeholder="{{ trans('shop::app.components.layouts.header.desktop.bottom.search-text') }}"
+                    toolparamdescription="{{ trans('shop::app.components.layouts.webmcp.search-products-query') }}"
+                />
 
                 <button
                     type="submit"

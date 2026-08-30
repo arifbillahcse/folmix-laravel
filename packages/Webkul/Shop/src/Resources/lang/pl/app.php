@@ -617,6 +617,12 @@ return [
                 ],
             ],
 
+            'search-suggestions' => [
+                'no-results' => 'Nie znaleziono produktów.',
+                'searching' => 'Wyszukiwanie...',
+                'view-all-results-for' => 'Zobacz wszystkie wyniki dla',
+            ],
+
             'webmcp' => [
                 'add-to-wishlist' => 'Dodaj produkt do listy życzeń klienta według nazwy.',
                 'add-to-wishlist-query' => 'Nazwa produktu lub klucz URL do dodania do listy życzeń.',
