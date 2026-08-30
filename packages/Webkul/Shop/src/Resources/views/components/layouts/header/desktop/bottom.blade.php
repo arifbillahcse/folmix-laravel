@@ -1,28 +1,6 @@
 {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.before') !!}
 
-@push('styles')
-    <style>
-        /*
-         * Plain CSS (not a new Tailwind utility) because this theme's
-         * compiled CSS isn't rebuilt from source on deploy - only classes
-         * already present elsewhere in the codebase at build time exist in
-         * the shipped stylesheet. Raw CSS here always applies regardless.
-         */
-        .folmix-header-bottom-grid {
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            align-items: center;
-            column-gap: 24px;
-        }
-
-        .folmix-header-search-center {
-            display: flex;
-            justify-content: center;
-        }
-    </style>
-@endpush
-
-<div class="folmix-header-bottom-grid min-h-[78px] w-full border border-b border-l-0 border-r-0 border-t-0 px-[60px] max-1180:px-8">
+<div class="flex min-h-[78px] w-full items-center justify-between border border-b border-l-0 border-r-0 border-t-0 px-[60px] max-1180:px-8">
     <!--
         This section will provide categories for the first, second, and third levels. If
         additional levels are required, users can customize them according to their needs.
@@ -70,14 +48,17 @@
     </div>
 
     <!-- Center Search Section -->
-    <div class="folmix-header-search-center">
+    <div class="flex flex-1 items-center justify-center px-8">
         {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.search_bar.before') !!}
 
         <!-- Search Bar Container -->
-        <div class="relative w-full">
+        <div
+            class="relative w-full"
+            style="max-width: 640px"
+        >
             <form
                 action="{{ route('shop.search.index') }}"
-                class="flex max-w-[445px] items-center"
+                class="flex w-full items-center"
                 role="search"
                 toolname="search_products"
                 tooldescription="{{ trans('shop::app.components.layouts.webmcp.search-products') }}"
