@@ -58,34 +58,38 @@
         <div class="flex w-full items-center justify-between border border-b border-l-0 border-r-0 border-t-0 px-16">
             {!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.currency_switcher.before') !!}
 
-            <!-- Currency Switcher -->
-            <x-shop::dropdown position="bottom-{{ core()->getCurrentLocale()->direction === 'ltr' ? 'left' : 'right' }}">
-                <!-- Dropdown Toggler -->
-                <x-slot:toggle>
-                    <div
-                        class="flex cursor-pointer gap-2.5 py-3"
-                        role="button"
-                        tabindex="0"
-                        @click="currencyToggler = ! currencyToggler"
-                    >
-                        <span v-pre>
-                            {{ core()->getCurrentCurrency()->symbol . ' ' . core()->getCurrentCurrencyCode() }}
-                        </span>
-
-                        <span
-                            class="text-2xl"
-                            :class="{'icon-arrow-up': currencyToggler, 'icon-arrow-down': ! currencyToggler}"
-                            role="presentation"
+            <!-- Currency Switcher (only shown when the channel has more than one currency to pick from) -->
+            @if (core()->getCurrentChannel()->currencies()->count() > 1)
+                <x-shop::dropdown position="bottom-{{ core()->getCurrentLocale()->direction === 'ltr' ? 'left' : 'right' }}">
+                    <!-- Dropdown Toggler -->
+                    <x-slot:toggle>
+                        <div
+                            class="flex cursor-pointer gap-2.5 py-3"
+                            role="button"
+                            tabindex="0"
+                            @click="currencyToggler = ! currencyToggler"
                         >
-                        </span>
-                    </div>
-                </x-slot>
+                            <span v-pre>
+                                {{ core()->getCurrentCurrency()->symbol . ' ' . core()->getCurrentCurrencyCode() }}
+                            </span>
 
-                <!-- Dropdown Content -->
-                <x-slot:content class="journal-scroll max-h-[500px] !p-0">
-                    <v-currency-switcher></v-currency-switcher>
-                </x-slot>
-            </x-shop::dropdown>
+                            <span
+                                class="text-2xl"
+                                :class="{'icon-arrow-up': currencyToggler, 'icon-arrow-down': ! currencyToggler}"
+                                role="presentation"
+                            >
+                            </span>
+                        </div>
+                    </x-slot>
+
+                    <!-- Dropdown Content -->
+                    <x-slot:content class="journal-scroll max-h-[500px] !p-0">
+                        <v-currency-switcher></v-currency-switcher>
+                    </x-slot>
+                </x-shop::dropdown>
+            @else
+                <span></span>
+            @endif
 
             {!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.currency_switcher.after') !!}
 

@@ -301,44 +301,46 @@
                     <!-- Localization & Currency Section -->
                 @if(core()->getCurrentChannel()->locales()->count() > 1 || core()->getCurrentChannel()->currencies()->count() > 1 )
                                     <div class="fixed bottom-0 z-10 grid w-full max-w-full grid-cols-[1fr_auto_1fr] items-center justify-items-center border-t border-zinc-200 bg-white px-5 ltr:left-0 rtl:right-0">
-                                        <!-- Filter Drawer -->
-                                        <x-shop::drawer
-                                            position="bottom"
-                                            width="100%"
-                                        >
-                                            <!-- Drawer Toggler -->
-                                            <x-slot:toggle>
-                                                <div
-                                                    class="flex cursor-pointer items-center gap-x-2.5 px-2.5 py-3.5 text-lg font-medium uppercase max-md:py-3 max-sm:text-base"
-                                                    role="button"
-                                                    v-pre
-                                                >
-                                                    {{ core()->getCurrentCurrency()->symbol . ' ' . core()->getCurrentCurrencyCode() }}
-                                                </div>
-                                            </x-slot>
+                                        <!-- Filter Drawer (only shown when the channel has more than one currency) -->
+                                        @if (core()->getCurrentChannel()->currencies()->count() > 1)
+                                            <x-shop::drawer
+                                                position="bottom"
+                                                width="100%"
+                                            >
+                                                <!-- Drawer Toggler -->
+                                                <x-slot:toggle>
+                                                    <div
+                                                        class="flex cursor-pointer items-center gap-x-2.5 px-2.5 py-3.5 text-lg font-medium uppercase max-md:py-3 max-sm:text-base"
+                                                        role="button"
+                                                        v-pre
+                                                    >
+                                                        {{ core()->getCurrentCurrency()->symbol . ' ' . core()->getCurrentCurrencyCode() }}
+                                                    </div>
+                                                </x-slot>
 
-                                            <!-- Drawer Header -->
-                                            <x-slot:header>
-                                                <div class="flex items-center justify-between">
-                                                    <p class="text-lg font-semibold">
-                                                        @lang('shop::app.components.layouts.header.mobile.currencies')
-                                                    </p>
-                                                </div>
-                                            </x-slot>
+                                                <!-- Drawer Header -->
+                                                <x-slot:header>
+                                                    <div class="flex items-center justify-between">
+                                                        <p class="text-lg font-semibold">
+                                                            @lang('shop::app.components.layouts.header.mobile.currencies')
+                                                        </p>
+                                                    </div>
+                                                </x-slot>
 
-                                            <!-- Drawer Content -->
-                                            <x-slot:content class="!px-0">
-                                                <div
-                                                    class="overflow-auto"
-                                                    :style="{ height: getCurrentScreenHeight }"
-                                                >
-                                                    <v-currency-switcher></v-currency-switcher>
-                                                </div>
-                                            </x-slot>
-                                        </x-shop::drawer>
+                                                <!-- Drawer Content -->
+                                                <x-slot:content class="!px-0">
+                                                    <div
+                                                        class="overflow-auto"
+                                                        :style="{ height: getCurrentScreenHeight }"
+                                                    >
+                                                        <v-currency-switcher></v-currency-switcher>
+                                                    </div>
+                                                </x-slot>
+                                            </x-shop::drawer>
 
-                                        <!-- Seperator -->
-                                        <span class="h-5 w-0.5 bg-zinc-200"></span>
+                                            <!-- Seperator -->
+                                            <span class="h-5 w-0.5 bg-zinc-200"></span>
+                                        @endif
 
                                         <!-- Sort Drawer -->
                                         <x-shop::drawer
