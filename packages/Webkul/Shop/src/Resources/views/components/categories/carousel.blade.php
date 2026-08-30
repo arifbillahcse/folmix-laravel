@@ -1,3 +1,23 @@
+@push('styles')
+    <style>
+        /*
+         * Plain CSS (not a new Tailwind utility) because this theme's
+         * compiled CSS isn't rebuilt from source on deploy - only classes
+         * already present elsewhere in the codebase at build time exist in
+         * the shipped stylesheet. Raw CSS here always applies regardless.
+         *
+         * Sized so exactly 5 cards fit the 1260px container width at full
+         * page width: 5 cards + 4 gaps (gap-10 = 40px) = 5*220 + 4*40 = 1260.
+         */
+        @media (min-width: 768px) {
+            .folmix-category-carousel-item {
+                min-width: 220px;
+                max-width: 220px;
+            }
+        }
+    </style>
+@endpush
+
 <v-categories-carousel
     src="{{ $src }}"
     title="{{ $title }}"
@@ -24,25 +44,25 @@
                     class="scrollbar-hide flex gap-10 overflow-auto scroll-smooth max-lg:gap-4"
                 >
                     <div
-                        class="grid min-w-[120px] max-w-[120px] grid-cols-1 justify-items-center gap-4 font-medium max-md:min-w-20 max-md:max-w-20 max-md:gap-2.5 max-md:first:ml-4 max-sm:min-w-[60px] max-sm:max-w-[60px] max-sm:gap-1.5"
+                        class="folmix-category-carousel-item grid grid-cols-1 justify-items-center gap-4 font-medium max-md:min-w-20 max-md:max-w-20 max-md:gap-2.5 max-md:first:ml-4 max-sm:min-w-[60px] max-sm:max-w-[60px] max-sm:gap-1.5"
                         v-for="category in categories"
                     >
                         <a
                             :href="category.slug"
-                            class="h-[110px] w-[110px] rounded-full bg-zinc-100 max-md:h-20 max-md:w-20 max-sm:h-[60px] max-sm:w-[60px]"
+                            class="block w-full aspect-square rounded-xl bg-zinc-100 max-md:h-20 max-md:w-20 max-sm:h-[60px] max-sm:w-[60px]"
                             :aria-label="category.name"
                         >
                             <x-shop::media.images.lazy
                                 ::src="category.logo?.small_image_url || fallback"
                                 ::srcset="`
                                     ${(category.logo?.small_image_url || fallback)} 60w,
-                                    ${(category.logo?.medium_image_url || fallback)} 110w,
+                                    ${(category.logo?.medium_image_url || fallback)} 220w,
                                     ${(category.logo?.large_image_url || fallback)} 300w
                                 `"
-                                sizes="(max-width: 640px) 60px, 110px"
-                                width="110"
-                                height="110"
-                                class="w-full rounded-full max-sm:h-[60px] max-sm:w-[60px]"
+                                sizes="(max-width: 640px) 60px, 220px"
+                                width="220"
+                                height="220"
+                                class="h-full w-full rounded-xl object-cover max-sm:h-[60px] max-sm:w-[60px]"
                                 ::alt="category.name"
                             />
                         </a>
@@ -105,7 +125,7 @@
 
                     categories: [],
 
-                    offset: 323,
+                    offset: 260,
 
                     fallback: "{{ bagisto_asset('images/small-product-placeholder.webp') }}"
                 };
