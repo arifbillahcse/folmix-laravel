@@ -17,6 +17,43 @@
     @endif
 @endPush
 
+@push('styles')
+    <style>
+        /*
+         * Plain CSS instead of a Tailwind utility (grid-cols-4) because this
+         * theme's compiled CSS bundle isn't rebuilt from source on deploy -
+         * only utility classes already present elsewhere in the codebase at
+         * build time actually exist in the shipped stylesheet. Raw CSS here
+         * always applies regardless of that.
+         */
+        .folmix-category-product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            row-gap: 2rem;
+            column-gap: 2rem;
+        }
+
+        @media (max-width: 1180px) {
+            .folmix-category-product-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 1060px) {
+            .folmix-category-product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .folmix-category-product-grid {
+                justify-items: center;
+                column-gap: 1rem;
+            }
+        }
+    </style>
+@endPush
+
 <x-shop::layouts>
     <!-- Page Title -->
     <x-slot:title>
@@ -126,7 +163,7 @@
                         <div v-else class="mt-8 max-md:mt-5">
                             <!-- Product Card Shimmer Effect -->
                             <template v-if="isLoading">
-                                <div class="grid grid-cols-3 gap-8 max-1060:grid-cols-2 max-md:justify-items-center max-md:gap-x-4">
+                                <div class="folmix-category-product-grid">
                                     <x-shop::shimmer.products.cards.grid count="12" />
                                 </div>
                             </template>
@@ -136,7 +173,7 @@
                             <!-- Product Card Listing -->
                             <template v-else>
                                 <template v-if="products.length">
-                                    <div class="grid grid-cols-3 gap-8 max-1060:grid-cols-2 max-md:justify-items-center max-md:gap-x-4">
+                                    <div class="folmix-category-product-grid">
                                         <x-shop::products.card
                                             ::mode="'grid'"
                                             v-for="product in products"
