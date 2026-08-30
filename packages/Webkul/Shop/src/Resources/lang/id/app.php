@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => 'Semua',
+                        'all' => 'Jelajahi Kategori',
                         'back-button' => 'Kembali ke Menu Utama',
                         'bagisto' => 'Folmix',
                         'categories' => 'Kategori',

@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => 'সব',
+                        'all' => 'বিভাগসমূহ ব্রাউজ করুন',
                         'back-button' => 'প্রধান মেনুতে ফিরে যান',
                         'bagisto' => 'Folmix',
                         'categories' => 'বিভাগ',

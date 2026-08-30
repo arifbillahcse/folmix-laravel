@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => 'Alles',
+                        'all' => 'Categorieën bekijken',
                         'back-button' => 'Terug naar hoofdmenu',
                         'bagisto' => 'Folmix',
                         'categories' => 'Categorieën',

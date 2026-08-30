@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => 'Wszystko',
+                        'all' => 'Przeglądaj kategorie',
                         'back-button' => 'Powrót do menu głównego',
                         'bagisto' => 'Folmix',
                         'categories' => 'Kategorie',

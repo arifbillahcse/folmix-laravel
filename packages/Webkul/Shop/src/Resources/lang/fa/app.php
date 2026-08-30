@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => 'همه',
+                        'all' => 'مرور دسته‌بندی‌ها',
                         'back-button' => 'بازگشت به منوی اصلی',
                         'bagisto' => 'Folmix',
                         'categories' => 'دسته‌بندی‌ها',

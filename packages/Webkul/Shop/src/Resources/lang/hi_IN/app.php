@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => 'सभी',
+                        'all' => 'श्रेणियाँ ब्राउज़ करें',
                         'back-button' => 'मुख्य मेनू पर वापस जाएं',
                         'bagisto' => 'Folmix',
                         'categories' => 'श्रेणियाँ',

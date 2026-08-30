@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => 'Все',
+                        'all' => 'Просмотреть категории',
                         'back-button' => 'Назад к главному меню',
                         'bagisto' => 'Folmix',
                         'categories' => 'Категории',

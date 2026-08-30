@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => 'Tümü',
+                        'all' => 'Kategorilere Göz At',
                         'back-button' => 'Geri Dön',
                         'bagisto' => 'Folmix',
                         'categories' => 'Kategoriler',

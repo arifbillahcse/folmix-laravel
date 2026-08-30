@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => 'Toate',
+                        'all' => 'Răsfoiește categoriile',
                         'back-button' => 'Înapoi la meniul principal',
                         'bagisto' => 'Folmix',
                         'categories' => 'Categorii',

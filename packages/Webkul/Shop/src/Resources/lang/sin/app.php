@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => 'සියල්ල',
+                        'all' => 'කාණ්ඩ පිරික්සන්න',
                         'back-button' => 'ප්‍රධාන මෙනුවට ආපසු යන්න',
                         'bagisto' => 'Folmix',
                         'categories' => 'ප්‍රවර්ග',

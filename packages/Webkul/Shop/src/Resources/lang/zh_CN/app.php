@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => '全部',
+                        'all' => '浏览分类',
                         'back-button' => '返回主菜单',
                         'bagisto' => 'Folmix',
                         'categories' => '分类',

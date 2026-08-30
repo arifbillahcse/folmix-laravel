@@ -573,7 +573,7 @@ return [
                     ],
 
                     'bottom' => [
-                        'all' => 'すべて',
+                        'all' => 'カテゴリーを見る',
                         'back-button' => 'メインメニューに戻る',
                         'bagisto' => 'Folmix',
                         'categories' => 'カテゴリ',
