@@ -119,7 +119,7 @@ class PrepareCatalogMigration extends Command
             'parent_id' => $parentId,
             'position' => $position,
             'status' => 1,
-            'display_mode' => 'products',
+            'display_mode' => 'products_only',
         ]);
 
         $this->info("  created category: {$name} (id {$category->id})");
