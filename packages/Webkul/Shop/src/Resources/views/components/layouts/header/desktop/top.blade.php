@@ -110,44 +110,8 @@
 
             {!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.locale_switcher.before') !!}
 
-            <!-- Locales Switcher -->
-            <x-shop::dropdown position="bottom-{{ core()->getCurrentLocale()->direction === 'ltr' ? 'right' : 'left' }}">
-                <x-slot:toggle>
-                    <!-- Dropdown Toggler -->
-                    <div
-                        class="flex cursor-pointer items-center gap-2.5 py-3"
-                        role="button"
-                        tabindex="0"
-                        @click="localeToggler = ! localeToggler"
-                    >
-                        <img
-                            src="{{ ! empty(core()->getCurrentLocale()->logo_url)
-                                    ? core()->getCurrentLocale()->logo_url
-                                    : bagisto_asset('images/default-language.svg')
-                                }}"
-                            class="h-full"
-                            alt="@lang('shop::app.components.layouts.header.desktop.top.default-locale')"
-                            width="24"
-                            height="16"
-                        />
-                        
-                        <span v-pre>
-                            {{ core()->getCurrentChannel()->locales()->orderBy('name')->where('code', app()->getLocale())->value('name') }}
-                        </span>
-
-                        <span
-                            class="text-2xl"
-                            :class="{'icon-arrow-up': localeToggler, 'icon-arrow-down': ! localeToggler}"
-                            role="presentation"
-                        ></span>
-                    </div>
-                </x-slot>
-            
-                <!-- Dropdown Content -->
-                <x-slot:content class="journal-scroll max-h-[500px] !p-0">
-                    <v-locale-switcher></v-locale-switcher>
-                </x-slot>
-            </x-shop::dropdown>
+            <!-- Locale switcher moved down next to the cart icon in the main header row -->
+            <span></span>
 
             {!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.locale_switcher.after') !!}
         </div>

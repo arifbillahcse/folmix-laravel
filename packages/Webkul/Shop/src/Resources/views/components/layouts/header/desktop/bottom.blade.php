@@ -1,6 +1,28 @@
 {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.before') !!}
 
-<div class="flex min-h-[78px] w-full justify-between border border-b border-l-0 border-r-0 border-t-0 px-[60px] max-1180:px-8">
+@push('styles')
+    <style>
+        /*
+         * Plain CSS (not a new Tailwind utility) because this theme's
+         * compiled CSS isn't rebuilt from source on deploy - only classes
+         * already present elsewhere in the codebase at build time exist in
+         * the shipped stylesheet. Raw CSS here always applies regardless.
+         */
+        .folmix-header-bottom-grid {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            column-gap: 24px;
+        }
+
+        .folmix-header-search-center {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+@endpush
+
+<div class="folmix-header-bottom-grid min-h-[78px] w-full border border-b border-l-0 border-r-0 border-t-0 px-[60px] max-1180:px-8">
     <!--
         This section will provide categories for the first, second, and third levels. If
         additional levels are required, users can customize them according to their needs.
@@ -47,9 +69,8 @@
         {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.category.after') !!}
     </div>
 
-    <!-- Right Nagivation Section -->
-    <div class="flex items-center gap-x-9 max-[1100px]:gap-x-6 max-lg:gap-x-8">
-
+    <!-- Center Search Section -->
+    <div class="folmix-header-search-center">
         {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.search_bar.before') !!}
 
         <!-- Search Bar Container -->
@@ -92,9 +113,10 @@
         </div>
 
         {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.search_bar.after') !!}
+    </div>
 
-        <!-- Right Navigation Links -->
-        <div class="mt-1.5 flex gap-x-8 max-[1100px]:gap-x-6 max-lg:gap-x-8">
+    <!-- Right Navigation Links -->
+    <div class="flex items-center gap-x-8 max-[1100px]:gap-x-6 max-lg:gap-x-8">
 
             {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.compare.before') !!}
 
@@ -112,6 +134,43 @@
             @endif
 
             {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.compare.after') !!}
+
+            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.locale_switcher.before') !!}
+
+            <!-- Locale Switcher (moved here so it sits to the left of the cart icon) -->
+            @if (core()->getCurrentChannel()->locales()->count() > 1)
+                <x-shop::dropdown position="bottom-{{ core()->getCurrentLocale()->direction === 'ltr' ? 'right' : 'left' }}">
+                    <x-slot:toggle>
+                        <div
+                            class="flex cursor-pointer items-center gap-1"
+                            role="button"
+                            tabindex="0"
+                        >
+                            <img
+                                src="{{ ! empty(core()->getCurrentLocale()->logo_url)
+                                        ? core()->getCurrentLocale()->logo_url
+                                        : bagisto_asset('images/default-language.svg')
+                                    }}"
+                                class="h-4 w-6"
+                                alt="@lang('shop::app.components.layouts.header.desktop.top.default-locale')"
+                                width="24"
+                                height="16"
+                            />
+
+                            <span
+                                class="text-2xl icon-arrow-down"
+                                role="presentation"
+                            ></span>
+                        </div>
+                    </x-slot>
+
+                    <x-slot:content class="journal-scroll max-h-[500px] !p-0">
+                        <v-locale-switcher></v-locale-switcher>
+                    </x-slot>
+                </x-shop::dropdown>
+            @endif
+
+            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.locale_switcher.after') !!}
 
             {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.mini_cart.before') !!}
 
@@ -252,7 +311,6 @@
 
             {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.profile.after') !!}
         </div>
-    </div>
 </div>
 
 @pushOnce('scripts')
