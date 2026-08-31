@@ -14,6 +14,7 @@ use Webkul\Product\Helpers\Indexers\Price\Simple as SimpleIndexer;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
 use Webkul\Product\Repositories\ProductBundleOptionProductRepository;
 use Webkul\Product\Repositories\ProductCustomerGroupPriceRepository;
+use Webkul\Product\Repositories\ProductCustomerPriceRepository;
 use Webkul\Product\Repositories\ProductCustomizableOptionPriceRepository;
 use Webkul\Product\Repositories\ProductCustomizableOptionRepository;
 use Webkul\Product\Repositories\ProductGroupedProductRepository;
@@ -45,6 +46,7 @@ class Simple extends AbstractType
         ProductImageRepository $productImageRepository,
         ProductVideoRepository $productVideoRepository,
         ProductCustomerGroupPriceRepository $productCustomerGroupPriceRepository,
+        ProductCustomerPriceRepository $productCustomerPriceRepository,
         protected ProductGroupedProductRepository $productGroupedProductRepository,
         protected ProductBundleOptionProductRepository $productBundleOptionProductRepository,
         protected ProductCustomizableOptionRepository $productCustomizableOptionRepository,
@@ -58,7 +60,8 @@ class Simple extends AbstractType
             $productInventoryRepository,
             $productImageRepository,
             $productVideoRepository,
-            $productCustomerGroupPriceRepository
+            $productCustomerGroupPriceRepository,
+            $productCustomerPriceRepository
         );
     }
 

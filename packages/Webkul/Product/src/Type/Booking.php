@@ -15,6 +15,7 @@ use Webkul\Product\Exceptions\InsufficientProductInventoryException;
 use Webkul\Product\Helpers\Indexers\Price\Booking as BookingIndexer;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
 use Webkul\Product\Repositories\ProductCustomerGroupPriceRepository;
+use Webkul\Product\Repositories\ProductCustomerPriceRepository;
 use Webkul\Product\Repositories\ProductImageRepository;
 use Webkul\Product\Repositories\ProductInventoryRepository;
 use Webkul\Product\Repositories\ProductRepository;
@@ -75,6 +76,7 @@ class Booking extends AbstractType
         protected ProductImageRepository $productImageRepository,
         protected ProductVideoRepository $productVideoRepository,
         protected ProductCustomerGroupPriceRepository $productCustomerGroupPriceRepository,
+        protected ProductCustomerPriceRepository $productCustomerPriceRepository,
         protected BookingProductRepository $bookingProductRepository,
         protected BookingHelper $bookingHelper
     ) {}

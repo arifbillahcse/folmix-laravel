@@ -8,6 +8,7 @@ use Webkul\Product\Contracts\Product;
 use Webkul\Product\Helpers\Indexers\Price\Grouped as GroupedIndexer;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
 use Webkul\Product\Repositories\ProductCustomerGroupPriceRepository;
+use Webkul\Product\Repositories\ProductCustomerPriceRepository;
 use Webkul\Product\Repositories\ProductGroupedProductRepository;
 use Webkul\Product\Repositories\ProductImageRepository;
 use Webkul\Product\Repositories\ProductInventoryRepository;
@@ -63,6 +64,7 @@ class Grouped extends AbstractType
         ProductImageRepository $productImageRepository,
         ProductVideoRepository $productVideoRepository,
         ProductCustomerGroupPriceRepository $productCustomerGroupPriceRepository,
+        ProductCustomerPriceRepository $productCustomerPriceRepository,
         protected ProductGroupedProductRepository $productGroupedProductRepository
     ) {
         parent::__construct(
@@ -73,7 +75,8 @@ class Grouped extends AbstractType
             $productInventoryRepository,
             $productImageRepository,
             $productVideoRepository,
-            $productCustomerGroupPriceRepository
+            $productCustomerGroupPriceRepository,
+            $productCustomerPriceRepository
         );
     }
 

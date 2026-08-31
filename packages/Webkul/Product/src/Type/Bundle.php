@@ -14,6 +14,7 @@ use Webkul\Product\Repositories\ProductAttributeValueRepository;
 use Webkul\Product\Repositories\ProductBundleOptionProductRepository;
 use Webkul\Product\Repositories\ProductBundleOptionRepository;
 use Webkul\Product\Repositories\ProductCustomerGroupPriceRepository;
+use Webkul\Product\Repositories\ProductCustomerPriceRepository;
 use Webkul\Product\Repositories\ProductImageRepository;
 use Webkul\Product\Repositories\ProductInventoryRepository;
 use Webkul\Product\Repositories\ProductRepository;
@@ -83,6 +84,7 @@ class Bundle extends AbstractType
         ProductImageRepository $productImageRepository,
         ProductVideoRepository $productVideoRepository,
         ProductCustomerGroupPriceRepository $productCustomerGroupPriceRepository,
+        ProductCustomerPriceRepository $productCustomerPriceRepository,
         protected ProductBundleOptionRepository $productBundleOptionRepository,
         protected ProductBundleOptionProductRepository $productBundleOptionProductRepository,
         protected BundleOption $bundleOptionHelper
@@ -95,7 +97,8 @@ class Bundle extends AbstractType
             $productInventoryRepository,
             $productImageRepository,
             $productVideoRepository,
-            $productCustomerGroupPriceRepository
+            $productCustomerGroupPriceRepository,
+            $productCustomerPriceRepository
         );
     }
 

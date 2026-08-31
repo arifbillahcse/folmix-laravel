@@ -10,6 +10,7 @@ use Webkul\Product\DataTypes\CartItemValidationResult;
 use Webkul\Product\Helpers\Indexers\Price\Downloadable as DownloadableIndexer;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
 use Webkul\Product\Repositories\ProductCustomerGroupPriceRepository;
+use Webkul\Product\Repositories\ProductCustomerPriceRepository;
 use Webkul\Product\Repositories\ProductDownloadableLinkRepository;
 use Webkul\Product\Repositories\ProductDownloadableSampleRepository;
 use Webkul\Product\Repositories\ProductImageRepository;
@@ -65,6 +66,7 @@ class Downloadable extends AbstractType
         ProductImageRepository $productImageRepository,
         ProductVideoRepository $productVideoRepository,
         ProductCustomerGroupPriceRepository $productCustomerGroupPriceRepository,
+        ProductCustomerPriceRepository $productCustomerPriceRepository,
         protected ProductDownloadableLinkRepository $productDownloadableLinkRepository,
         protected ProductDownloadableSampleRepository $productDownloadableSampleRepository
     ) {
@@ -76,7 +78,8 @@ class Downloadable extends AbstractType
             $productInventoryRepository,
             $productImageRepository,
             $productVideoRepository,
-            $productCustomerGroupPriceRepository
+            $productCustomerGroupPriceRepository,
+            $productCustomerPriceRepository
         );
     }
 
