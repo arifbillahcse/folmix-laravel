@@ -146,52 +146,54 @@
                 >
                 </v-filter-item>
 
-                <!-- Subcategories -->
-                <div
-                    class="border-t border-zinc-200 pt-2.5"
-                    v-if="subcategories.length"
-                >
-                    <p class="py-2.5 text-lg font-semibold max-sm:text-base max-sm:font-medium">
-                        @lang('shop::app.categories.view.subcategories')
-                    </p>
+                @if (isset($category))
+                    <!-- Subcategories -->
+                    <div
+                        class="border-t border-zinc-200 pt-2.5"
+                        v-if="subcategories.length"
+                    >
+                        <p class="py-2.5 text-lg font-semibold max-sm:text-base max-sm:font-medium">
+                            @lang('shop::app.categories.view.subcategories')
+                        </p>
 
-                    <ul class="pb-3 text-base text-gray-700">
-                        <li>
-                            <div
-                                class="flex select-none items-center gap-x-4 rounded hover:bg-gray-100 max-sm:gap-x-1 max-sm:!p-0 ltr:pl-2 rtl:pr-2"
-                                role="button"
-                                tabindex="0"
-                                @click="selectCategory({{ $category->id }})"
-                            >
-                                <span
-                                    class="w-full cursor-pointer p-2 text-base ltr:pl-0 rtl:pr-0"
-                                    :class="activeCategoryId === {{ $category->id }} ? 'font-semibold text-navyBlue' : 'text-gray-900'"
+                        <ul class="pb-3 text-base text-gray-700">
+                            <li>
+                                <div
+                                    class="flex select-none items-center gap-x-4 rounded hover:bg-gray-100 max-sm:gap-x-1 max-sm:!p-0 ltr:pl-2 rtl:pr-2"
+                                    role="button"
+                                    tabindex="0"
+                                    @click="selectCategory({{ $category->id }})"
                                 >
-                                    @lang('shop::app.categories.view.all')
-                                </span>
-                            </div>
-                        </li>
+                                    <span
+                                        class="w-full cursor-pointer p-2 text-base ltr:pl-0 rtl:pr-0"
+                                        :class="activeCategoryId === {{ $category->id }} ? 'font-semibold text-navyBlue' : 'text-gray-900'"
+                                    >
+                                        @lang('shop::app.categories.view.all')
+                                    </span>
+                                </div>
+                            </li>
 
-                        <li
-                            :key="subcategory.id"
-                            v-for="subcategory in subcategories"
-                        >
-                            <div
-                                class="flex select-none items-center gap-x-4 rounded hover:bg-gray-100 max-sm:gap-x-1 max-sm:!p-0 ltr:pl-2 rtl:pr-2"
-                                role="button"
-                                tabindex="0"
-                                @click="selectCategory(subcategory.id)"
+                            <li
+                                :key="subcategory.id"
+                                v-for="subcategory in subcategories"
                             >
-                                <span
-                                    class="w-full cursor-pointer p-2 text-base ltr:pl-0 rtl:pr-0"
-                                    :class="activeCategoryId === subcategory.id ? 'font-semibold text-navyBlue' : 'text-gray-900'"
-                                    v-text="subcategory.name"
+                                <div
+                                    class="flex select-none items-center gap-x-4 rounded hover:bg-gray-100 max-sm:gap-x-1 max-sm:!p-0 ltr:pl-2 rtl:pr-2"
+                                    role="button"
+                                    tabindex="0"
+                                    @click="selectCategory(subcategory.id)"
                                 >
-                                </span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                                    <span
+                                        class="w-full cursor-pointer p-2 text-base ltr:pl-0 rtl:pr-0"
+                                        :class="activeCategoryId === subcategory.id ? 'font-semibold text-navyBlue' : 'text-gray-900'"
+                                        v-text="subcategory.name"
+                                    >
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                @endif
             </div>
         </template>
     </script>
