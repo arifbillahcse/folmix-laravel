@@ -15,6 +15,32 @@
                 max-width: 220px;
             }
         }
+
+        /*
+         * On mobile the carousel switches from a horizontal scroll strip
+         * (which was wrapping/overlapping awkwardly with 5+ narrow items)
+         * to a fixed 2-column grid, so exactly 2 categories sit per row.
+         */
+        @media (max-width: 767px) {
+            .folmix-category-carousel-scroller {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                overflow: visible;
+            }
+
+            .folmix-category-carousel-item {
+                min-width: 0;
+                max-width: none;
+                width: 100%;
+                margin-left: 0 !important;
+            }
+
+            .folmix-category-carousel-image {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1 / 1;
+            }
+        }
     </style>
 @endpush
 
@@ -41,7 +67,7 @@
             <div class="relative">
                 <div
                     ref="swiperContainer"
-                    class="scrollbar-hide flex gap-10 overflow-auto scroll-smooth max-lg:gap-4"
+                    class="folmix-category-carousel-scroller scrollbar-hide flex gap-10 overflow-auto scroll-smooth max-lg:gap-4"
                 >
                     <div
                         class="folmix-category-carousel-item grid grid-cols-1 justify-items-center gap-4 font-medium max-md:min-w-20 max-md:max-w-20 max-md:gap-2.5 max-md:first:ml-4 max-sm:min-w-[60px] max-sm:max-w-[60px] max-sm:gap-1.5"
@@ -49,7 +75,7 @@
                     >
                         <a
                             :href="category.slug"
-                            class="block w-full aspect-square rounded-xl bg-zinc-100 max-md:h-20 max-md:w-20 max-sm:h-[60px] max-sm:w-[60px]"
+                            class="folmix-category-carousel-image block w-full aspect-square rounded-xl bg-zinc-100 max-md:h-20 max-md:w-20 max-sm:h-[60px] max-sm:w-[60px]"
                             :aria-label="category.name"
                         >
                             <x-shop::media.images.lazy
