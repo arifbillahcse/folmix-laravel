@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'Adaugă preț produs',
                     'sku' => 'SKU - :sku',
                     'price' => 'Preț',
+                    'regular-price' => 'Preț obișnuit - :price',
                     'create-title' => 'Adaugă preț special',
                     'update-title' => 'Actualizează prețul special',
                     'save-btn' => 'Salvează',

@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'Добавить цену товара',
                     'sku' => 'SKU - :sku',
                     'price' => 'Цена',
+                    'regular-price' => 'Обычная цена - :price',
                     'create-title' => 'Добавить специальную цену',
                     'update-title' => 'Обновить специальную цену',
                     'save-btn' => 'Сохранить',

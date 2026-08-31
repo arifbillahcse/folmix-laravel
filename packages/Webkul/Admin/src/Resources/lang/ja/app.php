@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => '商品価格を追加',
                     'sku' => 'SKU - :sku',
                     'price' => '価格',
+                    'regular-price' => '通常価格 - :price',
                     'create-title' => '特別価格を追加',
                     'update-title' => '特別価格を更新',
                     'save-btn' => '保存',

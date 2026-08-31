@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'उत्पाद मूल्य जोड़ें',
                     'sku' => 'SKU - :sku',
                     'price' => 'मूल्य',
+                    'regular-price' => 'नियमित मूल्य - :price',
                     'create-title' => 'विशेष मूल्य जोड़ें',
                     'update-title' => 'विशेष मूल्य अपडेट करें',
                     'save-btn' => 'सहेजें',

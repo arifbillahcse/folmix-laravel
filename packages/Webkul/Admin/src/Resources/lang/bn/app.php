@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'পণ্যের মূল্য যোগ করুন',
                     'sku' => 'SKU - :sku',
                     'price' => 'মূল্য',
+                    'regular-price' => 'নিয়মিত মূল্য - :price',
                     'create-title' => 'বিশেষ মূল্য যোগ করুন',
                     'update-title' => 'বিশেষ মূল্য আপডেট করুন',
                     'save-btn' => 'সংরক্ষণ করুন',

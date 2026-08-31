@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'Ürün Fiyatı Ekle',
                     'sku' => 'SKU - :sku',
                     'price' => 'Fiyat',
+                    'regular-price' => 'Normal Fiyat - :price',
                     'create-title' => 'Özel Fiyat Ekle',
                     'update-title' => 'Özel Fiyatı Güncelle',
                     'save-btn' => 'Kaydet',

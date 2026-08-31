@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'නිෂ්පාදන මිල එක් කරන්න',
                     'sku' => 'SKU - :sku',
                     'price' => 'මිල',
+                    'regular-price' => 'සාමාන්‍ය මිල - :price',
                     'create-title' => 'විශේෂ මිලක් එක් කරන්න',
                     'update-title' => 'විශේෂ මිල යාවත්කාලීන කරන්න',
                     'save-btn' => 'සුරකින්න',

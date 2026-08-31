@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'Productprijs toevoegen',
                     'sku' => 'SKU - :sku',
                     'price' => 'Prijs',
+                    'regular-price' => 'Normale prijs - :price',
                     'create-title' => 'Speciale prijs toevoegen',
                     'update-title' => 'Speciale prijs bijwerken',
                     'save-btn' => 'Opslaan',

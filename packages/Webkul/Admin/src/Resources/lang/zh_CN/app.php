@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => '添加商品价格',
                     'sku' => 'SKU - :sku',
                     'price' => '价格',
+                    'regular-price' => '常规价格 - :price',
                     'create-title' => '添加特殊价格',
                     'update-title' => '更新特殊价格',
                     'save-btn' => '保存',

@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'Tambah Harga Produk',
                     'sku' => 'SKU - :sku',
                     'price' => 'Harga',
+                    'regular-price' => 'Harga Normal - :price',
                     'create-title' => 'Tambah Harga Khusus',
                     'update-title' => 'Perbarui Harga Khusus',
                     'save-btn' => 'Simpan',

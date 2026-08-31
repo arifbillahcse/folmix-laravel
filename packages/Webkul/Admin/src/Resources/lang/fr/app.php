@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'Ajouter un prix produit',
                     'sku' => 'SKU - :sku',
                     'price' => 'Prix',
+                    'regular-price' => 'Prix normal - :price',
                     'create-title' => 'Ajouter un prix spécial',
                     'update-title' => 'Mettre à jour le prix spécial',
                     'save-btn' => 'Enregistrer',

@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'افزودن قیمت محصول',
                     'sku' => 'SKU - :sku',
                     'price' => 'قیمت',
+                    'regular-price' => 'قیمت عادی - :price',
                     'create-title' => 'افزودن قیمت ویژه',
                     'update-title' => 'به‌روزرسانی قیمت ویژه',
                     'save-btn' => 'ذخیره',

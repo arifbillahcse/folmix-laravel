@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'הוסף מחיר מוצר',
                     'sku' => 'SKU - :sku',
                     'price' => 'מחיר',
+                    'regular-price' => 'מחיר רגיל - :price',
                     'create-title' => 'הוסף מחיר מיוחד',
                     'update-title' => 'עדכן מחיר מיוחד',
                     'save-btn' => 'שמור',

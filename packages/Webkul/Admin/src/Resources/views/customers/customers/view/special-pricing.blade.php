@@ -48,6 +48,10 @@
                     </div>
 
                     <div class="grid place-content-start gap-1 text-right">
+                        <p class="text-sm text-gray-500 line-through dark:text-gray-400">
+                            @{{ $admin.formatPrice(item.product.price) }}
+                        </p>
+
                         <p class="font-semibold text-gray-800 dark:text-white">
                             @{{ $admin.formatPrice(item.price) }}
                         </p>
@@ -124,6 +128,10 @@
                                 <p class="text-gray-600 dark:text-gray-300">
                                     @{{ "@lang('admin::app.customers.customers.view.special-pricing.sku')".replace(':sku', selectedPrice.product_sku) }}
                                 </p>
+
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    @{{ "@lang('admin::app.customers.customers.view.special-pricing.regular-price')".replace(':price', $admin.formatPrice(selectedPrice.regular_price)) }}
+                                </p>
                             </div>
 
                             <x-admin::form.control-group>
@@ -198,6 +206,7 @@
                         product_id: null,
                         product_name: '',
                         product_sku: '',
+                        regular_price: 0,
                         price: 0,
                     };
                 },
@@ -214,6 +223,7 @@
                         product_id: item.product_id,
                         product_name: item.product.name,
                         product_sku: item.product.sku,
+                        regular_price: item.product.price,
                         price: item.price,
                     };
 
@@ -232,6 +242,7 @@
                         product_id: product.id,
                         product_name: product.name,
                         product_sku: product.sku,
+                        regular_price: product.price,
                         price: product.price,
                     };
 

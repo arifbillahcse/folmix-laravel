@@ -2332,6 +2332,7 @@ return [
                     'add-btn' => 'إضافة سعر منتج',
                     'sku' => 'SKU - :sku',
                     'price' => 'السعر',
+                    'regular-price' => 'السعر العادي - :price',
                     'create-title' => 'إضافة سعر خاص',
                     'update-title' => 'تحديث السعر الخاص',
                     'save-btn' => 'حفظ',
