@@ -79,6 +79,22 @@
         @stack('styles')
 
         <style>
+            /*
+             * Section headers across the theme use the Tailwind "font-dmserif"
+             * utility (compiled into the shipped CSS, pointing at DM Serif
+             * Display). We want every one of those headers in Poppins instead,
+             * but "font-poppins" was never referenced anywhere in the codebase
+             * and so was never compiled into the bundle on this no-rebuild
+             * deployment - a brand new utility class here would have zero
+             * effect. Overriding the existing, already-compiled .font-dmserif
+             * rule directly avoids that problem entirely.
+             */
+            .font-dmserif {
+                font-family: 'Poppins', sans-serif !important;
+            }
+        </style>
+
+        <style>
             {!! core()->getConfigData('general.content.custom_scripts.custom_css') !!}
         </style>
 
