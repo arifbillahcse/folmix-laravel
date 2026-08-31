@@ -7,7 +7,7 @@
         :active-category-id="activeCategoryId"
         @filter-applied="setFilters('filter', $event)"
         @filter-clear="clearFilters('filter', $event)"
-        @switch-category="switchCategory($event)"
+        @category-switch="switchCategory($event)"
     >
         <!-- Category Filter Shimmer Effect -->
         <x-shop::shimmer.categories.filters />
@@ -60,7 +60,7 @@
                 :active-category-id="activeCategoryId"
                 @filter-applied="setFilters('filter', $event)"
                 @filter-clear="clearFilters('filter', $event)"
-                @switch-category="switchCategory($event)"
+                @category-switch="switchCategory($event)"
             >
                 <!-- Category Filter Shimmer Effect -->
                 <x-shop::shimmer.categories.filters />
@@ -481,7 +481,7 @@
                 },
 
                 selectCategory(id) {
-                    this.$emit('switch-category', id);
+                    this.$emit('category-switch', id);
                 },
             },
         });
