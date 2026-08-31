@@ -53,7 +53,6 @@ class RegistrationController extends Controller
         $data = array_merge($registrationRequest->only([
             'first_name',
             'last_name',
-            'username',
             'vat_number',
             'address',
             'postcode',

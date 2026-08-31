@@ -102,27 +102,6 @@
 
                     {!! view_render_event('bagisto.shop.customers.signup_form.last_name.after') !!}
 
-                    <!-- Username -->
-                    <x-shop::form.control-group>
-                        <x-shop::form.control-group.label class="required">
-                            @lang('shop::app.customers.signup-form.username')
-                        </x-shop::form.control-group.label>
-
-                        <x-shop::form.control-group.control
-                            type="text"
-                            class="px-6 py-4 max-md:py-3 max-sm:py-2"
-                            name="username"
-                            rules="required"
-                            :value="old('username')"
-                            :label="trans('shop::app.customers.signup-form.username')"
-                            :placeholder="trans('shop::app.customers.signup-form.username')"
-                            :aria-label="trans('shop::app.customers.signup-form.username')"
-                            aria-required="true"
-                        />
-
-                        <x-shop::form.control-group.error control-name="username" />
-                    </x-shop::form.control-group>
-
                     <!-- VAT -->
                     <x-shop::form.control-group>
                         <x-shop::form.control-group.label class="required">
