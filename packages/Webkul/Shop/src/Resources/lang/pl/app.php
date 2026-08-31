@@ -753,6 +753,7 @@ return [
                 'new' => 'Nowy',
                 'review-description' => 'Bądź pierwszym, który oceni ten produkt',
                 'sale' => 'Wyprzedaż',
+                'sold-out' => 'Wyprzedane',
             ],
 
             'carousel' => [

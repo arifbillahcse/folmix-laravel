@@ -753,6 +753,7 @@ return [
                 'new' => 'جديد',
                 'review-description' => 'كن أول من يقيم هذا المنتج',
                 'sale' => 'تخفيض',
+                'sold-out' => 'نفدت الكمية',
             ],
 
             'carousel' => [

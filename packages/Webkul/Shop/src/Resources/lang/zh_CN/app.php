@@ -753,6 +753,7 @@ return [
                 'new' => '新品',
                 'review-description' => '成为第一个评价这个产品的人',
                 'sale' => '特卖',
+                'sold-out' => '售罄',
             ],
 
             'carousel' => [

@@ -753,6 +753,7 @@ return [
                 'new' => 'New',
                 'review-description' => 'Be the first to review this product',
                 'sale' => 'Sale',
+                'sold-out' => 'Sold Out',
             ],
 
             'carousel' => [

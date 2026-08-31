@@ -753,6 +753,7 @@ return [
                 'new' => 'Yeni',
                 'review-description' => 'İlk yorumu siz yapın',
                 'sale' => 'İndirim',
+                'sold-out' => 'Stokta Yok',
             ],
 
             'carousel' => [

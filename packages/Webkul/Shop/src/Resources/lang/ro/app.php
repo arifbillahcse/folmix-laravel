@@ -753,6 +753,7 @@ return [
                 'new' => 'Nou',
                 'review-description' => 'Fii primul care recenzează acest produs',
                 'sale' => 'Reducere',
+                'sold-out' => 'Stoc epuizat',
             ],
 
             'carousel' => [

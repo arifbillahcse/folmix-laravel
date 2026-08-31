@@ -753,6 +753,7 @@ return [
                 'new' => 'Nuovo',
                 'review-description' => 'Sii il primo a recensire questo prodotto',
                 'sale' => 'Sconto',
+                'sold-out' => 'Esaurito',
             ],
 
             'carousel' => [

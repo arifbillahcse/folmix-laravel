@@ -753,6 +753,7 @@ return [
                 'new' => 'Nou',
                 'review-description' => 'Sigues el primer a revisar aquest producte',
                 'sale' => 'Oferta',
+                'sold-out' => 'Esgotat',
             ],
 
             'carousel' => [

@@ -753,6 +753,7 @@ return [
                 'new' => 'Baru',
                 'review-description' => 'Jadilah yang pertama mengulas produk ini.',
                 'sale' => 'Diskon',
+                'sold-out' => 'Stok Habis',
             ],
 
             'carousel' => [

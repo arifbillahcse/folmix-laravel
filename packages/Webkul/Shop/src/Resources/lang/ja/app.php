@@ -753,6 +753,7 @@ return [
                 'new' => '新着',
                 'review-description' => 'この製品の最初のレビュアになる',
                 'sale' => 'セール',
+                'sold-out' => '売り切れ',
             ],
 
             'carousel' => [

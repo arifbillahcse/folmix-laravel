@@ -753,6 +753,7 @@ return [
                 'new' => 'חדש',
                 'review-description' => 'הפוך לראשון שמבקר במוצר זה',
                 'sale' => 'מבצע',
+                'sold-out' => 'אזל מהמלאי',
             ],
 
             'carousel' => [
