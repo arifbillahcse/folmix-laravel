@@ -55,6 +55,7 @@
         type="text/x-template"
         id="v-topbar-template"
     >
+        @if (core()->getConfigData('general.content.header_offer.title') || core()->getCurrentChannel()->currencies()->count() > 1)
         <div class="flex w-full items-center justify-between border border-b border-l-0 border-r-0 border-t-0 px-16">
             {!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.currency_switcher.before') !!}
 
@@ -115,6 +116,7 @@
 
             {!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.locale_switcher.after') !!}
         </div>
+        @endif
     </script>
 
     <script
