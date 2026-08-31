@@ -25,7 +25,7 @@
         {!! view_render_event('bagisto.shop.customers.sign-up.logo.before') !!}
 
         <!-- Company Logo -->
-        <div class="flex items-center gap-x-14 max-[1180px]:gap-x-9">
+        <div class="flex items-center justify-between gap-x-14 max-[1180px]:gap-x-9">
             <a
                 href="{{ route('shop.home.index') }}"
                 class="m-[0_auto_20px_auto]"
@@ -38,6 +38,8 @@
                     height="29"
                 >
             </a>
+
+            @include('shop::components.layouts.auth-locale-switcher')
         </div>
 
         {!! view_render_event('bagisto.shop.customers.sign-up.logo.before') !!}
