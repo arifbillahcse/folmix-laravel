@@ -1037,8 +1037,10 @@ return [
         ],
 
         'view' => [
+            'all' => 'Toate',
             'empty' => 'Nu sunt produse disponibile în această categorie',
             'load-more' => 'Încarcă mai multe',
+            'subcategories' => 'Subcategorii',
         ],
     ],
 

@@ -1037,8 +1037,10 @@ return [
         ],
 
         'view' => [
+            'all' => 'Tümü',
             'empty' => 'Bu kategoride ürün bulunamadı.',
             'load-more' => 'Daha Fazla Yükle',
+            'subcategories' => 'Alt Kategoriler',
         ],
     ],
 

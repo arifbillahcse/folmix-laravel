@@ -1037,8 +1037,10 @@ return [
         ],
 
         'view' => [
+            'all' => '全部',
             'empty' => '此类别中没有可用产品',
             'load-more' => '加载更多',
+            'subcategories' => '子分类',
         ],
     ],
 

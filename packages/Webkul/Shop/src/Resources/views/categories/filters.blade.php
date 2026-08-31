@@ -4,8 +4,10 @@
 <div v-if="! isMobile">
     <!-- Filters Vue Component -->
     <v-filters
+        :active-category-id="activeCategoryId"
         @filter-applied="setFilters('filter', $event)"
         @filter-clear="clearFilters('filter', $event)"
+        @switch-category="switchCategory($event)"
     >
         <!-- Category Filter Shimmer Effect -->
         <x-shop::shimmer.categories.filters />
@@ -55,8 +57,10 @@
         <x-slot:content>
             <!-- Filters Vue Component -->
             <v-filters
+                :active-category-id="activeCategoryId"
                 @filter-applied="setFilters('filter', $event)"
                 @filter-clear="clearFilters('filter', $event)"
+                @switch-category="switchCategory($event)"
             >
                 <!-- Category Filter Shimmer Effect -->
                 <x-shop::shimmer.categories.filters />
@@ -141,6 +145,53 @@
                     @values-applied="applyFilter(filter, $event)"
                 >
                 </v-filter-item>
+
+                <!-- Subcategories -->
+                <div
+                    class="border-t border-zinc-200 pt-2.5"
+                    v-if="subcategories.length"
+                >
+                    <p class="py-2.5 text-lg font-semibold max-sm:text-base max-sm:font-medium">
+                        @lang('shop::app.categories.view.subcategories')
+                    </p>
+
+                    <ul class="pb-3 text-base text-gray-700">
+                        <li>
+                            <div
+                                class="flex select-none items-center gap-x-4 rounded hover:bg-gray-100 max-sm:gap-x-1 max-sm:!p-0 ltr:pl-2 rtl:pr-2"
+                                role="button"
+                                tabindex="0"
+                                @click="selectCategory({{ $category->id }})"
+                            >
+                                <span
+                                    class="w-full cursor-pointer p-2 text-base ltr:pl-0 rtl:pr-0"
+                                    :class="activeCategoryId === {{ $category->id }} ? 'font-semibold text-navyBlue' : 'text-gray-900'"
+                                >
+                                    @lang('shop::app.categories.view.all')
+                                </span>
+                            </div>
+                        </li>
+
+                        <li
+                            :key="subcategory.id"
+                            v-for="subcategory in subcategories"
+                        >
+                            <div
+                                class="flex select-none items-center gap-x-4 rounded hover:bg-gray-100 max-sm:gap-x-1 max-sm:!p-0 ltr:pl-2 rtl:pr-2"
+                                role="button"
+                                tabindex="0"
+                                @click="selectCategory(subcategory.id)"
+                            >
+                                <span
+                                    class="w-full cursor-pointer p-2 text-base ltr:pl-0 rtl:pr-0"
+                                    :class="activeCategoryId === subcategory.id ? 'font-semibold text-navyBlue' : 'text-gray-900'"
+                                    v-text="subcategory.name"
+                                >
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </template>
     </script>
@@ -341,6 +392,8 @@
         app.component('v-filters', {
             template: '#v-filters-template',
 
+            props: ['activeCategoryId'],
+
             data() {
                 return {
                     isLoading: true,
@@ -350,6 +403,12 @@
 
                         applied: {},
                     },
+
+                    subcategories: @json(
+                        isset($category)
+                            ? $category->children()->where('status', 1)->orderBy('position')->get()->map(fn ($child) => ['id' => $child->id, 'name' => $child->name])->values()
+                            : []
+                    ),
                 };
             },
 
@@ -419,6 +478,10 @@
                     });
 
                     this.$emit('filter-applied', this.filters.applied);
+                },
+
+                selectCategory(id) {
+                    this.$emit('switch-category', id);
                 },
             },
         });

@@ -1037,8 +1037,10 @@ return [
         ],
 
         'view' => [
+            'all' => 'Todos',
             'empty' => 'Nenhum produto disponível nesta categoria',
             'load-more' => 'Carregar Mais',
+            'subcategories' => 'Subcategorias',
         ],
     ],
 
