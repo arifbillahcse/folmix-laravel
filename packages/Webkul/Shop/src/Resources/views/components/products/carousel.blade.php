@@ -20,7 +20,13 @@
         }
 
         .folmix-product-carousel-item {
-            flex: 0 0 auto;
+            /*
+             * flex-basis must stay 0% (not auto) - the card's own "w-full"
+             * class (width: 100%) is only ignored by flex layout when the
+             * basis isn't auto, otherwise a single card stretches to fill
+             * the entire row instead of sitting at its min-width.
+             */
+            flex: 0 1 0%;
             min-width: 224px;
         }
 
