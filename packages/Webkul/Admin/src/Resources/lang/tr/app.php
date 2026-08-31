@@ -5379,7 +5379,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => ':webkul tarafından geliştirilen açık kaynaklı bir proje olan :bagisto tarafından desteklenmektedir.',
+                'description' => ':softorio tarafından desteklenmektedir.',
             ],
         ],
 

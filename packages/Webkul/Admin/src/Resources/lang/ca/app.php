@@ -5379,7 +5379,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'Desenvolupat per :bagisto, un projecte de codi obert per :webkul.',
+                'description' => 'Amb tecnologia de :softorio.',
             ],
         ],
 

@@ -5379,7 +5379,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => ':webkul විසින් නිර්මාණය කරන ලද විවෘත මූලාශ්‍ර ව්‍යාපෘතියක් වන :bagisto විසින් බලගැන්වෙන ලදි.',
+                'description' => ':softorio මගින් බලගැන්වේ.',
             ],
         ],
 

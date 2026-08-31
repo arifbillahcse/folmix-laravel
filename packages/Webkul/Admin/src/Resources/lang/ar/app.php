@@ -5379,7 +5379,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'مدعوم من :bagisto، مشروع مفتوح المصدر من :webkul.',
+                'description' => 'مدعوم من :softorio.',
             ],
         ],
 

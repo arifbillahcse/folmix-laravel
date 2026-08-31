@@ -5379,7 +5379,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'قدرت گرفته از :bagisto، یک پروژه متن‌باز توسط :webkul.',
+                'description' => 'قدرت گرفته از :softorio.',
             ],
         ],
 

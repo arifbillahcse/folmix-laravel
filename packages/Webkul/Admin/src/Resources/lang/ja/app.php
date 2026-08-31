@@ -5379,7 +5379,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => ':webkul によるオープンソースプロジェクト :bagisto によって提供されています。',
+                'description' => ':softorio 提供。',
             ],
         ],
 
