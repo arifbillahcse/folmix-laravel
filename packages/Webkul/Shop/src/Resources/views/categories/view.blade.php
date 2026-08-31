@@ -109,6 +109,32 @@
 
                     <!-- Product Listing Container -->
                     <div class="flex-1">
+                        <!-- Subcategory Tabs -->
+                        <div
+                            class="scrollbar-hide flex items-center gap-8 overflow-x-auto border-b border-zinc-200"
+                            v-if="subcategories.length"
+                        >
+                            <button
+                                type="button"
+                                class="whitespace-nowrap border-b-2 py-3 text-sm font-semibold uppercase"
+                                :class="activeCategoryId === {{ $category->id }} ? 'border-navyBlue text-navyBlue' : 'border-transparent text-zinc-500 hover:text-navyBlue'"
+                                @click="switchCategory({{ $category->id }})"
+                            >
+                                @lang('shop::app.categories.view.all')
+                            </button>
+
+                            <button
+                                type="button"
+                                class="whitespace-nowrap border-b-2 py-3 text-sm font-semibold uppercase"
+                                :class="activeCategoryId === subcategory.id ? 'border-navyBlue text-navyBlue' : 'border-transparent text-zinc-500 hover:text-navyBlue'"
+                                v-for="subcategory in subcategories"
+                                :key="subcategory.id"
+                                @click="switchCategory(subcategory.id)"
+                            >
+                                @{{ subcategory.name }}
+                            </button>
+                        </div>
+
                         <!-- Desktop Product Listing Toolbar -->
                         <div class="max-md:hidden">
                             @include('shop::categories.toolbar')
@@ -265,6 +291,10 @@
                         links: {},
 
                         loader: false,
+
+                        activeCategoryId: {{ $category->id }},
+
+                        subcategories: @json($category->children()->where('status', 1)->orderBy('position')->get()->map(fn ($child) => ['id' => $child->id, 'name' => $child->name])),
                     }
                 },
 
@@ -310,8 +340,8 @@
 
                         this.isLoading = true;
 
-                        this.$axios.get("{{ route('shop.api.products.index', ['category_id' => $category->id]) }}", {
-                            params: this.queryParams
+                        this.$axios.get("{{ route('shop.api.products.index') }}", {
+                            params: Object.assign({}, this.queryParams, { category_id: this.activeCategoryId })
                         })
                             .then(response => {
                                 this.isLoading = false;
@@ -322,6 +352,12 @@
                             }).catch(error => {
                                 console.log(error);
                             });
+                    },
+
+                    switchCategory(id) {
+                        this.activeCategoryId = id;
+
+                        this.getProducts();
                     },
 
                     loadMoreProducts() {
