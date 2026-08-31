@@ -14,6 +14,6 @@
     <p class="regular-price text-lg font-semibold text-gray-500 line-through max-sm:text-sm max-sm:leading-4" style="display: none;"></p>
 
     <p class="final-price font-semibold max-sm:leading-4">
-        {{ $prices['regular']['formatted_price'] }}
+        {{ $prices['final']['formatted_price'] ?? $prices['regular']['formatted_price'] }}
     </p>
 @endif

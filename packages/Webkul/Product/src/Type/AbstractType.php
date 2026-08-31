@@ -728,7 +728,13 @@ abstract class AbstractType
             return false;
         }
 
-        return $priceIndex->min_price != $priceIndex->regular_min_price;
+        /**
+         * Strictly less-than, not just "different from" - a customer group
+         * price can now be a markup (higher than regular), which is not a
+         * discount and must not trigger the "Sale" badge/strike-through
+         * treatment.
+         */
+        return $priceIndex->min_price < $priceIndex->regular_min_price;
     }
 
     /**

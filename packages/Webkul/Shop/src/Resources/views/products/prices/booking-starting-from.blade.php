@@ -15,6 +15,6 @@
     </p>
 @else
     <p class="final-price font-semibold max-sm:leading-4">
-        {{ $prices['regular']['formatted_price'] }}
+        {{ $prices['final']['formatted_price'] ?? $prices['regular']['formatted_price'] }}
     </p>
 @endif
