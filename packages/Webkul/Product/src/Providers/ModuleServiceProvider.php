@@ -9,6 +9,7 @@ use Webkul\Product\Models\ProductBundleOption;
 use Webkul\Product\Models\ProductBundleOptionProduct;
 use Webkul\Product\Models\ProductBundleOptionTranslation;
 use Webkul\Product\Models\ProductCustomerGroupPrice;
+use Webkul\Product\Models\ProductCustomerPrice;
 use Webkul\Product\Models\ProductCustomizableOption;
 use Webkul\Product\Models\ProductCustomizableOptionPrice;
 use Webkul\Product\Models\ProductCustomizableOptionTranslation;
@@ -40,6 +41,7 @@ class ModuleServiceProvider extends CoreModuleServiceProvider
         ProductBundleOptionProduct::class,
         ProductBundleOptionTranslation::class,
         ProductCustomerGroupPrice::class,
+        ProductCustomerPrice::class,
         ProductCustomizableOption::class,
         ProductCustomizableOptionPrice::class,
         ProductCustomizableOptionTranslation::class,

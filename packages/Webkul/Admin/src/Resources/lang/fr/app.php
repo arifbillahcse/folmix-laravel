@@ -2326,6 +2326,24 @@ return [
                     'count' => 'Avis (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => 'Tarification spéciale',
+                    'info' => 'Définissez un prix personnalisé pour ce client sur des produits spécifiques, remplaçant le prix de son groupe.',
+                    'add-btn' => 'Ajouter un prix produit',
+                    'sku' => 'SKU - :sku',
+                    'price' => 'Prix',
+                    'create-title' => 'Ajouter un prix spécial',
+                    'update-title' => 'Mettre à jour le prix spécial',
+                    'save-btn' => 'Enregistrer',
+                    'edit-btn' => 'Modifier',
+                    'delete-btn' => 'Supprimer',
+                    'empty-title' => 'Aucun tarif spécial',
+                    'empty-info' => 'Ce client n\'a pas encore de prix personnalisé sur un produit.',
+                    'create-success' => 'Prix spécial ajouté avec succès.',
+                    'update-success' => 'Prix spécial mis à jour avec succès.',
+                    'delete-success' => 'Prix spécial supprimé avec succès.',
+                ],
+
                 'cart' => [
                     'delete-success' => 'Article du panier supprimé avec succès.',
                 ],

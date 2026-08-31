@@ -164,6 +164,12 @@
                     @include('admin::customers.customers.view.notes')
 
                     {!! view_render_event('bagisto.admin.customers.customers.view.card.notes.after') !!}
+
+                    {!! view_render_event('bagisto.admin.customers.customers.view.card.special_pricing.before') !!}
+
+                    @include('admin::customers.customers.view.special-pricing')
+
+                    {!! view_render_event('bagisto.admin.customers.customers.view.card.special_pricing.after') !!}
                 </div>
 
                 <!-- Right Component -->

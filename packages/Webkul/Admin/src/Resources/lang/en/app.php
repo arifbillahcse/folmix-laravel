@@ -2326,6 +2326,24 @@ return [
                     'count' => 'Reviews (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => 'Special Pricing',
+                    'info' => 'Set a custom price for this customer on specific products, overriding their group price.',
+                    'add-btn' => 'Add Product Price',
+                    'sku' => 'SKU - :sku',
+                    'price' => 'Price',
+                    'create-title' => 'Add Special Price',
+                    'update-title' => 'Update Special Price',
+                    'save-btn' => 'Save',
+                    'edit-btn' => 'Edit',
+                    'delete-btn' => 'Delete',
+                    'empty-title' => 'No Special Pricing',
+                    'empty-info' => 'This customer does not have a custom price on any product yet.',
+                    'create-success' => 'Special price added successfully.',
+                    'update-success' => 'Special price updated successfully.',
+                    'delete-success' => 'Special price removed successfully.',
+                ],
+
                 'cart' => [
                     'delete-success' => 'Cart item removed successfully.',
                 ],

@@ -2326,6 +2326,24 @@ return [
                     'count' => 'レビュー (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => '特別価格',
+                    'info' => 'この顧客の特定の商品にカスタム価格を設定し、グループ価格を上書きします。',
+                    'add-btn' => '商品価格を追加',
+                    'sku' => 'SKU - :sku',
+                    'price' => '価格',
+                    'create-title' => '特別価格を追加',
+                    'update-title' => '特別価格を更新',
+                    'save-btn' => '保存',
+                    'edit-btn' => '編集',
+                    'delete-btn' => '削除',
+                    'empty-title' => '特別価格はありません',
+                    'empty-info' => 'この顧客はまだどの商品にもカスタム価格を設定していません。',
+                    'create-success' => '特別価格が正常に追加されました。',
+                    'update-success' => '特別価格が正常に更新されました。',
+                    'delete-success' => '特別価格が正常に削除されました。',
+                ],
+
                 'cart' => [
                     'delete-success' => 'カートアイテムが正常に削除されました。',
                 ],

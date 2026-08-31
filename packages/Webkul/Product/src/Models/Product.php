@@ -100,6 +100,15 @@ class Product extends Model implements ProductContract
     }
 
     /**
+     * Get the per-customer fixed prices that override group/base pricing for
+     * this product.
+     */
+    public function customer_prices(): HasMany
+    {
+        return $this->hasMany(ProductCustomerPriceProxy::modelClass());
+    }
+
+    /**
      * Get the product customer group prices that owns the product.
      */
     public function catalog_rule_prices(): HasMany

@@ -2326,6 +2326,24 @@ return [
                     'count' => 'Değerlendirmeler (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => 'Özel Fiyatlandırma',
+                    'info' => 'Bu müşteri için belirli ürünlerde, grup fiyatının yerine geçecek özel bir fiyat belirleyin.',
+                    'add-btn' => 'Ürün Fiyatı Ekle',
+                    'sku' => 'SKU - :sku',
+                    'price' => 'Fiyat',
+                    'create-title' => 'Özel Fiyat Ekle',
+                    'update-title' => 'Özel Fiyatı Güncelle',
+                    'save-btn' => 'Kaydet',
+                    'edit-btn' => 'Düzenle',
+                    'delete-btn' => 'Sil',
+                    'empty-title' => 'Özel Fiyat Yok',
+                    'empty-info' => 'Bu müşterinin henüz hiçbir üründe özel fiyatı yok.',
+                    'create-success' => 'Özel fiyat başarıyla eklendi.',
+                    'update-success' => 'Özel fiyat başarıyla güncellendi.',
+                    'delete-success' => 'Özel fiyat başarıyla kaldırıldı.',
+                ],
+
                 'cart' => [
                     'delete-success' => 'Ürün başarıyla silindi.',
                 ],

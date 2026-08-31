@@ -2326,6 +2326,24 @@ return [
                     'count' => 'Bewertungen (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => 'Sonderpreise',
+                    'info' => 'Legen Sie für diesen Kunden einen individuellen Preis für bestimmte Produkte fest, der den Gruppenpreis überschreibt.',
+                    'add-btn' => 'Produktpreis hinzufügen',
+                    'sku' => 'SKU - :sku',
+                    'price' => 'Preis',
+                    'create-title' => 'Sonderpreis hinzufügen',
+                    'update-title' => 'Sonderpreis aktualisieren',
+                    'save-btn' => 'Speichern',
+                    'edit-btn' => 'Bearbeiten',
+                    'delete-btn' => 'Löschen',
+                    'empty-title' => 'Keine Sonderpreise',
+                    'empty-info' => 'Dieser Kunde hat noch keinen individuellen Preis für ein Produkt.',
+                    'create-success' => 'Sonderpreis erfolgreich hinzugefügt.',
+                    'update-success' => 'Sonderpreis erfolgreich aktualisiert.',
+                    'delete-success' => 'Sonderpreis erfolgreich entfernt.',
+                ],
+
                 'cart' => [
                     'delete-success' => 'Artikel aus dem Warenkorb erfolgreich entfernt.',
                 ],

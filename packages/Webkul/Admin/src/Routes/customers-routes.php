@@ -5,6 +5,7 @@ use Webkul\Admin\Http\Controllers\Customers\AddressController;
 use Webkul\Admin\Http\Controllers\Customers\Customer\CartController;
 use Webkul\Admin\Http\Controllers\Customers\Customer\CompareController;
 use Webkul\Admin\Http\Controllers\Customers\Customer\OrderController;
+use Webkul\Admin\Http\Controllers\Customers\Customer\ProductPriceController;
 use Webkul\Admin\Http\Controllers\Customers\Customer\WishlistController;
 use Webkul\Admin\Http\Controllers\Customers\CustomerController;
 use Webkul\Admin\Http\Controllers\Customers\CustomerGroupController;
@@ -63,6 +64,14 @@ Route::prefix('customers')->group(function () {
 
         Route::controller(OrderController::class)->group(function () {
             Route::get('{id}/recent-order-items', 'recentItems')->name('admin.customers.customers.orders.recent_items');
+        });
+
+        Route::controller(ProductPriceController::class)->prefix('{id}/special-prices')->group(function () {
+            Route::post('', 'store')->name('admin.customers.customers.special_prices.store');
+
+            Route::put('{priceId}', 'update')->name('admin.customers.customers.special_prices.update');
+
+            Route::delete('{priceId}', 'destroy')->name('admin.customers.customers.special_prices.delete');
         });
     });
 

@@ -2326,6 +2326,24 @@ return [
                     'count' => 'Avaliações (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => 'Preços especiais',
+                    'info' => 'Defina um preço personalizado para este cliente em produtos específicos, substituindo o preço do grupo dele.',
+                    'add-btn' => 'Adicionar preço de produto',
+                    'sku' => 'SKU - :sku',
+                    'price' => 'Preço',
+                    'create-title' => 'Adicionar preço especial',
+                    'update-title' => 'Atualizar preço especial',
+                    'save-btn' => 'Salvar',
+                    'edit-btn' => 'Editar',
+                    'delete-btn' => 'Excluir',
+                    'empty-title' => 'Sem preços especiais',
+                    'empty-info' => 'Este cliente ainda não possui preço personalizado em nenhum produto.',
+                    'create-success' => 'Preço especial adicionado com sucesso.',
+                    'update-success' => 'Preço especial atualizado com sucesso.',
+                    'delete-success' => 'Preço especial removido com sucesso.',
+                ],
+
                 'cart' => [
                     'delete-success' => 'Item do carrinho removido com sucesso.',
                 ],

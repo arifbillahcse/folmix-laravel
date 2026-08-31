@@ -253,7 +253,7 @@ class CustomerController extends Controller
      */
     public function show(int $id)
     {
-        $customer = $this->customerRepository->with(['addresses', 'group'])->findOrFail($id);
+        $customer = $this->customerRepository->with(['addresses', 'group', 'product_prices.product'])->findOrFail($id);
 
         $groups = $this->customerGroupRepository->findWhere([['code', '<>', 'guest']]);
 

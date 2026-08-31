@@ -20,6 +20,7 @@ use Webkul\Product\Facades\ProductImage;
 use Webkul\Product\Models\Product;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
 use Webkul\Product\Repositories\ProductCustomerGroupPriceRepository;
+use Webkul\Product\Repositories\ProductCustomerPriceRepository;
 use Webkul\Product\Repositories\ProductImageRepository;
 use Webkul\Product\Repositories\ProductInventoryRepository;
 use Webkul\Product\Repositories\ProductRepository;
@@ -135,7 +136,8 @@ abstract class AbstractType
         protected ProductInventoryRepository $productInventoryRepository,
         protected ProductImageRepository $productImageRepository,
         protected ProductVideoRepository $productVideoRepository,
-        protected ProductCustomerGroupPriceRepository $productCustomerGroupPriceRepository
+        protected ProductCustomerGroupPriceRepository $productCustomerGroupPriceRepository,
+        protected ProductCustomerPriceRepository $productCustomerPriceRepository
     ) {}
 
     /**
@@ -609,6 +611,19 @@ abstract class AbstractType
      */
     public function getMinimalPrice()
     {
+        /**
+         * A per-customer price, set explicitly for this exact logged-in
+         * customer on this exact product, always wins - it overrides even
+         * their own customer group's price. Checked live rather than
+         * through the cached price index (which is only precomputed per
+         * group, not per individual customer), so it applies the moment
+         * it's set. This is the method the storefront display (product
+         * page, listings, API price fields) actually reads through.
+         */
+        if (! is_null($customerPrice = $this->getCurrentCustomerPrice())) {
+            return $customerPrice;
+        }
+
         if (! $priceIndex = $this->getPriceIndex()) {
             return $this->product->price;
         }
@@ -673,6 +688,18 @@ abstract class AbstractType
             return $this->getMinimalPrice();
         }
 
+        /**
+         * getMinimalPrice() (above) already checks for a per-customer
+         * override, but quantities greater than 1 skip it entirely and go
+         * straight to the live per-quantity indexer below - which has no
+         * concept of a per-customer override (only per-group). So this
+         * has to be checked again here for the cart/checkout path to stay
+         * consistent with what the qty=1 display shows.
+         */
+        if (! is_null($customerPrice = $this->getCurrentCustomerPrice())) {
+            return $customerPrice;
+        }
+
         $customerGroup = $this->customerRepository->getCurrentGroup();
 
         $indexer = $this->getPriceIndexer()
@@ -681,6 +708,19 @@ abstract class AbstractType
             ->setProduct($this->product);
 
         return $indexer->getMinimalPrice($qty);
+    }
+
+    /**
+     * Returns this product's fixed price for the currently logged-in
+     * customer, or null if none was set (guests never have one).
+     */
+    public function getCurrentCustomerPrice(): ?float
+    {
+        if (! $customer = auth()->guard()->user()) {
+            return null;
+        }
+
+        return $this->productCustomerPriceRepository->priceFor($this->product, $customer->id);
     }
 
     /**

@@ -2326,6 +2326,24 @@ return [
                     'count' => 'Recenzje (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => 'Ceny specjalne',
+                    'info' => 'Ustaw niestandardową cenę dla tego klienta na wybranych produktach, zastępując cenę jego grupy.',
+                    'add-btn' => 'Dodaj cenę produktu',
+                    'sku' => 'SKU - :sku',
+                    'price' => 'Cena',
+                    'create-title' => 'Dodaj cenę specjalną',
+                    'update-title' => 'Zaktualizuj cenę specjalną',
+                    'save-btn' => 'Zapisz',
+                    'edit-btn' => 'Edytuj',
+                    'delete-btn' => 'Usuń',
+                    'empty-title' => 'Brak cen specjalnych',
+                    'empty-info' => 'Ten klient nie ma jeszcze niestandardowej ceny na żadnym produkcie.',
+                    'create-success' => 'Cena specjalna została pomyślnie dodana.',
+                    'update-success' => 'Cena specjalna została pomyślnie zaktualizowana.',
+                    'delete-success' => 'Cena specjalna została pomyślnie usunięta.',
+                ],
+
                 'cart' => [
                     'delete-success' => 'Pomyślnie usunięto przedmiot z koszyka.',
                 ],

@@ -2326,6 +2326,24 @@ return [
                     'count' => 'Ulasan (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => 'Harga Khusus',
+                    'info' => 'Tetapkan harga khusus untuk pelanggan ini pada produk tertentu, menggantikan harga grup mereka.',
+                    'add-btn' => 'Tambah Harga Produk',
+                    'sku' => 'SKU - :sku',
+                    'price' => 'Harga',
+                    'create-title' => 'Tambah Harga Khusus',
+                    'update-title' => 'Perbarui Harga Khusus',
+                    'save-btn' => 'Simpan',
+                    'edit-btn' => 'Ubah',
+                    'delete-btn' => 'Hapus',
+                    'empty-title' => 'Tidak Ada Harga Khusus',
+                    'empty-info' => 'Pelanggan ini belum memiliki harga khusus pada produk apa pun.',
+                    'create-success' => 'Harga khusus berhasil ditambahkan.',
+                    'update-success' => 'Harga khusus berhasil diperbarui.',
+                    'delete-success' => 'Harga khusus berhasil dihapus.',
+                ],
+
                 'cart' => [
                     'delete-success' => 'Item keranjang berhasil dihapus.',
                 ],

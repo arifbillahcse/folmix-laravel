@@ -2326,6 +2326,24 @@ return [
                     'count' => 'Recensioni (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => 'Prezzi speciali',
+                    'info' => 'Imposta un prezzo personalizzato per questo cliente su prodotti specifici, sostituendo il prezzo del suo gruppo.',
+                    'add-btn' => 'Aggiungi prezzo prodotto',
+                    'sku' => 'SKU - :sku',
+                    'price' => 'Prezzo',
+                    'create-title' => 'Aggiungi prezzo speciale',
+                    'update-title' => 'Aggiorna prezzo speciale',
+                    'save-btn' => 'Salva',
+                    'edit-btn' => 'Modifica',
+                    'delete-btn' => 'Elimina',
+                    'empty-title' => 'Nessun prezzo speciale',
+                    'empty-info' => 'Questo cliente non ha ancora un prezzo personalizzato su alcun prodotto.',
+                    'create-success' => 'Prezzo speciale aggiunto con successo.',
+                    'update-success' => 'Prezzo speciale aggiornato con successo.',
+                    'delete-success' => 'Prezzo speciale rimosso con successo.',
+                ],
+
                 'cart' => [
                     'delete-success' => 'Elemento del carrello rimosso con successo.',
                 ],

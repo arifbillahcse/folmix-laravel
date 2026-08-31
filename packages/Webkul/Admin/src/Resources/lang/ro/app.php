@@ -2326,6 +2326,24 @@ return [
                     'count' => 'Reviews (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => 'Prețuri speciale',
+                    'info' => 'Setați un preț personalizat pentru acest client la produse specifice, care va înlocui prețul grupului său.',
+                    'add-btn' => 'Adaugă preț produs',
+                    'sku' => 'SKU - :sku',
+                    'price' => 'Preț',
+                    'create-title' => 'Adaugă preț special',
+                    'update-title' => 'Actualizează prețul special',
+                    'save-btn' => 'Salvează',
+                    'edit-btn' => 'Editează',
+                    'delete-btn' => 'Șterge',
+                    'empty-title' => 'Fără prețuri speciale',
+                    'empty-info' => 'Acest client nu are încă un preț personalizat la niciun produs.',
+                    'create-success' => 'Prețul special a fost adăugat cu succes.',
+                    'update-success' => 'Prețul special a fost actualizat cu succes.',
+                    'delete-success' => 'Prețul special a fost eliminat cu succes.',
+                ],
+
                 'cart' => [
                     'delete-success' => 'Cart item removed successfully.',
                 ],

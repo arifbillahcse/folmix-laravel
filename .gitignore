@@ -41,6 +41,7 @@ skills-lock.json
 /public/folmix-migrate.php
 /public/folmix-flush-cache.php
 /public/folmix-reindex-price.php
+/public/folmix-migrate-special-pricing.php
 /import-products-cli.php
 /test-results
 /vendor

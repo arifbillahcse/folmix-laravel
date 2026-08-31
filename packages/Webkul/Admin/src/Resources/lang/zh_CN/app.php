@@ -2326,6 +2326,24 @@ return [
                     'count' => '评论 (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => '特殊定价',
+                    'info' => '为该客户在特定商品上设置自定义价格，覆盖其所属客户组的价格。',
+                    'add-btn' => '添加商品价格',
+                    'sku' => 'SKU - :sku',
+                    'price' => '价格',
+                    'create-title' => '添加特殊价格',
+                    'update-title' => '更新特殊价格',
+                    'save-btn' => '保存',
+                    'edit-btn' => '编辑',
+                    'delete-btn' => '删除',
+                    'empty-title' => '暂无特殊价格',
+                    'empty-info' => '该客户尚未对任何商品设置自定义价格。',
+                    'create-success' => '特殊价格添加成功。',
+                    'update-success' => '特殊价格更新成功。',
+                    'delete-success' => '特殊价格删除成功。',
+                ],
+
                 'cart' => [
                     'delete-success' => '成功删除购物车商品。',
                 ],

@@ -17,6 +17,7 @@ use Webkul\Core\Models\ChannelProxy;
 use Webkul\Core\Models\SubscribersListProxy;
 use Webkul\Customer\Contracts\Customer as CustomerContract;
 use Webkul\Customer\Database\Factories\CustomerFactory;
+use Webkul\Product\Models\ProductCustomerPriceProxy;
 use Webkul\Product\Models\ProductReviewProxy;
 use Webkul\Sales\Models\InvoiceProxy;
 use Webkul\Sales\Models\OrderProxy;
@@ -279,6 +280,16 @@ class Customer extends Authenticatable implements CustomerContract
     public function notes()
     {
         return $this->hasMany(CustomerNoteProxy::modelClass(), 'customer_id');
+    }
+
+    /**
+     * Get all per-product custom prices set for this customer.
+     *
+     * @return HasMany
+     */
+    public function product_prices()
+    {
+        return $this->hasMany(ProductCustomerPriceProxy::modelClass(), 'customer_id');
     }
 
     /**

@@ -2326,6 +2326,24 @@ return [
                     'count' => 'Ressenyes (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => 'Preus especials',
+                    'info' => 'Estableix un preu personalitzat per a aquest client en productes específics, substituint el preu del seu grup.',
+                    'add-btn' => 'Afegeix preu de producte',
+                    'sku' => 'SKU - :sku',
+                    'price' => 'Preu',
+                    'create-title' => 'Afegeix preu especial',
+                    'update-title' => 'Actualitza preu especial',
+                    'save-btn' => 'Desa',
+                    'edit-btn' => 'Edita',
+                    'delete-btn' => 'Elimina',
+                    'empty-title' => 'Sense preus especials',
+                    'empty-info' => 'Aquest client encara no té cap preu personalitzat en cap producte.',
+                    'create-success' => 'Preu especial afegit correctament.',
+                    'update-success' => 'Preu especial actualitzat correctament.',
+                    'delete-success' => 'Preu especial eliminat correctament.',
+                ],
+
                 'cart' => [
                     'delete-success' => 'Element del carret eliminat amb éxit.',
                 ],

@@ -2326,6 +2326,24 @@ return [
                     'count' => 'Beoordelingen (:count)',
                 ],
 
+                'special-pricing' => [
+                    'title' => 'Speciale prijzen',
+                    'info' => 'Stel voor deze klant een aangepaste prijs in voor specifieke producten, die de groepsprijs overschrijft.',
+                    'add-btn' => 'Productprijs toevoegen',
+                    'sku' => 'SKU - :sku',
+                    'price' => 'Prijs',
+                    'create-title' => 'Speciale prijs toevoegen',
+                    'update-title' => 'Speciale prijs bijwerken',
+                    'save-btn' => 'Opslaan',
+                    'edit-btn' => 'Bewerken',
+                    'delete-btn' => 'Verwijderen',
+                    'empty-title' => 'Geen speciale prijzen',
+                    'empty-info' => 'Deze klant heeft nog geen aangepaste prijs op een product.',
+                    'create-success' => 'Speciale prijs succesvol toegevoegd.',
+                    'update-success' => 'Speciale prijs succesvol bijgewerkt.',
+                    'delete-success' => 'Speciale prijs succesvol verwijderd.',
+                ],
+
                 'cart' => [
                     'delete-success' => 'Item succesvol verwijderd uit winkelwagen.',
                 ],
