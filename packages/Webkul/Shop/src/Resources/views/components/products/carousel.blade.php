@@ -1,3 +1,55 @@
+@push('styles')
+    <style>
+        /*
+         * Plain CSS instead of the arbitrary Tailwind utilities this widget
+         * used to rely on (min-w-[224px], [&>*]:flex-[0]) - this theme's
+         * compiled CSS bundle isn't rebuilt from source on deploy, and those
+         * classes were only ever referenced by this one widget, so they
+         * never made it into the shipped stylesheet: flex items collapsed
+         * to zero width and the whole product row rendered invisible even
+         * though the data loaded correctly. Raw CSS here always applies
+         * regardless of that.
+         */
+        .folmix-product-carousel-scroller {
+            display: flex;
+            gap: 2rem;
+            padding-bottom: 0.625rem;
+            margin-top: 2.5rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .folmix-product-carousel-item {
+            flex: 0 0 auto;
+            min-width: 224px;
+        }
+
+        @media (max-width: 768px) {
+            .folmix-product-carousel-scroller {
+                gap: 1.75rem;
+                margin-top: 1.25rem;
+                padding-bottom: 0;
+                white-space: nowrap;
+            }
+
+            .folmix-product-carousel-item {
+                height: fit-content;
+                min-width: 224px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .folmix-product-carousel-scroller {
+                gap: 1rem;
+            }
+
+            .folmix-product-carousel-item {
+                min-width: 192px;
+            }
+        }
+    </style>
+@endpush
+
 <v-products-carousel
     src="{{ $src }}"
     title="{{ $title }}"
@@ -59,10 +111,10 @@
 
             <div
                 ref="swiperContainer"
-                class="flex gap-8 pb-2.5 [&>*]:flex-[0] mt-10 overflow-auto scroll-smooth scrollbar-hide max-md:gap-7 max-md:mt-5 max-sm:gap-4 max-md:pb-0 max-md:whitespace-nowrap"
+                class="folmix-product-carousel-scroller scrollbar-hide"
             >
                 <x-shop::products.card
-                    class="min-w-[224px] max-md:h-fit max-md:min-w-56 max-sm:min-w-[192px]"
+                    class="folmix-product-carousel-item"
                     v-for="product in products"
                 />
             </div>
