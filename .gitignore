@@ -40,6 +40,7 @@ skills-lock.json
 /storage/dcc-data/
 /public/folmix-migrate.php
 /public/folmix-flush-cache.php
+/public/folmix-reindex-price.php
 /import-products-cli.php
 /test-results
 /vendor

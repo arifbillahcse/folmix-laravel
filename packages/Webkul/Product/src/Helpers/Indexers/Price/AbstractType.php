@@ -109,14 +109,24 @@ abstract class AbstractType
      */
     public function getMinimalPrice($qty = null)
     {
+        /**
+         * A customer group price that was explicitly configured for this
+         * product/group is an intentional fixed price - it must be shown
+         * as-is, even when it's higher than the base/special/catalog-rule
+         * price. Only fall through to the normal cheapest-price logic when
+         * no group-specific price applies.
+         */
         $customerGroupPrice = $this->getCustomerGroupPrice($qty ?? 1);
+
+        if ($customerGroupPrice !== null) {
+            return $customerGroupPrice;
+        }
 
         $rulePrice = $this->getCatalogRulePrice();
 
         if (
             empty($this->product->special_price)
             && empty($rulePrice)
-            && $customerGroupPrice == $this->product->price
         ) {
             return $this->product->price;
         }
@@ -153,14 +163,17 @@ abstract class AbstractType
             }
         }
 
-        return min($discountedPrice, $customerGroupPrice);
+        return $discountedPrice;
     }
 
     /**
-     * Get product group price.
+     * Get product group price. Returns null when no customer group price
+     * has been configured for this product/group/quantity, so the caller
+     * can fall back to normal pricing instead of treating "no override" as
+     * "override with the base price" (which used to make min() always win).
      *
      * @param  int  $qty
-     * @return float
+     * @return float|null
      */
     public function getCustomerGroupPrice($qty)
     {
@@ -168,12 +181,12 @@ abstract class AbstractType
             ->prices($this->product, $this->customerGroup->id);
 
         if ($customerGroupPrices->isEmpty()) {
-            return $this->product->price;
+            return null;
         }
 
         $lastQty = 1;
 
-        $lastPrice = $this->product->price;
+        $matchedPrice = null;
 
         foreach ($customerGroupPrices as $customerGroupPrice) {
             if (
@@ -188,23 +201,25 @@ abstract class AbstractType
                     $customerGroupPrice->value >= 0
                     && $customerGroupPrice->value <= 100
                 ) {
-                    $lastPrice = $this->product->price - ($this->product->price * $customerGroupPrice->value) / 100;
+                    $matchedPrice = $this->product->price - ($this->product->price * $customerGroupPrice->value) / 100;
 
                     $lastQty = $customerGroupPrice->qty;
                 }
             } else {
-                if (
-                    $customerGroupPrice->value >= 0
-                    && $customerGroupPrice->value < $lastPrice
-                ) {
-                    $lastPrice = $customerGroupPrice->value;
+                /**
+                 * Fixed prices are taken as-is - including when they're
+                 * higher than the base price - so a group can be given a
+                 * markup, not just a discount.
+                 */
+                if ($customerGroupPrice->value >= 0) {
+                    $matchedPrice = $customerGroupPrice->value;
 
                     $lastQty = $customerGroupPrice->qty;
                 }
             }
         }
 
-        return $lastPrice;
+        return $matchedPrice;
     }
 
     /**
