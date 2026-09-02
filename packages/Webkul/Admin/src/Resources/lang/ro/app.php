@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Creare Slider',
+                'title' => 'Slidere pentru pagina de conectare',
+
+                'datagrid' => [
+                    'active' => 'Activ',
+                    'delete' => 'Șterge',
+                    'edit' => 'Editează',
+                    'id' => 'ID',
+                    'inactive' => 'Inactiv',
+                    'link' => 'Link',
+                    'sort-order' => 'Ordine sortare',
+                    'status' => 'Stare',
+                    'title' => 'Titlu',
+                ],
+
+                'create' => [
+                    'image' => 'Imagine',
+                    'image-size' => 'Rezoluția imaginii ar trebui să fie 1920px X 700px',
+                    'link' => 'Link',
+                    'save-btn' => 'Salvează Slider',
+                    'sort-order' => 'Ordine sortare',
+                    'status' => 'Stare',
+                    'title' => 'Creare Slider',
+                    'title-field' => 'Titlu',
+                ],
+
+                'edit' => [
+                    'title' => 'Editare Slider',
+                ],
+
+                'create-success' => 'Slider creat cu succes.',
+                'delete-failed' => 'Ștergerea sliderului a eșuat',
+                'delete-success' => 'Slider șters cu succes.',
+                'delete-warning' => 'Sigur doriți să efectuați această acțiune?',
+                'update-success' => 'Slider actualizat cu succes.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Create Currency',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Inventory Sources',
                 'invoices' => 'Invoices',
                 'locales' => 'Locales',
+                'login-sliders' => 'Slidere de conectare',
                 'marketing' => 'Marketing',
                 'mode' => 'Dark Mode',
                 'newsletter-subscriptions' => 'Newsletter Subscriptions',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Inventory Sources',
         'invoices' => 'Invoices',
         'locales' => 'Locales',
+        'login-sliders' => 'Slidere de conectare',
         'marketing' => 'Marketing',
         'newsletter-subscriptions' => 'Newsletter Subscriptions',
         'note' => 'Note',

@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => '创建滑块',
+                'title' => '登录页滑块',
+
+                'datagrid' => [
+                    'active' => '启用',
+                    'delete' => '删除',
+                    'edit' => '编辑',
+                    'id' => 'ID',
+                    'inactive' => '禁用',
+                    'link' => '链接',
+                    'sort-order' => '排序',
+                    'status' => '状态',
+                    'title' => '标题',
+                ],
+
+                'create' => [
+                    'image' => '图片',
+                    'image-size' => '图片分辨率应为 1920px X 700px',
+                    'link' => '链接',
+                    'save-btn' => '保存滑块',
+                    'sort-order' => '排序',
+                    'status' => '状态',
+                    'title' => '创建滑块',
+                    'title-field' => '标题',
+                ],
+
+                'edit' => [
+                    'title' => '编辑滑块',
+                ],
+
+                'create-success' => '滑块创建成功。',
+                'delete-failed' => '滑块删除失败',
+                'delete-success' => '滑块删除成功。',
+                'delete-warning' => '您确定要执行此操作吗？',
+                'update-success' => '滑块更新成功。',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => '创建货币',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => '库存来源',
                 'invoices' => '发票',
                 'locales' => '语言环境',
+                'login-sliders' => '登录滑块',
                 'marketing' => '营销',
                 'mode' => '暗模式',
                 'newsletter-subscriptions' => '订阅通讯',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => '库存来源',
         'invoices' => '发票',
         'locales' => '区域设置',
+        'login-sliders' => '登录滑块',
         'marketing' => '营销',
         'newsletter-subscriptions' => '通讯订阅',
         'note' => '备注',

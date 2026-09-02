@@ -1099,6 +1099,33 @@ return [
         'route' => 'admin.settings.roles.delete',
         'sort' => 3,
     ], [
+        'key' => 'settings.login_sliders',
+        'name' => 'admin::app.acl.login-sliders',
+        'route' => 'admin.settings.login_sliders.index',
+        'sort' => 8,
+    ], [
+        'key' => 'settings.login_sliders.create',
+        'name' => 'admin::app.acl.create',
+        'route' => 'admin.settings.login_sliders.store',
+        'sort' => 1,
+    ], [
+        'key' => 'settings.login_sliders.edit',
+        'name' => 'admin::app.acl.edit',
+        'route' => [
+            'admin.settings.login_sliders.edit',
+            'admin.settings.login_sliders.update',
+            'admin.settings.login_sliders.mass_update',
+        ],
+        'sort' => 2,
+    ], [
+        'key' => 'settings.login_sliders.delete',
+        'name' => 'admin::app.acl.delete',
+        'route' => [
+            'admin.settings.login_sliders.delete',
+            'admin.settings.login_sliders.mass_delete',
+        ],
+        'sort' => 3,
+    ], [
         'key' => 'settings.themes',
         'name' => 'admin::app.acl.themes',
         'route' => 'admin.settings.themes.index',

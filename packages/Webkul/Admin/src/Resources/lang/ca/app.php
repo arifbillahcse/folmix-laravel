@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Crear diapositiva',
+                'title' => 'Diapositives de la pàgina d\'inici de sessió',
+
+                'datagrid' => [
+                    'active' => 'Actiu',
+                    'delete' => 'Eliminar',
+                    'edit' => 'Editar',
+                    'id' => 'ID',
+                    'inactive' => 'Inactiu',
+                    'link' => 'Enllaç',
+                    'sort-order' => 'Ordre',
+                    'status' => 'Estat',
+                    'title' => 'Títol',
+                ],
+
+                'create' => [
+                    'image' => 'Imatge',
+                    'image-size' => 'La resolució de la imatge hauria de ser 1920px X 700px',
+                    'link' => 'Enllaç',
+                    'save-btn' => 'Desar diapositiva',
+                    'sort-order' => 'Ordre',
+                    'status' => 'Estat',
+                    'title' => 'Crear diapositiva',
+                    'title-field' => 'Títol',
+                ],
+
+                'edit' => [
+                    'title' => 'Editar diapositiva',
+                ],
+
+                'create-success' => 'Diapositiva creada correctament.',
+                'delete-failed' => 'Error en eliminar la diapositiva',
+                'delete-success' => 'Diapositiva eliminada correctament.',
+                'delete-warning' => 'Esteu segur que voleu realitzar aquesta acció?',
+                'update-success' => 'Diapositiva actualitzada correctament.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Crear Moneda',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Fonts d\'inventari',
                 'invoices' => 'Factures',
                 'locales' => 'Ubicacions',
+                'login-sliders' => 'Diapositives d\'inici de sessió',
                 'marketing' => 'Màrqueting',
                 'mode' => 'Mode fosc',
                 'newsletter-subscriptions' => 'Subscriure\'s al butlletí',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Fonts d\'Inventari',
         'invoices' => 'Factures',
         'locales' => 'Idiomes',
+        'login-sliders' => 'Diapositives d\'inici de sessió',
         'marketing' => 'Màrqueting',
         'newsletter-subscriptions' => 'Subscripcions al Butlletí',
         'note' => 'Nota',

@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'ایجاد اسلایدر',
+                'title' => 'اسلایدرهای صفحه ورود',
+
+                'datagrid' => [
+                    'active' => 'فعال',
+                    'delete' => 'حذف',
+                    'edit' => 'ویرایش',
+                    'id' => 'شناسه',
+                    'inactive' => 'غیرفعال',
+                    'link' => 'پیوند',
+                    'sort-order' => 'ترتیب',
+                    'status' => 'وضعیت',
+                    'title' => 'عنوان',
+                ],
+
+                'create' => [
+                    'image' => 'تصویر',
+                    'image-size' => 'وضوح تصویر باید 1920px X 700px باشد',
+                    'link' => 'پیوند',
+                    'save-btn' => 'ذخیره اسلایدر',
+                    'sort-order' => 'ترتیب',
+                    'status' => 'وضعیت',
+                    'title' => 'ایجاد اسلایدر',
+                    'title-field' => 'عنوان',
+                ],
+
+                'edit' => [
+                    'title' => 'ویرایش اسلایدر',
+                ],
+
+                'create-success' => 'اسلایدر با موفقیت ایجاد شد.',
+                'delete-failed' => 'حذف اسلایدر ناموفق بود',
+                'delete-success' => 'اسلایدر با موفقیت حذف شد.',
+                'delete-warning' => 'آیا مطمئن هستید که می‌خواهید این عمل را انجام دهید؟',
+                'update-success' => 'اسلایدر با موفقیت به‌روزرسانی شد.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'ساخت ارز',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'منابع موجودی',
                 'invoices' => 'فاکتورها',
                 'locales' => 'محلی‌ها',
+                'login-sliders' => 'اسلایدرهای ورود',
                 'marketing' => 'بازاریابی',
                 'mode' => 'حالت تاریک',
                 'newsletter-subscriptions' => 'اشتراک‌های خبرنامه',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'منابع موجودی',
         'invoices' => 'فاکتورها',
         'locales' => 'زبان‌ها',
+        'login-sliders' => 'اسلایدرهای ورود',
         'marketing' => 'بازاریابی',
         'newsletter-subscriptions' => 'اشتراک‌های خبرنامه',
         'note' => 'یادداشت',

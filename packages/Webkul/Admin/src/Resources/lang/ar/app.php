@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'إنشاء شريحة',
+                'title' => 'شرائح صفحة تسجيل الدخول',
+
+                'datagrid' => [
+                    'active' => 'نشط',
+                    'delete' => 'حذف',
+                    'edit' => 'تعديل',
+                    'id' => 'المعرف',
+                    'inactive' => 'غير نشط',
+                    'link' => 'الرابط',
+                    'sort-order' => 'ترتيب الفرز',
+                    'status' => 'الحالة',
+                    'title' => 'العنوان',
+                ],
+
+                'create' => [
+                    'image' => 'صورة',
+                    'image-size' => 'دقة الصورة يجب أن تكون مثل 1920px X 700px',
+                    'link' => 'الرابط',
+                    'save-btn' => 'حفظ الشريحة',
+                    'sort-order' => 'ترتيب الفرز',
+                    'status' => 'الحالة',
+                    'title' => 'إنشاء شريحة',
+                    'title-field' => 'العنوان',
+                ],
+
+                'edit' => [
+                    'title' => 'تعديل الشريحة',
+                ],
+
+                'create-success' => 'تم إنشاء الشريحة بنجاح.',
+                'delete-failed' => 'فشل حذف الشريحة',
+                'delete-success' => 'تم حذف الشريحة بنجاح.',
+                'delete-warning' => 'هل أنت متأكد أنك تريد تنفيذ هذا الإجراء؟',
+                'update-success' => 'تم تحديث الشريحة بنجاح.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'إنشاء عملة',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'مصادر المخزون',
                 'invoices' => 'الفواتير',
                 'locales' => 'الإعدادات المحلية',
+                'login-sliders' => 'شرائح صفحة الدخول',
                 'marketing' => 'التسويق',
                 'mode' => 'وضع الظلام',
                 'newsletter-subscriptions' => 'اشتراكات النشرة الإخبارية',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'مصادر المخزون',
         'invoices' => 'الفواتير',
         'locales' => 'اللغات',
+        'login-sliders' => 'شرائح صفحة الدخول',
         'marketing' => 'التسويق',
         'newsletter-subscriptions' => 'اشتراكات النشرة الإخبارية',
         'note' => 'ملاحظة',

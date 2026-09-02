@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'ස්ලයිඩරයක් සාදන්න',
+                'title' => 'පිවිසුම් පිටු ස්ලයිඩර්',
+
+                'datagrid' => [
+                    'active' => 'සක්‍රිය',
+                    'delete' => 'මකන්න',
+                    'edit' => 'සංස්කරණය',
+                    'id' => 'හැඳුනුම්පත',
+                    'inactive' => 'අක්‍රිය',
+                    'link' => 'සබැඳිය',
+                    'sort-order' => 'අනුපිළිවෙල',
+                    'status' => 'තත්ත්වය',
+                    'title' => 'මාතෘකාව',
+                ],
+
+                'create' => [
+                    'image' => 'රූපය',
+                    'image-size' => 'රූප විභේදනය 1920px X 700px මෙන් විය යුතුය',
+                    'link' => 'සබැඳිය',
+                    'save-btn' => 'ස්ලයිඩරය සුරකින්න',
+                    'sort-order' => 'අනුපිළිවෙල',
+                    'status' => 'තත්ත්වය',
+                    'title' => 'ස්ලයිඩරයක් සාදන්න',
+                    'title-field' => 'මාතෘකාව',
+                ],
+
+                'edit' => [
+                    'title' => 'ස්ලයිඩරය සංස්කරණය කරන්න',
+                ],
+
+                'create-success' => 'ස්ලයිඩරය සාර්ථකව සාදන ලදී.',
+                'delete-failed' => 'ස්ලයිඩරය මකා දැමීම අසාර්ථක විය',
+                'delete-success' => 'ස්ලයිඩරය සාර්ථකව මකා දමන ලදී.',
+                'delete-warning' => 'ඔබට මෙම ක්‍රියාව සිදු කිරීමට අවශ්‍ය බව විශ්වාසද?',
+                'update-success' => 'ස්ලයිඩරය සාර්ථකව යාවත්කාලීන කරන ලදී.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'මුදල් සාදන්න',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'උපාංග',
                 'invoices' => 'ගොනුව',
                 'locales' => 'ස්ථාන',
+                'login-sliders' => 'පිවිසුම් ස්ලයිඩර්',
                 'marketing' => 'වෙළඳ සැලසුම්',
                 'mode' => 'අඳුරු මාදිලිය',
                 'newsletter-subscriptions' => 'නිවේශාරී පුවත්',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'අබාරාද',
         'invoices' => 'ක්‍රියාත්මක',
         'locales' => 'ස්ථාන',
+        'login-sliders' => 'පිවිසුම් ස්ලයිඩර්',
         'marketing' => 'නිර්දේශ',
         'newsletter-subscriptions' => 'නිළියුබ්ස් දායකත්ව',
         'note' => 'සටහන',

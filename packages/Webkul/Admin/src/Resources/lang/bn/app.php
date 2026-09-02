@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'স্লাইডার তৈরি করুন',
+                'title' => 'লগইন পেজ স্লাইডার',
+
+                'datagrid' => [
+                    'active' => 'সক্রিয়',
+                    'delete' => 'মুছুন',
+                    'edit' => 'সম্পাদনা',
+                    'id' => 'আইডি',
+                    'inactive' => 'নিষ্ক্রিয়',
+                    'link' => 'লিঙ্ক',
+                    'sort-order' => 'সাজানোর ক্রম',
+                    'status' => 'অবস্থা',
+                    'title' => 'শিরোনাম',
+                ],
+
+                'create' => [
+                    'image' => 'ছবি',
+                    'image-size' => 'ছবির রেজোলিউশন 1920px X 700px এর মতো হওয়া উচিত',
+                    'link' => 'লিঙ্ক',
+                    'save-btn' => 'স্লাইডার সংরক্ষণ করুন',
+                    'sort-order' => 'সাজানোর ক্রম',
+                    'status' => 'অবস্থা',
+                    'title' => 'স্লাইডার তৈরি করুন',
+                    'title-field' => 'শিরোনাম',
+                ],
+
+                'edit' => [
+                    'title' => 'স্লাইডার সম্পাদনা করুন',
+                ],
+
+                'create-success' => 'স্লাইডার সফলভাবে তৈরি হয়েছে।',
+                'delete-failed' => 'স্লাইডার মুছতে ব্যর্থ হয়েছে',
+                'delete-success' => 'স্লাইডার সফলভাবে মুছে ফেলা হয়েছে।',
+                'delete-warning' => 'আপনি কি নিশ্চিত যে আপনি এই কাজটি করতে চান?',
+                'update-success' => 'স্লাইডার সফলভাবে আপডেট হয়েছে।',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'মুদ্রা তৈরি করুন',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'মূল মদ',
                 'invoices' => 'চালান',
                 'locales' => 'লোকেল',
+                'login-sliders' => 'লগইন স্লাইডার',
                 'marketing' => 'মার্কেটিং',
                 'mode' => 'ডার্ক মোড',
                 'newsletter-subscriptions' => 'নিউজলেটার সাবস্ক্রিপশন',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'মূল্যবান পণ্যের উৎস',
         'invoices' => 'চালান',
         'locales' => 'লোকেল',
+        'login-sliders' => 'লগইন স্লাইডার',
         'marketing' => 'মার্কেটিং',
         'newsletter-subscriptions' => 'নিউজলেটার সাবস্ক্রিপশন',
         'note' => 'মন্তব্য',

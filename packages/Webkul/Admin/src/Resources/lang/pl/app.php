@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Utwórz slajd',
+                'title' => 'Slajdy strony logowania',
+
+                'datagrid' => [
+                    'active' => 'Aktywny',
+                    'delete' => 'Usuń',
+                    'edit' => 'Edytuj',
+                    'id' => 'ID',
+                    'inactive' => 'Nieaktywny',
+                    'link' => 'Link',
+                    'sort-order' => 'Kolejność sortowania',
+                    'status' => 'Status',
+                    'title' => 'Tytuł',
+                ],
+
+                'create' => [
+                    'image' => 'Obraz',
+                    'image-size' => 'Rozdzielczość obrazu powinna wynosić 1920px X 700px',
+                    'link' => 'Link',
+                    'save-btn' => 'Zapisz slajd',
+                    'sort-order' => 'Kolejność sortowania',
+                    'status' => 'Status',
+                    'title' => 'Utwórz slajd',
+                    'title-field' => 'Tytuł',
+                ],
+
+                'edit' => [
+                    'title' => 'Edytuj slajd',
+                ],
+
+                'create-success' => 'Slajd został utworzony pomyślnie.',
+                'delete-failed' => 'Usunięcie slajdu nie powiodło się',
+                'delete-success' => 'Slajd został usunięty pomyślnie.',
+                'delete-warning' => 'Czy na pewno chcesz wykonać tę czynność?',
+                'update-success' => 'Slajd został zaktualizowany pomyślnie.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Utwórz walutę',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Źródła inwentarza',
                 'invoices' => 'Faktury',
                 'locales' => 'Lokalizacje',
+                'login-sliders' => 'Slajdy logowania',
                 'marketing' => 'Marketing',
                 'mode' => 'Tryb ciemny',
                 'newsletter-subscriptions' => 'Subskrypcje newslettera',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Magazyny',
         'invoices' => 'Faktury',
         'locales' => 'Lokalizacje',
+        'login-sliders' => 'Slajdy logowania',
         'marketing' => 'Marketing',
         'newsletter-subscriptions' => 'Subskrypcje newslettera',
         'note' => 'Notatka',

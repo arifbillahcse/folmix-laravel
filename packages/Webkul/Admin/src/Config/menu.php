@@ -355,6 +355,12 @@ return [
         'sort' => 7,
         'icon' => '',
     ], [
+        'key' => 'settings.login_sliders',
+        'name' => 'admin::app.components.layouts.sidebar.login-sliders',
+        'route' => 'admin.settings.login_sliders.index',
+        'sort' => 8,
+        'icon' => '',
+    ], [
         'key' => 'settings.themes',
         'name' => 'admin::app.components.layouts.sidebar.themes',
         'route' => 'admin.settings.themes.index',

@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Kaydırıcı Oluştur',
+                'title' => 'Giriş Sayfası Kaydırıcıları',
+
+                'datagrid' => [
+                    'active' => 'Aktif',
+                    'delete' => 'Sil',
+                    'edit' => 'Düzenle',
+                    'id' => 'Kimlik',
+                    'inactive' => 'Pasif',
+                    'link' => 'Bağlantı',
+                    'sort-order' => 'Sıralama',
+                    'status' => 'Durum',
+                    'title' => 'Başlık',
+                ],
+
+                'create' => [
+                    'image' => 'Görsel',
+                    'image-size' => 'Görsel çözünürlüğü 1920px X 700px gibi olmalıdır',
+                    'link' => 'Bağlantı',
+                    'save-btn' => 'Kaydırıcıyı Kaydet',
+                    'sort-order' => 'Sıralama',
+                    'status' => 'Durum',
+                    'title' => 'Kaydırıcı Oluştur',
+                    'title-field' => 'Başlık',
+                ],
+
+                'edit' => [
+                    'title' => 'Kaydırıcıyı Düzenle',
+                ],
+
+                'create-success' => 'Kaydırıcı başarıyla oluşturuldu.',
+                'delete-failed' => 'Kaydırıcı silme başarısız oldu',
+                'delete-success' => 'Kaydırıcı başarıyla silindi.',
+                'delete-warning' => 'Bu işlemi gerçekleştirmek istediğinizden emin misiniz?',
+                'update-success' => 'Kaydırıcı başarıyla güncellendi.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Para Birimi Oluştur',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Envanter Kaynakları',
                 'invoices' => 'Faturalar',
                 'locales' => 'Yerel Ayarlar',
+                'login-sliders' => 'Giriş Kaydırıcıları',
                 'marketing' => 'Pazarlama',
                 'mode' => 'Karanlık Mod',
                 'newsletter-subscriptions' => 'Bülten Abonelikleri',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Envanter Kaynakları',
         'invoices' => 'Faturalar',
         'locales' => 'Yerel Ayarlar',
+        'login-sliders' => 'Giriş Kaydırıcıları',
         'marketing' => 'Pazarlama',
         'newsletter-subscriptions' => 'Bülten Abonelikleri',
         'note' => 'Not',

@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Slider aanmaken',
+                'title' => 'Inlogpagina sliders',
+
+                'datagrid' => [
+                    'active' => 'Actief',
+                    'delete' => 'Verwijderen',
+                    'edit' => 'Bewerken',
+                    'id' => 'ID',
+                    'inactive' => 'Inactief',
+                    'link' => 'Link',
+                    'sort-order' => 'Sorteervolgorde',
+                    'status' => 'Status',
+                    'title' => 'Titel',
+                ],
+
+                'create' => [
+                    'image' => 'Afbeelding',
+                    'image-size' => 'Afbeeldingsresolutie moet zoals 1920px X 700px zijn',
+                    'link' => 'Link',
+                    'save-btn' => 'Slider opslaan',
+                    'sort-order' => 'Sorteervolgorde',
+                    'status' => 'Status',
+                    'title' => 'Slider aanmaken',
+                    'title-field' => 'Titel',
+                ],
+
+                'edit' => [
+                    'title' => 'Slider bewerken',
+                ],
+
+                'create-success' => 'Slider succesvol aangemaakt.',
+                'delete-failed' => 'Verwijderen van slider mislukt',
+                'delete-success' => 'Slider succesvol verwijderd.',
+                'delete-warning' => 'Weet u zeker dat u deze actie wilt uitvoeren?',
+                'update-success' => 'Slider succesvol bijgewerkt.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Valuta Aanmaken',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Voorraadbronnen',
                 'invoices' => 'Facturen',
                 'locales' => 'Locaties',
+                'login-sliders' => 'Inlogsliders',
                 'marketing' => 'Marketing',
                 'mode' => 'Donkere Modus',
                 'newsletter-subscriptions' => 'Nieuwsbriefabonnementen',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Voorraadbronnen',
         'invoices' => 'Facturen',
         'locales' => 'Talen',
+        'login-sliders' => 'Inlogsliders',
         'marketing' => 'Marketing',
         'newsletter-subscriptions' => 'Nieuwsbriefabonnementen',
         'note' => 'Notitie',

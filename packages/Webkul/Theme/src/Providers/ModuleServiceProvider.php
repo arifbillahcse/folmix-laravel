@@ -3,6 +3,7 @@
 namespace Webkul\Theme\Providers;
 
 use Webkul\Core\Providers\CoreModuleServiceProvider;
+use Webkul\Theme\Models\LoginSlider;
 use Webkul\Theme\Models\ThemeCustomization;
 use Webkul\Theme\Models\ThemeCustomizationTranslation;
 
@@ -16,5 +17,6 @@ class ModuleServiceProvider extends CoreModuleServiceProvider
     protected $models = [
         ThemeCustomization::class,
         ThemeCustomizationTranslation::class,
+        LoginSlider::class,
     ];
 }

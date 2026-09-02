@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Crear slider',
+                'title' => 'Sliders de la página de inicio de sesión',
+
+                'datagrid' => [
+                    'active' => 'Activo',
+                    'delete' => 'Eliminar',
+                    'edit' => 'Editar',
+                    'id' => 'ID',
+                    'inactive' => 'Inactivo',
+                    'link' => 'Enlace',
+                    'sort-order' => 'Orden',
+                    'status' => 'Estado',
+                    'title' => 'Título',
+                ],
+
+                'create' => [
+                    'image' => 'Imagen',
+                    'image-size' => 'La resolución de la imagen debe ser 1920px X 700px',
+                    'link' => 'Enlace',
+                    'save-btn' => 'Guardar slider',
+                    'sort-order' => 'Orden',
+                    'status' => 'Estado',
+                    'title' => 'Crear slider',
+                    'title-field' => 'Título',
+                ],
+
+                'edit' => [
+                    'title' => 'Editar slider',
+                ],
+
+                'create-success' => 'Slider creado correctamente.',
+                'delete-failed' => 'Error al eliminar el slider',
+                'delete-success' => 'Slider eliminado correctamente.',
+                'delete-warning' => '¿Está seguro de que desea realizar esta acción?',
+                'update-success' => 'Slider actualizado correctamente.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Crear Moneda',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Fuentes de inventario',
                 'invoices' => 'Facturas',
                 'locales' => 'Idiomas',
+                'login-sliders' => 'Sliders de inicio de sesión',
                 'marketing' => 'Marketing',
                 'mode' => 'Modo oscuro',
                 'newsletter-subscriptions' => 'Suscripciones al boletín',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Fuentes de Inventario',
         'invoices' => 'Facturas',
         'locales' => 'Idiomas',
+        'login-sliders' => 'Sliders de inicio de sesión',
         'marketing' => 'Marketing',
         'newsletter-subscriptions' => 'Suscripciones al Boletín',
         'note' => 'Nota',

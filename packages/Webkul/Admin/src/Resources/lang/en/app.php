@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Create Slider',
+                'title' => 'Login Page Sliders',
+
+                'datagrid' => [
+                    'active' => 'Active',
+                    'delete' => 'Delete',
+                    'edit' => 'Edit',
+                    'id' => 'ID',
+                    'inactive' => 'Inactive',
+                    'link' => 'Link',
+                    'sort-order' => 'Sort Order',
+                    'status' => 'Status',
+                    'title' => 'Title',
+                ],
+
+                'create' => [
+                    'image' => 'Image',
+                    'image-size' => 'Image resolution should be like 1920px X 700px',
+                    'link' => 'Link',
+                    'save-btn' => 'Save Slider',
+                    'sort-order' => 'Sort Order',
+                    'status' => 'Status',
+                    'title' => 'Create Slider',
+                    'title-field' => 'Title',
+                ],
+
+                'edit' => [
+                    'title' => 'Edit Slider',
+                ],
+
+                'create-success' => 'Slider created successfully.',
+                'delete-failed' => 'Slider deletion failed',
+                'delete-success' => 'Slider deleted successfully.',
+                'delete-warning' => 'Are you sure, you want to perform this action?',
+                'update-success' => 'Slider updated successfully.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Create Currency',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Inventory Sources',
                 'invoices' => 'Invoices',
                 'locales' => 'Locales',
+                'login-sliders' => 'Login Sliders',
                 'marketing' => 'Marketing',
                 'mode' => 'Dark Mode',
                 'newsletter-subscriptions' => 'Newsletter Subscriptions',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Inventory Sources',
         'invoices' => 'Invoices',
         'locales' => 'Locales',
+        'login-sliders' => 'Login Sliders',
         'marketing' => 'Marketing',
         'newsletter-subscriptions' => 'Newsletter Subscriptions',
         'note' => 'Note',

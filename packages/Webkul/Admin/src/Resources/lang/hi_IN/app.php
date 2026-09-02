@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'स्लाइडर बनाएं',
+                'title' => 'लॉगिन पेज स्लाइडर',
+
+                'datagrid' => [
+                    'active' => 'सक्रिय',
+                    'delete' => 'हटाएं',
+                    'edit' => 'संपादित करें',
+                    'id' => 'आईडी',
+                    'inactive' => 'निष्क्रिय',
+                    'link' => 'लिंक',
+                    'sort-order' => 'सॉर्ट ऑर्डर',
+                    'status' => 'स्थिति',
+                    'title' => 'शीर्षक',
+                ],
+
+                'create' => [
+                    'image' => 'छवि',
+                    'image-size' => 'छवि रिज़ॉल्यूशन 1920px X 700px जैसा होना चाहिए',
+                    'link' => 'लिंक',
+                    'save-btn' => 'स्लाइडर सहेजें',
+                    'sort-order' => 'सॉर्ट ऑर्डर',
+                    'status' => 'स्थिति',
+                    'title' => 'स्लाइडर बनाएं',
+                    'title-field' => 'शीर्षक',
+                ],
+
+                'edit' => [
+                    'title' => 'स्लाइडर संपादित करें',
+                ],
+
+                'create-success' => 'स्लाइडर सफलतापूर्वक बनाया गया।',
+                'delete-failed' => 'स्लाइडर हटाना विफल रहा',
+                'delete-success' => 'स्लाइडर सफलतापूर्वक हटाया गया।',
+                'delete-warning' => 'क्या आप वाकई यह कार्रवाई करना चाहते हैं?',
+                'update-success' => 'स्लाइडर सफलतापूर्वक अपडेट किया गया।',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'मुद्रा बनाएं',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'सूची स्रोत',
                 'invoices' => 'चालान',
                 'locales' => 'स्थान',
+                'login-sliders' => 'लॉगिन स्लाइडर',
                 'marketing' => 'मार्केटिंग',
                 'mode' => 'डार्क मोड',
                 'newsletter-subscriptions' => 'समाचार पत्रिका सदस्यता',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'सूची स्रोत',
         'invoices' => 'चालान',
         'locales' => 'स्थान',
+        'login-sliders' => 'लॉगिन स्लाइडर',
         'marketing' => 'मार्केटिंग',
         'newsletter-subscriptions' => 'न्यूज़लेटर सदस्यता',
         'note' => 'टिप्पणी',

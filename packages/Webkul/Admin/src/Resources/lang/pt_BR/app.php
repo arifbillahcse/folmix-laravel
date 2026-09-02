@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Criar Slider',
+                'title' => 'Sliders da Página de Login',
+
+                'datagrid' => [
+                    'active' => 'Ativo',
+                    'delete' => 'Excluir',
+                    'edit' => 'Editar',
+                    'id' => 'ID',
+                    'inactive' => 'Inativo',
+                    'link' => 'Link',
+                    'sort-order' => 'Ordem',
+                    'status' => 'Status',
+                    'title' => 'Título',
+                ],
+
+                'create' => [
+                    'image' => 'Imagem',
+                    'image-size' => 'A resolução da imagem deve ser 1920px X 700px',
+                    'link' => 'Link',
+                    'save-btn' => 'Salvar Slider',
+                    'sort-order' => 'Ordem',
+                    'status' => 'Status',
+                    'title' => 'Criar Slider',
+                    'title-field' => 'Título',
+                ],
+
+                'edit' => [
+                    'title' => 'Editar Slider',
+                ],
+
+                'create-success' => 'Slider criado com sucesso.',
+                'delete-failed' => 'Falha ao excluir o slider',
+                'delete-success' => 'Slider excluído com sucesso.',
+                'delete-warning' => 'Tem certeza de que deseja executar esta ação?',
+                'update-success' => 'Slider atualizado com sucesso.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Criar Moeda',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Fontes de Estoque',
                 'invoices' => 'Faturas',
                 'locales' => 'Localizações',
+                'login-sliders' => 'Sliders de Login',
                 'marketing' => 'Marketing',
                 'mode' => 'Modo Escuro',
                 'newsletter-subscriptions' => 'Inscrições na Newsletter',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Fontes de Inventário',
         'invoices' => 'Faturas',
         'locales' => 'Idiomas',
+        'login-sliders' => 'Sliders de Login',
         'marketing' => 'Marketing',
         'newsletter-subscriptions' => 'Assinaturas de Newsletter',
         'note' => 'Nota',

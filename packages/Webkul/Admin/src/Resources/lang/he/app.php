@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'צור מחוון',
+                'title' => 'מחוונים לדף ההתחברות',
+
+                'datagrid' => [
+                    'active' => 'פעיל',
+                    'delete' => 'מחק',
+                    'edit' => 'ערוך',
+                    'id' => 'מזהה',
+                    'inactive' => 'לא פעיל',
+                    'link' => 'קישור',
+                    'sort-order' => 'סדר מיון',
+                    'status' => 'סטטוס',
+                    'title' => 'כותרת',
+                ],
+
+                'create' => [
+                    'image' => 'תמונה',
+                    'image-size' => 'רזולוציית התמונה צריכה להיות 1920px X 700px',
+                    'link' => 'קישור',
+                    'save-btn' => 'שמור מחוון',
+                    'sort-order' => 'סדר מיון',
+                    'status' => 'סטטוס',
+                    'title' => 'צור מחוון',
+                    'title-field' => 'כותרת',
+                ],
+
+                'edit' => [
+                    'title' => 'ערוך מחוון',
+                ],
+
+                'create-success' => 'המחוון נוצר בהצלחה.',
+                'delete-failed' => 'מחיקת המחוון נכשלה',
+                'delete-success' => 'המחוון נמחק בהצלחה.',
+                'delete-warning' => 'האם אתה בטוח שברצונך לבצע פעולה זו?',
+                'update-success' => 'המחוון עודכן בהצלחה.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'צור מטבע',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'מקורות מלאי',
                 'invoices' => 'חשבוניות',
                 'locales' => 'אזורים',
+                'login-sliders' => 'מחוונים לדף ההתחברות',
                 'marketing' => 'שיווק',
                 'mode' => 'מצב כהה',
                 'newsletter-subscriptions' => 'מנויי יומן חדשות',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'מקורות מלאי',
         'invoices' => 'חשבוניות',
         'locales' => 'אזורים',
+        'login-sliders' => 'מחוונים לדף ההתחברות',
         'marketing' => 'שיווק',
         'newsletter-subscriptions' => 'הרשמות לניוזלטר',
         'note' => 'הערה',

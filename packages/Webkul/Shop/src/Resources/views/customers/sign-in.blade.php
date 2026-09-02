@@ -16,12 +16,12 @@
     </x-slot>
 
     <!-- Slider Section -->
-    @foreach ($sliders ?? [] as $slider)
+    @if (! empty($sliderOptions['images']))
         <x-shop::carousel
-            :options="$slider->options"
+            :options="$sliderOptions"
             aria-label="{{ trans('shop::app.home.index.image-carousel') }}"
         />
-    @endforeach
+    @endif
 
     <div class="container mt-20 max-1180:px-5 max-md:mt-12">
         {!! view_render_event('bagisto.shop.customers.login.logo.before') !!}

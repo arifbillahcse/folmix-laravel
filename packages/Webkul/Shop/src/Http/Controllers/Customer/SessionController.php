@@ -9,8 +9,7 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\View\View;
 use Webkul\Shop\Http\Controllers\Controller;
 use Webkul\Shop\Http\Requests\Customer\LoginRequest;
-use Webkul\Theme\Models\ThemeCustomization;
-use Webkul\Theme\Repositories\ThemeCustomizationRepository;
+use Webkul\Theme\Repositories\LoginSliderRepository;
 
 class SessionController extends Controller
 {
@@ -19,7 +18,7 @@ class SessionController extends Controller
      *
      * @return void
      */
-    public function __construct(protected ThemeCustomizationRepository $themeCustomizationRepository) {}
+    public function __construct(protected LoginSliderRepository $loginSliderRepository) {}
 
     /**
      * Display the resource.
@@ -32,14 +31,17 @@ class SessionController extends Controller
             return redirect()->route('shop.home.index');
         }
 
-        $sliders = $this->themeCustomizationRepository->orderBy('sort_order')->findWhere([
-            'status'     => 1,
-            'type'       => ThemeCustomization::IMAGE_CAROUSEL,
-            'channel_id' => core()->getCurrentChannel()->id,
-            'theme_code' => core()->getCurrentChannel()->theme,
-        ]);
+        $sliders = $this->loginSliderRepository->orderBy('sort_order')->findWhere(['status' => 1]);
 
-        return view('shop::customers.sign-in', compact('sliders'));
+        $sliderOptions = [
+            'images' => $sliders->map(fn ($slider) => [
+                'image' => $slider->image_url,
+                'title' => $slider->title,
+                'link'  => $slider->link,
+            ])->values()->all(),
+        ];
+
+        return view('shop::customers.sign-in', compact('sliderOptions'));
     }
 
     /**

@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Slider erstellen',
+                'title' => 'Login-Seiten-Slider',
+
+                'datagrid' => [
+                    'active' => 'Aktiv',
+                    'delete' => 'Löschen',
+                    'edit' => 'Bearbeiten',
+                    'id' => 'ID',
+                    'inactive' => 'Inaktiv',
+                    'link' => 'Link',
+                    'sort-order' => 'Sortierreihenfolge',
+                    'status' => 'Status',
+                    'title' => 'Titel',
+                ],
+
+                'create' => [
+                    'image' => 'Bild',
+                    'image-size' => 'Die Bildauflösung sollte 1920px X 700px betragen',
+                    'link' => 'Link',
+                    'save-btn' => 'Slider speichern',
+                    'sort-order' => 'Sortierreihenfolge',
+                    'status' => 'Status',
+                    'title' => 'Slider erstellen',
+                    'title-field' => 'Titel',
+                ],
+
+                'edit' => [
+                    'title' => 'Slider bearbeiten',
+                ],
+
+                'create-success' => 'Slider erfolgreich erstellt.',
+                'delete-failed' => 'Löschen des Sliders fehlgeschlagen',
+                'delete-success' => 'Slider erfolgreich gelöscht.',
+                'delete-warning' => 'Sind Sie sicher, dass Sie diese Aktion durchführen möchten?',
+                'update-success' => 'Slider erfolgreich aktualisiert.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Währung erstellen',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Inventarquellen',
                 'invoices' => 'Rechnungen',
                 'locales' => 'Standorte',
+                'login-sliders' => 'Login-Slider',
                 'marketing' => 'Marketing',
                 'mode' => 'Dunkler Modus',
                 'newsletter-subscriptions' => 'Newsletter-Abonnements',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Inventarquellen',
         'invoices' => 'Rechnungen',
         'locales' => 'Sprachen',
+        'login-sliders' => 'Login-Slider',
         'marketing' => 'Marketing',
         'newsletter-subscriptions' => 'Newsletter-Abonnements',
         'note' => 'Notiz',

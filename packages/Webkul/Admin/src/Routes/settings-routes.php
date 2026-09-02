@@ -7,6 +7,7 @@ use Webkul\Admin\Http\Controllers\Settings\DataTransfer\ImportController;
 use Webkul\Admin\Http\Controllers\Settings\ExchangeRateController;
 use Webkul\Admin\Http\Controllers\Settings\InventorySourceController;
 use Webkul\Admin\Http\Controllers\Settings\LocaleController;
+use Webkul\Admin\Http\Controllers\Settings\LoginSliderController;
 use Webkul\Admin\Http\Controllers\Settings\RoleController;
 use Webkul\Admin\Http\Controllers\Settings\Tax\TaxCategoryController;
 use Webkul\Admin\Http\Controllers\Settings\Tax\TaxRateController;
@@ -81,6 +82,25 @@ Route::prefix('settings')->group(function () {
         Route::put('edit', 'update')->name('admin.settings.locales.update');
 
         Route::delete('edit/{id}', 'destroy')->name('admin.settings.locales.delete');
+    });
+
+    /**
+     * Login sliders routes.
+     */
+    Route::controller(LoginSliderController::class)->prefix('login-sliders')->group(function () {
+        Route::get('', 'index')->name('admin.settings.login_sliders.index');
+
+        Route::post('create', 'store')->name('admin.settings.login_sliders.store');
+
+        Route::get('edit/{id}', 'edit')->name('admin.settings.login_sliders.edit');
+
+        Route::put('edit', 'update')->name('admin.settings.login_sliders.update');
+
+        Route::delete('edit/{id}', 'destroy')->name('admin.settings.login_sliders.delete');
+
+        Route::post('mass-update', 'massUpdate')->name('admin.settings.login_sliders.mass_update');
+
+        Route::post('mass-delete', 'massDestroy')->name('admin.settings.login_sliders.mass_delete');
     });
 
     /**

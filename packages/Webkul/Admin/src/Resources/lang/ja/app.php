@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'スライダーを作成',
+                'title' => 'ログインページスライダー',
+
+                'datagrid' => [
+                    'active' => '有効',
+                    'delete' => '削除',
+                    'edit' => '編集',
+                    'id' => 'ID',
+                    'inactive' => '無効',
+                    'link' => 'リンク',
+                    'sort-order' => '並び順',
+                    'status' => 'ステータス',
+                    'title' => 'タイトル',
+                ],
+
+                'create' => [
+                    'image' => '画像',
+                    'image-size' => '画像の解像度は1920px X 700pxが推奨されます',
+                    'link' => 'リンク',
+                    'save-btn' => 'スライダーを保存',
+                    'sort-order' => '並び順',
+                    'status' => 'ステータス',
+                    'title' => 'スライダーを作成',
+                    'title-field' => 'タイトル',
+                ],
+
+                'edit' => [
+                    'title' => 'スライダーを編集',
+                ],
+
+                'create-success' => 'スライダーが正常に作成されました。',
+                'delete-failed' => 'スライダーの削除に失敗しました',
+                'delete-success' => 'スライダーが正常に削除されました。',
+                'delete-warning' => '本当にこの操作を実行しますか?',
+                'update-success' => 'スライダーが正常に更新されました。',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => '通貨を作成',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => '在庫ソース',
                 'invoices' => '請求書',
                 'locales' => 'ロケール',
+                'login-sliders' => 'ログインスライダー',
                 'marketing' => 'マーケティング',
                 'mode' => 'ダークモード',
                 'newsletter-subscriptions' => 'ニュースレターの購読',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => '在庫ソース',
         'invoices' => '請求書',
         'locales' => 'ロケール',
+        'login-sliders' => 'ログインスライダー',
         'marketing' => 'マーケティング',
         'newsletter-subscriptions' => 'ニュースレター購読',
         'note' => 'メモ',

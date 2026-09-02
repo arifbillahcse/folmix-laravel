@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Buat Slider',
+                'title' => 'Slider Halaman Login',
+
+                'datagrid' => [
+                    'active' => 'Aktif',
+                    'delete' => 'Hapus',
+                    'edit' => 'Ubah',
+                    'id' => 'ID',
+                    'inactive' => 'Tidak Aktif',
+                    'link' => 'Tautan',
+                    'sort-order' => 'Urutan',
+                    'status' => 'Status',
+                    'title' => 'Judul',
+                ],
+
+                'create' => [
+                    'image' => 'Gambar',
+                    'image-size' => 'Resolusi gambar harus seperti 1920px X 700px',
+                    'link' => 'Tautan',
+                    'save-btn' => 'Simpan Slider',
+                    'sort-order' => 'Urutan',
+                    'status' => 'Status',
+                    'title' => 'Buat Slider',
+                    'title-field' => 'Judul',
+                ],
+
+                'edit' => [
+                    'title' => 'Ubah Slider',
+                ],
+
+                'create-success' => 'Slider berhasil dibuat.',
+                'delete-failed' => 'Penghapusan slider gagal',
+                'delete-success' => 'Slider berhasil dihapus.',
+                'delete-warning' => 'Apakah Anda yakin ingin melakukan tindakan ini?',
+                'update-success' => 'Slider berhasil diperbarui.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Buat Mata Uang',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Sumber Inventaris',
                 'invoices' => 'Faktur',
                 'locales' => 'Bahasa & Lokalisasi',
+                'login-sliders' => 'Slider Login',
                 'marketing' => 'Pemasaran',
                 'mode' => 'Mode Gelap',
                 'newsletter-subscriptions' => 'Langganan Newsletter',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Sumber Inventaris',
         'invoices' => 'Faktur',
         'locales' => 'Bahasa & Lokalisasi',
+        'login-sliders' => 'Slider Login',
         'marketing' => 'Pemasaran',
         'newsletter-subscriptions' => 'Langganan Newsletter',
         'note' => 'Catatan',

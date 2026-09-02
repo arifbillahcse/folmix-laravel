@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Crea Slider',
+                'title' => 'Slider della pagina di accesso',
+
+                'datagrid' => [
+                    'active' => 'Attivo',
+                    'delete' => 'Elimina',
+                    'edit' => 'Modifica',
+                    'id' => 'ID',
+                    'inactive' => 'Inattivo',
+                    'link' => 'Link',
+                    'sort-order' => 'Ordine',
+                    'status' => 'Stato',
+                    'title' => 'Titolo',
+                ],
+
+                'create' => [
+                    'image' => 'Immagine',
+                    'image-size' => 'La risoluzione dell\'immagine dovrebbe essere 1920px X 700px',
+                    'link' => 'Link',
+                    'save-btn' => 'Salva Slider',
+                    'sort-order' => 'Ordine',
+                    'status' => 'Stato',
+                    'title' => 'Crea Slider',
+                    'title-field' => 'Titolo',
+                ],
+
+                'edit' => [
+                    'title' => 'Modifica Slider',
+                ],
+
+                'create-success' => 'Slider creato con successo.',
+                'delete-failed' => 'Eliminazione dello slider non riuscita',
+                'delete-success' => 'Slider eliminato con successo.',
+                'delete-warning' => 'Sei sicuro di voler eseguire questa azione?',
+                'update-success' => 'Slider aggiornato con successo.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Crea Valuta',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Fonti di Inventario',
                 'invoices' => 'Fatture',
                 'locales' => 'Localizzazioni',
+                'login-sliders' => 'Slider di accesso',
                 'marketing' => 'Marketing',
                 'mode' => 'Modalità Scura',
                 'newsletter-subscriptions' => 'Abbonamenti alla Newsletter',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Fonti di Inventario',
         'invoices' => 'Fatture',
         'locales' => 'Localizzazioni',
+        'login-sliders' => 'Slider di accesso',
         'marketing' => 'Marketing',
         'newsletter-subscriptions' => 'Abbonamenti alla Newsletter',
         'note' => 'Nota',

@@ -3285,6 +3285,46 @@ return [
             ],
         ],
 
+        'login-sliders' => [
+            'index' => [
+                'create-btn' => 'Créer un diaporama',
+                'title' => 'Diaporamas de la page de connexion',
+
+                'datagrid' => [
+                    'active' => 'Actif',
+                    'delete' => 'Supprimer',
+                    'edit' => 'Modifier',
+                    'id' => 'ID',
+                    'inactive' => 'Inactif',
+                    'link' => 'Lien',
+                    'sort-order' => 'Ordre de tri',
+                    'status' => 'Statut',
+                    'title' => 'Titre',
+                ],
+
+                'create' => [
+                    'image' => 'Image',
+                    'image-size' => 'La résolution de l\'image doit être de 1920px X 700px',
+                    'link' => 'Lien',
+                    'save-btn' => 'Enregistrer le diaporama',
+                    'sort-order' => 'Ordre de tri',
+                    'status' => 'Statut',
+                    'title' => 'Créer un diaporama',
+                    'title-field' => 'Titre',
+                ],
+
+                'edit' => [
+                    'title' => 'Modifier le diaporama',
+                ],
+
+                'create-success' => 'Diaporama créé avec succès.',
+                'delete-failed' => 'Échec de la suppression du diaporama',
+                'delete-success' => 'Diaporama supprimé avec succès.',
+                'delete-warning' => 'Êtes-vous sûr de vouloir effectuer cette action ?',
+                'update-success' => 'Diaporama mis à jour avec succès.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Créer une devise',
@@ -5347,6 +5387,7 @@ return [
                 'inventory-sources' => 'Sources de l\'inventaire',
                 'invoices' => 'Factures',
                 'locales' => 'Paramètres régionaux',
+                'login-sliders' => 'Diaporamas de connexion',
                 'marketing' => 'Marketing',
                 'mode' => 'Mode sombre',
                 'newsletter-subscriptions' => 'Abonnements à la newsletter',
@@ -5594,6 +5635,7 @@ return [
         'inventory-sources' => 'Sources d\'inventaire',
         'invoices' => 'Factures',
         'locales' => 'Paramètres régionaux',
+        'login-sliders' => 'Diaporamas de connexion',
         'marketing' => 'Marketing',
         'newsletter-subscriptions' => 'Abonnements à la newsletter',
         'note' => 'Note',
