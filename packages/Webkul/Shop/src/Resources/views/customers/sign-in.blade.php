@@ -15,6 +15,14 @@
         @lang('shop::app.customers.login-form.page-title')
     </x-slot>
 
+    <!-- Slider Section -->
+    @foreach ($sliders ?? [] as $slider)
+        <x-shop::carousel
+            :options="$slider->options"
+            aria-label="{{ trans('shop::app.home.index.image-carousel') }}"
+        />
+    @endforeach
+
     <div class="container mt-20 max-1180:px-5 max-md:mt-12">
         {!! view_render_event('bagisto.shop.customers.login.logo.before') !!}
 
