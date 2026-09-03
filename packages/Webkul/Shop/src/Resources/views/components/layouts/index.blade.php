@@ -161,6 +161,9 @@
 
         {!! view_render_event('bagisto.shop.layout.body.after') !!}
 
+        <!-- Floating WhatsApp Chat Button -->
+        <x-shop::layouts.whatsapp />
+
         <!-- WebMCP Tool Registration For AI Agents -->
         <x-shop::layouts.webmcp />
 

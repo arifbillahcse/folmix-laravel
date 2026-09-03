@@ -637,6 +637,10 @@ return [
                 'view-wishlist' => 'Obre la pàgina de la llista de desitjos per revisar els productes desats del client.',
             ],
 
+            'whatsapp' => [
+                'chat-with-us' => 'Xateja amb nosaltres per WhatsApp',
+            ],
+
             'footer' => [
                 'about-tagline' => 'Benvingut a Folmix. Explora la nostra àmplia gamma de peces de recanvi i accessoris amb la qualitat i el servei en què pots confiar.',
                 'about-us' => 'Sobre nosaltres',

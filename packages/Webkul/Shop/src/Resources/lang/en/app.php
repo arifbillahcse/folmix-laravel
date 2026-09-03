@@ -637,6 +637,10 @@ return [
                 'view-wishlist' => 'Open the wishlist page to review the customer\'s saved products.',
             ],
 
+            'whatsapp' => [
+                'chat-with-us' => 'Chat with us on WhatsApp',
+            ],
+
             'footer' => [
                 'about-tagline' => 'Welcome to Folmix. Explore our wide range of spare parts and accessories with the quality and service you can trust.',
                 'about-us' => 'About Us',

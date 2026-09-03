@@ -637,6 +637,10 @@ return [
                 'view-wishlist' => 'Open de verlanglijstpagina om de opgeslagen producten van de klant te bekijken.',
             ],
 
+            'whatsapp' => [
+                'chat-with-us' => 'Chat met ons via WhatsApp',
+            ],
+
             'footer' => [
                 'about-tagline' => 'Welkom bij Folmix. Ontdek ons brede assortiment reserveonderdelen en accessoires met de kwaliteit en service die u kunt vertrouwen.',
                 'about-us' => 'Over ons',

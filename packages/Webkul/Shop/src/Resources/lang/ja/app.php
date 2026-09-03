@@ -637,6 +637,10 @@ return [
                 'view-wishlist' => '顧客が保存した商品を確認するためにお気に入りリストのページを開きます。',
             ],
 
+            'whatsapp' => [
+                'chat-with-us' => 'WhatsAppでチャットする',
+            ],
+
             'footer' => [
                 'about-tagline' => 'Folmixへようこそ。信頼できる品質とサービスで、幅広いスペアパーツとアクセサリーをご覧ください。',
                 'about-us' => '当社について',

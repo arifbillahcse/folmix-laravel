@@ -637,6 +637,10 @@ return [
                 'view-wishlist' => '打开心愿单页面以查看客户保存的产品。',
             ],
 
+            'whatsapp' => [
+                'chat-with-us' => '通过WhatsApp与我们聊天',
+            ],
+
             'footer' => [
                 'about-tagline' => '欢迎来到 Folmix。探索我们种类丰富的备件和配件，值得信赖的品质与服务。',
                 'about-us' => '关于我们',

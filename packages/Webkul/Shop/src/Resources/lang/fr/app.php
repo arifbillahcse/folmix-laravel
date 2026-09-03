@@ -637,6 +637,10 @@ return [
                 'view-wishlist' => 'Ouvrir la page de la liste de souhaits pour consulter les produits enregistrés du client.',
             ],
 
+            'whatsapp' => [
+                'chat-with-us' => 'Discutez avec nous sur WhatsApp',
+            ],
+
             'footer' => [
                 'about-tagline' => 'Bienvenue chez Folmix. Découvrez notre large gamme de pièces détachées et d\'accessoires avec la qualité et le service en lesquels vous pouvez avoir confiance.',
                 'about-us' => 'À propos de nous',

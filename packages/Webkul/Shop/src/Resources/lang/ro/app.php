@@ -637,6 +637,10 @@ return [
                 'view-wishlist' => 'Deschide pagina listei de dorințe pentru a revizui produsele salvate ale clientului.',
             ],
 
+            'whatsapp' => [
+                'chat-with-us' => 'Discutați cu noi pe WhatsApp',
+            ],
+
             'footer' => [
                 'about-tagline' => 'Bine ați venit la Folmix. Explorați gama noastră largă de piese de schimb și accesorii cu calitatea și serviciile în care puteți avea încredere.',
                 'about-us' => 'Despre noi',

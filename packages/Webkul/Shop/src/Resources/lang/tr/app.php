@@ -637,6 +637,10 @@ return [
                 'view-wishlist' => 'Müşterinin kaydettiği ürünleri incelemek için istek listesi sayfasını açın.',
             ],
 
+            'whatsapp' => [
+                'chat-with-us' => 'WhatsApp\'tan bizimle sohbet edin',
+            ],
+
             'footer' => [
                 'about-tagline' => 'Folmix\'e hoş geldiniz. Güvenebileceğiniz kalite ve hizmet anlayışıyla geniş yedek parça ve aksesuar yelpazemizi keşfedin.',
                 'about-us' => 'Hakkımızda',

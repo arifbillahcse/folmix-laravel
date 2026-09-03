@@ -637,6 +637,10 @@ return [
                 'view-wishlist' => 'Die Wunschlistenseite öffnen, um die gespeicherten Produkte des Kunden zu überprüfen.',
             ],
 
+            'whatsapp' => [
+                'chat-with-us' => 'Chatten Sie mit uns auf WhatsApp',
+            ],
+
             'footer' => [
                 'about-tagline' => 'Willkommen bei Folmix. Entdecken Sie unser breites Sortiment an Ersatzteilen und Zubehör mit der Qualität und dem Service, dem Sie vertrauen können.',
                 'about-us' => 'Über uns',

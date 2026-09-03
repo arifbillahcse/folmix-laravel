@@ -637,6 +637,10 @@ return [
                 'view-wishlist' => 'Buka halaman daftar keinginan untuk meninjau produk tersimpan pelanggan.',
             ],
 
+            'whatsapp' => [
+                'chat-with-us' => 'Chat dengan kami di WhatsApp',
+            ],
+
             'footer' => [
                 'about-tagline' => 'Selamat datang di Folmix. Jelajahi berbagai suku cadang dan aksesori kami dengan kualitas dan layanan yang dapat Anda percayai.',
                 'about-us' => 'Tentang Kami',
