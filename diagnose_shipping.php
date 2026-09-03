@@ -91,3 +91,36 @@ try {
     echo $e->getFile().':'.$e->getLine()."\n";
     echo $e->getTraceAsString()."\n";
 }
+
+echo "\n=== Step-by-step trace of what calculate() sees internally ===\n";
+
+$activeFlag = core()->getConfigData('sales.carriers.shippingzones.active');
+echo 'active flag: ';
+var_dump($activeFlag);
+
+$traceCart = Cart::getCart();
+echo 'Cart::getCart() is null? ';
+var_dump(is_null($traceCart));
+
+$traceAddress = $traceCart?->shipping_address;
+echo 'shipping_address is null? ';
+var_dump(is_null($traceAddress));
+
+if ($traceAddress) {
+    echo 'shipping_address->country: '.var_export($traceAddress->country, true)."\n";
+    echo 'shipping_address->postcode: '.var_export($traceAddress->postcode, true)."\n";
+}
+
+$traceZone = app(\Webkul\Shipping\Repositories\ShippingZoneRepository::class)->findMatchingZone(
+    $traceAddress?->country,
+    $traceAddress?->postcode
+);
+echo 'findMatchingZone() result: ';
+var_dump($traceZone ? $traceZone->id.' - '.$traceZone->name : null);
+
+if ($traceZone) {
+    echo 'zone methods count: '.$traceZone->methods->count()."\n";
+    foreach ($traceZone->methods as $m) {
+        echo '  method #'.$m->id.' status='.var_export($m->status, true).' title='.$m->title."\n";
+    }
+}
