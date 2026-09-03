@@ -3325,6 +3325,69 @@ return [
             ],
         ],
 
+        'shipping-zones' => [
+            'index' => [
+                'create-btn' => 'Crea Zona',
+                'title' => 'Zone di Spedizione',
+                'info' => 'Una zona di spedizione è un insieme di paesi/CAP a cui spedisci e i metodi di spedizione offerti lì. Un cliente viene abbinato alla prima zona (dall\'alto verso il basso) la cui regione corrisponde al suo indirizzo di spedizione.',
+
+                'datagrid' => [
+                    'active' => 'Attivo',
+                    'delete' => 'Elimina',
+                    'edit' => 'Modifica',
+                    'id' => 'ID',
+                    'inactive' => 'Inattivo',
+                    'methods' => 'Metodi',
+                    'name' => 'Nome Zona',
+                    'regions' => 'Regioni',
+                    'rest-of-world' => 'Resto del Mondo',
+                    'sort-order' => 'Ordine',
+                    'status' => 'Stato',
+                ],
+
+                'form' => [
+                    'add-method-btn' => 'Aggiungi Metodo di Spedizione',
+                    'add-region-btn' => 'Aggiungi Regione',
+                    'back' => 'Indietro',
+                    'calculation-type' => 'Tipo di Calcolo',
+                    'country' => 'Paese',
+                    'free-shipping' => 'Spedizione Gratuita',
+                    'flat-rate' => 'Tariffa Fissa',
+                    'methods' => 'Metodi di Spedizione',
+                    'methods-info' => 'I metodi tra cui un cliente può scegliere quando questa zona corrisponde al suo indirizzo.',
+                    'method-status' => 'Attivo',
+                    'method-title' => 'Titolo Metodo',
+                    'method-type' => 'Tipo',
+                    'name' => 'Nome Zona',
+                    'per-order' => 'Per Ordine',
+                    'per-unit' => 'Per Unità',
+                    'postcode' => 'CAP (opzionale)',
+                    'rate' => 'Tariffa',
+                    'regions' => 'Regioni',
+                    'regions-info' => 'I paesi (e, facoltativamente, un CAP specifico) corrispondenti a questa zona. Lasciare vuoto solo per la zona Resto del Mondo.',
+                    'rest-of-world' => 'Questa è la zona "Resto del Mondo" (sempre verificata per ultima, ignora le regioni sopra)',
+                    'save-btn' => 'Salva Zona',
+                    'sort-order' => 'Ordine',
+                    'sort-order-info' => 'Le zone vengono verificate in questo ordine (prima le più basse); la zona Resto del Mondo viene sempre verificata per ultima.',
+                    'status' => 'Stato',
+                ],
+
+                'create' => [
+                    'title' => 'Crea Zona di Spedizione',
+                ],
+
+                'edit' => [
+                    'title' => 'Modifica Zona di Spedizione',
+                ],
+
+                'create-success' => 'Zona di spedizione creata con successo.',
+                'delete-failed' => 'Eliminazione della zona di spedizione non riuscita',
+                'delete-success' => 'Zona di spedizione eliminata con successo.',
+                'delete-warning' => 'Sei sicuro di voler eseguire questa azione?',
+                'update-success' => 'Zona di spedizione aggiornata con successo.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Crea Valuta',
@@ -4975,6 +5038,12 @@ return [
                             'title' => 'Tipo',
                         ],
                     ],
+
+                    'shipping-zones' => [
+                        'page-title' => 'Zone di Spedizione',
+                        'status' => 'Stato',
+                        'title-info' => 'Attiva questa opzione per addebitare la spedizione in base alle zone configurate in Impostazioni > Zone di Spedizione - ogni zona può corrispondere a paesi/CAP specifici e offrire i propri metodi e tariffe di spedizione.',
+                    ],
                 ],
 
                 'payment-methods' => [
@@ -5388,6 +5457,7 @@ return [
                 'invoices' => 'Fatture',
                 'locales' => 'Localizzazioni',
                 'login-sliders' => 'Slider di accesso',
+                'shipping-zones' => 'Zone di spedizione',
                 'marketing' => 'Marketing',
                 'mode' => 'Modalità Scura',
                 'newsletter-subscriptions' => 'Abbonamenti alla Newsletter',
@@ -5636,6 +5706,7 @@ return [
         'invoices' => 'Fatture',
         'locales' => 'Localizzazioni',
         'login-sliders' => 'Slider di accesso',
+        'shipping-zones' => 'Zone di spedizione',
         'marketing' => 'Marketing',
         'newsletter-subscriptions' => 'Abbonamenti alla Newsletter',
         'note' => 'Nota',

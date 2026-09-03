@@ -3325,6 +3325,69 @@ return [
             ],
         ],
 
+        'shipping-zones' => [
+            'index' => [
+                'create-btn' => 'Create Zone',
+                'title' => 'Shipping Zones',
+                'info' => 'A shipping zone is a set of countries/postcodes you ship to and the shipping method(s) offered there. A customer is matched to the first zone (top to bottom) whose region matches their shipping address.',
+
+                'datagrid' => [
+                    'active' => 'Active',
+                    'delete' => 'Delete',
+                    'edit' => 'Edit',
+                    'id' => 'ID',
+                    'inactive' => 'Inactive',
+                    'methods' => 'Methods',
+                    'name' => 'Zone Name',
+                    'regions' => 'Regions',
+                    'rest-of-world' => 'Rest of the World',
+                    'sort-order' => 'Sort Order',
+                    'status' => 'Status',
+                ],
+
+                'form' => [
+                    'add-method-btn' => 'Add Shipping Method',
+                    'add-region-btn' => 'Add Region',
+                    'back' => 'Back',
+                    'calculation-type' => 'Calculation Type',
+                    'country' => 'Country',
+                    'free-shipping' => 'Free Shipping',
+                    'flat-rate' => 'Flat Rate',
+                    'methods' => 'Shipping Methods',
+                    'methods-info' => 'The methods a customer can choose from when this zone matches their address.',
+                    'method-status' => 'Active',
+                    'method-title' => 'Method Title',
+                    'method-type' => 'Type',
+                    'name' => 'Zone Name',
+                    'per-order' => 'Per Order',
+                    'per-unit' => 'Per Unit',
+                    'postcode' => 'Postcode (optional)',
+                    'rate' => 'Rate',
+                    'regions' => 'Regions',
+                    'regions-info' => 'The countries (and, optionally, a specific postcode) this zone matches. Leave empty only for the Rest of the World zone.',
+                    'rest-of-world' => 'This is the "Rest of the World" zone (always matched last, ignores regions above)',
+                    'save-btn' => 'Save Zone',
+                    'sort-order' => 'Sort Order',
+                    'sort-order-info' => 'Zones are matched in this order (lowest first); the Rest of the World zone is always checked last regardless.',
+                    'status' => 'Status',
+                ],
+
+                'create' => [
+                    'title' => 'Create Shipping Zone',
+                ],
+
+                'edit' => [
+                    'title' => 'Edit Shipping Zone',
+                ],
+
+                'create-success' => 'Shipping zone created successfully.',
+                'delete-failed' => 'Shipping zone deletion failed',
+                'delete-success' => 'Shipping zone deleted successfully.',
+                'delete-warning' => 'Are you sure, you want to perform this action?',
+                'update-success' => 'Shipping zone updated successfully.',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Create Currency',
@@ -4975,6 +5038,12 @@ return [
                             'title' => 'Type',
                         ],
                     ],
+
+                    'shipping-zones' => [
+                        'page-title' => 'Shipping Zones',
+                        'status' => 'Status',
+                        'title-info' => 'Enable this to charge shipping based on the zones configured under Settings > Shipping Zones - each zone can match specific countries/postcodes and offer its own shipping methods and rates.',
+                    ],
                 ],
 
                 'payment-methods' => [
@@ -5388,6 +5457,7 @@ return [
                 'invoices' => 'Invoices',
                 'locales' => 'Locales',
                 'login-sliders' => 'Login Sliders',
+                'shipping-zones' => 'Shipping Zones',
                 'marketing' => 'Marketing',
                 'mode' => 'Dark Mode',
                 'newsletter-subscriptions' => 'Newsletter Subscriptions',
@@ -5636,6 +5706,7 @@ return [
         'invoices' => 'Invoices',
         'locales' => 'Locales',
         'login-sliders' => 'Login Sliders',
+        'shipping-zones' => 'Shipping Zones',
         'marketing' => 'Marketing',
         'newsletter-subscriptions' => 'Newsletter Subscriptions',
         'note' => 'Note',

@@ -1126,6 +1126,32 @@ return [
         ],
         'sort' => 3,
     ], [
+        'key' => 'settings.shipping_zones',
+        'name' => 'admin::app.acl.shipping-zones',
+        'route' => 'admin.settings.shipping_zones.index',
+        'sort' => 8,
+    ], [
+        'key' => 'settings.shipping_zones.create',
+        'name' => 'admin::app.acl.create',
+        'route' => [
+            'admin.settings.shipping_zones.create',
+            'admin.settings.shipping_zones.store',
+        ],
+        'sort' => 1,
+    ], [
+        'key' => 'settings.shipping_zones.edit',
+        'name' => 'admin::app.acl.edit',
+        'route' => [
+            'admin.settings.shipping_zones.edit',
+            'admin.settings.shipping_zones.update',
+        ],
+        'sort' => 2,
+    ], [
+        'key' => 'settings.shipping_zones.delete',
+        'name' => 'admin::app.acl.delete',
+        'route' => 'admin.settings.shipping_zones.delete',
+        'sort' => 3,
+    ], [
         'key' => 'settings.themes',
         'name' => 'admin::app.acl.themes',
         'route' => 'admin.settings.themes.index',

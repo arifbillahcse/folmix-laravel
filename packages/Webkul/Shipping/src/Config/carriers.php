@@ -19,4 +19,12 @@ return [
         'default_rate' => '0',
         'class' => 'Webkul\Shipping\Carriers\Free',
     ],
+
+    'shippingzones' => [
+        'code' => 'shippingzones',
+        'title' => 'Shipping Zones',
+        'description' => 'Shipping Zones',
+        'active' => true,
+        'class' => 'Webkul\Shipping\Carriers\ShippingZones',
+    ],
 ];

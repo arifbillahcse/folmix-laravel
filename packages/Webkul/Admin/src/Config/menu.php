@@ -361,6 +361,12 @@ return [
         'sort' => 8,
         'icon' => '',
     ], [
+        'key' => 'settings.shipping_zones',
+        'name' => 'admin::app.components.layouts.sidebar.shipping-zones',
+        'route' => 'admin.settings.shipping_zones.index',
+        'sort' => 8,
+        'icon' => '',
+    ], [
         'key' => 'settings.themes',
         'name' => 'admin::app.components.layouts.sidebar.themes',
         'route' => 'admin.settings.themes.index',

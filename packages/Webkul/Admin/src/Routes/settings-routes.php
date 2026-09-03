@@ -8,6 +8,7 @@ use Webkul\Admin\Http\Controllers\Settings\ExchangeRateController;
 use Webkul\Admin\Http\Controllers\Settings\InventorySourceController;
 use Webkul\Admin\Http\Controllers\Settings\LocaleController;
 use Webkul\Admin\Http\Controllers\Settings\LoginSliderController;
+use Webkul\Admin\Http\Controllers\Settings\ShippingZoneController;
 use Webkul\Admin\Http\Controllers\Settings\RoleController;
 use Webkul\Admin\Http\Controllers\Settings\Tax\TaxCategoryController;
 use Webkul\Admin\Http\Controllers\Settings\Tax\TaxRateController;
@@ -101,6 +102,23 @@ Route::prefix('settings')->group(function () {
         Route::post('mass-update', 'massUpdate')->name('admin.settings.login_sliders.mass_update');
 
         Route::post('mass-delete', 'massDestroy')->name('admin.settings.login_sliders.mass_delete');
+    });
+
+    /**
+     * Shipping zones routes.
+     */
+    Route::controller(ShippingZoneController::class)->prefix('shipping-zones')->group(function () {
+        Route::get('', 'index')->name('admin.settings.shipping_zones.index');
+
+        Route::get('create', 'create')->name('admin.settings.shipping_zones.create');
+
+        Route::post('create', 'store')->name('admin.settings.shipping_zones.store');
+
+        Route::get('edit/{id}', 'edit')->name('admin.settings.shipping_zones.edit');
+
+        Route::put('edit/{id}', 'update')->name('admin.settings.shipping_zones.update');
+
+        Route::delete('edit/{id}', 'destroy')->name('admin.settings.shipping_zones.delete');
     });
 
     /**

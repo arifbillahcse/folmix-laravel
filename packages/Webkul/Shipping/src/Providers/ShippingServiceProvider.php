@@ -19,6 +19,16 @@ class ShippingServiceProvider extends ServiceProvider
     }
 
     /**
+     * Bootstrap services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->loadMigrationsFrom(dirname(__DIR__).'/Database/Migrations');
+    }
+
+    /**
      * Register package config.
      *
      * @return void

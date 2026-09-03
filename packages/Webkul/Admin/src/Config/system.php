@@ -1936,6 +1936,20 @@ return [
             ],
         ],
     ], [
+        'key' => 'sales.carriers.shippingzones',
+        'name' => 'admin::app.configuration.index.sales.shipping-methods.shipping-zones.page-title',
+        'info' => 'admin::app.configuration.index.sales.shipping-methods.shipping-zones.title-info',
+        'sort' => 3,
+        'fields' => [
+            [
+                'name' => 'active',
+                'title' => 'admin::app.configuration.index.sales.shipping-methods.shipping-zones.status',
+                'type' => 'boolean',
+                'channel_based' => true,
+                'locale_based' => false,
+            ],
+        ],
+    ], [
         'key' => 'sales.payment_methods',
         'name' => 'admin::app.configuration.index.sales.payment-methods.page-title',
         'info' => 'admin::app.configuration.index.sales.payment-methods.info',
