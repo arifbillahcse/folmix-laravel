@@ -93,10 +93,15 @@ class ShippingZoneRepository extends Repository
                 continue;
             }
 
+            $isFlatRate = $method['type'] === 'flat_rate';
+
             $zone->methods()->create([
                 'type'             => $method['type'],
                 'title'            => $method['title'],
-                'rate'             => $method['type'] === 'flat_rate' ? ($method['rate'] ?? 0) : null,
+                'rate'             => $isFlatRate ? ($method['rate'] ?? 0) : null,
+                'min_fee'          => $isFlatRate && ($method['calculation_type'] ?? null) === 'percent_of_cart'
+                    ? ($method['min_fee'] ?? 0)
+                    : null,
                 'calculation_type' => $method['calculation_type'] ?? 'per_order',
                 'sort_order'       => $index,
                 'status'           => ! empty($method['status']),

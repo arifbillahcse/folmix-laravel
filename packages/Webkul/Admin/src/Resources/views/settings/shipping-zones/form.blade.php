@@ -20,6 +20,7 @@
                 'type'             => $method->type,
                 'title'            => $method->title,
                 'rate'             => $method->rate,
+                'min_fee'          => $method->min_fee,
                 'calculation_type' => $method->calculation_type,
                 'status'           => (bool) $method->status,
             ])->values(),
@@ -47,8 +48,8 @@
             <div class="flex items-center justify-between gap-4 max-sm:flex-wrap">
                 <p class="text-xl font-bold text-gray-800 dark:text-white">
                     @{{ isEdit
-                        ? "@lang('admin::app.settings.shipping-zones.edit.title')"
-                        : "@lang('admin::app.settings.shipping-zones.create.title')" }}
+                        ? "@lang('admin::app.settings.shipping-zones.index.edit.title')"
+                        : "@lang('admin::app.settings.shipping-zones.index.create.title')" }}
                 </p>
 
                 <div class="flex items-center gap-x-2.5">
@@ -245,7 +246,9 @@
                             >
                                 <div class="flex-1">
                                     <label class="mb-1.5 block text-sm font-medium text-gray-800 dark:text-white">
-                                        @lang('admin::app.settings.shipping-zones.index.form.rate')
+                                        @{{ method.calculation_type === 'percent_of_cart'
+                                            ? "@lang('admin::app.settings.shipping-zones.index.form.rate-percent')"
+                                            : "@lang('admin::app.settings.shipping-zones.index.form.rate')" }}
                                     </label>
 
                                     <input
@@ -266,9 +269,32 @@
                                     >
                                         <option value="per_order">@lang('admin::app.settings.shipping-zones.index.form.per-order')</option>
                                         <option value="per_unit">@lang('admin::app.settings.shipping-zones.index.form.per-unit')</option>
+                                        <option value="percent_of_cart">@lang('admin::app.settings.shipping-zones.index.form.percent-of-cart')</option>
                                     </select>
                                 </div>
+
+                                <div
+                                    class="flex-1"
+                                    v-if="method.calculation_type === 'percent_of_cart'"
+                                >
+                                    <label class="mb-1.5 block text-sm font-medium text-gray-800 dark:text-white">
+                                        @lang('admin::app.settings.shipping-zones.index.form.min-fee')
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        v-model="method.min_fee"
+                                        class="flex min-h-[39px] w-full rounded-md border px-3 py-2 text-sm text-gray-600 transition-all hover:border-gray-400 focus:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300"
+                                    />
+                                </div>
                             </div>
+
+                            <p
+                                class="text-xs text-gray-500 dark:text-gray-300"
+                                v-if="method.calculation_type === 'percent_of_cart'"
+                            >
+                                @lang('admin::app.settings.shipping-zones.index.form.percent-of-cart-info')
+                            </p>
 
                             <div class="flex items-center gap-2.5">
                                 <input
@@ -375,6 +401,7 @@
                         type: 'flat_rate',
                         title: '',
                         rate: 0,
+                        min_fee: 0,
                         calculation_type: 'per_order',
                         status: true,
                     });

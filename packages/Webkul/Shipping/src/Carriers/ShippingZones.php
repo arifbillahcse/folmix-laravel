@@ -94,7 +94,13 @@ class ShippingZones extends AbstractShipping
 
         $rate = (float) $method->rate;
 
-        if ($method->calculation_type !== 'per_unit') {
+        if ($method->calculation_type === ShippingZoneMethod::PERCENT_OF_CART) {
+            $fee = ((float) $cart->base_sub_total) * $rate / 100;
+
+            return max($fee, (float) $method->min_fee);
+        }
+
+        if ($method->calculation_type !== ShippingZoneMethod::PER_UNIT) {
             return $rate;
         }
 

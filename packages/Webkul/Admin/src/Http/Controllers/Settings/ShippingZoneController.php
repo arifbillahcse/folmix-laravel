@@ -54,6 +54,8 @@ class ShippingZoneController extends Controller
             'methods.*.type'           => 'required|in:flat_rate,free_shipping',
             'methods.*.title'          => 'required|string',
             'methods.*.rate'           => 'nullable|numeric',
+            'methods.*.min_fee'        => 'nullable|numeric',
+            'methods.*.calculation_type' => 'nullable|in:per_order,per_unit,percent_of_cart',
         ]);
 
         $zone = $this->shippingZoneRepository->create(request()->all());
@@ -91,6 +93,8 @@ class ShippingZoneController extends Controller
             'methods.*.type'           => 'required|in:flat_rate,free_shipping',
             'methods.*.title'          => 'required|string',
             'methods.*.rate'           => 'nullable|numeric',
+            'methods.*.min_fee'        => 'nullable|numeric',
+            'methods.*.calculation_type' => 'nullable|in:per_order,per_unit,percent_of_cart',
         ]);
 
         $this->shippingZoneRepository->update(request()->all(), $id);
