@@ -28,25 +28,26 @@
          */
         .folmix-category-product-grid {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-columns: repeat(5, minmax(0, 1fr));
             row-gap: 2rem;
             column-gap: 2rem;
         }
 
-        @media (max-width: 1180px) {
+        @media (max-width: 1280px) {
             .folmix-category-product-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-template-columns: repeat(4, minmax(0, 1fr));
             }
         }
 
         @media (max-width: 1060px) {
             .folmix-category-product-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-columns: repeat(3, minmax(0, 1fr));
             }
         }
 
         @media (max-width: 768px) {
             .folmix-category-product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
                 justify-items: center;
                 column-gap: 1rem;
             }
@@ -103,16 +104,11 @@
             id="v-category-template"
         >
             <div class="container px-[60px] max-lg:px-8 max-md:px-4">
-                <div class="flex items-start gap-10 max-lg:gap-5 md:mt-10">
-                    <!-- Product Listing Filters -->
-                    @include('shop::categories.filters')
-
+                <div class="md:mt-10">
                     <!-- Product Listing Container -->
                     <div class="flex-1">
-                        <!-- Desktop Product Listing Toolbar -->
-                        <div class="max-md:hidden">
-                            @include('shop::categories.toolbar')
-                        </div>
+                        <!-- Product Listing Toolbar -->
+                        @include('shop::categories.toolbar')
 
                         <!-- Product List Card Container -->
                         <div
