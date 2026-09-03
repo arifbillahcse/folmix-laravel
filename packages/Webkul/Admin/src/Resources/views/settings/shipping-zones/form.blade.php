@@ -70,6 +70,17 @@
                 </div>
             </div>
 
+            <div
+                class="mt-3.5 rounded border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-300"
+                v-if="Object.keys(errors).length"
+            >
+                <p
+                    v-for="(messages, field) in errors"
+                    :key="field"
+                    v-text="messages[0]"
+                ></p>
+            </div>
+
             <div class="mt-3.5 flex gap-2.5 max-xl:flex-wrap">
                 <!-- Left column -->
                 <div class="flex flex-1 flex-col gap-2.5 max-xl:flex-auto">

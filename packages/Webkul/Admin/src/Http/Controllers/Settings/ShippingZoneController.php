@@ -46,6 +46,8 @@ class ShippingZoneController extends Controller
      */
     public function store(): JsonResponse
     {
+        $this->sanitizeNumericFields();
+
         $this->validate(request(), [
             'name'                     => 'required|string',
             'locations'                => 'nullable|array',
@@ -85,6 +87,8 @@ class ShippingZoneController extends Controller
      */
     public function update($id): JsonResponse
     {
+        $this->sanitizeNumericFields();
+
         $this->validate(request(), [
             'name'                     => 'required|string',
             'locations'                => 'nullable|array',
@@ -103,6 +107,28 @@ class ShippingZoneController extends Controller
             'message'      => trans('admin::app.settings.shipping-zones.index.update-success'),
             'redirect_url' => route('admin.settings.shipping_zones.index'),
         ]);
+    }
+
+    /**
+     * Strip stray characters (%, currency symbols, thousand separators)
+     * admins commonly type into rate/fee fields before validating them
+     * as plain numbers.
+     *
+     * @return void
+     */
+    protected function sanitizeNumericFields()
+    {
+        $methods = request()->input('methods', []);
+
+        foreach ($methods as $index => $method) {
+            foreach (['rate', 'min_fee'] as $field) {
+                if (isset($method[$field]) && is_string($method[$field])) {
+                    $methods[$index][$field] = trim(str_replace(['%', ',', '€', '$'], '', $method[$field]));
+                }
+            }
+        }
+
+        request()->merge(['methods' => $methods]);
     }
 
     /**
