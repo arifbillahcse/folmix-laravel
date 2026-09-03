@@ -41,7 +41,7 @@ class Shipping
             }
         }
 
-        $this->rates = array_merge(...$ratesList);
+        $this->rates = $ratesList ? array_merge(...$ratesList) : [];
 
         $this->saveAllShippingRates();
 
