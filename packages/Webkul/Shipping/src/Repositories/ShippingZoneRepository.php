@@ -63,21 +63,25 @@ class ShippingZoneRepository extends Repository
     }
 
     /**
-     * Replace a zone's locations.
+     * Replace a zone's locations. Each incoming row may list several
+     * countries at once (a multi-select in the Admin form) sharing the
+     * same optional postcode list - expanded here into one row per
+     * country, since matching only ever needs a single country per row.
      *
      * @return void
      */
     protected function syncLocations($zone, array $locations)
     {
         foreach ($locations as $location) {
-            if (empty($location['country_code'])) {
-                continue;
-            }
+            $countryCodes = $location['country_codes']
+                ?? (! empty($location['country_code']) ? [$location['country_code']] : []);
 
-            $zone->locations()->create([
-                'country_code' => $location['country_code'],
-                'postcode'     => $location['postcode'] ?? null,
-            ]);
+            foreach (array_filter($countryCodes) as $countryCode) {
+                $zone->locations()->create([
+                    'country_code' => $countryCode,
+                    'postcode'     => $location['postcode'] ?? null,
+                ]);
+            }
         }
     }
 
@@ -143,7 +147,7 @@ class ShippingZoneRepository extends Repository
 
                 if (
                     ! empty($location->postcode)
-                    && strcasecmp(trim($location->postcode), trim((string) $postcode)) !== 0
+                    && ! $this->postcodeMatches($location->postcode, $postcode)
                 ) {
                     continue;
                 }
@@ -153,5 +157,26 @@ class ShippingZoneRepository extends Repository
         }
 
         return null;
+    }
+
+    /**
+     * Whether a customer's postcode matches a location's postcode rule,
+     * which may list several postcodes separated by commas.
+     *
+     * @param  string  $rule
+     * @param  string|null  $postcode
+     * @return bool
+     */
+    protected function postcodeMatches($rule, $postcode)
+    {
+        $postcode = trim((string) $postcode);
+
+        foreach (explode(',', $rule) as $allowed) {
+            if (strcasecmp(trim($allowed), $postcode) === 0) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

@@ -12,10 +12,13 @@
             'is_rest_of_world' => (bool) $zone->is_rest_of_world,
             'status'           => (bool) $zone->status,
             'sort_order'       => $zone->sort_order,
-            'locations'        => $zone->locations->map(fn ($location) => [
-                'country_code' => $location->country_code,
-                'postcode'     => $location->postcode,
-            ])->values(),
+            'locations'        => $zone->locations
+                ->groupBy(fn ($location) => $location->postcode ?? '')
+                ->map(fn ($group) => [
+                    'country_codes' => $group->pluck('country_code')->values(),
+                    'postcode'      => $group->first()->postcode,
+                ])
+                ->values(),
             'methods' => $zone->methods->map(fn ($method) => [
                 'type'             => $method->type,
                 'title'            => $method->title,
@@ -152,11 +155,10 @@
                                 </label>
 
                                 <select
-                                    v-model="location.country_code"
-                                    class="flex min-h-[39px] w-full rounded-md border px-3 py-2 text-sm text-gray-600 transition-all hover:border-gray-400 focus:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300"
+                                    multiple
+                                    v-model="location.country_codes"
+                                    class="flex min-h-[90px] w-full rounded-md border px-3 py-2 text-sm text-gray-600 transition-all hover:border-gray-400 focus:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300"
                                 >
-                                    <option value="">@lang('admin::app.settings.shipping-zones.index.form.country')</option>
-
                                     <option
                                         v-for="country in countries"
                                         :value="country.code"
@@ -164,6 +166,10 @@
                                         :key="country.code"
                                     ></option>
                                 </select>
+
+                                <p class="mt-1 text-xs text-gray-500 dark:text-gray-300">
+                                    @lang('admin::app.settings.shipping-zones.index.form.country-multi-info')
+                                </p>
                             </div>
 
                             <div class="flex-1">
@@ -176,6 +182,10 @@
                                     v-model="location.postcode"
                                     class="flex min-h-[39px] w-full rounded-md border px-3 py-2 text-sm text-gray-600 transition-all hover:border-gray-400 focus:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300"
                                 />
+
+                                <p class="mt-1 text-xs text-gray-500 dark:text-gray-300">
+                                    @lang('admin::app.settings.shipping-zones.index.form.postcode-multi-info')
+                                </p>
                             </div>
 
                             <span
@@ -400,7 +410,7 @@
 
             methods: {
                 addLocation() {
-                    this.zone.locations.push({ country_code: '', postcode: '' });
+                    this.zone.locations.push({ country_codes: [], postcode: '' });
                 },
 
                 removeLocation(index) {

@@ -49,14 +49,15 @@ class ShippingZoneController extends Controller
         $this->sanitizeNumericFields();
 
         $this->validate(request(), [
-            'name'                     => 'required|string',
-            'locations'                => 'nullable|array',
-            'locations.*.country_code' => 'required|string',
-            'methods'                  => 'required|array|min:1',
-            'methods.*.type'           => 'required|in:flat_rate,free_shipping',
-            'methods.*.title'          => 'required|string',
-            'methods.*.rate'           => 'nullable|numeric',
-            'methods.*.min_fee'        => 'nullable|numeric',
+            'name'                       => 'required|string',
+            'locations'                  => 'nullable|array',
+            'locations.*.country_codes'  => 'required|array|min:1',
+            'locations.*.country_codes.*' => 'required|string',
+            'methods'                    => 'required|array|min:1',
+            'methods.*.type'             => 'required|in:flat_rate,free_shipping',
+            'methods.*.title'            => 'required|string',
+            'methods.*.rate'             => 'nullable|numeric',
+            'methods.*.min_fee'          => 'nullable|numeric',
             'methods.*.calculation_type' => 'nullable|in:per_order,per_unit,percent_of_cart',
         ]);
 
@@ -90,14 +91,15 @@ class ShippingZoneController extends Controller
         $this->sanitizeNumericFields();
 
         $this->validate(request(), [
-            'name'                     => 'required|string',
-            'locations'                => 'nullable|array',
-            'locations.*.country_code' => 'required|string',
-            'methods'                  => 'required|array|min:1',
-            'methods.*.type'           => 'required|in:flat_rate,free_shipping',
-            'methods.*.title'          => 'required|string',
-            'methods.*.rate'           => 'nullable|numeric',
-            'methods.*.min_fee'        => 'nullable|numeric',
+            'name'                       => 'required|string',
+            'locations'                  => 'nullable|array',
+            'locations.*.country_codes'  => 'required|array|min:1',
+            'locations.*.country_codes.*' => 'required|string',
+            'methods'                    => 'required|array|min:1',
+            'methods.*.type'             => 'required|in:flat_rate,free_shipping',
+            'methods.*.title'            => 'required|string',
+            'methods.*.rate'             => 'nullable|numeric',
+            'methods.*.min_fee'          => 'nullable|numeric',
             'methods.*.calculation_type' => 'nullable|in:per_order,per_unit,percent_of_cart',
         ]);
 
