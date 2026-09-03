@@ -54,7 +54,7 @@
         <!-- Search Bar Container -->
         <div
             class="relative w-full"
-            style="max-width: 640px"
+            style="max-width: 640px; position: relative;"
         >
             <form
                 action="{{ route('shop.search.index') }}"

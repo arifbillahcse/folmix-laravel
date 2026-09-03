@@ -6,26 +6,6 @@
     'toolparamdescription' => '',
 ])
 
-@push('styles')
-    <style>
-        /*
-         * Plain CSS (not new Tailwind utilities) because this theme's
-         * compiled CSS isn't rebuilt from source on deploy - classes like
-         * top-full, z-30 and the arbitrary max-h-[70vh]/shadow-[...] never
-         * existed in the shipped stylesheet, so the dropdown had no top
-         * offset or stacking order and visually swallowed the input.
-         */
-        .folmix-search-suggestions-results {
-            position: absolute;
-            top: 100%;
-            inset-inline-start: 0;
-            z-index: 30;
-            max-height: 70vh;
-            box-shadow: 0px 10px 84px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-@endpush
-
 <v-search-suggestions
     name="{{ $name }}"
     input-class="{{ $class }}"
@@ -69,7 +49,8 @@
 
         <div
             v-if="isOpen && (isLoading || suggestions.length || hasSearched)"
-            class="folmix-search-suggestions-results w-full overflow-y-auto rounded-lg border border-zinc-200 bg-white"
+            class="w-full overflow-y-auto rounded-lg border border-zinc-200 bg-white"
+            style="position: absolute; top: 100%; inset-inline-start: 0; z-index: 30; max-height: 70vh; box-shadow: 0px 10px 84px rgba(0, 0, 0, 0.1);"
         >
             <template v-if="isLoading">
                 <p class="p-4 text-sm text-zinc-500">

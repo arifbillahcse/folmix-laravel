@@ -212,7 +212,10 @@
             @lang('shop::app.components.layouts.header.mobile.search')
         </label>
 
-        <div class="relative w-full">
+        <div
+            class="relative w-full"
+            style="position: relative;"
+        >
             <div class="icon-search pointer-events-none absolute top-3 flex items-center text-2xl max-md:text-xl max-sm:top-2.5 ltr:left-3 rtl:right-3"></div>
 
             <x-shop::layouts.header.search-suggestions
