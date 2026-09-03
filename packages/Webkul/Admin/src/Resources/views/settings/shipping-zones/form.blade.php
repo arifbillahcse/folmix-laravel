@@ -1,5 +1,39 @@
 @php
     $zone = $zone ?? null;
+
+    $countriesData = core()->countries()->map(fn ($country) => [
+        'code' => $country->code,
+        'name' => $country->name,
+    ]);
+
+    if ($zone) {
+        $zoneData = [
+            'name'             => $zone->name,
+            'is_rest_of_world' => (bool) $zone->is_rest_of_world,
+            'status'           => (bool) $zone->status,
+            'sort_order'       => $zone->sort_order,
+            'locations'        => $zone->locations->map(fn ($location) => [
+                'country_code' => $location->country_code,
+                'postcode'     => $location->postcode,
+            ])->values(),
+            'methods' => $zone->methods->map(fn ($method) => [
+                'type'             => $method->type,
+                'title'            => $method->title,
+                'rate'             => $method->rate,
+                'calculation_type' => $method->calculation_type,
+                'status'           => (bool) $method->status,
+            ])->values(),
+        ];
+    } else {
+        $zoneData = [
+            'name'             => '',
+            'is_rest_of_world' => false,
+            'status'           => true,
+            'sort_order'       => 0,
+            'locations'        => [],
+            'methods'          => [],
+        ];
+    }
 @endphp
 
 <v-shipping-zone-form></v-shipping-zone-form>
@@ -321,32 +355,9 @@
 
                     errors: {},
 
-                    countries: @json(core()->countries()->map(fn ($country) => ['code' => $country->code, 'name' => $country->name])),
+                    countries: @json($countriesData),
 
-                    zone: @json($zone ? [
-                        'name'             => $zone->name,
-                        'is_rest_of_world' => (bool) $zone->is_rest_of_world,
-                        'status'           => (bool) $zone->status,
-                        'sort_order'       => $zone->sort_order,
-                        'locations'        => $zone->locations->map(fn ($location) => [
-                            'country_code' => $location->country_code,
-                            'postcode'     => $location->postcode,
-                        ])->values(),
-                        'methods' => $zone->methods->map(fn ($method) => [
-                            'type'             => $method->type,
-                            'title'            => $method->title,
-                            'rate'             => $method->rate,
-                            'calculation_type' => $method->calculation_type,
-                            'status'           => (bool) $method->status,
-                        ])->values(),
-                    ] : [
-                        'name'             => '',
-                        'is_rest_of_world' => false,
-                        'status'           => true,
-                        'sort_order'       => 0,
-                        'locations'        => [],
-                        'methods'          => [],
-                    ]),
+                    zone: @json($zoneData),
                 };
             },
 
