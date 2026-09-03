@@ -65,6 +65,13 @@ try {
     echo $e->getTraceAsString()."\n";
 }
 
+echo "\n=== Re-attaching the address after collectTotals() (the fix) ===\n";
+
+$cartAfterTotals = Cart::getCart();
+$cartAfterTotals->setRelation('billing_address', $address);
+$cartAfterTotals->setRelation('shipping_address', $address);
+echo "Re-attached. cart->shipping_address->country = ".Cart::getCart()->shipping_address->country."\n";
+
 echo "\n=== Calling Shipping::collectRates() directly ===\n";
 
 try {

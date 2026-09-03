@@ -204,7 +204,20 @@ class CartController extends APIController
 
         Cart::collectTotals();
 
-        $cartResource = (new CartResource(Cart::getCart()))->jsonSerialize();
+        /**
+         * `collectTotals()` reloads the cart from the database partway
+         * through (see `Cart::refreshCart()`), which drops the temporary
+         * estimate address set above since it was never actually saved.
+         * Re-attach it to the refreshed cart so carriers that need the
+         * address (e.g. zone-based shipping) can still see it below.
+         */
+        $cart = Cart::getCart();
+
+        $cart->setRelation('billing_address', $address);
+
+        $cart->setRelation('shipping_address', $address);
+
+        $cartResource = (new CartResource($cart))->jsonSerialize();
 
         return new JsonResource([
             'data' => [
