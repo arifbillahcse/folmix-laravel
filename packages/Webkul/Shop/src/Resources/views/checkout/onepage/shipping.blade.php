@@ -37,12 +37,13 @@
                     <!-- Accordion Blade Component Content -->
                     <x-slot:content class="mt-8 !p-0 max-md:mt-0 max-md:rounded-t-none max-md:border max-md:border-t-0 max-md:!p-4">
                         <div class="flex flex-wrap gap-8 max-md:gap-4 max-sm:gap-2.5">
-                            <template v-for="method in methods">
+                            <template v-for="method in methods" :key="method.carrier_title">
                                 {!! view_render_event('bagisto.shop.checkout.onepage.shipping_method.before') !!}
 
                                 <div
                                     class="relative max-w-[218px] select-none max-md:max-w-full max-md:flex-auto"
                                     v-for="rate in method.rates"
+                                    :key="rate.method"
                                 >
                                     <input 
                                         type="radio"
