@@ -1,9 +1,11 @@
 <?php
 
 /**
- * Temporary diagnostic script - replicates the "Estimate Shipping" request
- * against a real cart from the database and prints any error with a full
- * stack trace, so we can see exactly why no shipping rate is returned.
+ * Temporary diagnostic script - replicates the "Estimate Shipping" request,
+ * including selecting a shipping method (clicking a rate radio button),
+ * and prints the resulting cart totals plus any error with a full stack
+ * trace, so we can see exactly why Delivery Charges/Tax stay at 0.00
+ * after selecting a rate.
  *
  * Run from the project root:
  *   php diagnose_shipping.php
@@ -23,6 +25,12 @@ use Webkul\Checkout\Facades\Cart;
 use Webkul\Checkout\Models\CartAddress;
 use Webkul\Shipping\Facades\Shipping;
 
+function attachAddress($cart, $address)
+{
+    $cart->setRelation('billing_address', $address);
+    $cart->setRelation('shipping_address', $address);
+}
+
 echo "=== Loading a cart to test with ===\n";
 
 $cartModel = \Webkul\Checkout\Models\Cart::query()
@@ -31,29 +39,70 @@ $cartModel = \Webkul\Checkout\Models\Cart::query()
     ->first();
 
 if (! $cartModel) {
-    echo "No active cart found in the database. Add an item to a cart on the site first, then re-run this script.\n";
+    echo "No active cart found in the database.\n";
     exit(1);
 }
 
-echo 'Using cart #'.$cartModel->id." (items: {$cartModel->items()->count()}, base_sub_total: {$cartModel->base_sub_total})\n\n";
+echo 'Using cart #'.$cartModel->id."\n\n";
 
-echo "=== Building a temporary Italy/rome/0100 address ===\n";
+echo "=== STEP 1: estimate for Israel (like changing the Country dropdown) ===\n";
 
 $address = (new CartAddress)->fill([
-    'country' => 'IT',
-    'state' => 'rome',
-    'postcode' => '0100',
+    'country' => 'IL',
+    'state' => 'Dhaka',
+    'postcode' => '8560',
     'cart_id' => $cartModel->id,
 ]);
 
-$cartModel->setRelation('billing_address', $address);
-$cartModel->setRelation('shipping_address', $address);
+attachAddress($cartModel, $address);
 
 Cart::setCart($cartModel);
 
-echo "Address attached. cart->shipping_address->country = ".Cart::getCart()->shipping_address->country."\n\n";
+Cart::collectTotals();
 
-echo "=== Calling Cart::collectTotals() ===\n";
+$cart = Cart::getCart();
+
+attachAddress($cart, $address);
+
+$rates = Shipping::collectRates();
+
+$methodCode = null;
+
+foreach ($rates['shippingMethods'] as $carrierGroup) {
+    foreach ($carrierGroup['rates'] as $rate) {
+        echo 'Found rate: method='.$rate->method.' price='.$rate->price."\n";
+        $methodCode = $rate->method;
+    }
+}
+
+if (! $methodCode) {
+    echo "No rate found for Israel - stopping here.\n";
+    exit(1);
+}
+
+echo "\ncart->shipping_amount after estimate only (no method selected): ".Cart::getCart()->shipping_amount."\n";
+echo "cart->tax_total after estimate only: ".Cart::getCart()->tax_total."\n";
+
+echo "\n=== STEP 2: select that rate (like clicking its radio button) ===\n";
+
+$address2 = (new CartAddress)->fill([
+    'country' => 'IL',
+    'state' => 'Dhaka',
+    'postcode' => '8560',
+    'cart_id' => $cartModel->id,
+]);
+
+$cart = Cart::getCart();
+attachAddress($cart, $address2);
+Cart::setCart($cart);
+
+echo 'Selecting method code: '.$methodCode."\n";
+
+$saved = Cart::saveShippingMethod($methodCode);
+echo 'saveShippingMethod() returned: ';
+var_dump($saved);
+
+echo 'cart->shipping_method after save: '.var_export(Cart::getCart()->shipping_method, true)."\n";
 
 try {
     Cart::collectTotals();
@@ -65,69 +114,25 @@ try {
     echo $e->getTraceAsString()."\n";
 }
 
-echo "\n=== Re-attaching the address after collectTotals() (the fix) ===\n";
+$cart = Cart::getCart();
+attachAddress($cart, $address2);
 
-$cartAfterTotals = Cart::getCart();
-$cartAfterTotals->setRelation('billing_address', $address);
-$cartAfterTotals->setRelation('shipping_address', $address);
-echo "Re-attached. cart->shipping_address->country = ".Cart::getCart()->shipping_address->country."\n";
+echo "\ncart->shipping_method: ".var_export($cart->shipping_method, true)."\n";
 
-echo "\n=== Calling Shipping::collectRates() directly ===\n";
+$selectedRate = $cart->selected_shipping_rate;
+echo 'cart->selected_shipping_rate found? ';
+var_dump(! is_null($selectedRate));
 
-try {
-    $result = Shipping::collectRates();
-    echo "collectRates() returned:\n";
-    print_r($result);
-} catch (\Throwable $e) {
-    echo "collectRates() THREW AN EXCEPTION:\n";
-    echo get_class($e).': '.$e->getMessage()."\n";
-    echo $e->getFile().':'.$e->getLine()."\n";
-    echo $e->getTraceAsString()."\n";
+if ($selectedRate) {
+    echo 'selected_shipping_rate->price: '.$selectedRate->price."\n";
 }
 
-echo "\n=== Calling the shippingzones carrier's calculate() directly ===\n";
+echo "\ncart->shipping_amount: ".$cart->shipping_amount."\n";
+echo 'cart->base_shipping_amount: '.$cart->base_shipping_amount."\n";
+echo 'cart->tax_total: '.$cart->tax_total."\n";
+echo 'cart->grand_total: '.$cart->grand_total."\n";
 
-try {
-    $carrier = new \Webkul\Shipping\Carriers\ShippingZones;
-    $rates = $carrier->calculate();
-    echo "calculate() returned:\n";
-    var_dump($rates);
-} catch (\Throwable $e) {
-    echo "calculate() THREW AN EXCEPTION:\n";
-    echo get_class($e).': '.$e->getMessage()."\n";
-    echo $e->getFile().':'.$e->getLine()."\n";
-    echo $e->getTraceAsString()."\n";
-}
-
-echo "\n=== Step-by-step trace of what calculate() sees internally ===\n";
-
-$activeFlag = core()->getConfigData('sales.carriers.shippingzones.active');
-echo 'active flag: ';
-var_dump($activeFlag);
-
-$traceCart = Cart::getCart();
-echo 'Cart::getCart() is null? ';
-var_dump(is_null($traceCart));
-
-$traceAddress = $traceCart?->shipping_address;
-echo 'shipping_address is null? ';
-var_dump(is_null($traceAddress));
-
-if ($traceAddress) {
-    echo 'shipping_address->country: '.var_export($traceAddress->country, true)."\n";
-    echo 'shipping_address->postcode: '.var_export($traceAddress->postcode, true)."\n";
-}
-
-$traceZone = app(\Webkul\Shipping\Repositories\ShippingZoneRepository::class)->findMatchingZone(
-    $traceAddress?->country,
-    $traceAddress?->postcode
-);
-echo 'findMatchingZone() result: ';
-var_dump($traceZone ? $traceZone->id.' - '.$traceZone->name : null);
-
-if ($traceZone) {
-    echo 'zone methods count: '.$traceZone->methods->count()."\n";
-    foreach ($traceZone->methods as $m) {
-        echo '  method #'.$m->id.' status='.var_export($m->status, true).' title='.$m->title."\n";
-    }
+echo "\nAll cart_shipping_rates rows for this cart right now:\n";
+foreach (\Webkul\Checkout\Models\CartShippingRate::where('cart_id', $cartModel->id)->get() as $r) {
+    echo '  id='.$r->id.' method='.$r->method.' price='.$r->price."\n";
 }
