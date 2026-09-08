@@ -194,6 +194,40 @@ class OrderController extends Controller
     }
 
     /**
+     * Permanently delete the specified order, along with its items,
+     * invoices, shipments, refunds, payments, and comments (cascaded
+     * at the database level).
+     *
+     * @return JsonResponse|Response
+     */
+    public function destroy(int $id)
+    {
+        try {
+            $this->orderRepository->delete($id);
+
+            if (request()->ajax()) {
+                return new JsonResponse([
+                    'message' => trans('admin::app.sales.orders.index.datagrid.delete-success'),
+                ]);
+            }
+
+            session()->flash('success', trans('admin::app.sales.orders.index.datagrid.delete-success'));
+
+            return redirect()->route('admin.sales.orders.index');
+        } catch (\Exception $e) {
+            if (request()->ajax()) {
+                return new JsonResponse([
+                    'message' => trans('admin::app.sales.orders.index.datagrid.delete-failed'),
+                ], 500);
+            }
+
+            session()->flash('error', trans('admin::app.sales.orders.index.datagrid.delete-failed'));
+
+            return redirect()->route('admin.sales.orders.view', $id);
+        }
+    }
+
+    /**
      * Add comment to the order
      *
      * @return Response

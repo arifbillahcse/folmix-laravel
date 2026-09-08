@@ -229,5 +229,17 @@ class OrderDataGrid extends DataGrid
                 },
             ]);
         }
+
+        if (bouncer()->hasPermission('sales.orders.delete')) {
+            $this->addAction([
+                'index' => 'delete',
+                'icon' => 'icon-delete',
+                'title' => trans('admin::app.sales.orders.index.datagrid.delete'),
+                'method' => 'DELETE',
+                'url' => function ($row) {
+                    return route('admin.sales.orders.delete', $row->id);
+                },
+            ]);
+        }
     }
 }

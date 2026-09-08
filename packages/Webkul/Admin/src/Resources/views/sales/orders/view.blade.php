@@ -106,6 +106,38 @@
                 </div>
             @endif
 
+            @if (bouncer()->hasPermission('sales.orders.delete'))
+                <form
+                    method="POST"
+                    ref="deleteOrderForm"
+                    action="{{ route('admin.sales.orders.delete', $order->id) }}"
+                >
+                    @csrf
+                    @method('DELETE')
+                </form>
+
+                <div
+                    class="transparent-button px-1 py-1.5 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-800"
+                    @click="$emitter.emit('open-confirm-modal', {
+                        message: '@lang('admin::app.sales.orders.view.delete-msg')',
+                        agree: () => {
+                            this.$refs['deleteOrderForm'].submit()
+                        }
+                    })"
+                >
+                    <span
+                        class="icon-delete text-2xl"
+                        role="presentation"
+                        tabindex="0"
+                    >
+                    </span>
+
+                    <a href="javascript:void(0);">
+                        @lang('admin::app.sales.orders.view.delete')
+                    </a>
+                </div>
+            @endif
+
             {!! view_render_event('bagisto.admin.sales.order.page_action.after', ['order' => $order]) !!}
         </div>
 
