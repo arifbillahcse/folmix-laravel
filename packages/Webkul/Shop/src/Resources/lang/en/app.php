@@ -1288,6 +1288,11 @@ return [
             'title' => 'Flash Sale',
         ],
 
+        'suggested' => [
+            'empty' => 'No suggested products yet.',
+            'title' => 'Suggested Products',
+        ],
+
         'index' => [
             'categories-carousel' => 'Categories Carousel',
             'image-carousel' => 'Image Carousel',

@@ -3399,6 +3399,20 @@ return [
             ],
         ],
 
+        'suggested-products' => [
+            'edit' => [
+                'empty-description' => 'Usa "Aggiungi Prodotto" per iniziare a creare la lista.',
+                'empty-title' => 'Nessun prodotto ancora aggiunto',
+                'info' => 'I prodotti aggiunti qui compaiono, in quest\'ordine, nella pagina non elencata /suggested - non collegata da nessuna parte del negozio, pensata per condividere un link privato con un cliente specifico.',
+                'products' => 'Prodotti',
+                'remove' => 'Rimuovi',
+                'save-btn' => 'Salva',
+                'title' => 'Prodotti Suggeriti',
+                'update-success' => 'Prodotti suggeriti aggiornati con successo.',
+                'view-page' => 'Visualizza Pagina',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Crea Valuta',
@@ -5491,6 +5505,7 @@ return [
                 'shipments' => 'Spedizioni',
                 'sitemaps' => 'Sitemap',
                 'statuses' => 'RMA Status',
+                'suggested-products' => 'Prodotti Suggeriti',
                 'tax-categories' => 'Categorie Fiscali',
                 'tax-rates' => 'Aliquote Fiscali',
                 'taxes' => 'Tasse',
@@ -5736,6 +5751,7 @@ return [
         'shipments' => 'Spedizioni',
         'sitemaps' => 'Sitemap',
         'subscribers' => 'Abbonati alla Newsletter',
+        'suggested-products' => 'Prodotti Suggeriti',
         'tax-categories' => 'Categorie Fiscali',
         'tax-rates' => 'Aliquote Fiscali',
         'taxes' => 'Tasse',

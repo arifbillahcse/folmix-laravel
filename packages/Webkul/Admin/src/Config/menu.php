@@ -373,6 +373,12 @@ return [
         'sort' => 8,
         'icon' => '',
     ], [
+        'key' => 'settings.suggested_products',
+        'name' => 'admin::app.components.layouts.sidebar.suggested-products',
+        'route' => 'admin.settings.suggested_products.edit',
+        'sort' => 8,
+        'icon' => '',
+    ], [
         'key' => 'settings.taxes',
         'name' => 'admin::app.components.layouts.sidebar.taxes',
         'route' => 'admin.settings.taxes.categories.index',

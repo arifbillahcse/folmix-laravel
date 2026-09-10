@@ -3399,6 +3399,20 @@ return [
             ],
         ],
 
+        'suggested-products' => [
+            'edit' => [
+                'empty-description' => 'Use "Add Product" to start building the list.',
+                'empty-title' => 'No products added yet',
+                'info' => 'Products added here appear, in this order, on the unlisted /suggested page - not linked anywhere on the storefront, meant for sharing a private link with a specific customer.',
+                'products' => 'Products',
+                'remove' => 'Remove',
+                'save-btn' => 'Save',
+                'title' => 'Suggested Products',
+                'update-success' => 'Suggested products updated successfully.',
+                'view-page' => 'View Page',
+            ],
+        ],
+
         'currencies' => [
             'index' => [
                 'create-btn' => 'Create Currency',
@@ -5491,6 +5505,7 @@ return [
                 'shipments' => 'Shipments',
                 'sitemaps' => 'Sitemaps',
                 'statuses' => 'Statuses',
+                'suggested-products' => 'Suggested Products',
                 'tax-categories' => 'Tax Categories',
                 'tax-rates' => 'Tax Rates',
                 'taxes' => 'Taxes',
@@ -5736,6 +5751,7 @@ return [
         'shipments' => 'Shipments',
         'sitemaps' => 'Sitemaps',
         'subscribers' => 'Newsletter Subscribers',
+        'suggested-products' => 'Suggested Products',
         'tax-categories' => 'Tax Categories',
         'tax-rates' => 'Tax Rates',
         'taxes' => 'Taxes',

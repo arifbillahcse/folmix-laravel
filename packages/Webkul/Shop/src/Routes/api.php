@@ -41,6 +41,8 @@ Route::group(['prefix' => 'api'], function () {
         Route::get('flash-sale/all', 'allFlashSaleProducts')->name('shop.api.products.flash-sale.all');
 
         Route::get('flash-sale/{id}', 'flashSaleProducts')->name('shop.api.products.flash-sale.index');
+
+        Route::get('suggested', 'suggestedProducts')->name('shop.api.products.suggested.index');
     });
 
     Route::controller(ReviewController::class)->prefix('product/{id}')->group(function () {

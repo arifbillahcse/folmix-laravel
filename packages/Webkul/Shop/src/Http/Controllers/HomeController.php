@@ -77,6 +77,18 @@ class HomeController extends Controller
     }
 
     /**
+     * Loads the unlisted /suggested page - a manually curated product list
+     * with no link anywhere on the storefront, meant to be shared directly
+     * with a specific customer.
+     *
+     * @return View
+     */
+    public function suggested()
+    {
+        return view('shop::home.suggested');
+    }
+
+    /**
      * Summary of store.
      *
      * @return RedirectResponse

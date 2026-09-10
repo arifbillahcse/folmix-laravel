@@ -74,6 +74,10 @@ Route::get('flash-sale', [HomeController::class, 'flashSale'])
     ->name('shop.home.flash_sale')
     ->middleware('cache.response');
 
+Route::get('suggested', [HomeController::class, 'suggested'])
+    ->name('shop.home.suggested')
+    ->middleware('cache.response');
+
 /**
  * Store front search.
  */

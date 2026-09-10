@@ -26,6 +26,7 @@ use Webkul\Product\Models\ProductReview;
 use Webkul\Product\Models\ProductReviewAttachment;
 use Webkul\Product\Models\ProductSalableInventory;
 use Webkul\Product\Models\ProductVideo;
+use Webkul\Product\Models\SuggestedProduct;
 
 class ModuleServiceProvider extends CoreModuleServiceProvider
 {
@@ -58,5 +59,6 @@ class ModuleServiceProvider extends CoreModuleServiceProvider
         ProductReviewAttachment::class,
         ProductSalableInventory::class,
         ProductVideo::class,
+        SuggestedProduct::class,
     ];
 }

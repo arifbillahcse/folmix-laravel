@@ -1288,6 +1288,11 @@ return [
             'title' => 'Offerta Lampo',
         ],
 
+        'suggested' => [
+            'empty' => 'Nessun prodotto suggerito al momento.',
+            'title' => 'Prodotti Suggeriti',
+        ],
+
         'index' => [
             'categories-carousel' => 'Carosello delle categorie',
             'image-carousel' => 'Carosello delle immagini',

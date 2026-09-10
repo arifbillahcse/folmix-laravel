@@ -9,6 +9,7 @@ use Webkul\Admin\Http\Controllers\Settings\InventorySourceController;
 use Webkul\Admin\Http\Controllers\Settings\LocaleController;
 use Webkul\Admin\Http\Controllers\Settings\LoginSliderController;
 use Webkul\Admin\Http\Controllers\Settings\ShippingZoneController;
+use Webkul\Admin\Http\Controllers\Settings\SuggestedProductController;
 use Webkul\Admin\Http\Controllers\Settings\RoleController;
 use Webkul\Admin\Http\Controllers\Settings\Tax\TaxCategoryController;
 use Webkul\Admin\Http\Controllers\Settings\Tax\TaxRateController;
@@ -119,6 +120,16 @@ Route::prefix('settings')->group(function () {
         Route::put('edit/{id}', 'update')->name('admin.settings.shipping_zones.update');
 
         Route::delete('edit/{id}', 'destroy')->name('admin.settings.shipping_zones.delete');
+    });
+
+    /**
+     * Suggested products routes (manages the single, unlisted
+     * /suggested storefront page).
+     */
+    Route::controller(SuggestedProductController::class)->prefix('suggested-products')->group(function () {
+        Route::get('', 'edit')->name('admin.settings.suggested_products.edit');
+
+        Route::put('', 'update')->name('admin.settings.suggested_products.update');
     });
 
     /**

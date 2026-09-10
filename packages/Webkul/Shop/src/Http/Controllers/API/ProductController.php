@@ -177,6 +177,26 @@ class ProductController extends APIController
     }
 
     /**
+     * The admin's hand-picked suggested products list, in their saved
+     * order (for the unlisted "/suggested" page).
+     */
+    public function suggestedProducts(): JsonResource
+    {
+        $productIds = app(\Webkul\Product\Repositories\SuggestedProductRepository::class)->getOrderedProductIds();
+
+        $products = $this->productRepository->findWhereIn('id', $productIds)
+            ->where('status', 1)
+            ->keyBy('id');
+
+        $orderedProducts = collect($productIds)
+            ->map(fn ($productId) => $products->get($productId))
+            ->filter()
+            ->values();
+
+        return ProductCardResource::collection($orderedProducts);
+    }
+
+    /**
      * Related product listings.
      *
      * @param  int  $id

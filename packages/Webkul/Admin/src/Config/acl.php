@@ -1162,6 +1162,14 @@ return [
         'route' => 'admin.settings.themes.index',
         'sort' => 8,
     ], [
+        'key' => 'settings.suggested_products',
+        'name' => 'admin::app.acl.suggested-products',
+        'route' => [
+            'admin.settings.suggested_products.edit',
+            'admin.settings.suggested_products.update',
+        ],
+        'sort' => 8,
+    ], [
         'key' => 'settings.themes.create',
         'name' => 'admin::app.acl.create',
         'route' => 'admin.settings.themes.store',
