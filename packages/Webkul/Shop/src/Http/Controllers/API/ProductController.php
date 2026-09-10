@@ -144,6 +144,39 @@ class ProductController extends APIController
     }
 
     /**
+     * Every product hand-picked across all active Flash Sale theme
+     * customization blocks for the current channel/theme, combined into
+     * one deduplicated list (for the "/flash-sale" listing page).
+     */
+    public function allFlashSaleProducts(): JsonResource
+    {
+        $flashSaleBlocks = app(\Webkul\Theme\Repositories\ThemeCustomizationRepository::class)
+            ->orderBy('sort_order')
+            ->findWhere([
+                'status'     => 1,
+                'type'       => \Webkul\Theme\Models\ThemeCustomization::FLASH_SALE,
+                'channel_id' => core()->getCurrentChannel()->id,
+                'theme_code' => core()->getCurrentChannel()->theme,
+            ]);
+
+        $productIds = $flashSaleBlocks
+            ->flatMap(fn ($block) => $block->translate(core()->getRequestedLocaleCode())->options['product_ids'] ?? [])
+            ->unique()
+            ->values();
+
+        $products = $this->productRepository->findWhereIn('id', $productIds)
+            ->where('status', 1)
+            ->keyBy('id');
+
+        $orderedProducts = $productIds
+            ->map(fn ($productId) => $products->get($productId))
+            ->filter()
+            ->values();
+
+        return ProductCardResource::collection($orderedProducts);
+    }
+
+    /**
      * Related product listings.
      *
      * @param  int  $id

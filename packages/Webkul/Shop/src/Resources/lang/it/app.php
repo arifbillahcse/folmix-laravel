@@ -1283,6 +1283,11 @@ return [
             'title' => 'Contattaci',
         ],
 
+        'flash-sale' => [
+            'empty' => 'Nessun prodotto in offerta lampo al momento.',
+            'title' => 'Offerta Lampo',
+        ],
+
         'index' => [
             'categories-carousel' => 'Carosello delle categorie',
             'image-carousel' => 'Carosello delle immagini',

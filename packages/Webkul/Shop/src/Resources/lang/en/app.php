@@ -1283,6 +1283,11 @@ return [
             'title' => 'Contact Us',
         ],
 
+        'flash-sale' => [
+            'empty' => 'No flash sale products right now.',
+            'title' => 'Flash Sale',
+        ],
+
         'index' => [
             'categories-carousel' => 'Categories Carousel',
             'image-carousel' => 'Image Carousel',

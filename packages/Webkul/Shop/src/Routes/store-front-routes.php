@@ -70,6 +70,10 @@ Route::post('contact-us/send-mail', [HomeController::class, 'sendContactUsMail']
     ->name('shop.home.contact_us.send_mail')
     ->middleware('cache.response');
 
+Route::get('flash-sale', [HomeController::class, 'flashSale'])
+    ->name('shop.home.flash_sale')
+    ->middleware('cache.response');
+
 /**
  * Store front search.
  */

@@ -66,6 +66,17 @@ class HomeController extends Controller
     }
 
     /**
+     * Loads a listing page of every product hand-picked across all active
+     * Flash Sale theme customization blocks, combined into one grid.
+     *
+     * @return View
+     */
+    public function flashSale()
+    {
+        return view('shop::home.flash-sale');
+    }
+
+    /**
      * Summary of store.
      *
      * @return RedirectResponse

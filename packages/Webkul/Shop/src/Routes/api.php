@@ -38,6 +38,8 @@ Route::group(['prefix' => 'api'], function () {
 
         Route::get('{id}/up-sell', 'upSellProducts')->name('shop.api.products.up-sell.index');
 
+        Route::get('flash-sale/all', 'allFlashSaleProducts')->name('shop.api.products.flash-sale.all');
+
         Route::get('flash-sale/{id}', 'flashSaleProducts')->name('shop.api.products.flash-sale.index');
     });
 
