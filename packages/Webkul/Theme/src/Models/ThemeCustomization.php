@@ -71,6 +71,13 @@ class ThemeCustomization extends TranslatableModel implements ThemeCustomization
     public const SERVICES_CONTENT = 'services_content';
 
     /**
+     * Flash sale precision.
+     *
+     * @var string
+     */
+    public const FLASH_SALE = 'flash_sale';
+
+    /**
      * Cast options field to array.
      *
      * @var array

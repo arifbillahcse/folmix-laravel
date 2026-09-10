@@ -120,6 +120,30 @@ class ProductController extends APIController
     }
 
     /**
+     * Products hand-picked for a flash sale theme customization block,
+     * preserving the order the admin arranged them in.
+     *
+     * @param  int  $id
+     */
+    public function flashSaleProducts($id): JsonResource
+    {
+        $themeCustomization = app(\Webkul\Theme\Repositories\ThemeCustomizationRepository::class)->findOrFail($id);
+
+        $productIds = $themeCustomization->translate(core()->getRequestedLocaleCode())->options['product_ids'] ?? [];
+
+        $products = $this->productRepository->findWhereIn('id', $productIds)
+            ->where('status', 1)
+            ->keyBy('id');
+
+        $orderedProducts = collect($productIds)
+            ->map(fn ($productId) => $products->get($productId))
+            ->filter()
+            ->values();
+
+        return ProductCardResource::collection($orderedProducts);
+    }
+
+    /**
      * Related product listings.
      *
      * @param  int  $id
