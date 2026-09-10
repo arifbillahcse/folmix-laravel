@@ -87,11 +87,12 @@
             @case ($customization::FLASH_SALE)
                 <!-- Flash Sale: admin hand-picks the products (Settings > Themes),
                      so this reuses the product carousel widget pointed at a fixed,
-                     ordered product list instead of a filter-based query. -->
+                     ordered product list instead of a filter-based query. No
+                     navigation link - flash sale is a fixed showcase, not a
+                     listing with a "view all" page behind it. -->
                 <x-shop::products.carousel
                     :title="$data['title'] ?? ''"
                     :src="route('shop.api.products.flash-sale.index', $customization->id)"
-                    :navigation-link="$data['view_all_url'] ?? ''"
                     aria-label="{{ $data['title'] ?? trans('shop::app.home.index.product-carousel') }}"
                 />
 
