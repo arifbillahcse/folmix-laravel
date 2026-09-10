@@ -414,6 +414,17 @@
             <!-- First level view -->
             <div class="flex-shrink-0 w-full h-full px-6 overflow-auto">
                 <div class="py-4">
+                        <div class="mb-2">
+                            <div class="flex items-center justify-between py-2 transition-colors duration-200 cursor-pointer">
+                                <a
+                                    href="{{ route('shop.home.flash_sale') }}"
+                                    class="text-base font-medium text-black"
+                                >
+                                    @lang('shop::app.home.flash-sale.title')
+                                </a>
+                            </div>
+                        </div>
+
                         <div
                             v-for="category in categories"
                             :key="category.id"

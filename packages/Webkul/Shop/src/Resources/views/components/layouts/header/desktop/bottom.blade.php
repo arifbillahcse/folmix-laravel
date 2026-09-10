@@ -325,6 +325,17 @@
             class="flex items-center"
             v-else-if="'{{ core()->getConfigData('general.design.categories.category_view') }}' !== 'sidebar'"
         >
+            <div class="group relative flex h-[77px] items-center border-b-4 border-transparent hover:border-b-4 hover:border-navyBlue">
+                <span>
+                    <a
+                        href="{{ route('shop.home.flash_sale') }}"
+                        class="inline-block px-5 uppercase"
+                    >
+                        @lang('shop::app.home.flash-sale.title')
+                    </a>
+                </span>
+            </div>
+
             <div
                 class="group relative flex h-[77px] items-center border-b-4 border-transparent hover:border-b-4 hover:border-navyBlue"
                 v-for="category in categories"
@@ -424,6 +435,17 @@
                             <!-- First level view -->
                             <div class="h-[calc(100vh-74px)] w-full flex-shrink-0 overflow-auto">
                                 <div class="py-4">
+                                    <div class="mb-2">
+                                        <div class="flex items-center justify-between px-6 py-2 transition-colors duration-200 cursor-pointer hover:bg-gray-100">
+                                            <a
+                                                href="{{ route('shop.home.flash_sale') }}"
+                                                class="text-base font-medium text-black"
+                                            >
+                                                @lang('shop::app.home.flash-sale.title')
+                                            </a>
+                                        </div>
+                                    </div>
+
                                     <div
                                         v-for="category in categories"
                                         :key="category.id"
