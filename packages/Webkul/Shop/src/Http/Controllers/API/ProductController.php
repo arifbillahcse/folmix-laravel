@@ -164,7 +164,7 @@ class ProductController extends APIController
             ->unique()
             ->values();
 
-        $products = $this->productRepository->findWhereIn('id', $productIds)
+        $products = $this->productRepository->findWhereIn('id', $productIds->all())
             ->where('status', 1)
             ->keyBy('id');
 
