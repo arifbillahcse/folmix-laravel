@@ -195,6 +195,49 @@
                             </x-admin::form.control-group>
                         </div>
             
+                        <div class="flex gap-4 max-sm:flex-wrap">
+                            <!-- New Password -->
+                            <x-admin::form.control-group class="mb-2.5 w-full">
+                                <x-admin::form.control-group.label>
+                                    @lang('admin::app.customers.customers.view.edit.password')
+                                </x-admin::form.control-group.label>
+
+                                <x-admin::form.control-group.control
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    rules="min:6"
+                                    ref="password"
+                                    :label="trans('admin::app.customers.customers.view.edit.password')"
+                                    :placeholder="trans('admin::app.customers.customers.view.edit.password')"
+                                />
+
+                                <x-admin::form.control-group.error control-name="password" />
+                            </x-admin::form.control-group>
+
+                            <!-- Confirm Password -->
+                            <x-admin::form.control-group class="mb-2.5 w-full">
+                                <x-admin::form.control-group.label>
+                                    @lang('admin::app.customers.customers.view.edit.confirm-password')
+                                </x-admin::form.control-group.label>
+
+                                <x-admin::form.control-group.control
+                                    type="password"
+                                    name="password_confirmation"
+                                    id="password_confirmation"
+                                    rules="confirmed:@password"
+                                    :label="trans('admin::app.customers.customers.view.edit.confirm-password')"
+                                    :placeholder="trans('admin::app.customers.customers.view.edit.confirm-password')"
+                                />
+
+                                <x-admin::form.control-group.error control-name="password_confirmation" />
+                            </x-admin::form.control-group>
+                        </div>
+
+                        <p class="-mt-1 mb-2.5 text-xs text-gray-500 dark:text-gray-300">
+                            @lang('admin::app.customers.customers.view.edit.password-info')
+                        </p>
+
                         <div class="flex gap-60 max-sm:flex-wrap">
                             <!-- Customer Status -->
                             <x-admin::form.control-group class="!mb-0">

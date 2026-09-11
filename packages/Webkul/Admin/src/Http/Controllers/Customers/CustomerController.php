@@ -146,6 +146,7 @@ class CustomerController extends Controller
             'email' => 'required|unique:customers,email,'.$id,
             'date_of_birth' => 'date|before:today',
             'phone' => ['unique:customers,phone,'.$id, new PhoneNumber],
+            'password' => 'nullable|confirmed|min:6',
         ]);
 
         $data = request()->only([
@@ -162,6 +163,15 @@ class CustomerController extends Controller
 
         if (empty($data['phone'])) {
             $data['phone'] = null;
+        }
+
+        /**
+         * Left blank on the edit form, the customer's existing password is
+         * kept as-is - only overwritten when the admin explicitly types a
+         * new one.
+         */
+        if (request()->filled('password')) {
+            $data['password'] = bcrypt(request()->input('password'));
         }
 
         Event::dispatch('customer.update.before', $id);

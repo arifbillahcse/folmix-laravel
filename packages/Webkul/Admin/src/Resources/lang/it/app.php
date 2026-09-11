@@ -2286,6 +2286,7 @@ return [
                 ],
 
                 'edit' => [
+                    'confirm-password' => 'Conferma Password',
                     'contact-number' => 'Numero di Contatto',
                     'customer-group' => 'Gruppo Cliente',
                     'date-of-birth' => 'Data di Nascita',
@@ -2297,6 +2298,8 @@ return [
                     'last-name' => 'Cognome',
                     'male' => 'Maschile',
                     'other' => 'Altro',
+                    'password' => 'Nuova Password',
+                    'password-info' => 'Lascia entrambi i campi vuoti per mantenere invariata la password attuale del cliente.',
                     'save-btn' => 'Salva Cliente',
                     'select-customer-group' => 'Seleziona Gruppo Cliente',
                     'select-gender' => 'Seleziona Genere',

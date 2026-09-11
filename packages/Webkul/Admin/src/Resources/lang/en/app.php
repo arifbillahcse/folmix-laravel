@@ -2286,6 +2286,7 @@ return [
                 ],
 
                 'edit' => [
+                    'confirm-password' => 'Confirm Password',
                     'contact-number' => 'Contact Number',
                     'customer-group' => 'Customer Group',
                     'date-of-birth' => 'Date of Birth',
@@ -2297,6 +2298,8 @@ return [
                     'last-name' => 'Last Name',
                     'male' => 'Male',
                     'other' => 'Other',
+                    'password' => 'New Password',
+                    'password-info' => 'Leave both fields blank to keep the customer\'s current password unchanged.',
                     'save-btn' => 'Save customer',
                     'select-customer-group' => 'Select Customer Group',
                     'select-gender' => 'Select Gender',
