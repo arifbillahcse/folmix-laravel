@@ -4230,6 +4230,19 @@ return [
                         'info' => 'Configureer de auteursrechtinhoud die in de voettekst van uw website wordt weergegeven om uw intellectuele eigendom te beschermen en de merkherkenning te verbeteren.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Footer-inhoud',
+                        'info' => 'Configureer de tagline, het telefoonnummer en het adres die worden weergegeven in de footer van de winkel.',
+                        'tagline' => 'Tagline',
+                        'need-help-text' => '"Hulp nodig"-tekst',
+                        'phone-number' => 'Telefoonnummer',
+                        'address-heading' => 'Adreskop',
+                        'address-trademark' => 'Handelsmerkregel',
+                        'address-street' => 'Straatadres',
+                        'address-city' => 'Stad / Postcode / Land',
+                        'address-vat' => 'Btw / Registratienummer',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Speculatieregels inschakelen',
                         'info' => 'Stel instellingen in voor het in- of uitschakelen van geautomatiseerde speculatie-logica.',

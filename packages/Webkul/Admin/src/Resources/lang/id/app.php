@@ -4230,6 +4230,19 @@ return [
                         'info' => 'Configura il contenuto del copyright visualizzato nel piè di pagina del tuo sito web per proteggere la tua proprietà intellettuale e migliorare il riconoscimento del marchio.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Konten Footer',
+                        'info' => 'Konfigurasikan tagline, nomor telepon, dan alamat yang ditampilkan di footer toko.',
+                        'tagline' => 'Tagline',
+                        'need-help-text' => 'Teks Butuh Bantuan',
+                        'phone-number' => 'Nomor Telepon',
+                        'address-heading' => 'Judul Alamat',
+                        'address-trademark' => 'Baris Merek Dagang',
+                        'address-street' => 'Alamat Jalan',
+                        'address-city' => 'Kota / Kode Pos / Negara',
+                        'address-vat' => 'Nomor PKP / Registrasi',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Aktifkan Aturan Spekulasi',
                         'info' => 'Atur preferensi untuk mengaktifkan atau menonaktifkan logika spekulasi otomatis.',

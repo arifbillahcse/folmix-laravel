@@ -4230,6 +4230,19 @@ return [
                         'info' => 'Configura el contenido de derechos de autor que se muestra en el pie de página de tu sitio web para proteger tu propiedad intelectual y mejorar el reconocimiento de tu marca.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Contenido del pie de página',
+                        'info' => 'Configura el eslogan, el número de teléfono y la dirección que se muestran en el pie de página de la tienda.',
+                        'tagline' => 'Eslogan',
+                        'need-help-text' => 'Texto "¿Necesitas ayuda?"',
+                        'phone-number' => 'Número de teléfono',
+                        'address-heading' => 'Encabezado de dirección',
+                        'address-trademark' => 'Línea de marca registrada',
+                        'address-street' => 'Dirección',
+                        'address-city' => 'Ciudad / Código postal / País',
+                        'address-vat' => 'NIF / Número de registro',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Habilitar reglas de especulación',
                         'info' => 'Configura los ajustes para habilitar o deshabilitar la lógica de especulación automática.',

@@ -4230,6 +4230,19 @@ return [
                         'info' => 'Fikri mülkiyetinizi korumak ve marka bilinirliğini artırmak için web sitenizin alt bilgisinde görüntülenen telif hakkı içeriğini yapılandırın.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Alt Bilgi İçeriği',
+                        'info' => 'Mağaza alt bilgisinde gösterilen sloganı, telefon numarasını ve adresi yapılandırın.',
+                        'tagline' => 'Slogan',
+                        'need-help-text' => '"Yardıma mı ihtiyacınız var" Metni',
+                        'phone-number' => 'Telefon Numarası',
+                        'address-heading' => 'Adres Başlığı',
+                        'address-trademark' => 'Ticari Marka Satırı',
+                        'address-street' => 'Sokak Adresi',
+                        'address-city' => 'Şehir / Posta Kodu / Ülke',
+                        'address-vat' => 'Vergi Numarası / Kayıt Numarası',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Spekülasyon Kurallarını Etkinleştir',
                         'info' => 'Otomatik spekülasyon mantığını etkinleştirmek veya devre dışı bırakmak için ayarları yapılandırın.',

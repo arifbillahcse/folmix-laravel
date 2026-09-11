@@ -4230,6 +4230,19 @@ return [
                         'info' => '知的財産を保護し、ブランド認知を高めるために、ウェブサイトのフッターに表示される著作権コンテンツを設定してください。',
                     ],
 
+                    'footer' => [
+                        'title' => 'フッターコンテンツ',
+                        'info' => 'ストアフロントのフッターに表示されるタグライン、電話番号、住所を設定します。',
+                        'tagline' => 'タグライン',
+                        'need-help-text' => '「お困りですか」テキスト',
+                        'phone-number' => '電話番号',
+                        'address-heading' => '住所見出し',
+                        'address-trademark' => '商標表記行',
+                        'address-street' => '番地',
+                        'address-city' => '市区町村 / 郵便番号 / 国',
+                        'address-vat' => '登録番号 / VAT番号',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => '投機ルールを有効にする',
                         'info' => '自動投機ロジックの有効化または無効化の設定を構成します。',

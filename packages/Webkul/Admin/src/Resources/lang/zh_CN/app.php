@@ -4230,6 +4230,19 @@ return [
                         'info' => '配置在您网站页脚显示的版权内容，以保护您的知识产权并提升品牌知名度。',
                     ],
 
+                    'footer' => [
+                        'title' => '页脚内容',
+                        'info' => '配置在店铺页脚中显示的标语、电话号码和地址。',
+                        'tagline' => '标语',
+                        'need-help-text' => '"需要帮助"文本',
+                        'phone-number' => '电话号码',
+                        'address-heading' => '地址标题',
+                        'address-trademark' => '商标行',
+                        'address-street' => '街道地址',
+                        'address-city' => '城市 / 邮政编码 / 国家',
+                        'address-vat' => '增值税号 / 注册号',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => '启用猜测规则',
                         'info' => '配置启用或禁用自动猜测逻辑的设置。',

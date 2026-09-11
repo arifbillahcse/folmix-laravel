@@ -4230,6 +4230,19 @@ return [
                         'info' => 'Configure o conteúdo de direitos autorais exibido no rodapé do seu site para proteger sua propriedade intelectual e aumentar o reconhecimento da marca.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Conteúdo do rodapé',
+                        'info' => 'Configure o slogan, o número de telefone e o endereço exibidos no rodapé da loja.',
+                        'tagline' => 'Slogan',
+                        'need-help-text' => 'Texto "Precisa de ajuda"',
+                        'phone-number' => 'Número de telefone',
+                        'address-heading' => 'Título do endereço',
+                        'address-trademark' => 'Linha de marca registrada',
+                        'address-street' => 'Endereço',
+                        'address-city' => 'Cidade / CEP / País',
+                        'address-vat' => 'CNPJ / Número de registro',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Ativar regras de especulação',
                         'info' => 'Configure as definições para ativar ou desativar a lógica automática de especulação.',

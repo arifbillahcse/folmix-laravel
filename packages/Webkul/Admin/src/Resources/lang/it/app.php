@@ -4321,6 +4321,19 @@ return [
                         'info' => 'Configura il contenuto del copyright visualizzato nel piè di pagina del tuo sito web per proteggere la tua proprietà intellettuale e migliorare il riconoscimento del marchio.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Contenuto del piè di pagina',
+                        'info' => 'Configura il tagline, il numero di telefono e l\'indirizzo mostrati nel piè di pagina del negozio.',
+                        'tagline' => 'Tagline',
+                        'need-help-text' => 'Testo "Serve aiuto?"',
+                        'phone-number' => 'Numero di telefono',
+                        'address-heading' => 'Intestazione indirizzo',
+                        'address-trademark' => 'Riga del marchio',
+                        'address-street' => 'Indirizzo',
+                        'address-city' => 'Città / CAP / Paese',
+                        'address-vat' => 'Partita IVA / Numero di registrazione',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Abilita regole di speculazione',
                         'info' => 'Configura le impostazioni per abilitare o disabilitare la logica di speculazione automatica.',

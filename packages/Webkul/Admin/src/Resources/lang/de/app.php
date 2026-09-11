@@ -4230,6 +4230,19 @@ return [
                         'info' => 'Konfigurieren Sie den im Footer Ihrer Website angezeigten Urheberrechtsinhalt, um Ihr geistiges Eigentum zu schützen und die Markenbekanntheit zu stärken.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Footer-Inhalt',
+                        'info' => 'Konfigurieren Sie den Slogan, die Telefonnummer und die Adresse, die im Footer des Shops angezeigt werden.',
+                        'tagline' => 'Slogan',
+                        'need-help-text' => '„Hilfe benötigt“-Text',
+                        'phone-number' => 'Telefonnummer',
+                        'address-heading' => 'Adressüberschrift',
+                        'address-trademark' => 'Markenzeichen-Zeile',
+                        'address-street' => 'Straße',
+                        'address-city' => 'Stadt / Postleitzahl / Land',
+                        'address-vat' => 'USt-IdNr. / Registrierungsnummer',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Spekulationsregeln aktivieren',
                         'info' => 'Konfigurieren Sie die Einstellungen zum Aktivieren oder Deaktivieren der automatischen Spekulationslogik.',

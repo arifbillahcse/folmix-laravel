@@ -4230,6 +4230,19 @@ return [
                         'info' => 'Configurez le contenu des droits d\'auteur affiché dans le pied de page de votre site web afin de protéger votre propriété intellectuelle et d\'améliorer la reconnaissance de votre marque.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Contenu du pied de page',
+                        'info' => 'Configurez le slogan, le numéro de téléphone et l\'adresse affichés dans le pied de page de la boutique.',
+                        'tagline' => 'Slogan',
+                        'need-help-text' => 'Texte « Besoin d\'aide »',
+                        'phone-number' => 'Numéro de téléphone',
+                        'address-heading' => 'Titre de l\'adresse',
+                        'address-trademark' => 'Ligne de marque déposée',
+                        'address-street' => 'Adresse',
+                        'address-city' => 'Ville / Code postal / Pays',
+                        'address-vat' => 'Numéro de TVA / d\'immatriculation',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Activer les règles de spéculation',
                         'info' => 'Configurer les paramètres pour activer ou désactiver la logique de spéculation automatique.',

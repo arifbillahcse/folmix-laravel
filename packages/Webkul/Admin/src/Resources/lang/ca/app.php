@@ -4230,6 +4230,19 @@ return [
                         'info' => 'Configura el contingut de drets d\'autor que es mostra al peu de pàgina del teu lloc web per protegir la teva propietat intel·lectual i millorar el reconeixement de la marca.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Contingut del peu de pàgina',
+                        'info' => 'Configureu l\'eslògan, el número de telèfon i l\'adreça que es mostren al peu de pàgina de la botiga.',
+                        'tagline' => 'Eslògan',
+                        'need-help-text' => 'Text "Necessites ajuda"',
+                        'phone-number' => 'Número de telèfon',
+                        'address-heading' => 'Encapçalament de l\'adreça',
+                        'address-trademark' => 'Línia de marca registrada',
+                        'address-street' => 'Adreça',
+                        'address-city' => 'Ciutat / Codi postal / País',
+                        'address-vat' => 'NIF / Número de registre',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Habilita les regles d’especulació',
                         'info' => 'Configura els paràmetres per habilitar o deshabilitar la lògica automàtica d’especulació.',

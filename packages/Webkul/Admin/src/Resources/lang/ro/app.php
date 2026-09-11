@@ -4230,6 +4230,19 @@ return [
                         'info' => 'Configurați conținutul drepturilor de autor afișat în subsolul site-ului dvs. pentru a vă proteja proprietatea intelectuală și a îmbunătăți recunoașterea brandului.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Conținut subsol',
+                        'info' => 'Configurați sloganul, numărul de telefon și adresa afișate în subsolul magazinului.',
+                        'tagline' => 'Slogan',
+                        'need-help-text' => 'Text „Ai nevoie de ajutor”',
+                        'phone-number' => 'Număr de telefon',
+                        'address-heading' => 'Titlu adresă',
+                        'address-trademark' => 'Linie marcă înregistrată',
+                        'address-street' => 'Adresă',
+                        'address-city' => 'Oraș / Cod poștal / Țară',
+                        'address-vat' => 'CUI / Număr de înregistrare',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Enable Speculation Rules',
                         'info' => 'Configure settings for enabling or disabling automated speculation logic.',

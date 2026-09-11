@@ -4230,6 +4230,19 @@ return [
                         'info' => 'Skonfiguruj treść praw autorskich wyświetlaną w stopce swojej witryny, aby chronić swoją własność intelektualną i zwiększyć rozpoznawalność marki.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Treść stopki',
+                        'info' => 'Skonfiguruj hasło reklamowe, numer telefonu i adres wyświetlane w stopce sklepu.',
+                        'tagline' => 'Hasło reklamowe',
+                        'need-help-text' => 'Tekst „Potrzebujesz pomocy”',
+                        'phone-number' => 'Numer telefonu',
+                        'address-heading' => 'Nagłówek adresu',
+                        'address-trademark' => 'Linia znaku towarowego',
+                        'address-street' => 'Adres',
+                        'address-city' => 'Miasto / Kod pocztowy / Kraj',
+                        'address-vat' => 'NIP / Numer rejestracyjny',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Włącz wstępne wczytywanie',
                         'info' => 'Skonfiguruj mechanizm automatycznego wczytywania podstron w tle, aby przyspieszyć działanie sklepu.',
