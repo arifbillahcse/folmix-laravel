@@ -166,6 +166,21 @@ class ThemeController extends Controller
     }
 
     /**
+     * Copy the currently active locale's saved customization to every other
+     * locale the theme's channel supports.
+     *
+     * @return JsonResponse
+     */
+    public function copyToAllLocales(int $id)
+    {
+        $this->themeCustomizationRepository->copyToAllLocales($id, core()->getRequestedLocaleCode());
+
+        return new JsonResponse([
+            'message' => trans('admin::app.settings.themes.edit.copy-to-all-locales-success'),
+        ]);
+    }
+
+    /**
      * Delete a specified theme.
      *
      * @return JsonResponse

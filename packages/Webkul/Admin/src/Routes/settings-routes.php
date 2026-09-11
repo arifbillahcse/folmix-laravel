@@ -226,6 +226,8 @@ Route::prefix('settings')->group(function () {
 
         Route::post('edit/{id}', 'update')->name('admin.settings.themes.update');
 
+        Route::post('edit/{id}/copy-to-all-locales', 'copyToAllLocales')->name('admin.settings.themes.copy_to_all_locales');
+
         Route::delete('edit/{id}', 'destroy')->name('admin.settings.themes.delete');
 
         Route::post('mass-update', 'massUpdate')->name('admin.settings.themes.mass_update');

@@ -1181,6 +1181,7 @@ return [
             'admin.settings.themes.edit',
             'admin.settings.themes.update',
             'admin.settings.themes.mass_update',
+            'admin.settings.themes.copy_to_all_locales',
         ],
         'sort' => 2,
     ], [

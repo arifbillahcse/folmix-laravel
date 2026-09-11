@@ -31,6 +31,17 @@
                     </a>
                 </div>
 
+                @if ($currentChannel->locales->count() > 1)
+                    <!-- Copy To All Languages Button -->
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        onclick="copyThemeCustomizationToAllLocales()"
+                    >
+                        @lang('admin::app.settings.themes.edit.copy-to-all-locales-btn')
+                    </button>
+                @endif
+
                 <button
                     type="submit"
                     class="primary-button"
@@ -257,4 +268,30 @@
             </div>
         </div>
     </x-admin::form>
+
+    @if ($currentChannel->locales->count() > 1)
+        @pushOnce('scripts')
+            <script type="module">
+                function copyThemeCustomizationToAllLocales() {
+                    window.emitter.emit('open-confirm-modal', {
+                        message: @json(trans('admin::app.settings.themes.edit.copy-to-all-locales-confirm')),
+
+                        agree: () => {
+                            window.axios.post('{{ route('admin.settings.themes.copy_to_all_locales', $theme->id) }}', {
+                                locale: '{{ $currentLocale->code }}',
+                            })
+                                .then((response) => {
+                                    window.emitter.emit('add-flash', { type: 'success', message: response.data.message });
+                                })
+                                .catch(() => {
+                                    window.emitter.emit('add-flash', { type: 'error', message: @json(trans('admin::app.settings.themes.edit.copy-to-all-locales-error')) });
+                                });
+                        },
+                    });
+                }
+
+                window.copyThemeCustomizationToAllLocales = copyThemeCustomizationToAllLocales;
+            </script>
+        @endPushOnce
+    @endif
 </x-admin::layouts>

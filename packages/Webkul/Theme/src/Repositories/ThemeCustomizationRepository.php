@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Stevebauman\Purify\Facades\Purify;
 use Webkul\Core\Eloquent\Repository;
+use Webkul\Core\Models\ChannelProxy;
 use Webkul\Theme\Contracts\ThemeCustomization;
 
 class ThemeCustomizationRepository extends Repository
@@ -143,5 +144,32 @@ class ThemeCustomizationRepository extends Repository
         $translatedModel->options = $options ?? [];
         $translatedModel->theme_customization_id = $theme->id;
         $translatedModel->save();
+    }
+
+    /**
+     * Copy the given locale's saved options to every other locale the theme's
+     * channel supports, so an admin can build a customization once and mirror
+     * it everywhere instead of repeating the same edit per locale.
+     */
+    public function copyToAllLocales(int $id, string $sourceLocale): ThemeCustomization
+    {
+        $theme = $this->find($id);
+
+        $sourceOptions = $theme->translate($sourceLocale)?->options ?? [];
+
+        $localeCodes = ChannelProxy::modelClass()::find($theme->channel_id)?->locales->pluck('code')->all() ?: [$sourceLocale];
+
+        foreach ($localeCodes as $localeCode) {
+            if ($localeCode === $sourceLocale) {
+                continue;
+            }
+
+            $translatedModel = $theme->translateOrNew($localeCode);
+            $translatedModel->options = $sourceOptions;
+            $translatedModel->theme_customization_id = $theme->id;
+            $translatedModel->save();
+        }
+
+        return $theme;
     }
 }
