@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Stevebauman\Purify\Facades\Purify;
 use Webkul\Core\Eloquent\Repository;
+use Webkul\Core\Models\ChannelProxy;
 use Webkul\Theme\Contracts\ThemeCustomization;
 
 class ThemeCustomizationRepository extends Repository
@@ -139,9 +140,21 @@ class ThemeCustomizationRepository extends Repository
             }
         }
 
-        $translatedModel = $theme->translate($locale);
-        $translatedModel->options = $options ?? [];
-        $translatedModel->theme_customization_id = $theme->id;
-        $translatedModel->save();
+        /**
+         * The image carousel is a single storefront-wide slider, so its slides
+         * are written to every locale the channel supports rather than just
+         * the locale tab the admin happened to have open — otherwise locales
+         * left untouched keep stale/seeded slides instead of showing this one.
+         */
+        $localeCodes = $theme->type === 'image_carousel'
+            ? (ChannelProxy::modelClass()::find($theme->channel_id)?->locales->pluck('code')->all() ?: [$locale])
+            : [$locale];
+
+        foreach ($localeCodes as $localeCode) {
+            $translatedModel = $theme->translateOrNew($localeCode);
+            $translatedModel->options = $options ?? [];
+            $translatedModel->theme_customization_id = $theme->id;
+            $translatedModel->save();
+        }
     }
 }
