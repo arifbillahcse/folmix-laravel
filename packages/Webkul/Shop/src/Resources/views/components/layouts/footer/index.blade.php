@@ -40,7 +40,7 @@
             />
 
             <p class="max-w-[320px] text-sm text-zinc-600">
-                @lang('shop::app.components.layouts.footer.about-tagline')
+                {{ core()->getConfigData('general.content.footer.tagline') ?: trans('shop::app.components.layouts.footer.about-tagline') }}
             </p>
 
             <div class="flex items-center gap-3">
@@ -62,11 +62,11 @@
 
                 <div>
                     <p class="text-xs font-semibold uppercase text-zinc-500">
-                        @lang('shop::app.components.layouts.footer.need-help')
+                        {{ core()->getConfigData('general.content.footer.need_help_text') ?: trans('shop::app.components.layouts.footer.need-help') }}
                     </p>
 
                     <p class="text-base font-bold text-navyBlue">
-                        @lang('shop::app.components.layouts.footer.phone-number')
+                        {{ core()->getConfigData('general.content.footer.phone_number') ?: trans('shop::app.components.layouts.footer.phone-number') }}
                     </p>
                 </div>
             </div>
@@ -105,17 +105,17 @@
         <!-- Company Address -->
         <div>
             <p class="mb-5 text-sm font-semibold uppercase text-zinc-800">
-                @lang('shop::app.components.layouts.footer.address-heading')
+                {{ core()->getConfigData('general.content.footer.address_heading') ?: trans('shop::app.components.layouts.footer.address-heading') }}
             </p>
 
             <p class="mb-3 text-sm text-zinc-600">
-                @lang('shop::app.components.layouts.footer.address-trademark')
+                {{ core()->getConfigData('general.content.footer.address_trademark') ?: trans('shop::app.components.layouts.footer.address-trademark') }}
             </p>
 
             <ul class="grid gap-2 text-sm text-zinc-600">
-                <li>@lang('shop::app.components.layouts.footer.address-street')</li>
-                <li>@lang('shop::app.components.layouts.footer.address-city')</li>
-                <li>@lang('shop::app.components.layouts.footer.address-vat')</li>
+                <li>{{ core()->getConfigData('general.content.footer.address_street') ?: trans('shop::app.components.layouts.footer.address-street') }}</li>
+                <li>{{ core()->getConfigData('general.content.footer.address_city') ?: trans('shop::app.components.layouts.footer.address-city') }}</li>
+                <li>{{ core()->getConfigData('general.content.footer.address_vat') ?: trans('shop::app.components.layouts.footer.address-vat') }}</li>
             </ul>
         </div>
 

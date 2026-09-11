@@ -4321,6 +4321,19 @@ return [
                         'info' => 'Configure the copyright content displayed in the footer of your website to protect your intellectual property and enhance brand recognition.',
                     ],
 
+                    'footer' => [
+                        'title' => 'Footer Content',
+                        'info' => 'Configure the tagline, phone number, and address shown in the storefront footer.',
+                        'tagline' => 'Tagline',
+                        'need-help-text' => 'Need Help Text',
+                        'phone-number' => 'Phone Number',
+                        'address-heading' => 'Address Heading',
+                        'address-trademark' => 'Trademark Line',
+                        'address-street' => 'Street Address',
+                        'address-city' => 'City / Postal Code / Country',
+                        'address-vat' => 'VAT / Registration Number',
+                    ],
+
                     'speculation-rules' => [
                         'enable-speculation' => 'Enable Speculation Rules',
                         'info' => 'Configure settings for enabling or disabling automated speculation logic.',

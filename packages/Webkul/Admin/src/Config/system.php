@@ -86,8 +86,8 @@ return [
         ],
     ], [
         'key' => 'general.content.footer',
-        'name' => 'admin::app.configuration.index.general.content.copyright-content.title',
-        'info' => 'admin::app.configuration.index.general.content.copyright-content.info',
+        'name' => 'admin::app.configuration.index.general.content.footer.title',
+        'info' => 'admin::app.configuration.index.general.content.footer.info',
         'sort' => 2,
         'fields' => [
             [
@@ -96,6 +96,54 @@ return [
                 'type' => 'text',
                 'channel_based' => false,
                 'locale_based' => true,
+            ], [
+                'name' => 'tagline',
+                'title' => 'admin::app.configuration.index.general.content.footer.tagline',
+                'type' => 'textarea',
+                'channel_based' => false,
+                'locale_based' => true,
+            ], [
+                'name' => 'need_help_text',
+                'title' => 'admin::app.configuration.index.general.content.footer.need-help-text',
+                'type' => 'text',
+                'channel_based' => false,
+                'locale_based' => true,
+            ], [
+                'name' => 'phone_number',
+                'title' => 'admin::app.configuration.index.general.content.footer.phone-number',
+                'type' => 'text',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'address_heading',
+                'title' => 'admin::app.configuration.index.general.content.footer.address-heading',
+                'type' => 'text',
+                'channel_based' => false,
+                'locale_based' => true,
+            ], [
+                'name' => 'address_trademark',
+                'title' => 'admin::app.configuration.index.general.content.footer.address-trademark',
+                'type' => 'text',
+                'channel_based' => false,
+                'locale_based' => true,
+            ], [
+                'name' => 'address_street',
+                'title' => 'admin::app.configuration.index.general.content.footer.address-street',
+                'type' => 'text',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'address_city',
+                'title' => 'admin::app.configuration.index.general.content.footer.address-city',
+                'type' => 'text',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'address_vat',
+                'title' => 'admin::app.configuration.index.general.content.footer.address-vat',
+                'type' => 'text',
+                'channel_based' => true,
+                'locale_based' => false,
             ],
         ],
     ], [
