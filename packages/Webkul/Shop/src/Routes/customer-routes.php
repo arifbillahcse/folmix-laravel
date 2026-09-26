@@ -36,9 +36,12 @@ Route::prefix('customer')->group(function () {
     });
 
     /**
-     * Login routes.
+     * Login routes. No-cache is forced here because the login page embeds a
+     * CSRF token tied to the visitor's own session - if a reverse proxy or
+     * page cache serves this HTML to a later visitor, that visitor submits
+     * a token that no longer matches their session and gets "Page Expired".
      */
-    Route::controller(SessionController::class)->prefix('login')->group(function () {
+    Route::controller(SessionController::class)->prefix('login')->middleware(NoCacheMiddleware::class)->group(function () {
         Route::get('', 'index')->name('shop.customer.session.index');
 
         Route::post('', 'store')->name('shop.customer.session.create');
