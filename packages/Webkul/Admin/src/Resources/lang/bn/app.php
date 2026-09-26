@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'কার্যকলাপ লগ',
+
+            'datagrid' => [
+                'date-time' => 'তারিখ ও সময়',
+                'user' => 'ব্যবহারকারী',
+                'system' => 'সিস্টেম',
+                'admin' => 'অ্যাডমিন',
+                'customer' => 'গ্রাহক',
+                'event' => 'ইভেন্ট',
+                'event-login' => 'লগইন',
+                'event-logout' => 'লগআউট',
+                'event-login-failed' => 'ব্যর্থ লগইন',
+                'event-created' => 'তৈরি হয়েছে',
+                'event-updated' => 'হালনাগাদ হয়েছে',
+                'event-deleted' => 'মুছে ফেলা হয়েছে',
+                'module' => 'মডিউল',
+                'description' => 'বিবরণ',
+                'ip-address' => 'আইপি ঠিকানা',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'কার্যকলাপ লগ',
                 'attribute-families' => 'গুণগুণ পরিবার',
                 'attributes' => 'গুণগুণ',
                 'booking-product' => 'সংরক্ষণ',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'কার্যকলাপ লগ',
         'addresses' => 'ঠিকানা',
         'attribute-families' => 'বৈশিষ্ট্য পরিবার',
         'attributes' => 'বৈশিষ্ট্য',

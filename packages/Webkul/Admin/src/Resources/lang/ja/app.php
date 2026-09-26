@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'アクティビティログ',
+
+            'datagrid' => [
+                'date-time' => '日付と時刻',
+                'user' => 'ユーザー',
+                'system' => 'システム',
+                'admin' => '管理者',
+                'customer' => '顧客',
+                'event' => 'イベント',
+                'event-login' => 'ログイン',
+                'event-logout' => 'ログアウト',
+                'event-login-failed' => 'ログイン失敗',
+                'event-created' => '作成した',
+                'event-updated' => '更新しました',
+                'event-deleted' => '削除されました',
+                'module' => 'モジュール',
+                'description' => '説明',
+                'ip-address' => 'IPアドレス',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'アクティビティログ',
                 'attribute-families' => '属性ファミリー',
                 'attributes' => '属性',
                 'booking-product' => '予約',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'アクティビティログ',
         'addresses' => '住所',
         'attribute-families' => '属性ファミリー',
         'attributes' => '属性',

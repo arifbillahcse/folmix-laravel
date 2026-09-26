@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'Registro de Actividad',
+
+            'datagrid' => [
+                'date-time' => 'Fecha y hora',
+                'user' => 'Usuario',
+                'system' => 'Sistema',
+                'admin' => 'Administrador',
+                'customer' => 'Cliente',
+                'event' => 'Evento',
+                'event-login' => 'Inicio de Sesión',
+                'event-logout' => 'Cerrar Sesión',
+                'event-login-failed' => 'Inicio de Sesión Fallido',
+                'event-created' => 'Creado',
+                'event-updated' => 'Actualizado',
+                'event-deleted' => 'Eliminado',
+                'module' => 'Módulo',
+                'description' => 'Descripción',
+                'ip-address' => 'Dirección IP',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'Registro de Actividad',
                 'attribute-families' => 'Familias de atributos',
                 'attributes' => 'Atributos',
                 'booking-product' => 'Reservas',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'Registro de Actividad',
         'addresses' => 'Direcciones',
         'attribute-families' => 'Familias de Atributos',
         'attributes' => 'Atributos',

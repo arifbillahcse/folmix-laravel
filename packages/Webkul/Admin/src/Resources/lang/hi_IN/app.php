@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'गतिविधि लॉग',
+
+            'datagrid' => [
+                'date-time' => 'तारीख और समय',
+                'user' => 'उपयोगकर्ता',
+                'system' => 'सिस्टम',
+                'admin' => 'व्यवस्थापक',
+                'customer' => 'ग्राहक',
+                'event' => 'घटना',
+                'event-login' => 'लॉगिन',
+                'event-logout' => 'लॉगआउट',
+                'event-login-failed' => 'असफल लॉगिन',
+                'event-created' => 'बनाया गया',
+                'event-updated' => 'अपडेट किया गया',
+                'event-deleted' => 'मिटाया गया',
+                'module' => 'मॉड्यूल',
+                'description' => 'विवरण',
+                'ip-address' => 'आईपी पता',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'गतिविधि लॉग',
                 'attribute-families' => 'गुण-परिवार',
                 'attributes' => 'गुण',
                 'booking-product' => 'बुकिंग',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'गतिविधि लॉग',
         'addresses' => 'पते',
         'attribute-families' => 'विशेषता परिवार',
         'attributes' => 'विशेषताएँ',

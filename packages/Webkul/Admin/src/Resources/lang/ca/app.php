@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'Registre d\'activitat',
+
+            'datagrid' => [
+                'date-time' => 'Data i hora',
+                'user' => 'Usuari',
+                'system' => 'Sistema',
+                'admin' => 'Administrador',
+                'customer' => 'Client',
+                'event' => 'Esdeveniment',
+                'event-login' => 'Inici de sessió',
+                'event-logout' => 'Tancar sessió',
+                'event-login-failed' => 'Inici de sessió fallit',
+                'event-created' => 'Creat',
+                'event-updated' => 'Actualitzat',
+                'event-deleted' => 'Eliminat',
+                'module' => 'Mòdul',
+                'description' => 'Descripció',
+                'ip-address' => 'Adreça IP',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'Registre d\'activitat',
                 'attribute-families' => 'Famílies d\'atributs',
                 'attributes' => 'Atributs',
                 'booking-product' => 'Reserves',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'Registre d\'activitat',
         'addresses' => 'Adreces',
         'attribute-families' => 'Famílies d\'Atributs',
         'attributes' => 'Atributs',

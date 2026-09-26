@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'Log Aktivitas',
+
+            'datagrid' => [
+                'date-time' => 'Tanggal & Waktu',
+                'user' => 'Pengguna',
+                'system' => 'Sistem',
+                'admin' => 'Admin',
+                'customer' => 'Pelanggan',
+                'event' => 'Acara',
+                'event-login' => 'Masuk',
+                'event-logout' => 'Keluar',
+                'event-login-failed' => 'Gagal Masuk',
+                'event-created' => 'Dibuat',
+                'event-updated' => 'Diperbarui',
+                'event-deleted' => 'Dihapus',
+                'module' => 'Modul',
+                'description' => 'Deskripsi',
+                'ip-address' => 'Alamat IP',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'Log Aktivitas',
                 'attribute-families' => 'Keluarga Atribut',
                 'attributes' => 'Atribut',
                 'booking-product' => 'Pemesanan',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'Log Aktivitas',
         'addresses' => 'Alamat',
         'attribute-families' => 'Keluarga Atribut',
         'attributes' => 'Atribut',

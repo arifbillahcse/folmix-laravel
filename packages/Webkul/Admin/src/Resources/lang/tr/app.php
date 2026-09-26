@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'Aktivite Günlüğü',
+
+            'datagrid' => [
+                'date-time' => 'Tarih ve Saat',
+                'user' => 'Kullanıcı',
+                'system' => 'Sistem',
+                'admin' => 'Yönetici',
+                'customer' => 'Müşteri',
+                'event' => 'Etkinlik',
+                'event-login' => 'Giriş',
+                'event-logout' => 'Çıkış',
+                'event-login-failed' => 'Başarısız Giriş',
+                'event-created' => 'Oluşturuldu',
+                'event-updated' => 'Güncellendi',
+                'event-deleted' => 'Silindi',
+                'module' => 'Modül',
+                'description' => 'Açıklama',
+                'ip-address' => 'IP Adresi',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'Aktivite Günlüğü',
                 'attribute-families' => 'Özellik Aileleri',
                 'attributes' => 'Özellikler',
                 'booking-product' => 'Rezervasyonlar',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'Aktivite Günlüğü',
         'addresses' => 'Adresler',
         'attribute-families' => 'Özellik Aileleri',
         'attributes' => 'Özellikler',

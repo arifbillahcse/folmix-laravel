@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'Jurnal de activitate',
+
+            'datagrid' => [
+                'date-time' => 'Data și ora',
+                'user' => 'Utilizator',
+                'system' => 'Sistem',
+                'admin' => 'Admin',
+                'customer' => 'Client',
+                'event' => 'Eveniment',
+                'event-login' => 'Autentificare',
+                'event-logout' => 'Deconectare',
+                'event-login-failed' => 'Autentificare eșuată',
+                'event-created' => 'Creat',
+                'event-updated' => 'Actualizat',
+                'event-deleted' => 'Șters',
+                'module' => 'Modul',
+                'description' => 'Descriere',
+                'ip-address' => 'Adresă IP',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'Jurnal de activitate',
                 'attribute-families' => 'Attribute Families',
                 'attributes' => 'Attributes',
                 'booking-product' => 'Bookings',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'Jurnal de activitate',
         'addresses' => 'Addresses',
         'attribute-families' => 'Attribute Families',
         'attributes' => 'Attributes',

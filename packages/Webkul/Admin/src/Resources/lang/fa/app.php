@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'گزارش فعالیت',
+
+            'datagrid' => [
+                'date-time' => 'تاریخ و زمان',
+                'user' => 'کاربر',
+                'system' => 'سیستم',
+                'admin' => 'مدیر',
+                'customer' => 'مشتری',
+                'event' => 'رویداد',
+                'event-login' => 'ورود',
+                'event-logout' => 'خروج',
+                'event-login-failed' => 'ورود ناموفق',
+                'event-created' => 'ایجاد شده',
+                'event-updated' => 'به‌روزرسانی شده',
+                'event-deleted' => 'حذف شده',
+                'module' => 'ماژول',
+                'description' => 'توضیحات',
+                'ip-address' => 'آدرس IP',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'گزارش فعالیت',
                 'attribute-families' => 'خانواده‌های ویژگی',
                 'attributes' => 'ویژگی‌ها',
                 'booking-product' => 'رزروها',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'گزارش فعالیت',
         'addresses' => 'آدرس‌ها',
         'attribute-families' => 'خانواده‌های ویژگی',
         'attributes' => 'ویژگی‌ها',

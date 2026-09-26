@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'יומן פעילות',
+
+            'datagrid' => [
+                'date-time' => 'תאריך ושעה',
+                'user' => 'משתמש',
+                'system' => 'מערכת',
+                'admin' => 'מנהל',
+                'customer' => 'לקוח',
+                'event' => 'אירוע',
+                'event-login' => 'התחברות',
+                'event-logout' => 'התנתקות',
+                'event-login-failed' => 'התחברות נכשלה',
+                'event-created' => 'נוצר',
+                'event-updated' => 'עודכן',
+                'event-deleted' => 'נמחק',
+                'module' => 'מודול',
+                'description' => 'תיאור',
+                'ip-address' => 'כתובת IP',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'יומן פעילות',
                 'attribute-families' => 'משפחות מאפיינים',
                 'attributes' => 'מאפיינים',
                 'booking-product' => 'הזמנות',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'יומן פעילות',
         'addresses' => 'כתובות',
         'attribute-families' => 'משפחות מאפיינים',
         'attributes' => 'מאפיינים',

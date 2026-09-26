@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'ක්‍රියාකාරකම් සටහන',
+
+            'datagrid' => [
+                'date-time' => 'දිනය සහ වේලාව',
+                'user' => 'පරිශීලක',
+                'system' => 'පද්ධතිය',
+                'admin' => 'පරිපාලක',
+                'customer' => 'පාරිභෝගික',
+                'event' => 'සිද්ධිය',
+                'event-login' => 'පිවිසුම',
+                'event-logout' => 'ඉවත්වීම',
+                'event-login-failed' => 'අසාර්ථක පිවිසුම',
+                'event-created' => 'නිර්මාණය කරන ලදී',
+                'event-updated' => 'යාවත්කාලීන කරන ලදී',
+                'event-deleted' => 'මකා දමන ලදී',
+                'module' => 'මොඩියුලය',
+                'description' => 'විස්තරය',
+                'ip-address' => 'IP ලිපිනය',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'ක්‍රියාකාරකම් සටහන',
                 'attribute-families' => 'සෘක්කු පවුලේ',
                 'attributes' => 'සෘක්කු',
                 'booking-product' => 'මුදල් ඇණවුම්',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'ක්‍රියාකාරකම් සටහන',
         'addresses' => 'ලිපින',
         'attribute-families' => 'ප්‍රභේද පවත්වාගේ',
         'attributes' => 'ප්‍රභේද',

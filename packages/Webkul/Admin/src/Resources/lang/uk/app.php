@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'Журнал активності',
+
+            'datagrid' => [
+                'date-time' => 'Дата і час',
+                'user' => 'Користувач',
+                'system' => 'Система',
+                'admin' => 'Адміністратор',
+                'customer' => 'Клієнт',
+                'event' => 'Подія',
+                'event-login' => 'Вхід',
+                'event-logout' => 'Вихід',
+                'event-login-failed' => 'Невдалий вхід',
+                'event-created' => 'Створено',
+                'event-updated' => 'Оновлено',
+                'event-deleted' => 'Видалено',
+                'module' => 'Модуль',
+                'description' => 'Опис',
+                'ip-address' => 'IP-адреса',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'Журнал активності',
                 'attribute-families' => 'Сімейства атрибутів',
                 'attributes' => 'Атрибути',
                 'booking-product' => 'Бронювання',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'Журнал активності',
         'addresses' => 'Адреси',
         'attribute-families' => 'Сімейства атрибутів',
         'attributes' => 'Атрибути',

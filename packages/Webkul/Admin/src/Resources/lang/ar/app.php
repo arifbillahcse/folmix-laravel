@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'سجل النشاط',
+
+            'datagrid' => [
+                'date-time' => 'التاريخ والوقت',
+                'user' => 'مستخدم',
+                'system' => 'النظام',
+                'admin' => 'المسؤول',
+                'customer' => 'العميل',
+                'event' => 'الحدث',
+                'event-login' => 'تسجيل الدخول',
+                'event-logout' => 'تسجيل الخروج',
+                'event-login-failed' => 'فشل تسجيل الدخول',
+                'event-created' => 'تم الإنشاء',
+                'event-updated' => 'تم التحديث',
+                'event-deleted' => 'تم الحذف',
+                'module' => 'الوحدة',
+                'description' => 'الوصف',
+                'ip-address' => 'عنوان IP',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'سجل النشاط',
                 'attribute-families' => 'أسر السمات',
                 'attributes' => 'السمات',
                 'booking-product' => 'الحجوزات',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'سجل النشاط',
         'addresses' => 'العناوين',
         'attribute-families' => 'أنساب السمات',
         'attributes' => 'السمات',

@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'Activiteitenlogboek',
+
+            'datagrid' => [
+                'date-time' => 'Datum en tijd',
+                'user' => 'Gebruiker',
+                'system' => 'Systeem',
+                'admin' => 'Beheerder',
+                'customer' => 'Klant',
+                'event' => 'Gebeurtenis',
+                'event-login' => 'Inloggen',
+                'event-logout' => 'Uitloggen',
+                'event-login-failed' => 'Mislukte Inlog',
+                'event-created' => 'Gemaakt',
+                'event-updated' => 'Bijgewerkt',
+                'event-deleted' => 'Verwijderd',
+                'module' => 'Module',
+                'description' => 'Beschrijving',
+                'ip-address' => 'IP-adres',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'Activiteitenlogboek',
                 'attribute-families' => 'Attribuut Families',
                 'attributes' => 'Attributen',
                 'booking-product' => 'Boekingen',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'Activiteitenlogboek',
         'addresses' => 'Adressen',
         'attribute-families' => 'Attribuutfamilies',
         'attributes' => 'Attributen',

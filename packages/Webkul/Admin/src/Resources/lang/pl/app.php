@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'Dziennik Aktywności',
+
+            'datagrid' => [
+                'date-time' => 'Data i czas',
+                'user' => 'Użytkownik',
+                'system' => 'System',
+                'admin' => 'Administrator',
+                'customer' => 'Klient',
+                'event' => 'Zdarzenie',
+                'event-login' => 'Logowanie',
+                'event-logout' => 'Wylogowanie',
+                'event-login-failed' => 'Nieudane logowanie',
+                'event-created' => 'Utworzono',
+                'event-updated' => 'Zaktualizowano',
+                'event-deleted' => 'Usunięto',
+                'module' => 'Moduł',
+                'description' => 'Opis',
+                'ip-address' => 'Adres IP',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'Dziennik Aktywności',
                 'attribute-families' => 'Rodziny atrybutów',
                 'attributes' => 'Atrybuty',
                 'booking-product' => 'Rezerwacje',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'Dziennik Aktywności',
         'addresses' => 'Adresy',
         'attribute-families' => 'Rodziny Atrybutów',
         'attributes' => 'Atrybuty',

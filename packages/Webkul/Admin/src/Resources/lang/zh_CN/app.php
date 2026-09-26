@@ -5348,6 +5348,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => '活动日志',
+
+            'datagrid' => [
+                'date-time' => '日期和时间',
+                'user' => '用户',
+                'system' => '系统',
+                'admin' => '管理员',
+                'customer' => '客户',
+                'event' => '事件',
+                'event-login' => '登录',
+                'event-logout' => '登出',
+                'event-login-failed' => '登录失败',
+                'event-created' => '已创建',
+                'event-updated' => '已更新',
+                'event-deleted' => '已删除',
+                'module' => '模块',
+                'description' => '描述',
+                'ip-address' => 'IP 地址',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5377,6 +5401,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => '活动日志',
                 'attribute-families' => '属性族',
                 'attributes' => '属性',
                 'booking-product' => '预订',
@@ -5621,6 +5646,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => '活动日志',
         'addresses' => '地址',
         'attribute-families' => '属性家族',
         'attributes' => '属性',
