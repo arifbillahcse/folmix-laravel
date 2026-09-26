@@ -156,6 +156,7 @@
                         <button
                             class="primary-button m-0 mx-auto block w-full max-w-[374px] rounded-2xl px-11 py-4 text-center text-base max-md:max-w-full max-md:rounded-lg max-md:py-3 max-sm:py-1.5 ltr:ml-0 rtl:mr-0"
                             type="submit"
+                            id="login-submit-button"
                         >
                             @lang('shop::app.customers.login-form.button-title')
                         </button>
@@ -209,6 +210,30 @@
                     ? "text"
                     : "password";
             }
+
+            /**
+             * Guards against double-submitting the login form (e.g. an
+             * impatient double-click/double-tap on a slow connection).
+             * A duplicate request re-sent after the first one already logged
+             * the customer in fails CSRF verification, since login
+             * regenerates the session - the customer sees "Page Expired"
+             * even though the first request already succeeded.
+             */
+            document.addEventListener('DOMContentLoaded', () => {
+                const submitButton = document.getElementById('login-submit-button');
+
+                const form = submitButton?.closest('form');
+
+                if (! form) {
+                    return;
+                }
+
+                form.addEventListener('submit', () => {
+                    submitButton.disabled = true;
+
+                    submitButton.classList.add('pointer-events-none', 'opacity-50');
+                });
+            });
         </script>
     @endpush
 </x-shop::layouts>
