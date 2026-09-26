@@ -5445,6 +5445,30 @@ return [
         ],
     ],
 
+    'activity-log' => [
+        'index' => [
+            'title' => 'Activity Log',
+
+            'datagrid' => [
+                'date-time' => 'Date & Time',
+                'user' => 'User',
+                'system' => 'System',
+                'admin' => 'Admin',
+                'customer' => 'Customer',
+                'event' => 'Event',
+                'event-login' => 'Login',
+                'event-logout' => 'Logout',
+                'event-login-failed' => 'Failed Login',
+                'event-created' => 'Created',
+                'event-updated' => 'Updated',
+                'event-deleted' => 'Deleted',
+                'module' => 'Module',
+                'description' => 'Description',
+                'ip-address' => 'IP Address',
+            ],
+        ],
+    ],
+
     'components' => [
         'layouts' => [
             'header' => [
@@ -5474,6 +5498,7 @@ return [
             ],
 
             'sidebar' => [
+                'activity-log' => 'Activity Log',
                 'attribute-families' => 'Attribute Families',
                 'attributes' => 'Attributes',
                 'booking-product' => 'Bookings',
@@ -5720,6 +5745,7 @@ return [
     ],
 
     'acl' => [
+        'activity-log' => 'Activity Log',
         'addresses' => 'Addresses',
         'attribute-families' => 'Attribute Families',
         'attributes' => 'Attributes',

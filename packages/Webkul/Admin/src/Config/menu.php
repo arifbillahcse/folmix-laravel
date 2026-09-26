@@ -420,4 +420,15 @@ return [
         'sort' => 9,
         'icon' => 'icon-configuration',
     ],
+
+    /**
+     * Activity log.
+     */
+    [
+        'key' => 'activity_log',
+        'name' => 'admin::app.components.layouts.sidebar.activity-log',
+        'route' => 'admin.activity_log.index',
+        'sort' => 10,
+        'icon' => 'icon-login',
+    ],
 ];

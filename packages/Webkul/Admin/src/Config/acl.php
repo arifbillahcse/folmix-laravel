@@ -1311,4 +1311,19 @@ return [
         ],
         'sort' => 9,
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Activity Log
+    |--------------------------------------------------------------------------
+    |
+    | All ACLs related to the activity log will be placed here.
+    |
+    */
+    [
+        'key' => 'activity_log',
+        'name' => 'admin::app.acl.activity-log',
+        'route' => 'admin.activity_log.index',
+        'sort' => 10,
+    ],
 ];

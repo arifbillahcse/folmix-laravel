@@ -10,6 +10,11 @@ require 'auth-routes.php';
 
 Route::group(['middleware' => ['admin', NoCacheMiddleware::class], 'prefix' => config('app.admin_url')], function () {
     /**
+     * Activity log routes.
+     */
+    require 'activity-log-routes.php';
+
+    /**
      * Sales routes.
      */
     require 'sales-routes.php';
