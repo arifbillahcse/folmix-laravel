@@ -5465,6 +5465,7 @@ return [
                 'module' => 'Module',
                 'description' => 'Description',
                 'ip-address' => 'IP Address',
+                'country' => 'Country',
             ],
         ],
     ],

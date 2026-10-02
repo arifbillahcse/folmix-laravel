@@ -153,6 +153,26 @@ class ActivityLogDataGrid extends DataGrid
             'searchable' => true,
             'filterable' => true,
         ]);
+
+        /**
+         * There is no server-side IP-to-country lookup here (this host's
+         * outbound internet access can't be relied on), so this column is
+         * just a placeholder resolved client-side - see the lookup script
+         * in activity-log/index.blade.php, which fills in each span once
+         * the page loads using a free public geolocation service.
+         */
+        $this->addColumn([
+            'index' => 'country',
+            'label' => trans('admin::app.activity-log.index.datagrid.country'),
+            'type' => 'string',
+            'closure' => function ($row) {
+                if (empty($row->ip_address)) {
+                    return '';
+                }
+
+                return '<span class="activity-log-country" data-ip="'.e($row->ip_address).'">&mdash;</span>';
+            },
+        ]);
     }
 
     /**
