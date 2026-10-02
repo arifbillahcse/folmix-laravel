@@ -5368,6 +5368,7 @@ return [
                 'module' => 'الوحدة',
                 'description' => 'الوصف',
                 'ip-address' => 'عنوان IP',
+                'country' => 'الدولة',
             ],
         ],
     ],

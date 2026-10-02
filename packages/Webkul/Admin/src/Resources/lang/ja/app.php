@@ -5368,6 +5368,7 @@ return [
                 'module' => 'モジュール',
                 'description' => '説明',
                 'ip-address' => 'IPアドレス',
+                'country' => '国',
             ],
         ],
     ],

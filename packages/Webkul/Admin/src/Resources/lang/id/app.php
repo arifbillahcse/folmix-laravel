@@ -5368,6 +5368,7 @@ return [
                 'module' => 'Modul',
                 'description' => 'Deskripsi',
                 'ip-address' => 'Alamat IP',
+                'country' => 'Negara',
             ],
         ],
     ],

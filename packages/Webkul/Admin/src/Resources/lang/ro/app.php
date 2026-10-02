@@ -5368,6 +5368,7 @@ return [
                 'module' => 'Modul',
                 'description' => 'Descriere',
                 'ip-address' => 'Adresă IP',
+                'country' => 'Țară',
             ],
         ],
     ],

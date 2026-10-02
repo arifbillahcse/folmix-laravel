@@ -5368,6 +5368,7 @@ return [
                 'module' => 'මොඩියුලය',
                 'description' => 'විස්තරය',
                 'ip-address' => 'IP ලිපිනය',
+                'country' => 'රට',
             ],
         ],
     ],

@@ -5368,6 +5368,7 @@ return [
                 'module' => 'ماژول',
                 'description' => 'توضیحات',
                 'ip-address' => 'آدرس IP',
+                'country' => 'کشور',
             ],
         ],
     ],

@@ -5368,6 +5368,7 @@ return [
                 'module' => '模块',
                 'description' => '描述',
                 'ip-address' => 'IP 地址',
+                'country' => '国家',
             ],
         ],
     ],
