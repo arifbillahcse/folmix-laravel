@@ -176,9 +176,35 @@ class ActivityLogDataGrid extends DataGrid
     }
 
     /**
-     * No row-level actions - the log is a read-only audit trail.
+     * Register the row-level delete action, gated by the
+     * activity_log.delete ACL permission.
      */
-    public function prepareActions(): void {}
+    public function prepareActions(): void
+    {
+        if (bouncer()->hasPermission('activity_log.delete')) {
+            $this->addAction([
+                'icon' => 'icon-delete',
+                'title' => trans('admin::app.activity-log.index.datagrid.delete'),
+                'method' => 'DELETE',
+                'url' => fn ($row) => route('admin.activity_log.delete', $row->id),
+            ]);
+        }
+    }
+
+    /**
+     * Register the mass delete action, gated by the activity_log.delete
+     * ACL permission.
+     */
+    public function prepareMassActions(): void
+    {
+        if (bouncer()->hasPermission('activity_log.delete')) {
+            $this->addMassAction([
+                'title' => trans('admin::app.activity-log.index.datagrid.delete'),
+                'url' => route('admin.activity_log.mass_delete'),
+                'method' => 'POST',
+            ]);
+        }
+    }
 
     protected function eventLabel(string $event): string
     {

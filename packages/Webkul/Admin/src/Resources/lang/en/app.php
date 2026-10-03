@@ -5466,8 +5466,12 @@ return [
                 'description' => 'Description',
                 'ip-address' => 'IP Address',
                 'country' => 'Country',
+                'delete' => 'Delete',
             ],
         ],
+
+        'delete-success' => 'Activity log entry deleted successfully.',
+        'mass-delete-success' => 'Selected activity log entries deleted successfully.',
     ],
 
     'components' => [

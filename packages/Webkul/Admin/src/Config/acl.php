@@ -1325,5 +1325,13 @@ return [
         'name' => 'admin::app.acl.activity-log',
         'route' => 'admin.activity_log.index',
         'sort' => 10,
+    ], [
+        'key' => 'activity_log.delete',
+        'name' => 'admin::app.acl.delete',
+        'route' => [
+            'admin.activity_log.delete',
+            'admin.activity_log.mass_delete',
+        ],
+        'sort' => 1,
     ],
 ];

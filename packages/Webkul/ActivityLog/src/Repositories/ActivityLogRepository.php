@@ -70,4 +70,12 @@ class ActivityLogRepository extends Repository
 
         return null;
     }
+
+    /**
+     * Delete several log entries at once (DataGrid mass delete).
+     */
+    public function massDestroy(array $ids): int
+    {
+        return $this->model->whereIn('id', $ids)->delete();
+    }
 }
