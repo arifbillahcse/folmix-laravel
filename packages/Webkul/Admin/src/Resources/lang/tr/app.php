@@ -5369,8 +5369,12 @@ return [
                 'description' => 'Açıklama',
                 'ip-address' => 'IP Adresi',
                 'country' => 'Ülke',
+                'delete' => 'Sil',
             ],
         ],
+
+        'delete-success' => 'Aktivite günlüğü kaydı başarıyla silindi.',
+        'mass-delete-success' => 'Seçili aktivite günlüğü kayıtları başarıyla silindi.',
     ],
 
     'components' => [

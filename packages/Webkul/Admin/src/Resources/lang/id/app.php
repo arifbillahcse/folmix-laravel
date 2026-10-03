@@ -5369,8 +5369,12 @@ return [
                 'description' => 'Deskripsi',
                 'ip-address' => 'Alamat IP',
                 'country' => 'Negara',
+                'delete' => 'Hapus',
             ],
         ],
+
+        'delete-success' => 'Entri log aktivitas berhasil dihapus.',
+        'mass-delete-success' => 'Entri log aktivitas yang dipilih berhasil dihapus.',
     ],
 
     'components' => [

@@ -5369,8 +5369,12 @@ return [
                 'description' => 'Beschreibung',
                 'ip-address' => 'IP-Adresse',
                 'country' => 'Land',
+                'delete' => 'Löschen',
             ],
         ],
+
+        'delete-success' => 'Aktivitätsprotokoll-Eintrag erfolgreich gelöscht.',
+        'mass-delete-success' => 'Ausgewählte Aktivitätsprotokoll-Einträge erfolgreich gelöscht.',
     ],
 
     'components' => [

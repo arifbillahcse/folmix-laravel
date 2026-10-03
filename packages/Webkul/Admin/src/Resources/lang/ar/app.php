@@ -5369,8 +5369,12 @@ return [
                 'description' => 'الوصف',
                 'ip-address' => 'عنوان IP',
                 'country' => 'الدولة',
+                'delete' => 'حذف',
             ],
         ],
+
+        'delete-success' => 'تم حذف عنصر سجل النشاط بنجاح.',
+        'mass-delete-success' => 'تم حذف عناصر سجل النشاط المحددة بنجاح.',
     ],
 
     'components' => [

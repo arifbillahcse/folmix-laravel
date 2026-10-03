@@ -5369,8 +5369,12 @@ return [
                 'description' => 'תיאור',
                 'ip-address' => 'כתובת IP',
                 'country' => 'מדינה',
+                'delete' => 'מחק',
             ],
         ],
+
+        'delete-success' => 'רשומת יומן הפעילות נמחקה בהצלחה.',
+        'mass-delete-success' => 'רשומות יומן הפעילות הנבחרות נמחקו בהצלחה.',
     ],
 
     'components' => [

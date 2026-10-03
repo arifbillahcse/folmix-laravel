@@ -5369,8 +5369,12 @@ return [
                 'description' => '説明',
                 'ip-address' => 'IPアドレス',
                 'country' => '国',
+                'delete' => '削除',
             ],
         ],
+
+        'delete-success' => 'アクティビティログのエントリが正常に削除されました。',
+        'mass-delete-success' => '選択したアクティビティログのエントリが正常に削除されました。',
     ],
 
     'components' => [

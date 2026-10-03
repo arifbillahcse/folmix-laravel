@@ -5369,8 +5369,12 @@ return [
                 'description' => 'Description',
                 'ip-address' => 'Adresse IP',
                 'country' => 'Pays',
+                'delete' => 'Supprimer',
             ],
         ],
+
+        'delete-success' => 'Entrée du journal d\'activité supprimée avec succès.',
+        'mass-delete-success' => 'Entrées du journal d\'activité sélectionnées supprimées avec succès.',
     ],
 
     'components' => [

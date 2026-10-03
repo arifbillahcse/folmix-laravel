@@ -5369,8 +5369,12 @@ return [
                 'description' => 'Beschrijving',
                 'ip-address' => 'IP-adres',
                 'country' => 'Land',
+                'delete' => 'Verwijderen',
             ],
         ],
+
+        'delete-success' => 'Activiteitenlogboekitem is succesvol verwijderd.',
+        'mass-delete-success' => 'Geselecteerde activiteitenlogboekitems zijn succesvol verwijderd.',
     ],
 
     'components' => [

@@ -5369,8 +5369,12 @@ return [
                 'description' => 'Descriere',
                 'ip-address' => 'Adresă IP',
                 'country' => 'Țară',
+                'delete' => 'Șterge',
             ],
         ],
+
+        'delete-success' => 'Intrarea din jurnalul de activitate a fost ștearsă cu succes.',
+        'mass-delete-success' => 'Intrările selectate din jurnalul de activitate au fost șterse cu succes.',
     ],
 
     'components' => [

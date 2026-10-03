@@ -5369,8 +5369,12 @@ return [
                 'description' => 'Descripció',
                 'ip-address' => 'Adreça IP',
                 'country' => 'País',
+                'delete' => 'Eliminar',
             ],
         ],
+
+        'delete-success' => 'Entrada del registre d\'activitat eliminada amb éxit.',
+        'mass-delete-success' => 'Entrades seleccionades del registre d\'activitat eliminades amb éxit.',
     ],
 
     'components' => [

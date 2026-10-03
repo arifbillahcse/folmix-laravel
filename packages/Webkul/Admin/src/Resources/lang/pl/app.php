@@ -5369,8 +5369,12 @@ return [
                 'description' => 'Opis',
                 'ip-address' => 'Adres IP',
                 'country' => 'Kraj',
+                'delete' => 'Usuń',
             ],
         ],
+
+        'delete-success' => 'Wpis dziennika aktywności został pomyślnie usunięty.',
+        'mass-delete-success' => 'Wybrane wpisy dziennika aktywności zostały pomyślnie usunięte.',
     ],
 
     'components' => [

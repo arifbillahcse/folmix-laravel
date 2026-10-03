@@ -5369,8 +5369,12 @@ return [
                 'description' => '描述',
                 'ip-address' => 'IP 地址',
                 'country' => '国家',
+                'delete' => '删除',
             ],
         ],
+
+        'delete-success' => '活动日志条目删除成功。',
+        'mass-delete-success' => '所选活动日志条目删除成功。',
     ],
 
     'components' => [

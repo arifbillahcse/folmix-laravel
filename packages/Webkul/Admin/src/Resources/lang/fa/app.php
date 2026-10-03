@@ -5369,8 +5369,12 @@ return [
                 'description' => 'توضیحات',
                 'ip-address' => 'آدرس IP',
                 'country' => 'کشور',
+                'delete' => 'حذف',
             ],
         ],
+
+        'delete-success' => 'ورودی گزارش فعالیت با موفقیت حذف شد.',
+        'mass-delete-success' => 'ورودی‌های گزارش فعالیت انتخاب‌شده با موفقیت حذف شدند.',
     ],
 
     'components' => [
