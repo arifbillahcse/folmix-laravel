@@ -120,9 +120,14 @@ class CategoryRepository extends Repository
 
         $this->uploadImages($data, $category, 'banner_path');
 
-        if (isset($data['attributes'])) {
-            $category->filterableAttributes()->sync($data['attributes']);
-        }
+        /**
+         * Unlike create(), this always syncs (defaulting to an empty
+         * array) rather than checking isset() - unchecking every
+         * attribute checkbox means the field isn't submitted at all, and
+         * that has to be able to clear the category's filterable
+         * attributes rather than silently leaving the old ones in place.
+         */
+        $category->filterableAttributes()->sync($data['attributes'] ?? []);
 
         return $category;
     }

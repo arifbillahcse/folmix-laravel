@@ -357,7 +357,7 @@
                 <!-- Filterable Attributes -->
                 <x-admin::accordion>
                     <x-slot:header>
-                        <p class="required p-2.5 text-base font-semibold text-gray-800 dark:text-white">
+                        <p class="p-2.5 text-base font-semibold text-gray-800 dark:text-white">
                             @lang('admin::app.catalog.categories.create.filterable-attributes')
                         </p>
                     </x-slot>
@@ -369,7 +369,6 @@
                                     type="checkbox"
                                     :id="$attribute->name ?? $attribute->admin_name"
                                     name="attributes[]"
-                                    rules="required"
                                     :value="$attribute->id"
                                     :label="trans('admin::app.catalog.categories.create.filterable-attributes')"
                                     :for="$attribute->name ?? $attribute->admin_name"
