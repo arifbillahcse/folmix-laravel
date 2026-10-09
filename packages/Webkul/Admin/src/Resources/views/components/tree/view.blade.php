@@ -137,9 +137,24 @@
                 },
 
                 getLabel(item) {
-                    return item[this.labelField]
-                        ? item[this.labelField]
-                        : item.translations.filter((translation) => translation.locale === this.fallbackLocale)[0][this.labelField];
+                    if (item[this.labelField]) {
+                        return item[this.labelField];
+                    }
+
+                    /**
+                     * Falls back through the item's own translations rather
+                     * than crashing when the fallback locale's translation
+                     * is missing (e.g. a category that was only ever named
+                     * in one language) - a single item with a gap here used
+                     * to break rendering of the whole tree, not just that
+                     * one row.
+                     */
+                    const translations = Array.isArray(item.translations) ? item.translations : [];
+
+                    const translation = translations.find((translation) => translation.locale === this.fallbackLocale)
+                        ?? translations[0];
+
+                    return translation?.[this.labelField] ?? '';
                 },
 
                 generateToggleIconComponent(props) {
