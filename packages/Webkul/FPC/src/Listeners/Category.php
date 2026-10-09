@@ -27,7 +27,9 @@ class Category
                 ResponseCache::forget($categoryTranslation->slug);
             }
 
-            ResponseCache::forget($category->translate(core()->getDefaultLocaleCodeFromDefaultChannel())->slug);
+            if ($defaultTranslation = $category->translate(core()->getDefaultLocaleCodeFromDefaultChannel())) {
+                ResponseCache::forget($defaultTranslation->slug);
+            }
         }
     }
 
@@ -46,7 +48,9 @@ class Category
                 ResponseCache::forget($categoryTranslation->slug);
             }
 
-            ResponseCache::forget($category->translate(core()->getDefaultLocaleCodeFromDefaultChannel())->slug);
+            if ($defaultTranslation = $category->translate(core()->getDefaultLocaleCodeFromDefaultChannel())) {
+                ResponseCache::forget($defaultTranslation->slug);
+            }
         }
     }
 }
