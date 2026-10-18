@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'श्रेणी कैरोसल',
                 'category-carousel-description' => 'एक प्रतिस्थापनीय श्रेणी कैरोसल का उपयोग करके डायनामिक श्रेणियों को प्रासंगिक रूप से प्रदर्शित करें।',
                 'category-id' => 'श्रेणी आईडी',
+                'apply-to-all-locales' => 'सभी भाषाओं में लागू करें',
                 'channels' => 'चैनल्स',
                 'column' => 'स्तंभ',
                 'copy-to-all-locales-btn' => 'सभी भाषाओं में कॉपी करें',

@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'カテゴリーカルーセル',
                 'category-carousel-description' => 'レスポンシブなカテゴリーカルーセルを使用して、動的なカテゴリーを魅力的に表示します。',
                 'category-id' => 'カテゴリID',
+                'apply-to-all-locales' => 'すべての言語に適用',
                 'channels' => 'チャンネル',
                 'column' => 'カラム',
                 'copy-to-all-locales-btn' => 'すべての言語にコピー',

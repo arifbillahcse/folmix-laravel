@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'Category Carousel',
                 'category-carousel-description' => 'Display dynamic categories attractively using a responsive category carousel.',
                 'category-id' => 'Category ID',
+                'apply-to-all-locales' => 'Aplică la Toate Limbile',
                 'channels' => 'Channels',
                 'column' => 'Column',
                 'copy-to-all-locales-btn' => 'Copiază în Toate Limbile',

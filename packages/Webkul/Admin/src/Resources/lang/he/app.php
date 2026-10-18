@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'קרוסלת קטגוריות',
                 'category-carousel-description' => 'הצג קטגוריות באופן מושך באמצעות קרוסלת קטגוריות רספונסיבית.',
                 'category-id' => 'מזהה קטגוריה',
+                'apply-to-all-locales' => 'החל על כל השפות',
                 'channels' => 'ערוצים',
                 'column' => 'עמודה',
                 'copy-to-all-locales-btn' => 'העתק לכל השפות',

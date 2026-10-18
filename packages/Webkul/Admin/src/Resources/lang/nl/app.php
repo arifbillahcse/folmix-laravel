@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'Categorie Carrousel',
                 'category-carousel-description' => 'Toon dynamische categorieën aantrekkelijk met een responsieve categoriecarrousel.',
                 'category-id' => 'Categorie-ID',
+                'apply-to-all-locales' => 'Toepassen op alle talen',
                 'channels' => 'Kanalen',
                 'column' => 'Kolom',
                 'copy-to-all-locales-btn' => 'Kopiëren naar alle talen',

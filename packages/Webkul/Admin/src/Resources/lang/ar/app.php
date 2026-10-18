@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'شريط الفئات',
                 'category-carousel-description' => 'عرض الفئات الديناميكية بشكل جذاب باستخدام شريط الفئات المتجاوب.',
                 'category-id' => 'معرف الفئة',
+                'apply-to-all-locales' => 'تطبيق على جميع اللغات',
                 'channels' => 'القنوات',
                 'column' => 'عمود',
                 'copy-to-all-locales-btn' => 'نسخ إلى جميع اللغات',

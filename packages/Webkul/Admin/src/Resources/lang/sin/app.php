@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'ප්‍රවේශ කැරූසල්',
                 'category-carousel-description' => 'ප්‍රපුරේෂිත කැටගෙන් අනුකූලතාවක් සංකීර්ණ කිරීමට ප්‍රකාශකරනු ලැබේ.',
                 'category-id' => 'ප්‍රවර්ගය අංකය',
+                'apply-to-all-locales' => 'සියලුම භාෂාවලට යොදන්න',
                 'channels' => 'චැනල්',
                 'column' => 'තීරුව',
                 'copy-to-all-locales-btn' => 'සියලුම භාෂාවලට පිටපත් කරන්න',

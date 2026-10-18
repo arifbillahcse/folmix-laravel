@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'বিভাগ ক্যারোসেল',
                 'category-carousel-description' => 'সম্প্রসারণকারী বিভাগগুলি রেস্পন্সিভ ক্যাটেগরি ক্যারোসেল ব্যবহার করে আকর্ষণীয়ভাবে প্রদর্শন করুন।',
                 'category-id' => 'বিভাগ আইডি',
+                'apply-to-all-locales' => 'সব ভাষায় প্রয়োগ করুন',
                 'channels' => 'চ্যানেল',
                 'column' => 'কলাম',
                 'copy-to-all-locales-btn' => 'সব ভাষায় কপি করুন',

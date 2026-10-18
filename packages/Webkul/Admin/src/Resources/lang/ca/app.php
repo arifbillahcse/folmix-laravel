@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'Carrousel de Categoria',
                 'category-carousel-description' => 'Mostra categories dinàmiques de forma atractiva utilitzant un carrousel de categories adaptable.',
                 'category-id' => 'ID de categoria',
+                'apply-to-all-locales' => 'Aplica a Tots els Idiomes',
                 'channels' => 'Canals',
                 'column' => 'Columna',
                 'copy-to-all-locales-btn' => 'Copia a Tots els Idiomes',

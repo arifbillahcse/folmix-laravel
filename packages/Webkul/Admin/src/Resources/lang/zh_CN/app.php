@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => '类别轮播',
                 'category-carousel-description' => '使用响应式类别轮播以引人注目的方式展示动态类别。',
                 'category-id' => '类别ID',
+                'apply-to-all-locales' => '应用到所有语言',
                 'channels' => '频道',
                 'column' => '列',
                 'copy-to-all-locales-btn' => '复制到所有语言',

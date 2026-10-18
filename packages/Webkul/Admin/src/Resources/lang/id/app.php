@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'Carousel Kategori',
                 'category-carousel-description' => 'Tampilkan kategori dinamis secara menarik menggunakan carousel kategori yang responsif.',
                 'category-id' => 'ID Kategori',
+                'apply-to-all-locales' => 'Terapkan Ke Semua Bahasa',
                 'channels' => 'Channel',
                 'column' => 'Kolom',
                 'copy-to-all-locales-btn' => 'Salin Ke Semua Bahasa',

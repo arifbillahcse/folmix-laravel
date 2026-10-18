@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'Карусель Категорий',
                 'category-carousel-description' => 'Показ динамических категорий привлекательным образом с использованием адаптивной карусели категорий.',
                 'category-id' => 'ID категории',
+                'apply-to-all-locales' => 'Применить ко всем языкам',
                 'channels' => 'Каналы',
                 'column' => 'Колонка',
                 'copy-to-all-locales-btn' => 'Копировать на все языки',

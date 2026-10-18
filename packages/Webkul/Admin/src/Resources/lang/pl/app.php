@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'Karuzela kategorii',
                 'category-carousel-description' => 'Wyświetl dynamiczne kategorie w atrakcyjny sposób za pomocą responsywnej karuzeli kategorii.',
                 'category-id' => 'ID kategorii',
+                'apply-to-all-locales' => 'Zastosuj do wszystkich języków',
                 'channels' => 'Kanały',
                 'column' => 'Kolumna',
                 'copy-to-all-locales-btn' => 'Kopiuj do wszystkich języków',

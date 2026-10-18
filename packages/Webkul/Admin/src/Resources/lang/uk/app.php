@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'Категорійна Карусель',
                 'category-carousel-description' => 'Показ категорій привабливим чином за допомогою відзивного каруселі категорій.',
                 'category-id' => 'Ідентифікатор категорії',
+                'apply-to-all-locales' => 'Застосувати до всіх мов',
                 'channels' => 'Канали',
                 'column' => 'Колонка',
                 'copy-to-all-locales-btn' => 'Копіювати на всі мови',

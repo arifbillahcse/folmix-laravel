@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'Carrousel de catégorie',
                 'category-carousel-description' => 'Affichez les catégories de manière attrayante à l\'aide d\'un carrousel de catégories réactif.',
                 'category-id' => 'ID de catégorie',
+                'apply-to-all-locales' => 'Appliquer à toutes les langues',
                 'channels' => 'Canaux',
                 'column' => 'Colonne',
                 'copy-to-all-locales-btn' => 'Copier vers toutes les langues',

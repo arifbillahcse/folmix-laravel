@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'Kategori Karuseli',
                 'category-carousel-description' => 'Dinamik kategorileri çekici bir şekilde göstermek için duyarlı bir kategori karuseli kullanın.',
                 'category-id' => 'Kategori Kimliği',
+                'apply-to-all-locales' => 'Tüm Dillere Uygula',
                 'channels' => 'Kanallar',
                 'column' => 'Sütun',
                 'copy-to-all-locales-btn' => 'Tüm Dillere Kopyala',

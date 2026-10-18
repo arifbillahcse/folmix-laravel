@@ -3957,6 +3957,7 @@ return [
                 'category-carousel' => 'کاروسل دسته‌بندی',
                 'category-carousel-description' => 'نمایش دسته‌بندی‌ها به شکل جذاب با استفاده از کاروسل دسته‌بندی واکنش‌گرا.',
                 'category-id' => 'شناسه دسته‌بندی',
+                'apply-to-all-locales' => 'اعمال به همه زبان‌ها',
                 'channels' => 'کانال‌ها',
                 'column' => 'ستون',
                 'copy-to-all-locales-btn' => 'کپی به همه زبان‌ها',
