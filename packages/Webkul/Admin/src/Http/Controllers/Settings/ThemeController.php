@@ -158,6 +158,16 @@ class ThemeController extends Controller
 
         $theme = $this->themeCustomizationRepository->update($data, $id);
 
+        /**
+         * Checked by default in the form, so saving normally propagates the
+         * change to every language immediately; the admin unchecks it only
+         * when they want this save to affect the current language alone
+         * (e.g. to give one language its own product selection).
+         */
+        if (request()->boolean('apply_to_all_locales')) {
+            $this->themeCustomizationRepository->copyToAllLocales($theme->id, $locale);
+        }
+
         Event::dispatch('theme_customization.update.after', $theme);
 
         session()->flash('success', trans('admin::app.settings.themes.update-success'));

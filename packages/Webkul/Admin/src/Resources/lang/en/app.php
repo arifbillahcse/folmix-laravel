@@ -4048,6 +4048,7 @@ return [
                 'category-carousel' => 'Category Carousel',
                 'category-carousel-description' => 'Display dynamic categories attractively using a responsive category carousel.',
                 'category-id' => 'Category ID',
+                'apply-to-all-locales' => 'Apply to all languages',
                 'channels' => 'Channels',
                 'column' => 'Column',
                 'copy-to-all-locales-btn' => 'Copy To All Languages',
