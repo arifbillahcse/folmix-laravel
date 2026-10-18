@@ -180,6 +180,15 @@ abstract class AbstractType
 
         $this->attributeValueRepository->saveValues($data, $product, $product->attribute_family->custom_attributes);
 
+        /**
+         * Checked by default in the product edit form, so saving normally
+         * mirrors the name/description/meta fields just entered onto every
+         * other language the channel supports.
+         */
+        if (request()->boolean('apply_to_all_locales')) {
+            $this->attributeValueRepository->copyValuesToAllLocales($data, $product, $product->attribute_family->custom_attributes);
+        }
+
         if (empty($data['channels'])) {
             $data['channels'][] = core()->getDefaultChannel()->id;
         }

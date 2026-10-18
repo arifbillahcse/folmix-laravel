@@ -44,6 +44,21 @@
                         </a>
                     @endif
 
+                    @if (core()->getRequestedChannel()->locales->count() > 1)
+                        <!-- Apply To All Languages Toggle -->
+                        <label class="flex cursor-pointer select-none items-center gap-1.5 text-sm text-gray-600 dark:text-gray-300">
+                            <input
+                                type="checkbox"
+                                name="apply_to_all_locales"
+                                value="1"
+                                checked
+                                class="h-4 w-4 rounded border-gray-400 dark:border-gray-800"
+                            />
+
+                            @lang('admin::app.catalog.products.edit.apply-to-all-locales')
+                        </label>
+                    @endif
+
                     <!-- Save Button -->
                     <button class="primary-button">
                         @lang('admin::app.catalog.products.edit.save-btn')

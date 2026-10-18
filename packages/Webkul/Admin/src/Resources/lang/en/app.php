@@ -1184,6 +1184,7 @@ return [
             ],
 
             'edit' => [
+                'apply-to-all-locales' => 'Apply to all languages',
                 'preview' => 'Preview',
                 'remove' => 'Remove',
                 'save-btn' => 'Save Product',

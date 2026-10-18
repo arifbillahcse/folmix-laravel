@@ -4,6 +4,7 @@ namespace Webkul\Product\Repositories;
 
 use Illuminate\Support\Facades\Storage;
 use Webkul\Core\Eloquent\Repository;
+use Webkul\Core\Models\ChannelProxy;
 use Webkul\Product\Contracts\Product;
 
 class ProductAttributeValueRepository extends Repository
@@ -147,6 +148,47 @@ class ProductAttributeValueRepository extends Repository
 
         if (! empty($attributeValuesToInsert)) {
             $this->insert($attributeValuesToInsert);
+        }
+    }
+
+    /**
+     * Mirror the locale-scoped values just saved for $data['locale'] (name,
+     * description, meta fields, etc.) onto every other locale the channel
+     * supports, so a product's text is visible in all languages by default
+     * instead of being blank until an admin re-enters it per language.
+     *
+     * Image/file attributes are skipped even when they are per-locale: they
+     * are already handled (and uploaded) by saveValues() for the edited
+     * locale, and re-running them here would just re-store the same upload
+     * under a new path for every other locale.
+     *
+     * @param  array  $data
+     * @param  Product  $product
+     * @param  mixed  $attributes
+     * @return void
+     */
+    public function copyValuesToAllLocales($data, $product, $attributes): void
+    {
+        $localeAttributes = $attributes->filter(
+            fn ($attribute) => $attribute->value_per_locale && ! in_array($attribute->type, ['image', 'file'])
+        );
+
+        if ($localeAttributes->isEmpty()) {
+            return;
+        }
+
+        $sourceLocale = $data['locale'] ?? core()->getDefaultLocaleCodeFromDefaultChannel();
+
+        $channelCode = $data['channel'] ?? core()->getDefaultChannelCode();
+
+        $localeCodes = ChannelProxy::modelClass()::where('code', $channelCode)->first()?->locales->pluck('code')->all() ?: [$sourceLocale];
+
+        foreach ($localeCodes as $localeCode) {
+            if ($localeCode === $sourceLocale) {
+                continue;
+            }
+
+            $this->saveValues(array_merge($data, ['locale' => $localeCode]), $product, $localeAttributes);
         }
     }
 
