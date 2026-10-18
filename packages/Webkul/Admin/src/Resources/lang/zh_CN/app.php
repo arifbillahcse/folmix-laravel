@@ -1179,6 +1179,7 @@ return [
             ],
 
             'edit' => [
+                'apply-to-all-locales' => '应用到所有语言',
                 'preview' => '预览',
                 'remove' => '删除',
                 'save-btn' => '保存产品',

@@ -1184,6 +1184,7 @@ return [
             ],
 
             'edit' => [
+                'apply-to-all-locales' => 'Applica a tutte le lingue',
                 'preview' => 'Anteprima',
                 'remove' => 'Rimuovi',
                 'save-btn' => 'Salva Prodotto',

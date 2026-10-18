@@ -1179,6 +1179,7 @@ return [
             ],
 
             'edit' => [
+                'apply-to-all-locales' => 'すべての言語に適用',
                 'preview' => 'プレビュー',
                 'remove' => '削除',
                 'save-btn' => '製品を保存',

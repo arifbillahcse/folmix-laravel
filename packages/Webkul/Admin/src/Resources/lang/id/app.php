@@ -1179,6 +1179,7 @@ return [
             ],
 
             'edit' => [
+                'apply-to-all-locales' => 'Terapkan ke semua bahasa',
                 'preview' => 'Pratinjau',
                 'remove' => 'Hapus',
                 'save-btn' => 'Simpan Produk',

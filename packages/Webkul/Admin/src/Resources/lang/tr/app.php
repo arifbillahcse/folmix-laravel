@@ -1179,6 +1179,7 @@ return [
             ],
 
             'edit' => [
+                'apply-to-all-locales' => 'Tüm dillere uygula',
                 'preview' => 'Önizleme',
                 'remove' => 'Kaldır',
                 'save-btn' => 'Ürünü Kaydet',

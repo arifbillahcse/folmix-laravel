@@ -1179,6 +1179,7 @@ return [
             ],
 
             'edit' => [
+                'apply-to-all-locales' => 'Auf alle Sprachen anwenden',
                 'preview' => 'Vorschau',
                 'remove' => 'Entfernen',
                 'save-btn' => 'Produkt speichern',
