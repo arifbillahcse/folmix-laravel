@@ -1146,6 +1146,7 @@ return [
                     'save-btn' => 'Product Opslaan',
                     'sku' => 'SKU',
                     'title' => 'Nieuw Product aanmaken',
+                    'too-many-variants-confirm' => 'Dit zal in één keer :count variantproducten aanmaken, wat enige tijd kan duren en ervoor kan zorgen dat de pagina niet meer reageert. Wilt u teruggaan en enkele kenmerkopties verwijderen, of toch doorgaan?',
                     'type' => 'Type',
                 ],
 

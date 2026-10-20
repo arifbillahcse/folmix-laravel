@@ -1146,6 +1146,7 @@ return [
                     'save-btn' => 'Enregistrer le produit',
                     'sku' => 'SKU',
                     'title' => 'Créer un nouveau produit',
+                    'too-many-variants-confirm' => 'Cette action créera :count produits variantes en une seule fois, ce qui peut prendre du temps et rendre la page non réactive. Voulez-vous revenir en arrière et supprimer certaines options d\'attributs, ou continuer quand même ?',
                     'type' => 'Type',
                 ],
 

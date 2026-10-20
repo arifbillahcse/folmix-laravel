@@ -1146,6 +1146,7 @@ return [
                     'save-btn' => 'Produkt speichern',
                     'sku' => 'Artikelnummer',
                     'title' => 'Neues Produkt erstellen',
+                    'too-many-variants-confirm' => 'Dadurch werden auf einmal :count Variantenprodukte erstellt, was eine Weile dauern kann und dazu führen kann, dass die Seite nicht mehr reagiert. Möchten Sie zurückgehen und einige Attributoptionen entfernen, oder trotzdem fortfahren?',
                     'type' => 'Typ',
                 ],
 

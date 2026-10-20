@@ -1146,6 +1146,7 @@ return [
                     'save-btn' => '保存产品',
                     'sku' => 'SKU',
                     'title' => '创建新产品',
+                    'too-many-variants-confirm' => '这将一次性创建 :count 个变体产品,可能需要一些时间,并可能导致页面无响应。是返回并删除一些属性选项,还是仍然继续?',
                     'type' => '类型',
                 ],
 

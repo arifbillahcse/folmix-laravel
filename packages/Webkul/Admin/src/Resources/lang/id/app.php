@@ -1146,6 +1146,7 @@ return [
                     'save-btn' => 'Simpan Produk',
                     'sku' => 'SKU',
                     'title' => 'Buat Produk Baru',
+                    'too-many-variants-confirm' => 'Ini akan membuat :count produk varian sekaligus, yang dapat memakan waktu dan membuat halaman tidak responsif. Kembali dan hapus beberapa opsi atribut, atau tetap lanjutkan?',
                     'type' => 'Tipe',
                 ],
 

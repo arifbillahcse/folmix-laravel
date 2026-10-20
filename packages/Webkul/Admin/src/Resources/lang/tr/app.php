@@ -1146,6 +1146,7 @@ return [
                     'save-btn' => 'Ürünü Kaydet',
                     'sku' => 'SKU',
                     'title' => 'Yeni Ürün Oluştur',
+                    'too-many-variants-confirm' => 'Bu, aynı anda :count varyant ürün oluşturacak; bu biraz zaman alabilir ve sayfanın yanıt vermemesine neden olabilir. Geri dönüp bazı özellik seçeneklerini kaldırmak mı yoksa yine de devam etmek mi istiyorsunuz?',
                     'type' => 'Tür',
                 ],
 

@@ -1146,6 +1146,7 @@ return [
                     'save-btn' => 'Salvar Produto',
                     'sku' => 'SKU',
                     'title' => 'Criar Novo Produto',
+                    'too-many-variants-confirm' => 'Isso criará :count produtos variantes de uma só vez, o que pode demorar um pouco e deixar a página sem resposta. Deseja voltar e remover algumas opções de atributos, ou continuar mesmo assim?',
                     'type' => 'Tipo',
                 ],
 

@@ -1146,6 +1146,7 @@ return [
                     'save-btn' => 'Desar producte',
                     'sku' => 'SKU',
                     'title' => 'Crear nou producte',
+                    'too-many-variants-confirm' => 'Això crearà :count productes variants alhora, cosa que pot trigar una estona i fer que la pàgina deixi de respondre. Vols tornar enrere i eliminar algunes opcions d\'atributs, o continuar igualment?',
                     'type' => 'Tipus',
                 ],
 

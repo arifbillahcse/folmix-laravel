@@ -1146,6 +1146,7 @@ return [
                     'save-btn' => 'Zapisz produkt',
                     'sku' => 'SKU',
                     'title' => 'Utwórz nowy produkt',
+                    'too-many-variants-confirm' => 'Spowoduje to utworzenie :count produktów wariantowych naraz, co może potrwać chwilę i sprawić, że strona przestanie odpowiadać. Czy chcesz wrócić i usunąć niektóre opcje atrybutów, czy mimo to kontynuować?',
                     'type' => 'Typ',
                 ],
 
