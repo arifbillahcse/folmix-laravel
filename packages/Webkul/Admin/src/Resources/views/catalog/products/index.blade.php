@@ -577,13 +577,39 @@
 
                 methods: {
                     create(params, { resetForm, resetField, setErrors }) {
-                        this.isLoading = true;
-
                         this.attributes.forEach(attribute => {
                             params.super_attributes ||= {};
 
                             params.super_attributes[attribute.code] = this.superAttributes[attribute.code];
                         });
+
+                        /**
+                         * Every value of every configurable attribute is pre-selected on
+                         * this screen, so saving without pruning any of them multiplies
+                         * out to every combination (color x size x ... ) as a real variant
+                         * product - easily 100+ at once, which is slow to save and easy to
+                         * trigger by accident. Warn with the exact count and let the admin
+                         * go back and remove options before that actually happens.
+                         */
+                        const variantCount = this.attributes.length
+                            ? this.attributes.reduce((total, attribute) => total * (attribute.options.length || 1), 1)
+                            : 0;
+
+                        if (variantCount > 50) {
+                            window.emitter.emit('open-confirm-modal', {
+                                message: @json(trans('admin::app.catalog.products.index.create.too-many-variants-confirm')).replace(':count', variantCount),
+
+                                agree: () => this.submitProduct(params, setErrors),
+                            });
+
+                            return;
+                        }
+
+                        this.submitProduct(params, setErrors);
+                    },
+
+                    submitProduct(params, setErrors) {
+                        this.isLoading = true;
 
                         this.$axios.post("{{ route('admin.catalog.products.store') }}", params)
                             .then((response) => {

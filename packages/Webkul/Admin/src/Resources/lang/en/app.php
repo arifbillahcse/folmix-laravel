@@ -1151,6 +1151,7 @@ return [
                     'save-btn' => 'Save Product',
                     'sku' => 'SKU',
                     'title' => 'Create New Product',
+                    'too-many-variants-confirm' => 'This will create :count variant products at once, which can take a while and may make the page unresponsive. Go back and remove some attribute options, or continue anyway?',
                     'type' => 'Type',
                 ],
 
