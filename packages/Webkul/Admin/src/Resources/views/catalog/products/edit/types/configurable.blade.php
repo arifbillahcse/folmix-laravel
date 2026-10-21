@@ -391,7 +391,7 @@
                                                         <x-admin::form.control-group.control
                                                             type="text"
                                                             name="weight"
-                                                            ::rules="{ required: true, regex: /^([0-9]*[1-9][0-9]*(\.[0-9]+)?|[0]+\.[0-9]*[1-9][0-9]*)$/ }"
+                                                            ::rules="{ regex: /^([0-9]*[1-9][0-9]*(\.[0-9]+)?|[0]+\.[0-9]*[1-9][0-9]*)$/ }"
                                                             value="0"
                                                             :label="trans('admin::app.catalog.products.edit.types.configurable.mass-edit.weight')"
                                                         />
@@ -532,7 +532,7 @@
                                                 class="flex min-h-[39px] w-full rounded-md border bg-white py-1.5 text-sm font-normal text-gray-600 transition-all hover:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 ltr:pl-2.5 rtl:pr-2.5"
                                                 :class="[errors['variants[variant_' + variant.id + ']'] ? 'border border-red-500' : '']"
                                                 :name="'variants[variant_' + variant.id + ']'"
-                                                ::rules="{ required: true, regex: /^([0-9]*[1-9][0-9]*(\.[0-9]+)?|[0]+\.[0-9]*[1-9][0-9]*)$/ }"
+                                                ::rules="{ regex: /^([0-9]*[1-9][0-9]*(\.[0-9]+)?|[0]+\.[0-9]*[1-9][0-9]*)$/ }"
                                                 v-model="variant.weight"
                                                 label="@lang('admin::app.catalog.products.edit.types.configurable.mass-edit.weight')"
                                             >
@@ -995,14 +995,14 @@
                                         </div>
 
                                         <x-admin::form.control-group>
-                                            <x-admin::form.control-group.label class="required">
+                                            <x-admin::form.control-group.label>
                                                 @lang('admin::app.catalog.products.edit.types.configurable.edit.weight')
                                             </x-admin::form.control-group.label>
-                
+
                                             <x-admin::form.control-group.control
                                                 type="text"
                                                 name="weight"
-                                                ::rules="{ required: true, regex: /^([0-9]*[1-9][0-9]*(\.[0-9]+)?|[0]+\.[0-9]*[1-9][0-9]*)$/ }"
+                                                ::rules="{ regex: /^([0-9]*[1-9][0-9]*(\.[0-9]+)?|[0]+\.[0-9]*[1-9][0-9]*)$/ }"
                                                 ::value="variant.weight"
                                                 :label="trans('admin::app.catalog.products.edit.types.configurable.edit.weight')"
                                             />

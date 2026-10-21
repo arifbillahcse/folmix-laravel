@@ -321,7 +321,6 @@ class Configurable extends AbstractType
                 new ConfigurableUniqueSku($this->getChildrenIds()),
             ],
             'variants.*.price' => 'required',
-            'variants.*.weight' => 'required',
         ];
     }
 
