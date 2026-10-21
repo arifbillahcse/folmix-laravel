@@ -164,6 +164,26 @@ class Flat extends AbstractIndexer
         foreach (core()->getAllChannels() as $channel) {
             if (in_array($channel->id, $channelIds)) {
                 foreach ($channel->locales as $locale) {
+                    /**
+                     * product_flat.parent_id is a foreign key to another
+                     * product_flat row's own id (not to products.id) - it must
+                     * be the specific flat row of the parent PRODUCT for this
+                     * same channel/locale pair, not the parent's product id.
+                     * refresh() always flat-indexes a configurable parent
+                     * before its variants, so that row already exists by the
+                     * time a variant gets here; if it genuinely doesn't yet
+                     * (e.g. this variant was reached first in a full reindex
+                     * pass), leave it null rather than violating the FK -
+                     * the next reindex fills it in once the parent exists.
+                     */
+                    $parentFlatId = $product->parent_id
+                        ? $this->productFlatRepository->findOneWhere([
+                            'product_id' => $product->parent_id,
+                            'channel' => $channel->code,
+                            'locale' => $locale->code,
+                        ])?->id
+                        : null;
+
                     $productFlat = $this->productFlatRepository->updateOrCreate([
                         'product_id' => $product->id,
                         'channel' => $channel->code,
@@ -172,7 +192,7 @@ class Flat extends AbstractIndexer
                         'type' => $product->type,
                         'sku' => $product->sku,
                         'attribute_family_id' => $product->attribute_family_id,
-                        'parent_id' => $product->parent_id,
+                        'parent_id' => $parentFlatId,
                     ]);
 
                     foreach ($familyAttributes as $attribute) {
