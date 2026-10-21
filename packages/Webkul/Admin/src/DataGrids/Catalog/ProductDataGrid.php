@@ -69,6 +69,14 @@ class ProductDataGrid extends DataGrid
             ->addSelect(DB::raw('SUM(DISTINCT '.$tablePrefix.'product_inventories.qty) as quantity'))
             ->addSelect(DB::raw('COUNT(DISTINCT '.$tablePrefix.'product_images.id) as images_count'))
             ->where('product_flat.locale', app()->getLocale())
+            /**
+             * A configurable product's variants (e.g. "Variant 64") are themselves
+             * rows in product_flat with parent_id set. Without this, every variant
+             * shows up as its own entry in the main Products list, which just
+             * looks like clutter/noise since they're already managed from their
+             * parent product's Variants tab.
+             */
+            ->whereNull('product_flat.parent_id')
             ->groupBy('product_flat.product_id');
 
         $this->addFilter('product_id', 'product_flat.product_id');
