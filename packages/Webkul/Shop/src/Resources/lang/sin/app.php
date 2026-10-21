@@ -817,6 +817,7 @@ return [
                 'configurable' => [
                     'select-options' => 'කරුණු තෝරන්න',
                     'select-above-options' => 'ඉහළට සහිත කරුණු තෝරන්න',
+                    'out-of-stock' => 'තොග නැත',
                 ],
 
                 'bundle' => [

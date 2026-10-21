@@ -817,6 +817,7 @@ return [
                 'configurable' => [
                     'select-options' => 'Будь ласка, виберіть опцію',
                     'select-above-options' => 'Будь ласка, виберіть опції вище',
+                    'out-of-stock' => 'Немає в наявності',
                 ],
 
                 'bundle' => [

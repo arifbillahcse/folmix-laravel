@@ -817,6 +817,7 @@ return [
                 'configurable' => [
                     'select-options' => 'オプションを選択してください',
                     'select-above-options' => '上記のオプションを選択してください',
+                    'out-of-stock' => '在庫切れ',
                 ],
 
                 'bundle' => [

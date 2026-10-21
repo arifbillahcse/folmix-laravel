@@ -817,6 +817,7 @@ return [
                 'configurable' => [
                     'select-options' => '请选择一个选项',
                     'select-above-options' => '请选择以上选项',
+                    'out-of-stock' => '缺货',
                 ],
 
                 'bundle' => [

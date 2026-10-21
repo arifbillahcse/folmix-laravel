@@ -817,6 +817,7 @@ return [
                 'configurable' => [
                     'select-options' => 'Seleziona un\'opzione',
                     'select-above-options' => 'Seleziona le opzioni sopra',
+                    'out-of-stock' => 'Esaurito',
                 ],
 
                 'bundle' => [

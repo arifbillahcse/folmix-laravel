@@ -817,6 +817,7 @@ return [
                 'configurable' => [
                     'select-options' => 'Silakan pilih opsi',
                     'select-above-options' => 'Silakan pilih opsi di atas',
+                    'out-of-stock' => 'Stok Habis',
                 ],
 
                 'bundle' => [

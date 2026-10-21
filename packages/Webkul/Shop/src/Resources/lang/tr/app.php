@@ -817,6 +817,7 @@ return [
                 'configurable' => [
                     'select-options' => 'Lütfen bir seçenek seçin',
                     'select-above-options' => 'Lütfen yukarıdaki seçenekleri seçin',
+                    'out-of-stock' => 'Stokta Yok',
                 ],
 
                 'bundle' => [

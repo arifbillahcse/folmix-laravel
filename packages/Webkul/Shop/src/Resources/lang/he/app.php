@@ -817,6 +817,7 @@ return [
                 'configurable' => [
                     'select-options' => 'אנא בחר אפשרות',
                     'select-above-options' => 'אנא בחר אפשרויות למעלה',
+                    'out-of-stock' => 'אזל מהמלאי',
                 ],
 
                 'bundle' => [
