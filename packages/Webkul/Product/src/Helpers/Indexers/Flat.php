@@ -34,6 +34,27 @@ class Flat extends AbstractIndexer
     protected $flatColumns = [];
 
     /**
+     * Structural/relational product_flat columns that must only ever come from
+     * $product itself. A family attribute sharing one of these codes (e.g. an
+     * admin naming a custom attribute "type", "channel" or "status") must never
+     * be allowed to drive it - see the guard in updateOrCreate().
+     *
+     * @var string[]
+     */
+    protected $reservedFlatColumns = [
+        'id',
+        'sku',
+        'type',
+        'created_at',
+        'updated_at',
+        'locale',
+        'channel',
+        'attribute_family_id',
+        'product_id',
+        'parent_id',
+    ];
+
+    /**
      * Channels
      *
      * @var array
@@ -151,12 +172,22 @@ class Flat extends AbstractIndexer
                         'type' => $product->type,
                         'sku' => $product->sku,
                         'attribute_family_id' => $product->attribute_family_id,
+                        'parent_id' => $product->parent_id,
                     ]);
 
                     foreach ($familyAttributes as $attribute) {
+                        /**
+                         * A custom attribute whose code happens to collide with one of
+                         * product_flat's structural columns (e.g. an admin naming an
+                         * attribute "type", "sku", "status", or "channel") would
+                         * otherwise have its selected value silently overwrite that
+                         * column here - corrupting the product's real type/sku/etc. on
+                         * every reindex. These columns are only ever set from $product
+                         * itself, never from a family attribute's value.
+                         */
                         if (
                             ! in_array($attribute->code, $this->flatColumns)
-                            || $attribute->code == 'sku'
+                            || in_array($attribute->code, $this->reservedFlatColumns)
                         ) {
                             continue;
                         }
