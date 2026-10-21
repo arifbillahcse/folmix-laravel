@@ -38,7 +38,20 @@ class Product
 
         $productIds = $this->getAllRelatedProductIds($product);
 
-        UpdateCreateElasticSearchIndexJob::dispatch($productIds);
+        /**
+         * Unlike afterUpdate(), this used to skip the inventory/price index jobs,
+         * so a brand new configurable product's variants (included in $productIds
+         * via getAllRelatedProductIds()) never got a product_inventory_indices or
+         * product_price_indices row. isSaleable() reads that index, not the live
+         * inventories table, so every freshly created variant looked out of stock
+         * and was silently excluded from the storefront's option dropdown even
+         * when it genuinely had quantity.
+         */
+        Bus::chain([
+            new UpdateCreateInventoryIndexJob($productIds),
+            new UpdateCreatePriceIndexJob($productIds),
+            new UpdateCreateElasticSearchIndexJob($productIds),
+        ])->dispatch();
     }
 
     /**
