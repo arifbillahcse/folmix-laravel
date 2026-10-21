@@ -47,13 +47,41 @@ class ConfigurableOption
             ])
             ->get();
 
+        /**
+         * Out-of-stock variants are kept in the option list (with an "in_stock"
+         * flag the frontend uses to badge/disable them) rather than being
+         * filtered out entirely - a shopper should be able to see that a
+         * color/size exists even when it's currently unavailable. Only an
+         * inactive (disabled) variant is excluded outright.
+         */
         foreach ($variantCollection as $variant) {
-            if ($variant->isSaleable()) {
+            if ($variant->status) {
                 $this->allowedVariants[] = $variant;
             }
         }
 
         return $this->allowedVariants;
+    }
+
+    /**
+     * Returns true if at least one of the given variant product ids is
+     * currently saleable (active and in stock).
+     *
+     * @param  array  $productIds
+     * @return bool
+     */
+    protected function isAnySaleable(array $productIds)
+    {
+        foreach ($this->allowedVariants as $variant) {
+            if (
+                in_array($variant->id, $productIds)
+                && $variant->isSaleable()
+            ) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**
@@ -170,6 +198,7 @@ class ConfigurableOption
                 'label' => $attributeOption->label ? $attributeOption->label : $attributeOption->admin_name,
                 'swatch_value' => $attribute->swatch_type == 'image' ? $attributeOption->swatch_value_url : $attributeOption->swatch_value,
                 'products' => $options[$attribute->id][$optionId],
+                'in_stock' => $this->isAnySaleable($options[$attribute->id][$optionId]),
             ];
         }
 

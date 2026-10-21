@@ -47,8 +47,9 @@
                             <option
                                 v-for='(option, index) in attribute.options'
                                 :value="option.id"
+                                :disabled="option.id && option.in_stock === false"
                             >
-                                @{{ option.label }}
+                                @{{ option.label }}@{{ option.id && option.in_stock === false ? ' (' + outOfStockLabel + ')' : '' }}
                             </option>
                         </v-field>
                     </template>
@@ -67,8 +68,8 @@
                                     <!-- Color Swatch Options -->
                                     <label
                                         class="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none"
-                                        :class="{'ring-2 ring-gray-900' : option.id == attribute.selectedValue}"
-                                        :title="option.label"
+                                        :class="{'ring-2 ring-gray-900' : option.id == attribute.selectedValue, 'opacity-40 !cursor-not-allowed' : option.in_stock === false}"
+                                        :title="option.label + (option.in_stock === false ? ' (' + outOfStockLabel + ')' : '')"
                                         v-if="attribute.swatch_type == 'color'"
                                     >
                                         <v-field
@@ -87,6 +88,7 @@
                                                 v-bind="field"
                                                 :id="'attribute_' + attribute.id"
                                                 :aria-labelledby="'color-choice-' + index + '-label'"
+                                                :disabled="option.in_stock === false"
                                                 class="peer sr-only"
                                                 @click="configure(attribute, $event.target.value)"
                                             />
@@ -100,10 +102,10 @@
                                     </label>
 
                                     <!-- Image Swatch Options -->
-                                    <label 
+                                    <label
                                         class="group relative flex h-[60px] w-[60px] cursor-pointer items-center justify-center overflow-hidden rounded-md border bg-white font-medium uppercase text-gray-900 hover:bg-gray-50 sm:py-6"
-                                        :class="{'border-navyBlue' : option.id == attribute.selectedValue }"
-                                        :title="option.label"
+                                        :class="{'border-navyBlue' : option.id == attribute.selectedValue, 'opacity-40 !cursor-not-allowed' : option.in_stock === false}"
+                                        :title="option.label + (option.in_stock === false ? ' (' + outOfStockLabel + ')' : '')"
                                         v-if="attribute.swatch_type == 'image'"
                                     >
                                         <v-field
@@ -123,6 +125,7 @@
                                                 v-bind="field"
                                                 :id="'attribute_' + attribute.id"
                                                 :aria-labelledby="'color-choice-' + index + '-label'"
+                                                :disabled="option.in_stock === false"
                                                 class="peer sr-only"
                                                 @click="configure(attribute, $event.target.value)"
                                             />
@@ -135,10 +138,10 @@
                                     </label>
 
                                     <!-- Text Swatch Options -->
-                                    <label 
+                                    <label
                                         class="group relative flex h-fit min-w-fit cursor-pointer items-center justify-center rounded-full border border-gray-300 bg-white px-5 py-3 font-medium uppercase text-gray-900 hover:bg-gray-50 max-sm:h-fit max-sm:w-fit max-sm:px-3.5 max-sm:py-2"
-                                        :class="{'border-transparent !bg-navyBlue text-white' : option.id == attribute.selectedValue }"
-                                        :title="option.label"
+                                        :class="{'border-transparent !bg-navyBlue text-white' : option.id == attribute.selectedValue, 'opacity-40 !cursor-not-allowed' : option.in_stock === false}"
+                                        :title="option.label + (option.in_stock === false ? ' (' + outOfStockLabel + ')' : '')"
                                         v-if="attribute.swatch_type == 'text'"
                                     >
                                         <v-field
@@ -159,6 +162,7 @@
                                                 :id="'attribute_' + attribute.id"
                                                 class="peer sr-only"
                                                 :aria-labelledby="'color-choice-' + index + '-label'"
+                                                :disabled="option.in_stock === false"
                                                 @click="configure(attribute, $event.target.value)"
                                             />
                                         </v-field>
@@ -216,6 +220,8 @@
                         selectedOptionVariant: '',
 
                         galleryImages: [],
+
+                        outOfStockLabel: "@lang('shop::app.products.view.type.configurable.out-of-stock')",
                     }
                 },
 
