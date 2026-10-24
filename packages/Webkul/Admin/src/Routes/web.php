@@ -10,6 +10,16 @@ require 'auth-routes.php';
 
 Route::group(['middleware' => ['admin', NoCacheMiddleware::class], 'prefix' => config('app.admin_url')], function () {
     /**
+     * Keep-alive ping. The admin panel polls this in the background while a
+     * logged-in admin has a tab open, so their session's last-activity time
+     * keeps refreshing and never hits SESSION_LIFETIME - unlike customers,
+     * who get no such ping and are logged out after that many idle minutes.
+     * It does nothing but respond; just being an authenticated request is
+     * what resets Laravel's session idle timer.
+     */
+    Route::get('session/keep-alive', fn () => response()->noContent())->name('admin.session.keep_alive');
+
+    /**
      * Activity log routes.
      */
     require 'activity-log-routes.php';

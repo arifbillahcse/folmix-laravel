@@ -160,6 +160,29 @@
     </script>
 
     {!! view_render_event('bagisto.admin.layout.vue-app-mount.after') !!}
+
+    <script>
+        /**
+         * Keeps this admin's own session from ever going idle long enough to
+         * hit SESSION_LIFETIME, while customers (who get no such ping) still
+         * time out normally. A plain fetch is enough - any authenticated
+         * request resets Laravel's session idle timer, the endpoint itself
+         * does nothing. Only runs while this tab is open and visible, so it
+         * doesn't keep a session alive the admin has actually walked away
+         * from with the tab left open in the background.
+         */
+        (function () {
+            const keepAliveUrl = "{{ route('admin.session.keep_alive') }}";
+
+            const ping = () => {
+                if (document.visibilityState === 'visible') {
+                    fetch(keepAliveUrl, { credentials: 'same-origin' }).catch(() => {});
+                }
+            };
+
+            setInterval(ping, 5 * 60 * 1000);
+        })();
+    </script>
 </body>
 
 </html>
