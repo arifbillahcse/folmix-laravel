@@ -36,23 +36,33 @@ class BackfillProductLocales extends Command
         $sourceLocale = $this->option('source-locale');
 
         /**
-         * Only products that have a flat row in the source locale and NO flat
-         * row in any other locale - i.e. exactly the "only translated into
-         * one language" set a single-locale import leaves behind. Products
-         * that already have real content in other locales are left alone.
+         * Checked at the EAV (product_attribute_values) level, not
+         * product_flat: the flat indexer creates an empty flat row for every
+         * locale regardless of whether real translated values exist, so flat
+         * row presence can't tell "translated" from "untranslated". A
+         * product needs backfilling when it has a url_key value in the
+         * source locale but none in any other locale - i.e. it was never
+         * actually translated, only flat-indexed. Products with real
+         * content in other locales are left alone.
          */
-        $productIds = DB::table('products')
-            ->whereIn('id', function ($query) use ($sourceLocale) {
+        $urlKeyAttributeId = DB::table('attributes')->where('code', 'url_key')->value('id');
+
+        if (! $urlKeyAttributeId) {
+            $this->components->error("Could not find an attribute with code 'url_key'.");
+
+            return self::FAILURE;
+        }
+
+        $productIds = DB::table('product_attribute_values')
+            ->where('attribute_id', $urlKeyAttributeId)
+            ->where('locale', $sourceLocale)
+            ->whereNotIn('product_id', function ($query) use ($urlKeyAttributeId, $sourceLocale) {
                 $query->select('product_id')
-                    ->from('product_flat')
-                    ->where('locale', $sourceLocale);
-            })
-            ->whereNotIn('id', function ($query) use ($sourceLocale) {
-                $query->select('product_id')
-                    ->from('product_flat')
+                    ->from('product_attribute_values')
+                    ->where('attribute_id', $urlKeyAttributeId)
                     ->where('locale', '!=', $sourceLocale);
             })
-            ->pluck('id');
+            ->pluck('product_id');
 
         if ($productIds->isEmpty()) {
             $this->components->info('No products found that are missing other-locale data. Nothing to do.');
