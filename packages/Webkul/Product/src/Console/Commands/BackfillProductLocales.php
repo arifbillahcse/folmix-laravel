@@ -79,7 +79,7 @@ class BackfillProductLocales extends Command
 
         foreach ($productIds->chunk(200) as $chunk) {
             $products = $this->productRepository
-                ->with('attribute_family')
+                ->with(['attribute_family', 'attribute_values'])
                 ->findWhereIn('id', $chunk->all());
 
             foreach ($products as $product) {
@@ -87,10 +87,38 @@ class BackfillProductLocales extends Command
                     $familyAttributesCache[$product->attribute_family_id] = $product->attribute_family->custom_attributes;
                 }
 
+                $familyAttributes = $familyAttributesCache[$product->attribute_family_id];
+
+                $localeAttributes = $familyAttributes->filter(
+                    fn ($attribute) => $attribute->value_per_locale && ! in_array($attribute->type, ['image', 'file'])
+                );
+
+                /**
+                 * copyValuesToAllLocales() reuses whatever values are already
+                 * in $data (it was written for the admin edit form, where
+                 * $data is the just-submitted request) - it does not fetch
+                 * the source locale's existing values itself. So the actual
+                 * en value for each translatable attribute has to be looked
+                 * up here and put into $data before calling it, or every
+                 * field is silently skipped.
+                 */
+                $data = ['locale' => $sourceLocale, 'channel' => $channelCode];
+
+                foreach ($localeAttributes as $attribute) {
+                    $existingValue = $product->attribute_values
+                        ->where('attribute_id', $attribute->id)
+                        ->where('locale', $sourceLocale)
+                        ->first();
+
+                    if ($existingValue) {
+                        $data[$attribute->code] = $existingValue->{$attribute->column_name};
+                    }
+                }
+
                 $this->productAttributeValueRepository->copyValuesToAllLocales(
-                    ['locale' => $sourceLocale, 'channel' => $channelCode],
+                    $data,
                     $product,
-                    $familyAttributesCache[$product->attribute_family_id]
+                    $familyAttributes
                 );
 
                 $bar->advance();
