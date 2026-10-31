@@ -962,7 +962,7 @@
                                                     type="text"
                                                     name="price"
                                                     ::rules="{required: true, decimal: true, min_value: 0}"
-                                                    ::value="variant.price"
+                                                    ::value="Number(variant.price).toFixed(2)"
                                                     :label="trans('admin::app.catalog.products.edit.types.configurable.edit.price')"
                                                 />
                     
