@@ -22,13 +22,23 @@
 
         @break
     @case('price')
+        @php
+            /**
+             * Prices are stored as decimal(12,4) for calculation precision,
+             * but showing all 4 decimals in the admin input is just noise -
+             * round the displayed value to 2 decimals here. This doesn't
+             * touch storage or pricing logic: trailing zeros a 2-decimal
+             * value gets padded with on save are harmless.
+             */
+            $priceValue = old($attribute->code) ?: $product[$attribute->code];
+        @endphp
         <x-admin::form.control-group.control
             type="price"
             :id="$attribute->code"
             :class="($attribute->code == 'price' ? 'py-2.5 bg-gray-50 text-xl font-bold' : '')"
             :name="$attribute->code"
             ::rules="{{ $attribute->validations }}"
-            value="{{ old($attribute->code) ?: $product[$attribute->code] }}"
+            value="{{ is_numeric($priceValue) ? number_format($priceValue, 2, '.', '') : $priceValue }}"
             :label="$attribute->admin_name"
         >
             <x-slot:currency :class="'dark:text-gray-300 ' . ($attribute->code == 'price' ? 'bg-gray-50 dark:bg-gray-900 text-xl' : '')">
