@@ -813,7 +813,19 @@
 
                 <!-- Details -->
                 <div class="grid place-content-start gap-1.5">
-                    <p class="text-base font-semibold text-gray-800 dark:text-white">
+                    <a
+                        :href="'{{ route('admin.catalog.products.edit', ':id') }}'.replace(':id', variant.id)"
+                        class="text-base font-semibold text-gray-800 hover:text-blue-600 hover:underline dark:text-white"
+                        target="_blank"
+                        v-if="typeof variant.id !== 'string'"
+                    >
+                        @{{ variant.name ?? 'N/A' }}
+                    </a>
+
+                    <p
+                        class="text-base font-semibold text-gray-800 dark:text-white"
+                        v-else
+                    >
                         @{{ variant.name ?? 'N/A' }}
                     </p>
 
