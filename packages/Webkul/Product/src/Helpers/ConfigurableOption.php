@@ -217,6 +217,8 @@ class ConfigurableOption
 
         foreach ($this->getAllowedVariants($product) as $variant) {
             $prices[$variant->id] = $variant->getTypeInstance()->getProductPrices();
+
+            $prices[$variant->id]['offers'] = $variant->getTypeInstance()->getCustomerGroupPricingOffers();
         }
 
         return $prices;

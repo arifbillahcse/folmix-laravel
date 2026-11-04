@@ -362,6 +362,14 @@
                                     </div>
                                 @endif
 
+                                {{--
+                                    Populated by configurable.blade.php's reloadPrice() once a
+                                    variant is fully selected - the parent product above never
+                                    has its own customer_group_prices, so its offers list is
+                                    always empty for configurable products.
+                                --}}
+                                <div class="mt-2.5 grid gap-1.5 variant-tier-offers"></div>
+
                                 {!! view_render_event('bagisto.shop.products.price.after', ['product' => $product]) !!}
 
                                 {!! view_render_event('bagisto.shop.products.short_description.before', ['product' => $product]) !!}

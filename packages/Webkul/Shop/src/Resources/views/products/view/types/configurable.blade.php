@@ -361,6 +361,8 @@
 
                         let configVariant = this.config.variant_prices[this.possibleOptionVariant];
 
+                        let tierOffers = document.querySelector('.variant-tier-offers');
+
                         if (this.childAttributes.length == selectedOptionCount) {
                             document.querySelector('.price-label').style.display = 'none';
 
@@ -376,6 +378,12 @@
                                 regularPrice.style.display = 'none';
 
                                 regularPrice.innerHTML = '';
+                            }
+
+                            if (tierOffers) {
+                                tierOffers.innerHTML = (configVariant.offers || [])
+                                    .map(offer => '<p class="text-zinc-500 [&>*]:text-black">' + offer + '</p>')
+                                    .join('');
                             }
 
                             this.$emitter.emit('configurable-variant-selected-event',this.possibleOptionVariant);
@@ -398,6 +406,10 @@
                                 regularPrice.innerHTML = '';
 
                                 finalPrice.innerHTML = this.config.regular.formatted_price;
+                            }
+
+                            if (tierOffers) {
+                                tierOffers.innerHTML = '';
                             }
 
                             this.$emitter.emit('configurable-variant-selected-event', 0);
