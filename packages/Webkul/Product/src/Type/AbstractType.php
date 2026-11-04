@@ -1057,7 +1057,8 @@ abstract class AbstractType
         foreach ($customerGroupPrices as $customerGroupPrice) {
             if (
                 ! is_null($this->product->special_price)
-                && $customerGroupPrice->value >= $this->product->special_price
+                && $this->product->special_price !== ''
+                && (float) $customerGroupPrice->value >= (float) $this->product->special_price
             ) {
                 continue;
             }
@@ -1076,9 +1077,13 @@ abstract class AbstractType
      */
     public function getOfferLines($customerGroupPrice)
     {
-        $price = $this->getCustomerGroupPrice($this->product, $customerGroupPrice->qty);
+        $price = (float) $this->getCustomerGroupPrice($this->product, $customerGroupPrice->qty);
 
-        $discount = number_format((($this->product->price - $price) * 100) / ($this->product->price), 2);
+        $productPrice = (float) $this->product->price;
+
+        $discount = $productPrice
+            ? number_format((($productPrice - $price) * 100) / $productPrice, 2)
+            : '0.00';
 
         $offerLines = trans('product::app.type.abstract.offers', [
             'qty' => $customerGroupPrice->qty,
@@ -1104,17 +1109,23 @@ abstract class AbstractType
 
         $customerGroupPrices = $this->productCustomerGroupPriceRepository->prices($product, $customerGroup->id);
 
+        $productPrice = (float) $product->price;
+
         if ($customerGroupPrices->isEmpty()) {
-            return $product->price;
+            return $productPrice;
         }
 
         $lastQty = 1;
 
-        $lastPrice = $product->price;
+        $lastPrice = $productPrice;
 
         $lastCustomerGroupId = null;
 
         foreach ($customerGroupPrices as $customerGroupPrice) {
+            $value = $customerGroupPrice->value === null || $customerGroupPrice->value === ''
+                ? null
+                : (float) $customerGroupPrice->value;
+
             if ($qty < $customerGroupPrice->qty) {
                 continue;
             }
@@ -1131,12 +1142,16 @@ abstract class AbstractType
                 continue;
             }
 
+            if ($value === null) {
+                continue;
+            }
+
             if ($customerGroupPrice->value_type == 'discount') {
                 if (
-                    $customerGroupPrice->value >= 0
-                    && $customerGroupPrice->value <= 100
+                    $value >= 0
+                    && $value <= 100
                 ) {
-                    $lastPrice = $product->price - ($product->price * $customerGroupPrice->value) / 100;
+                    $lastPrice = $productPrice - ($productPrice * $value) / 100;
 
                     $lastQty = $customerGroupPrice->qty;
 
@@ -1144,10 +1159,10 @@ abstract class AbstractType
                 }
             } else {
                 if (
-                    $customerGroupPrice->value >= 0
-                    && $customerGroupPrice->value < $lastPrice
+                    $value >= 0
+                    && $value < $lastPrice
                 ) {
-                    $lastPrice = $customerGroupPrice->value;
+                    $lastPrice = $value;
 
                     $lastQty = $customerGroupPrice->qty;
 
