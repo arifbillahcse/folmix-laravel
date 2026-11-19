@@ -88,12 +88,12 @@
                 <!-- Flash Sale: admin hand-picks the products (Settings > Themes),
                      so this reuses the product carousel widget pointed at a fixed,
                      ordered product list instead of a filter-based query. "View
-                     All" always goes to the combined /flash-sale listing page,
-                     regardless of the admin's View All URL field. -->
+                     All" uses the admin's View All URL field when set, falling
+                     back to the combined /flash-sale listing page. -->
                 <x-shop::products.carousel
                     :title="$data['title'] ?? ''"
                     :src="route('shop.api.products.flash-sale.index', $customization->id)"
-                    :navigation-link="route('shop.home.flash_sale')"
+                    :navigation-link="! empty($data['view_all_url']) ? $data['view_all_url'] : route('shop.home.flash_sale')"
                     aria-label="{{ $data['title'] ?? trans('shop::app.home.index.product-carousel') }}"
                 />
 
